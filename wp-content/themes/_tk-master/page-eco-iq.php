@@ -12,20 +12,19 @@
  */
 
 get_header(); ?>
-<!-- <div class="container-fluid"> -->
-	<?php global $post; ?>
-	<?php
-	$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
-	?>
-	<div class="homepage-featured-image" style="background-image: url(<?php echo $src[0]; ?> )">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-lg-9 col-md-9 col-sm-9 text-center" id="ecoiq">
-				</div>
-			</div>
+
+<?php global $post; ?>
+<?php
+$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
+?>
+<div class="homepage-featured-image" style="background-image: url(<?php echo $src[0]; ?> )">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-lg-9 col-md-9 col-sm-9 text-center" id="ecoiq"></div>
 		</div>
 	</div>
-<!-- </div> -->
+</div>
+
 
 <section class="dark-grey text-center" id="what-is-eco-iq">
 	<div class="container">
@@ -70,6 +69,7 @@ get_header(); ?>
 				<h4><?php the_field('section_2:_subsection_title_4'); ?></h4>
 				<p><?php the_field('section_2:_subsection_text_area_4'); ?></p>
 			</div>
+		</div>
 	</div>
 </section>
 
@@ -141,18 +141,25 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="text-center" id="get-in-touch">
+<section class="main-content">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
-				<h2>Get in touch</h2>
-				<p class="subtitle">Whether you are home or away, Wiser Air works to save you energy. Let us know how Wiser Air is helping you manage your comfort at <a href="mailto:wisermarketing@schneider-electric.com"/>wisermarketing@schneider-electric.com</a>. We look forward to hearing for you.</p>
-				<img src="/images/get-in-touch-thermo.png" />
-				<p class="subtitle">Stay up to date on new features and releases by subscribing to our mailing list below.</p>
-				<div id="eco-iq-form"><?php echo do_shortcode('[sg-subscription-form]'); ?></div>
+			<div class="col-lg-12 text-center">
+				<h2>Contact Us</h2>
+				<p class="subtitle">Contact us for partnership opportunities. Or, give us a call at 1-(855)-55-WISER.</p>
+
+				<p class="subtitle">Monday - Friday: 8am-12am EST | Saturday - Sunday: 10am-7pm EST</p>
+
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<?php echo do_shortcode('[contact-form-7 id="4" title="Contact form 1"]'); ?>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </section>
+
+
 
 <?php get_footer(); ?>

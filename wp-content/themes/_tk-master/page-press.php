@@ -44,7 +44,7 @@ get_header(); ?>
             <?php while($press->have_posts()) : $press->the_post(); ?>
 
                 <div class="col-lg-6 col-md-6 col-sm-6" class="press-releases">
-                    <h4><?php the_title(); ?></h4>
+                    <a href="<?php the_field('full_document_download'); ?>" target="_blank"><h4><?php the_title(); ?></h4></a>
                     <p><?php the_excerpt(); ?></p>
                 </div>
             <?php endwhile; // end of the loop. ?>
@@ -70,7 +70,7 @@ get_header(); ?>
             <?php while($featured_in->have_posts()) : $featured_in->the_post(); ?>
 
                 <div class="col-lg-3 col-md-3 col-sm-3" class="logos">
-                    <a href="<?php the_field('featured_url'); ?>"><img src="<?php the_field('featured_logo'); ?>"/></a>
+                    <a href="<?php the_field('featured_url'); ?>" target="_blank"><img src="<?php the_field('featured_logo'); ?>"/></a>
                 </div>
             <?php endwhile; // end of the loop. ?>
             <?php wp_reset_postdata(); ?>
@@ -95,7 +95,9 @@ get_header(); ?>
             <?php while($product_images->have_posts()) : $product_images->the_post(); ?>
 
                 <div class="col-lg-3 col-md-3 col-sm-6">
-                    <img src="<?php the_field('product_image'); ?>"/>
+                    <a href="<?php the_field('product_image'); ?>" target="_blank">
+                     <img src="<?php the_field('product_image'); ?>"/>
+                    </a>
                 </div>
             <?php endwhile; // end of the loop. ?>
             <?php wp_reset_postdata(); ?>
@@ -120,8 +122,10 @@ get_header(); ?>
             <?php while($videos->have_posts()) : $videos->the_post(); ?>
 
                 <div class="col-lg-3 col-md-3 col-sm-3 text-center" class="videos">
-                    <?php the_field('product_video'); ?>
-                    <h5><?php the_title(); ?></h5>
+                    <a href="<?php the_field('full_youtube_link'); ?>" target="_blank">
+                        <?php the_field('product_video'); ?>
+                        <h5><?php the_title(); ?></h5>
+                    </a>
                 </div>
             <?php endwhile; // end of the loop. ?>
             <?php wp_reset_postdata(); ?>
@@ -146,8 +150,8 @@ get_header(); ?>
             <?php while($logos->have_posts()) : $logos->the_post(); ?>
 
                 <div class="col-lg-3 col-md-3 col-sm-3 logos text-center">
-                    <a href="<?php the_field('product_logo_download'); ?>"><img src="<?php the_field('product_logo'); ?>"/></a>
-                    <h5><?php the_title(); ?></h5>
+                    <a href="<?php the_field('product_logo_download'); ?>" target="_blank"><img src="<?php the_field('product_logo'); ?>"/></a>
+                     <h5><?php the_title(); ?></h5>
                 </div>
             <?php endwhile; // end of the loop. ?>
             <?php wp_reset_postdata(); ?>

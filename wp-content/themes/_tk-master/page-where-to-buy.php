@@ -31,12 +31,12 @@ get_header(); ?>
 		<div class="row">
 			<ul class="wtb-retailers">
             <?php $retailers = new WP_Query(array(
-                'post_type' => 'retailers'
+                'post_type' => 'retailers', 'orderby' => 'title', 'order' => 'ASC'
                 )); ?>
 
             <?php while($retailers->have_posts()) : $retailers->the_post(); ?>
 
-           		<li class="col-lg-3 col-md-3 col-sm-6 text-center">
+           		<li class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
                 	<a href="<?php the_field('retailer_link'); ?>">	
                 		<img src="<?php the_field('retailer_image'); ?>"/>
                 	</a>
