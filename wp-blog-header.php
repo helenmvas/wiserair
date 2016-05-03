@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 /**
  * Loads the WordPress environment and template.
@@ -16,3 +17,27 @@ if ( !isset($wp_did_header) ) {
 	require_once( ABSPATH . WPINC . '/template-loader.php' );
 
 }
+||||||| merged common ancestors
+=======
+<?php
+/**
+ * Loads the WordPress environment and template.
+ *
+ * @package WordPress
+ */
+
+if ( !isset($wp_did_header) ) {
+
+	$wp_did_header = true;
+
+	// Load the WordPress library.
+	require_once( dirname(__FILE__) . '/wp-load.php' );
+
+	// Set up the WordPress query.
+	wp();
+
+	// Load the theme template.
+	require_once( ABSPATH . WPINC . '/template-loader.php' );
+
+}
+>>>>>>> 4f209a4e63213fa813cf729c7cd0c1788ee72395

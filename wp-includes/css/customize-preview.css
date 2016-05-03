@@ -1,6 +1,22 @@
+<<<<<<< HEAD
 .customize-partial-refreshing {
 	opacity: 0.25;
 	-webkit-transition: opacity 0.25s;
 	transition: opacity 0.25s;
 	cursor: progress;
 }
+||||||| merged common ancestors
+=======
+.customize-partial-refreshing {
+	opacity: 0.25;
+	-webkit-transition: opacity 0.25s;
+	transition: opacity 0.25s;
+	cursor: progress;
+}
+
+/* Override highlight when refreshing */
+.customize-partial-refreshing.widget-customizer-highlighted-widget {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+>>>>>>> 4f209a4e63213fa813cf729c7cd0c1788ee72395
