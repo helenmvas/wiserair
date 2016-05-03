@@ -1502,6 +1502,28 @@ ul.documents li {
     padding: 50px 15px;
 }
 
+/* About */
+
+.about-featured-image {
+    min-height: 500px !important;
+}
+
+.about-featured-image h2 {
+    margin-top: 100px;
+}
+
+img.thermo {
+    height: 300px;
+}
+
+section.about-section-two {
+    padding: 100px 0px;
+}
+
+.about-section-three .col-lg-4 {
+    margin: 30px 0px;
+}
+
 /* Where To Buy */
 .page-template-page-where-to-buy .site-navigation-inner {
     box-shadow: 0 0 2px #ccc;

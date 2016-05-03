@@ -1,0 +1,36 @@
+Apr 29 2016 21:27:14
+{"Number":2,"Message":"stream_socket_client(): unable to connect to ssl:\/\/100.118.110.23:443 (An attempt was made to access a socket in a way forbidden by its access permissions.\r\n)","File":"D:\\home\\site\\wwwroot\\wp-content\\plugins\\all-in-one-wp-migration\\lib\\model\\class-ai1wm-streams.php","Line":146}
+
+Apr 29 2016 21:27:20
+{"Number":2,"Message":"stream_socket_client(): SSL: The specified module could not be found.\r\n","File":"D:\\home\\site\\wwwroot\\wp-content\\plugins\\all-in-one-wp-migration\\lib\\model\\class-ai1wm-streams.php","Line":146}
+
+Apr 29 2016 21:27:20
+{"Number":8,"Message":"fwrite(): send of 396 bytes failed with errno=10054 An existing connection was forcibly closed by the remote host.\r\n","File":"D:\\home\\site\\wwwroot\\wp-content\\plugins\\all-in-one-wp-migration\\lib\\model\\class-ai1wm-streams.php","Line":211}
+
+Apr 29 2016 21:31:36
+{"Number":2,"Message":"mysql_unbuffered_query(): supplied resource is not a valid MySQL-Link resource","File":"D:\\home\\site\\wwwroot\\wp-content\\plugins\\all-in-one-wp-migration\\lib\\vendor\\servmask\\database\\class-ai1wm-database-mysql.php","Line":35}
+
+Apr 29 2016 21:31:36
+{"Number":2,"Message":"mysql_fetch_row() expects parameter 1 to be resource, boolean given","File":"D:\\home\\site\\wwwroot\\wp-content\\plugins\\all-in-one-wp-migration\\lib\\vendor\\servmask\\database\\class-ai1wm-database-mysql.php","Line":83}
+
+Apr 29 2016 21:31:36
+{"Number":2,"Message":"mysql_free_result() expects parameter 1 to be resource, boolean given","File":"D:\\home\\site\\wwwroot\\wp-content\\plugins\\all-in-one-wp-migration\\lib\\vendor\\servmask\\database\\class-ai1wm-database-mysql.php","Line":93}
+
+Apr 29 2016 22:25:47
+{"Number":2,"Message":"stream_socket_client(): unable to connect to ssl:\/\/100.118.110.23:443 (An attempt was made to access a socket in a way forbidden by its access permissions.\r\n)","File":"D:\\home\\site\\wwwroot\\wp-content\\plugins\\all-in-one-wp-migration\\lib\\model\\class-ai1wm-streams.php","Line":146}
+
+Apr 29 2016 22:25:52
+{"Number":2,"Message":"stream_socket_client(): SSL: The specified module could not be found.\r\n","File":"D:\\home\\site\\wwwroot\\wp-content\\plugins\\all-in-one-wp-migration\\lib\\model\\class-ai1wm-streams.php","Line":146}
+
+Apr 29 2016 22:25:52
+{"Number":8,"Message":"fwrite(): send of 396 bytes failed with errno=10054 An existing connection was forcibly closed by the remote host.\r\n","File":"D:\\home\\site\\wwwroot\\wp-content\\plugins\\all-in-one-wp-migration\\lib\\model\\class-ai1wm-streams.php","Line":211}
+
+Apr 29 2016 22:27:39
+{"Number":2,"Message":"mysql_unbuffered_query(): supplied resource is not a valid MySQL-Link resource","File":"D:\\home\\site\\wwwroot\\wp-content\\plugins\\all-in-one-wp-migration\\lib\\vendor\\servmask\\database\\class-ai1wm-database-mysql.php","Line":35}
+
+Apr 29 2016 22:27:39
+{"Number":2,"Message":"mysql_fetch_row() expects parameter 1 to be resource, boolean given","File":"D:\\home\\site\\wwwroot\\wp-content\\plugins\\all-in-one-wp-migration\\lib\\vendor\\servmask\\database\\class-ai1wm-database-mysql.php","Line":83}
+
+Apr 29 2016 22:27:39
+{"Number":2,"Message":"mysql_free_result() expects parameter 1 to be resource, boolean given","File":"D:\\home\\site\\wwwroot\\wp-content\\plugins\\all-in-one-wp-migration\\lib\\vendor\\servmask\\database\\class-ai1wm-database-mysql.php","Line":93}
+
