@@ -48,7 +48,7 @@ get_header(); ?>
 			<div class="col-lg-12 text-center">
 				<?php echo do_shortcode('[wonderplugin_tabs id="3"]'); ?>
 			</div>
-			<script src="./includes/js/highchart_upclose.js"></script>
+			<script src="/wp-content/themes/_tk-master/includes/js/highchart_upclose.js"></script>
 			<script src="https://code.highcharts.com/highcharts.js"></script>
 			<script src="https://code.highcharts.com/modules/exporting.js"></script>
 		</div>
