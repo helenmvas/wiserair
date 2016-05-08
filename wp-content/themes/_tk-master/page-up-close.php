@@ -1,4 +1,7 @@
 <?php
+
+echo getcwd();
+
 /**
  * Template Name: Up Close
  * The template for displaying all pages.
