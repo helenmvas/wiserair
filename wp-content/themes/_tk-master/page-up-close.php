@@ -49,7 +49,7 @@ get_header(); ?>
 				<?php echo do_shortcode('[wonderplugin_tabs id="3"]'); ?>
 			</div>
 			<script type="text/javascript">
-				$( document ).ready(function() {
+				jQuery( document ).ready(function($) {
 				    $('#chart-container').highcharts({
 				        credits: {
 				            enabled: false
