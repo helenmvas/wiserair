@@ -1384,7 +1384,7 @@ div#highcharts-0 {
     border-radius: 30px;
 }
 
-#ecoiq h5 {
+#ecoiq h4 {
     font-family: Lato-Regular;
     font-size: 16px;
     color: #3F97C5;
@@ -1399,6 +1399,14 @@ div#highcharts-0 {
 #eco-iq-working {
     background: url(/images/Eco_IQ_lifestyle.png) center/cover no-repeat;
     padding: 300px 50px 300px 0px;
+}
+
+#eco-iq-preferences .first {
+    margin-left: 15%;
+}
+
+#eco-iq-preferences .col-lg-3 {
+    margin-top: 50px;
 }
 
 /* Getting Started */
