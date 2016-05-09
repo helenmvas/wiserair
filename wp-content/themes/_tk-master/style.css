@@ -93,8 +93,20 @@ h2 {
     background-color: #f9f9f9;
 }
 
+.dark-grey {
+    background-color: #404040;
+    color: #fff;
+    padding: 80px 0px;
+}
+
 .grey, .gray {
     background-color: #ECECEC;
+}
+
+.blue {
+    background-color: #62baea;
+    color: #fff;
+    padding: 80px 0px;
 }
 
 .subtitle {
@@ -1358,6 +1370,53 @@ section {
 
 div#highcharts-0 {
     text-align: center !important;
+}
+
+/* New Up Close */
+.page-id-3542 .col-lg-12 {
+    padding: 0px 172px;
+}
+
+#ecoiq {
+    background: #fff;
+    margin-top: 275px;
+    padding: 80px 0px;
+    border-radius: 30px;
+    z-index: 9999;
+}
+
+#ecoiq hr {
+    width: 50%;
+}
+
+#ecoiq h4 a {
+    font-family: Lato-Regular;
+    font-size: 16px;
+    color: #3F97C5;
+    letter-spacing: -0.06px;
+    line-height: 36px;
+}
+
+#what-is-eco-iq {
+    padding: 150px 0px 80px;
+    margin-top: -100px;
+}
+
+#how-does-eco-iq-work {
+    background-color: #f2f2f2;
+}
+
+#eco-iq-working {
+    background: url(/images/Eco_IQ_lifestyle.png) center/cover no-repeat;
+    padding: 300px 50px 300px 0px;
+}
+
+#eco-iq-preferences .first {
+    margin-left: 12%;
+}
+
+#eco-iq-preferences .col-lg-3 {
+    margin-top: 50px;
 }
 
 /* Getting Started */

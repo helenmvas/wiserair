@@ -20,15 +20,16 @@ get_header(); ?>
 	<div class="homepage-featured-image" style="background-image: url(<?php echo $src[0]; ?> )">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 text-center" id="ecoiq">
-					<img src="#" />
+				<div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-lg-9 col-md-9 col-sm-9 text-center" id="ecoiq">
+					<img src="/images/boxes.jpg" />
 					<h1>EcoIQ</h1>
-					<h5>What is EcoIQ ™?</h5>
-					<h5>How does it work?</h5>
-					<h5>How do I enable Eco IQ ™?</h5>
-					<h5>How do I set my limits?</h5>
-					<h5>How do I know Eco IQ ™ is working?</h5>
-					<h5>How long does it take for Eco IQ ™ to learn my preferences?</h5>
+					<hr />
+					<h4><a href="#what-is-eco-iq">What is EcoIQ ™?</a></h4>
+					<h4><a href="#how-does-eco-iq-work">How does it work?</a></h4>
+					<h4><a href="#how-to-enable-eco-iq">How do I enable Eco IQ ™?</a></h4>
+					<h4><a href="#how-do-i-set-preferences">How do I set my preferences?</a></h4>
+					<h4><a href="#eco-iq-working">How do I know Eco IQ ™ is working?</a></h4>
+					<h4><a href="#eco-iq-preferences">How long does it take for Eco IQ ™ to learn my preferences?</a></h4>
 				</div>
 			</div>
 		</div>
@@ -39,12 +40,10 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2>What is EcoIQ</h2>
-				<p>Eco IQ™ is Wiser Air’s learning algorithm. It learns your heating and cooling preferences over time through direct feedback. Eco IQ™ challenges your perception of what an ideal temperature is by allowing you to define your comfort level by how warm or cold you are, rather than through a predetermined set point.</p>
-				<img src="#" />
-			</div>
-			<div class="col-lg-12 text-center">
-				<?php echo do_shortcode('[wonderplugin_tabs id="1"]'); ?>
+				<a name="what-is-eco-iq"></a>
+				<h2><?php the_field('section_1:_title'); ?></h2>
+				<p class="subtitle"><?php the_field('section_1:_text_area'); ?></p>
+				<img src="/images/thermo-black.png" />
 			</div>
 		</div>
 	</div>
@@ -54,57 +53,60 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2>How does it work?</h2>
-				<p>Eco IQ™ simplifies the way you interact with Wiser Air, by replacing set schedules with automatic temperature adjustments that save you energy, while keeping you comfortable throughout the day. Eco IQ™ works efficiently and intelligently, taking the following factors into account:</p>
+				<a name="how-does-eco-iq-work"></a>
+				<h2><?php the_field('section_2:_title'); ?></h2>
+				<p class="subtitle"><?php the_field('section_2:_text_area'); ?></p>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<img src="#" />
-				<h5>Your Lifestyle Patterns</h5>
-				<p>From initial inputs to subsequent adjustments, Eco IQ™ never stops learning.</p>
+			<div class="col-lg-offset-2 col-md-offset-2 col-lg-3 col-md-3 col-sm-6 text-center">
+				<img src="<?php the_field('section_2:_subsection_image_1'); ?>" />
+				<h4><?php the_field('section_2:_subsection_title_1'); ?></h4>
+				<p><?php the_field('section_2:_subsection_text_area_1'); ?></p>
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<img src="#" />
-				<h5>Your Thermal Profile</h5>
-				<p>Eco IQ™ learns how long it takes to heat your home and where you are losing heat.</p>
+			<div class="col-lg-offset-2 col-md-offset-2 col-lg-3 col-md-3 col-sm-6 text-center">
+				<img src="<?php the_field('section_2:_subsection_image_2'); ?>" />
+				<h4><?php the_field('section_2:_subsection_title_2'); ?></h4>
+				<p><?php the_field('section_2:_subsection_text_area_2'); ?></p>
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<img src="#" />
-				<h5>Your Energy Usage</h5>
-				<p>The more Eco IQ™ monitors your usage, the more places it finds to save energy.</p>
+			<div class="col-lg-offset-2 col-md-offset-2 col-lg-3 col-md-3 col-sm-6 text-center">
+				<img src="<?php the_field('section_2:_subsection_image_3'); ?>" />
+				<h4><?php the_field('section_2:_subsection_title_3'); ?></h4>
+				<p><?php the_field('section_2:_subsection_text_area_3'); ?></p>
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<img src="#" />
-				<h5>Schneider Electric’s Weather Service</h5>
-				<p>Accurate forecasting means more precise temperature adjustments in your home.</p>
+			<div class="col-lg-offset-2 col-md-offset-2 col-lg-3 col-md-3 col-sm-6 text-center">
+				<img src="<?php the_field('section_2:_subsection_image_4'); ?>" />
+				<h4><?php the_field('section_2:_subsection_title_4'); ?></h4>
+				<p><?php the_field('section_2:_subsection_text_area_4'); ?></p>
 			</div>
 	</div>
 </section>
 
-<section class="text-center" id="clear-information">
+<section class="text-center blue" id="how-to-enable-eco-iq">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2>How do I enable EcoIQ?</h2>
-				<p>After syncing your devices, you will be guided through a process to enable Eco IQ. When you reach the Eco IQ screen, press the blue “Enable Eco IQ button.” To enable Eco IQ™ at a later time, follow the steps below:</p>
+				<a name="how-to-enable-eco-iq"></a>
+				<h2><?php the_field('section_3:_title'); ?></h2>
+				<p class="subtitle"><?php the_field('section_3:_text_area'); ?></p>
 			</div>
 			<div class="col-lg-12 text-center">
-				<?php echo do_shortcode('[wonderplugin_tabs id="3"]'); ?>
+				<?php echo do_shortcode('[wonderplugin_tabs id="7"]'); ?>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="grey text-center">
+<section class="dark-grey text-center" id="how-do-i-set-preferences">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2>How do I set my preferences?</h2>
-				<p>Eco IQ™ sets its priorities to fit your lifestyle. To set your preferences, follow the steps below:</p>
+				<a name="how-do-i-set-preferences"></a>
+				<h2><?php the_field('section_4:_title'); ?></h2>
+				<p class="subtitle"><?php the_field('section_4:_text_area'); ?></p>
 			</div>
 			<div class="col-lg-12 text-center">
-				<?php echo do_shortcode('[wonderplugin_tabs id="4"]'); ?>
+				<?php echo do_shortcode('[wonderplugin_tabs id="8"]'); ?>
 			</div>
 		</div>
 	</div>
@@ -113,50 +115,49 @@ get_header(); ?>
 <section class="text-center" id="eco-iq-working">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<h2>How do I know Eco IQ™ is working?</h2>
-				<p>Let Eco IQ™ know if you are too warm or cold by pressing the up and down arrows on your thermostat or mobile device. As you provide feedback on your comfort level, the status bar changes color (blue for cooler, yellow for warmer) and a message indicates that Eco IQ is learning from your behavior.</p>
-			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<img src="#" />
+			<div class="col-lg-5 col-md-5 col-sm-5 text-center">
+				<a name="eco-iq-working"></a>
+				<h2><?php the_field('section_5:_title'); ?></h2>
+				<p class="subtitle"><?php the_field('section_5:_text_area'); ?></p>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="text-center" id="eco-iq-working">
+<section class="text-center blue" id="eco-iq-preferences">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<h2>How long does it take for Eco IQ™ to learn my preferences?</h2>
-				<p>On average, it takes about a week for Eco IQ™ to learn your preferences, depending on the number of times you provide input. The more feedback you provide, the quicker EcoIQ learns. Factors that determine your comfort schedule include:</p>
+			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+				<a name="eco-iq-preferences"></a>
+				<h2><?php the_field('section_6:_title'); ?></h2>
+				<p class="subtitle"><?php the_field('section_6:_text_area'); ?></p>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-3 col-md-3 col-sm-3 text-center">
-				<img src="#" />
-				<h5>Balance and comfort sliders</h5>
+			<div class="col-lg-3 col-md-3 col-sm-3 text-center first">
+				<img src="<?php the_field('section_6:_subsection_image_1'); ?>" />
+				<h4><?php the_field('section_6:_subsection_title_1'); ?></h4>
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-3 text-center">
-				<img src="#" />
-				<h5>Time and day of feedback </h5>
+				<img src="<?php the_field('section_6:_subsection_image_2'); ?>" />
+				<h4><?php the_field('section_6:_subsection_title_2'); ?></h4>
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-3 text-center">
-				<img src="#" />
-				<h5>Outside temperature</h5>
+				<img src="<?php the_field('section_6:_subsection_image_3'); ?>" />
+				<h4><?php the_field('section_6:_subsection_title_3'); ?></h4>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="text-center" id="eco-iq-working">
+<section class="text-center">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
 				<h2>Get in touch</h2>
-				<p>Whether you are home or away, Wiser Air works to save you energy. Let us know how Wiser Air is helping you manage your comfort @ wisermarketing@schneider-electric.com. We look forward to hearing for you.</p>
-				<img src="#" />
-				<p>Stay up to date on new features and releases by subscribing to our mailing list below.</p>
+				<p class="subtitle">Whether you are home or away, Wiser Air works to save you energy. Let us know how Wiser Air is helping you manage your comfort at <a href="mailto:wisermarketing@schneider-electric.com"/>wisermarketing@schneider-electric.com</a>. We look forward to hearing for you.</p>
+				<img src="/images/get-in-touch-thermo.png" />
+				<p class="subtitle">Stay up to date on new features and releases by subscribing to our mailing list below.</p>
 				<div id="eco-iq-form"><?php echo do_shortcode('[sg-subscription-form]'); ?></div>
 			</div>
 		</div>
