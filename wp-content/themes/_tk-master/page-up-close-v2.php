@@ -88,7 +88,7 @@ get_header(); ?>
 				<p><?php the_field('section_3:_text_area'); ?></p>
 			</div>
 			<div class="col-lg-12 text-center">
-				
+				<?php echo do_shortcode('[wonderplugin_tabs id="7"]'); ?>
 			</div>
 		</div>
 	</div>
@@ -102,7 +102,7 @@ get_header(); ?>
 				<p><?php the_field('section_4:_text_area'); ?></p>
 			</div>
 			<div class="col-lg-12 text-center">
-				
+				<?php echo do_shortcode('[wonderplugin_tabs id="8"]'); ?>
 			</div>
 		</div>
 	</div>
