@@ -42,7 +42,7 @@ get_header(); ?>
 			<div class="col-lg-12 text-center">
 				<a name="what-is-eco-iq"></a>
 				<h2><?php the_field('section_1:_title'); ?></h2>
-				<p><?php the_field('section_1:_text_area'); ?></p>
+				<p class="subtitle"><?php the_field('section_1:_text_area'); ?></p>
 				<img src="/images/thermo-black.png" />
 			</div>
 		</div>
@@ -55,7 +55,7 @@ get_header(); ?>
 			<div class="col-lg-12 text-center">
 				<a name="how-does-eco-iq-work"></a>
 				<h2><?php the_field('section_2:_title'); ?></h2>
-				<p><?php the_field('section_2:_text_area'); ?></p>
+				<p class="subtitle"><?php the_field('section_2:_text_area'); ?></p>
 			</div>
 		</div>
 		<div class="row">
@@ -88,7 +88,7 @@ get_header(); ?>
 			<div class="col-lg-12 text-center">
 				<a name="how-to-enable-eco-iq"></a>
 				<h2><?php the_field('section_3:_title'); ?></h2>
-				<p><?php the_field('section_3:_text_area'); ?></p>
+				<p class="subtitle"><?php the_field('section_3:_text_area'); ?></p>
 			</div>
 			<div class="col-lg-12 text-center">
 				<?php echo do_shortcode('[wonderplugin_tabs id="7"]'); ?>
@@ -103,7 +103,7 @@ get_header(); ?>
 			<div class="col-lg-12 text-center">
 				<a name="how-do-i-set-preferences"></a>
 				<h2><?php the_field('section_4:_title'); ?></h2>
-				<p><?php the_field('section_4:_text_area'); ?></p>
+				<p class="subtitle"><?php the_field('section_4:_text_area'); ?></p>
 			</div>
 			<div class="col-lg-12 text-center">
 				<?php echo do_shortcode('[wonderplugin_tabs id="8"]'); ?>
@@ -118,7 +118,7 @@ get_header(); ?>
 			<div class="col-lg-5 col-md-5 col-sm-5 text-center">
 				<a name="eco-iq-working"></a>
 				<h2><?php the_field('section_5:_title'); ?></h2>
-				<p><?php the_field('section_5:_text_area'); ?></p>
+				<p class="subtitle"><?php the_field('section_5:_text_area'); ?></p>
 			</div>
 		</div>
 	</div>
@@ -130,7 +130,7 @@ get_header(); ?>
 			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
 				<a name="eco-iq-preferences"></a>
 				<h2><?php the_field('section_6:_title'); ?></h2>
-				<p><?php the_field('section_6:_text_area'); ?></p>
+				<p class="subtitle"><?php the_field('section_6:_text_area'); ?></p>
 			</div>
 		</div>
 		<div class="row">
@@ -155,9 +155,9 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
 				<h2>Get in touch</h2>
-				<p>Whether you are home or away, Wiser Air works to save you energy. Let us know how Wiser Air is helping you manage your comfort at <a href="mailto:wisermarketing@schneider-electric.com"/>wisermarketing@schneider-electric.com</a>. We look forward to hearing for you.</p>
+				<p class="subtitle">Whether you are home or away, Wiser Air works to save you energy. Let us know how Wiser Air is helping you manage your comfort at <a href="mailto:wisermarketing@schneider-electric.com"/>wisermarketing@schneider-electric.com</a>. We look forward to hearing for you.</p>
 				<img src="/images/get-in-touch-thermo.png" />
-				<p>Stay up to date on new features and releases by subscribing to our mailing list below.</p>
+				<p class="subtitle">Stay up to date on new features and releases by subscribing to our mailing list below.</p>
 				<div id="eco-iq-form"><?php echo do_shortcode('[sg-subscription-form]'); ?></div>
 			</div>
 		</div>
