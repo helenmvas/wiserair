@@ -79,7 +79,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="text-center" id="clear-information">
+<section class="text-center blue" id="clear-information">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
@@ -93,7 +93,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="grey text-center">
+<section class="dark-grey text-center">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
@@ -121,7 +121,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="text-center" id="eco-iq-working">
+<section class="text-center blue" id="eco-iq-preferences">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
@@ -146,7 +146,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="text-center" id="eco-iq-working">
+<section class="text-center">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 text-center">

@@ -93,8 +93,16 @@ h2 {
     background-color: #f9f9f9;
 }
 
+.dark-grey {
+    background-color: #404040;
+}
+
 .grey, .gray {
     background-color: #ECECEC;
+}
+
+.blue {
+    background-color: #62baea;
 }
 
 .subtitle {
@@ -1358,6 +1366,19 @@ section {
 
 div#highcharts-0 {
     text-align: center !important;
+}
+
+/* New Up Close */
+.page-id-3542 .col-lg-12 {
+    padding: 0px 172px;
+}
+
+#how-does-eco-iq-work {
+    background-color: #f2f2f2;
+}
+
+#eco-iq-working {
+    background: url(/images/Eco_IQ_lifestyle.png) center/cover no-repeat;;
 }
 
 /* Getting Started */
