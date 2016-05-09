@@ -39,8 +39,8 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2>What is EcoIQ</h2>
-				<p>Eco IQ™ is Wiser Air’s learning algorithm. It learns your heating and cooling preferences over time through direct feedback. Eco IQ™ challenges your perception of what an ideal temperature is by allowing you to define your comfort level by how warm or cold you are, rather than through a predetermined set point.</p>
+				<h2><?php the_field('section_1:_title'); ?></h2>
+				<p><?php the_field('section_1:_text_area'); ?></p>
 				<img src="#" />
 			</div>
 			<div class="col-lg-12 text-center">
@@ -54,30 +54,30 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2>How does it work?</h2>
-				<p>Eco IQ™ simplifies the way you interact with Wiser Air, by replacing set schedules with automatic temperature adjustments that save you energy, while keeping you comfortable throughout the day. Eco IQ™ works efficiently and intelligently, taking the following factors into account:</p>
+				<h2><?php the_field('section_2:_title'); ?></h2>
+				<p><?php the_field('section_2:_text_area'); ?></p>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<img src="#" />
-				<h5>Your Lifestyle Patterns</h5>
-				<p>From initial inputs to subsequent adjustments, Eco IQ™ never stops learning.</p>
+				<img src="#" />section_2:_subsection_text_area_3
+				<h5><?php the_field('section_2:_subsection_title_1'); ?></h5>
+				<p><?php the_field('section_2:_subsection_text_area_1'); ?></p>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<img src="#" />
-				<h5>Your Thermal Profile</h5>
-				<p>Eco IQ™ learns how long it takes to heat your home and where you are losing heat.</p>
+				<h5><?php the_field('section_2:_subsection_title_2'); ?></h5>
+				<p><?php the_field('section_2:_subsection_text_area_2'); ?></p>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<img src="#" />
-				<h5>Your Energy Usage</h5>
-				<p>The more Eco IQ™ monitors your usage, the more places it finds to save energy.</p>
+				<h5><?php the_field('section_2:_subsection_title_3'); ?></h5>
+				<p><?php the_field('section_2:_subsection_text_area_3'); ?></p>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<img src="#" />
-				<h5>Schneider Electric’s Weather Service</h5>
-				<p>Accurate forecasting means more precise temperature adjustments in your home.</p>
+				<h5><?php the_field('section_2:_subsection_title_4'); ?></h5>
+				<p><?php the_field('section_2:_subsection_text_area_4'); ?></p>
 			</div>
 	</div>
 </section>
