@@ -103,6 +103,7 @@ h2 {
 
 .blue {
     background-color: #62baea;
+    color: #fff;
 }
 
 .subtitle {
@@ -1371,6 +1372,21 @@ div#highcharts-0 {
 /* New Up Close */
 .page-id-3542 .col-lg-12 {
     padding: 0px 172px;
+}
+
+#eco-iq {
+        background: #fff;
+    margin-top: 278px;
+    padding: 80px 0px;
+    border-radius: 30px;
+}
+
+#ecoiq h5 {
+    font-family: Lato-Regular;
+    font-size: 16px;
+    color: #3F97C5;
+    letter-spacing: -0.06px;
+    line-height: 36px;
 }
 
 #how-does-eco-iq-work {

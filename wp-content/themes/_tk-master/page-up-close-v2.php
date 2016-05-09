@@ -21,8 +21,9 @@ get_header(); ?>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 text-center" id="ecoiq">
-					<img src="#" />
+					<img src="/images/boxes.jpg" />
 					<h1>EcoIQ</h1>
+					<hr />
 					<h5>What is EcoIQ ™?</h5>
 					<h5>How does it work?</h5>
 					<h5>How do I enable Eco IQ ™?</h5>
@@ -41,7 +42,7 @@ get_header(); ?>
 			<div class="col-lg-12 text-center">
 				<h2><?php the_field('section_1:_title'); ?></h2>
 				<p><?php the_field('section_1:_text_area'); ?></p>
-				<img src="#" />
+				<img src="/images/thermo-black.png" />
 			</div>
 		</div>
 	</div>
@@ -57,22 +58,22 @@ get_header(); ?>
 		</div>
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<img src="#" />
+				<img src="<?php the_field('section_2:_subsection_image_1'); ?>" />
 				<h5><?php the_field('section_2:_subsection_title_1'); ?></h5>
 				<p><?php the_field('section_2:_subsection_text_area_1'); ?></p>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<img src="#" />
+				<img src="<?php the_field('section_2:_subsection_image_2'); ?>" />
 				<h5><?php the_field('section_2:_subsection_title_2'); ?></h5>
 				<p><?php the_field('section_2:_subsection_text_area_2'); ?></p>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<img src="#" />
+				<img src="<?php the_field('section_2:_subsection_image_3'); ?>" />
 				<h5><?php the_field('section_2:_subsection_title_3'); ?></h5>
 				<p><?php the_field('section_2:_subsection_text_area_3'); ?></p>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<img src="#" />
+				<img src="<?php the_field('section_2:_subsection_image_4'); ?>" />
 				<h5><?php the_field('section_2:_subsection_title_4'); ?></h5>
 				<p><?php the_field('section_2:_subsection_text_area_4'); ?></p>
 			</div>
@@ -131,15 +132,15 @@ get_header(); ?>
 		</div>
 		<div class="row">
 			<div class="col-lg-offset-3 col-md-offset-3 col-lg-3 col-md-3 col-sm-3 text-center">
-				<img src="#" />
+				<img src="section_6:_subsection_image_1" />
 				<h5><?php the_field('section_6:_subsection_title_1'); ?></h5>
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-3 text-center">
-				<img src="#" />
+				<img src="section_6:_subsection_image_2" />
 				<h5><?php the_field('section_6:_subsection_title_2'); ?></h5>
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-3 text-center">
-				<img src="#" />
+				<img src="section_6:_subsection_image_3" />
 				<h5><?php the_field('section_6:_subsection_title_3'); ?></h5>
 			</div>
 		</div>
