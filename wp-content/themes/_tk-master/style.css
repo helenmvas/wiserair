@@ -1384,6 +1384,10 @@ div#highcharts-0 {
     border-radius: 30px;
 }
 
+#ecoiq hr {
+    width: 50%;
+}
+
 #ecoiq h4 {
     font-family: Lato-Regular;
     font-size: 16px;

@@ -20,22 +20,22 @@ get_header(); ?>
 	<div class="homepage-featured-image" style="background-image: url(<?php echo $src[0]; ?> )">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 text-center" id="ecoiq">
+				<div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-lg-9 col-md-9 col-sm-9 text-center" id="ecoiq">
 					<img src="/images/boxes.jpg" />
 					<h1>EcoIQ</h1>
 					<hr />
-					<h4>What is EcoIQ ™?</h4>
-					<h4>How does it work?</h4>
-					<h4>How do I enable Eco IQ ™?</h4>
-					<h4>How do I set my limits?</h4>
-					<h4>How do I know Eco IQ ™ is working?</h4>
-					<h4>How long does it take for Eco IQ ™ to learn my preferences?</h4>
+					<h4><a name="what-is-eco-iq">What is EcoIQ ™?</a></h4>
+					<h4><a name="how-does-eco-iq-work">How does it work?</a></h4>
+					<h4><a name="#">How do I enable Eco IQ ™?</a></h4>
+					<h4><a name="#">How do I set my limits?</a></h4>
+					<h4><a name="#">How do I know Eco IQ ™ is working?</a></h4>
+					<h4><a name="#">How long does it take for Eco IQ ™ to learn my preferences?</a></h4>
 				</div>
 			</div>
 		</div>
 	</div>
 <!-- </div> -->
-
+<a href="#what-is-eco-iq"></a>
 <section class="dark-grey text-center" id="what-is-eco-iq">
 	<div class="container">
 		<div class="row">
@@ -48,6 +48,7 @@ get_header(); ?>
 	</div>
 </section>
 
+<a href="#how-does-eco-iq-work"></a>
 <section class="text-center" id="how-does-eco-iq-work">
 	<div class="container">
 		<div class="row">
@@ -57,22 +58,22 @@ get_header(); ?>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
+			<div class="col-lg-offset-2 col-md-offset-2 col-lg-3 col-md-3 col-sm-6 text-center">
 				<img src="<?php the_field('section_2:_subsection_image_1'); ?>" />
 				<h4><?php the_field('section_2:_subsection_title_1'); ?></h4>
 				<p><?php the_field('section_2:_subsection_text_area_1'); ?></p>
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
+			<div class="col-lg-offset-2 col-md-offset-2 col-lg-3 col-md-3 col-sm-6 text-center">
 				<img src="<?php the_field('section_2:_subsection_image_2'); ?>" />
 				<h4><?php the_field('section_2:_subsection_title_2'); ?></h4>
 				<p><?php the_field('section_2:_subsection_text_area_2'); ?></p>
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
+			<div class="col-lg-offset-2 col-md-offset-2 col-lg-3 col-md-3 col-sm-6 text-center">
 				<img src="<?php the_field('section_2:_subsection_image_3'); ?>" />
 				<h4><?php the_field('section_2:_subsection_title_3'); ?></h4>
 				<p><?php the_field('section_2:_subsection_text_area_3'); ?></p>
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
+			<div class="col-lg-offset-2 col-md-offset-2 col-lg-3 col-md-3 col-sm-6 text-center">
 				<img src="<?php the_field('section_2:_subsection_image_4'); ?>" />
 				<h4><?php the_field('section_2:_subsection_title_4'); ?></h4>
 				<p><?php the_field('section_2:_subsection_text_area_4'); ?></p>
