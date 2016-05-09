@@ -562,6 +562,7 @@ footer .social {
     margin-left: 0px;
     padding-left: 0;
     margin-top: 40px;
+    height: 30px;
 }
 
 footer .social li {
@@ -628,6 +629,7 @@ footer .SGML_form_container .SGML_form button {
 
 footer #polylang-3 ul li {
     list-style: none;
+    float: left;
 }
 
 footer #polylang-3 img {
