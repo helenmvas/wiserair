@@ -626,6 +626,14 @@ footer .SGML_form_container .SGML_form button {
     line-height: 11px;
 }
 
+footer #polylang-3 ul li {
+    list-style: none;
+}
+
+footer #polylang-3 img {
+    height: 16px;
+}
+
 .SGML_form_container .SGML_response-success {
     background: transparent;
     color: #fff;
