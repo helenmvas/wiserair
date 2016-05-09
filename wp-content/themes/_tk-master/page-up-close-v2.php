@@ -25,11 +25,11 @@ get_header(); ?>
 					<h1>EcoIQ</h1>
 					<hr />
 					<h4><a href="#what-is-eco-iq">What is EcoIQ ™?</a></h4>
-					<h4>How does it work?</h4>
-					<h4>How do I enable Eco IQ ™?</h4>
-					<h4>How do I set my limits?</h4>
-					<h4>How do I know Eco IQ ™ is working?</h4>
-					<h4>How long does it take for Eco IQ ™ to learn my preferences?</h4>
+					<h4><a href="#how-does-eco-iq-work">How does it work?</a></h4>
+					<h4><a href="#how-to-enable-eco-iq">How do I enable Eco IQ ™?</a></h4>
+					<h4><a href="#how-do-i-set-preferences">How do I set my preferences?</a></h4>
+					<h4><a href="#eco-iq-working">How do I know Eco IQ ™ is working?</a></h4>
+					<h4><a href="#eco-iq-preferences">How long does it take for Eco IQ ™ to learn my preferences?</a></h4>
 				</div>
 			</div>
 		</div>
@@ -53,6 +53,7 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
+				<a name="how-does-eco-iq-work"></a>
 				<h2><?php the_field('section_2:_title'); ?></h2>
 				<p><?php the_field('section_2:_text_area'); ?></p>
 			</div>
@@ -81,10 +82,11 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="text-center blue" id="clear-information">
+<section class="text-center blue" id="how-to-enable-eco-iq">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
+				<a name="how-to-enable-eco-iq"></a>
 				<h2><?php the_field('section_3:_title'); ?></h2>
 				<p><?php the_field('section_3:_text_area'); ?></p>
 			</div>
@@ -95,10 +97,11 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="dark-grey text-center">
+<section class="dark-grey text-center" id="how-do-i-set-preferences">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
+				<a name="how-do-i-set-preferences"></a>
 				<h2><?php the_field('section_4:_title'); ?></h2>
 				<p><?php the_field('section_4:_text_area'); ?></p>
 			</div>
@@ -113,6 +116,7 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-5 col-md-5 col-sm-5 text-center">
+				<a name="eco-iq-working"></a>
 				<h2><?php the_field('section_5:_title'); ?></h2>
 				<p><?php the_field('section_5:_text_area'); ?></p>
 			</div>
@@ -124,6 +128,7 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+				<a name="eco-iq-preferences"></a>
 				<h2><?php the_field('section_6:_title'); ?></h2>
 				<p><?php the_field('section_6:_text_area'); ?></p>
 			</div>
