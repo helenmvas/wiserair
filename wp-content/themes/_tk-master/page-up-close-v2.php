@@ -24,22 +24,23 @@ get_header(); ?>
 					<img src="/images/boxes.jpg" />
 					<h1>EcoIQ</h1>
 					<hr />
-					<h4><a name="what-is-eco-iq">What is EcoIQ ™?</a></h4>
-					<h4><a name="#">How does it work?</a></h4>
-					<h4><a name="#">How do I enable Eco IQ ™?</a></h4>
-					<h4><a name="#">How do I set my limits?</a></h4>
-					<h4><a name="#">How do I know Eco IQ ™ is working?</a></h4>
-					<h4><a name="#">How long does it take for Eco IQ ™ to learn my preferences?</a></h4>
+					<h4><a href="#what-is-eco-iq">What is EcoIQ ™?</a></h4>
+					<h4>How does it work?</h4>
+					<h4>How do I enable Eco IQ ™?</h4>
+					<h4>How do I set my limits?</h4>
+					<h4>How do I know Eco IQ ™ is working?</h4>
+					<h4>How long does it take for Eco IQ ™ to learn my preferences?</h4>
 				</div>
 			</div>
 		</div>
 	</div>
 <!-- </div> -->
-<a href="#what-is-eco-iq">x</a>
+
 <section class="dark-grey text-center" id="what-is-eco-iq">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
+				<a name="what-is-eco-iq"></a>
 				<h2><?php the_field('section_1:_title'); ?></h2>
 				<p><?php the_field('section_1:_text_area'); ?></p>
 				<img src="/images/thermo-black.png" />
