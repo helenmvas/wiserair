@@ -59,6 +59,13 @@
 					<li><a href="https://instagram.com/wiserair" target="_blank"><img src="/images/instagram.png" width="32" height="32"/></a></li>
 					<li><a href="https://www.youtube.com/c/wiserair" target="_blank"><img src="/images/youtube-2.png" width="32" height="32"/></a></li>
 				</ul>
+
+				<?php
+				if(is_active_sidebar('footer-sidebar-3')){
+					dynamic_sidebar('footer-sidebar-3');
+				}
+				?>
+
 			</div>
 		</div>
 		<div class="row" id="copyright">
