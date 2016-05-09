@@ -1434,7 +1434,7 @@ div#highcharts-0 {
     margin-top: 50px;
 }
 
-.metaslider_3583 .slides img {
+.page-id-354 .slides img {
     display: block;
     height: 469px;
     width: 265px;
@@ -1450,7 +1450,7 @@ div#highcharts-0 {
     position: absolute;
     top: 0 !important;
     margin-bottom: 20px;
-    background: transparent;
+    background: transparent !important;
     color: white;
     opacity: 0.7;
     margin: 0;
