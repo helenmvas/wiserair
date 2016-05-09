@@ -25,7 +25,7 @@ get_header(); ?>
 					<h1>EcoIQ</h1>
 					<hr />
 					<h4><a name="what-is-eco-iq">What is EcoIQ ™?</a></h4>
-					<h4><a name="how-does-eco-iq-work">How does it work?</a></h4>
+					<h4><a name="#">How does it work?</a></h4>
 					<h4><a name="#">How do I enable Eco IQ ™?</a></h4>
 					<h4><a name="#">How do I set my limits?</a></h4>
 					<h4><a name="#">How do I know Eco IQ ™ is working?</a></h4>
@@ -35,7 +35,7 @@ get_header(); ?>
 		</div>
 	</div>
 <!-- </div> -->
-<a href="#what-is-eco-iq"></a>
+<a href="#what-is-eco-iq">x</a>
 <section class="dark-grey text-center" id="what-is-eco-iq">
 	<div class="container">
 		<div class="row">
@@ -48,7 +48,6 @@ get_header(); ?>
 	</div>
 </section>
 
-<a href="#how-does-eco-iq-work"></a>
 <section class="text-center" id="how-does-eco-iq-work">
 	<div class="container">
 		<div class="row">
