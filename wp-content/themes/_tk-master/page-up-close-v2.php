@@ -132,15 +132,15 @@ get_header(); ?>
 		</div>
 		<div class="row">
 			<div class="col-lg-offset-3 col-md-offset-3 col-lg-3 col-md-3 col-sm-3 text-center">
-				<img src="section_6:_subsection_image_1" />
+				<img src="<?php the_field('section_6:_subsection_image_1'); ?>" />
 				<h5><?php the_field('section_6:_subsection_title_1'); ?></h5>
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-3 text-center">
-				<img src="section_6:_subsection_image_2" />
+				<img src="<?php the_field('section_6:_subsection_image_2'); ?>" />
 				<h5><?php the_field('section_6:_subsection_title_2'); ?></h5>
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-3 text-center">
-				<img src="section_6:_subsection_image_3" />
+				<img src="<?php the_field('section_6:_subsection_image_3'); ?>" />
 				<h5><?php the_field('section_6:_subsection_title_3'); ?></h5>
 			</div>
 		</div>
