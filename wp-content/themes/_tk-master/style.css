@@ -1481,19 +1481,19 @@ div#highcharts-0 {
 }
 
 .flex-control-paging li a {
-    width: 15px;
-    height: 15px;
-    display: block;
-    background: #666;
-    background: rgba(0,0,0,0.5);
-    cursor: pointer;
-    text-indent: -9999px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -o-border-radius: 20px;
-    border-radius: 20px;
-    box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
-    border: 2px solid #fff;
+    width: 30px !important;
+    height: 30px !important;
+    display: block !important;
+    background: #666 !important;
+    background: #000 !important;
+    cursor: pointer !important;
+    text-indent: -9999px !important;
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    -o-border-radius: 20px !important;
+    border-radius: 20px !important;
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.3)!important;
+    border: 2px solid #fff !important;
 }
 
 .flex-control-paging li a.flex-active {
