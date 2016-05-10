@@ -1421,6 +1421,10 @@ div#highcharts-0 {
     margin-top: -210px;
 }
 
+#what-is-eco-iq img {
+    width: 350px;
+}
+
 #how-does-eco-iq-work {
     background-color: #f2f2f2;
 }
@@ -1429,9 +1433,17 @@ div#highcharts-0 {
     margin-top: 60px;
 }
 
+#how-does-eco-iq-work h4 {
+    padding-top: 10px ;
+}
+
 #eco-iq-working {
     background: url(/images/Eco_IQ_lifestyle.png) center/cover no-repeat;
     padding: 300px 50px 300px 0px;
+}
+
+#eco-iq-working p.subtitle {
+    padding: 0px;
 }
 
 #eco-iq-preferences .first {
@@ -1451,12 +1463,20 @@ div#highcharts-0 {
 .page-id-3542 .metaslider .slides img {
     width: 100%;
     display: block;
-    margin: 60px auto;
+    margin: 80px auto 20px auto;
     padding: 0;
 }
 
 .flex-direction-nav {
     display: none;
+}
+
+.flex-control-nav li {
+    margin: 0px 22px;
+    width: 32px !important;
+    height: 32px !important;
+    border: 1px solid #eee;
+    border-radius: 50%;
 }
 
 .flex-control-paging li a {
@@ -1476,11 +1496,21 @@ div#highcharts-0 {
 }
 
 .flex-control-paging li a.flex-active {
-    background: #00A54F;
+    background: #00A54B;
     cursor: default;
-    height: 15px;
-    width: 15px;
-    border: 2px solid #fff;
+    height: 30px !important;
+    width: 30px !important;
+    border: 9px solid #fff !important;
+    top: 0;
+    left: 0;
+    outline: none;
+    border-radius: 50%;
+    text-indent: -999em;
+    overflow: hidden;
+}
+
+.flex-control-nav li a {
+    border: 13px solid #fff !important;
 }
 
 .metaslider .caption-wrap {
@@ -1493,15 +1523,27 @@ div#highcharts-0 {
     font-weight: 500;
     margin: 0;
     display: block;
-    line-height: 1.4em;
-    width: 500px !important;
-    left: -112px !important;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 400 !important;
+    line-height: 25px !important;
+}
+
+.caption-wrap span {
+    display: block;
+    font-weight: 300;
+    margin-top: 12px;
 }
 
 .page-id-3542 .wonderplugintabs-header-ul {
     margin-top: 20px !important;
+}
+
+.page-id-3542 .wonderplugintabs-header-li {
+    border-right: 1px solid #fff !important;
+}
+
+.wonderplugintabs-header-wrap .wonderplugintabs-header-li-active-last {
+    border-right: 0px !important;
 }
 
 .page-id-3542 .wonderplugintabs-header-li-active .wonderplugintabs-header-title {
@@ -1523,6 +1565,7 @@ div#highcharts-0 {
 
 #get-in-touch img {
     margin: 40px 0px;
+    width: 350px;
 }
 
 #get-in-touch input[type="email"] {

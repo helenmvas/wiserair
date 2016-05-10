@@ -134,15 +134,15 @@ get_header(); ?>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-3 col-md-3 col-sm-3 text-center first">
+			<div class="col-lg-offset-2 col-md-offset-2 col-lg-2 col-md-2 col-sm-2 text-center">
 				<img src="<?php the_field('section_6:_subsection_image_1'); ?>" />
 				<h4><?php the_field('section_6:_subsection_title_1'); ?></h4>
 			</div>
-			<div class="col-lg-3 col-md-3 col-sm-3 text-center">
+			<div class="col-lg-2 col-md-2 col-sm-2 text-center">
 				<img src="<?php the_field('section_6:_subsection_image_2'); ?>" />
 				<h4><?php the_field('section_6:_subsection_title_2'); ?></h4>
 			</div>
-			<div class="col-lg-3 col-md-3 col-sm-3 text-center">
+			<div class="col-lg-2 col-md-2 col-sm-2 text-center">
 				<img src="<?php the_field('section_6:_subsection_image_3'); ?>" />
 				<h4><?php the_field('section_6:_subsection_title_3'); ?></h4>
 			</div>
