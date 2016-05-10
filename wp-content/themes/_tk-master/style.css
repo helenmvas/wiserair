@@ -1388,6 +1388,14 @@ div#highcharts-0 {
 }
 
 /* New Up Close */
+.page-id-3542 .homepage-featured-image {
+    min-height: 600px;
+    background-size: 100%;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-color: #404040;
+}
+
 .page-id-3542 .col-lg-12 {
     padding: 0px 172px;
 }
