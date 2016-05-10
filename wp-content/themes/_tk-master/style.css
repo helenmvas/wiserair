@@ -1975,6 +1975,14 @@ article .entry-meta {
             width: 42%;
             left: 15%;
         }
+
+        .page-id-3542 .col-lg-12 {
+            padding: 0px 75px;
+        }
+
+        .page-id-3542 p.subtitle {
+            padding: 0px 20px;
+        }
     }
 
     /* Medium Devices, Desktops */
@@ -1991,6 +1999,10 @@ article .entry-meta {
             text-align: left;
             width: 42%;
             left: 15%;
+        }
+
+        .page-id-3542 .col-lg-12 {
+            padding: 0px;
         }
 
     }
@@ -2648,6 +2660,10 @@ article .entry-meta {
         .page-template-page-up-close video {
             height: 500px;
         }
+
+        .page-id-3542 .col-lg-12 {
+            padding: 0px 20px;
+        }
     }
 
     /* Custom, iPhone Retina */ 
@@ -2698,6 +2714,37 @@ article .entry-meta {
         .navbar li {
             padding: 10px 0px;
             border-top: 1px solid #ddd;
+        }
+
+        #get-in-touch button.SGML_submit_button {
+            background-color: #2a9430 !important;
+            width: 300px !important;
+            border-radius: 7px !important;
+            margin-left: 0px;
+            padding: 9px 0px!important;
+        }
+
+        .page-id-3542 .homepage-featured-image {
+            background-size: 146%;
+            background-position: 90% 0%;
+            background-repeat: no-repeat;
+        }
+
+        #ecoiq {
+            margin-top: 248px;
+            padding: 80px 20px;
+        }
+
+        #eco-iq-working {
+            background: url(/images/Eco_IQ_lifestyle.png)no-repeat;
+            padding: 10px 10px 80px 10px;
+            background-position: 64% 99%;
+            background-size: 450%;
+            height: 775px;
+        }
+
+        #eco-iq-working  {
+            margin-top: 500px;
         }
 
         /* Start Testing */
