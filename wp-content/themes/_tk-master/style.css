@@ -627,9 +627,14 @@ footer .SGML_form_container .SGML_form button {
     line-height: 11px;
 }
 
+footer #polylang-3 ul {
+    padding: 0;
+}
+
 footer #polylang-3 ul li {
     list-style: none;
     float: left;
+    padding-right: 18px;
 }
 
 footer #polylang-3 img {
