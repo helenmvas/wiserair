@@ -800,7 +800,7 @@ article .page-title:first-child {
     float: left;
     border-right: 1px solid #000 !important;
     border-radius: 0px !important;
-    line-height: 14px !important;
+    line-height: 5px !important;
 }
 
 .wonderplugintabs-header-li-active .wonderplugintabs-header-title {
@@ -1392,6 +1392,10 @@ div#highcharts-0 {
     padding: 0px 172px;
 }
 
+.page-id-3542 p.subtitle {
+    padding: 0px 80px;
+}
+
 #ecoiq {
     background: #fff;
     margin-top: 275px;
@@ -1413,12 +1417,16 @@ div#highcharts-0 {
 }
 
 #what-is-eco-iq {
-    padding: 150px 0px 80px;
-    margin-top: -100px;
+    padding: 240px 0px 80px;
+    margin-top: -210px;
 }
 
 #how-does-eco-iq-work {
     background-color: #f2f2f2;
+}
+
+#how-does-eco-iq-work img {
+    margin-top: 60px;
 }
 
 #eco-iq-working {
@@ -1434,11 +1442,15 @@ div#highcharts-0 {
     margin-top: 50px;
 }
 
+#eco-iq-preferences img {
+    width: 182px;
+    margin-top: 22px;
+    margin-bottom: 10px;
+}
+
 .page-id-3542 .metaslider .slides img {
     width: 100%;
     display: block;
-    width: 265px;
-    height: 469px;
     margin: 60px auto;
     padding: 0;
 }
@@ -1447,17 +1459,45 @@ div#highcharts-0 {
     display: none;
 }
 
+.flex-control-paging li a {
+    width: 15px;
+    height: 15px;
+    display: block;
+    background: #666;
+    background: rgba(0,0,0,0.5);
+    cursor: pointer;
+    text-indent: -9999px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+    border: 2px solid #fff;
+}
+
+.flex-control-paging li a.flex-active {
+    background: #00A54F;
+    cursor: default;
+    height: 15px;
+    width: 15px;
+    border: 2px solid #fff;
+}
+
 .metaslider .caption-wrap {
     position: absolute;
     top: 0 !important;
     margin-bottom: 20px;
     background: transparent !important;
     color: white;
-    opacity: 0.7;
+    opacity: 1 !important;
+    font-weight: 500;
     margin: 0;
     display: block;
-    width: 100%;
     line-height: 1.4em;
+    width: 500px !important;
+    left: -112px !important;
+    font-size: 14px;
+    font-weight: 400 !important;
 }
 
 .page-id-3542 .wonderplugintabs-header-ul {
@@ -1473,6 +1513,51 @@ div#highcharts-0 {
     border-right: 1px solid #fff !important;
 }
 
+#get-in-touch {
+    padding: 80px 0px 150px 0px;
+}
+
+#get-in-touch a {
+    font-weight: 400;
+}
+
+#get-in-touch img {
+    margin: 40px 0px;
+}
+
+#get-in-touch input[type="email"] {
+    background-color: #4c4c4c !important;
+    border: 0px !important;
+    box-shadow: none !important;
+    border-radius: 7px !important;
+    width: 300px !important;
+}
+
+#get-in-touch button.SGML_submit_button {
+    background-color: #2a9430 !important;
+    width: 140px !important;
+    border-radius: 7px !important;
+    margin-left: 20px;
+    padding: 8px 0px!important;
+}
+
+#get-in-touch button.SGML_submit_button:after {
+    content: "Keep me updated";
+    font-weight: 400;
+}
+
+#get-in-touch button.SGML_submit_button img.emailarrow {
+    display: none;
+}
+
+#get-in-touch .SGML_form_container .SGML_form input[type="email"] {
+    font-weight: 400;
+    padding: 8px 24px!important;
+}
+
+#get-in-touch #eco-iq-form {
+    margin-top: 30px;
+} 
 /* Getting Started */
 
 #sync {

@@ -150,7 +150,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="text-center">
+<section class="text-center" id="get-in-touch">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
