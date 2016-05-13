@@ -1,0 +1,15 @@
+#!/bin/bash
+
+BRANCH = $1
+
+echo "Pulling project nami changes from master branch..."
+
+git pull https://github.com/ProjectNami/projectnami.git master
+
+echo "Adding all files that may have changed"
+
+git add --all
+
+git commit -m"Merging project nami changes"
+
+git push origin $BRANCH
