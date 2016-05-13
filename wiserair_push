@@ -2,6 +2,8 @@
 
 BRANCH = $1
 
+echo $BRANCH
+
 echo "Pulling project nami changes from master branch..."
 
 git pull https://github.com/ProjectNami/projectnami.git master
