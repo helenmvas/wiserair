@@ -22,7 +22,8 @@ get_header(); ?>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-offset-6 col-lg-6 col-md-offset-6 col-md-6 col-sm-offset-6 col-sm-6 text-left">
-					
+					<h2><?php the_field('homepage_section_1_title'); ?></h2>
+					<p class="subtitle"><?php the_field('homepage_section_1_subtitle'); ?></p>
 				</div>
 			</div>
 		</div>
@@ -83,13 +84,6 @@ get_header(); ?>
 
 <section class="homepage-section-1">
 	<div class="container">
-		<div class="row">
-			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
-				<h2><?php the_field('homepage_section_1_title'); ?></h2>
-				<p class="subtitle"><?php the_field('homepage_section_1_subtitle'); ?></p>
-				<!-- <?php include (TEMPLATEPATH . '/searchform.php'); ?> -->
-			</div>
-		</div>
 		<div class="row text-center" id="video">
 			<div class="col-lg-offset-2 col-md-offset-2 col-lg-4 col-md-4 col-sm-6 col-xs-12">
 				<?php the_field('homepage_section_1_video'); ?>

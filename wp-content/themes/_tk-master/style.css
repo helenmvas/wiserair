@@ -563,6 +563,10 @@ footer.site-footer img {
     margin-top: -20px;
 }
 
+footer h5 {
+    font-size: 13px;
+}
+
 footer .social {
     margin-left: 0px;
     padding-left: 0;
