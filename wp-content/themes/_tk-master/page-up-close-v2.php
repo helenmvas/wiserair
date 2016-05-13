@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Up Close v2
+ * Template Name: EcoIQ
  * The template for displaying all pages.
  *
  * This is the template that displays all pages by default.
@@ -21,15 +21,6 @@ get_header(); ?>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-lg-9 col-md-9 col-sm-9 text-center" id="ecoiq">
-					<img src="/images/boxes.jpg" />
-					<h1>EcoIQ</h1>
-					<hr />
-					<h4><a href="#what-is-eco-iq">What is EcoIQ ™?</a></h4>
-					<h4><a href="#how-does-eco-iq-work">How does it work?</a></h4>
-					<h4><a href="#how-to-enable-eco-iq">How do I enable Eco IQ ™?</a></h4>
-					<h4><a href="#how-do-i-set-preferences">How do I set my preferences?</a></h4>
-					<h4><a href="#eco-iq-working">How do I know Eco IQ ™ is working?</a></h4>
-					<h4><a href="#eco-iq-preferences">How long does it take for Eco IQ ™ to learn my preferences?</a></h4>
 				</div>
 			</div>
 		</div>

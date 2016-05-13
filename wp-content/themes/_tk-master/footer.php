@@ -17,7 +17,6 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-3 col-md-3 col-sm-3">
-				<h6>Get Wiser</h6>
 				<?php
 				if(is_active_sidebar('footer-sidebar-1')){
 				dynamic_sidebar('footer-sidebar-1');
