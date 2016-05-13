@@ -29,28 +29,6 @@ get_header(); ?>
 	</div>
 <!-- </div> -->
 
-<section class="homepage-section-1">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
-				<h2><?php the_field('homepage_section_1_title'); ?></h2>
-				<p class="subtitle"><?php the_field('homepage_section_1_subtitle'); ?></p>
-				<!-- <?php include (TEMPLATEPATH . '/searchform.php'); ?> -->
-			</div>
-		</div>
-		<div class="row text-center" id="video">
-			<div class="col-lg-offset-2 col-md-offset-2 col-lg-4 col-md-4 col-sm-6 col-xs-12">
-				<?php the_field('homepage_section_1_video'); ?>
-				<h6 class="text-center"><?php the_field('homepage_section_1_video_title'); ?></h6>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-				<?php the_field('homepage_section_1_video2'); ?>
-				<h6 class="text-center"><?php the_field('homepage_section_1_video_2_title'); ?></h6>
-			</div>
-		</div>
-	</div>
-</section>
-
 <section class="homepage-section-2" id="in-control">
 	<div class="container">
 		<div class="row">
@@ -103,31 +81,25 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="homepage-section-6" id="retailers">
+<section class="homepage-section-1">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-12 text-center">
-				<h2>Make the Wiser choice.</h2>
-				<p class="subtitle">Available at these retailers.</p>
+			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+				<h2><?php the_field('homepage_section_1_title'); ?></h2>
+				<p class="subtitle"><?php the_field('homepage_section_1_subtitle'); ?></p>
+				<!-- <?php include (TEMPLATEPATH . '/searchform.php'); ?> -->
 			</div>
 		</div>
-		<div class="row">
-			<ul>
-            <?php $retailers = new WP_Query(array(
-                'post_type' => 'retailers'
-                )); ?>
-
-            <?php while($retailers->have_posts()) : $retailers->the_post(); ?>
-
-           		<li class="text-center">
-                	<div><?php the_post_thumbnail(); ?></div>
-                	<h4><?php the_title(); ?></h4>
-            	</li>
-            <?php endwhile; // end of the loop. ?>
-			<?php wp_reset_postdata(); ?>
-			</ul>
-        </div>
+		<div class="row text-center" id="video">
+			<div class="col-lg-offset-2 col-md-offset-2 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+				<?php the_field('homepage_section_1_video'); ?>
+				<h6 class="text-center"><?php the_field('homepage_section_1_video_title'); ?></h6>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+				<?php the_field('homepage_section_1_video2'); ?>
+				<h6 class="text-center"><?php the_field('homepage_section_1_video_2_title'); ?></h6>
+			</div>
+		</div>
 	</div>
 </section>
-
 <?php get_footer(); ?>

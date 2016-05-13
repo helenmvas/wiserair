@@ -29,7 +29,7 @@ get_header(); ?>
 
             <?php while($utility_options->have_posts()) : $utility_options->the_post(); ?>
 
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-center boxes">
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12 text-center boxes">
                 <div><?php the_post_thumbnail(); ?></div>
                 <h4><?php the_title(); ?></h4>
                 <p><?php the_content(); ?></p>
@@ -59,4 +59,22 @@ get_header(); ?>
 	<?php echo do_shortcode('[image-carousel category="utilities"]'); ?>
 </div>
 
+<section class="main-content">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2>Contact Us</h2>
+				<p class="subtitle">Use the form below to submit your product comments or support questions. Or, give us a call at 1-(855)-55-WISER.</p>
+
+				<p class="subtitle">Monday - Friday: 8am-12am EST | Saturday - Sunday: 10am-7pm EST</p>
+
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<?php echo do_shortcode('[contact-form-7 id="4" title="Contact form 1"]'); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 <?php get_footer(); ?>
