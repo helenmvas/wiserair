@@ -531,12 +531,17 @@ li#menu-item-3349 {
     background: #00a550;
     color: #fff;
     padding: 0px 15px;
-    border-radius: 5px;
+    border-radius: 4px;
+    margin-left: 25px;
 }
 
 li#menu-item-3349 a:hover > .dropdown-menu a {
     background: transparent !important;
     color: #fff !important;
+}
+
+.site-navigation-inner {
+    padding: 0px 80px;
 }
 
 /* Footer */
@@ -1593,6 +1598,7 @@ div#highcharts-0 {
     border-radius: 7px !important;
     margin-left: 20px;
     padding: 8px 0px!important;
+    color: #fff !important;
 }
 
 #get-in-touch button.SGML_submit_button:after {
@@ -1990,6 +1996,13 @@ article .entry-meta {
 
         .page-id-3542 p.subtitle {
             padding: 0px 20px;
+        }
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 1021px) {
+        .site-navigation-inner {
+            padding: 0px 60px;
         }
     }
 
