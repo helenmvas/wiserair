@@ -21,7 +21,7 @@ get_header(); ?>
 	<div class="homepage-featured-image" style="background-image: url(<?php echo $src[0]; ?> )">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-offset-6 col-lg-6 col-md-offset-6 col-md-6 col-sm-offset-6 col-sm-6 text-left">
+				<div class="col-lg-6 col-md-6 col-sm-6 text-left">
 					<h2><?php the_field('homepage_section_1_title'); ?></h2>
 					<p class="subtitle"><?php the_field('homepage_section_1_subtitle'); ?></p>
 				</div>
@@ -51,6 +51,7 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center">
 				<h2><?php the_field('homepage_section_3_title'); ?></h2>
+				<p class="subtitle"><?php the_field('homepage_section_3_subtitle'); ?></p>
 				<p class="btn-space"><?php the_field('homepage_section_3_button'); ?></p>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
@@ -65,6 +66,7 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-lg-offset-6 col-lg-6 col-md-offset-6 col-md-6 col-sm-offset-6 col-sm-6 col-xs-12 push-left">
 				<h2><?php the_field('homepage_section_4_title'); ?></h2>
+				<p class="subtitle"><?php the_field('homepage_section_4_subtitle'); ?></p>
 				<p class="btn-space"><?php the_field('homepage_section_4_button'); ?></p>
 			</div>
 		</div>
@@ -76,6 +78,7 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-lg-12 text-center">
 				<h2><?php the_field('homepage_section_5_title'); ?></h2>
+				<p class="subtitle"><?php the_field('homepage_section_5_subtitle'); ?></p>
 				<p class="btn-space"><?php the_field('homepage_section_5_button'); ?></p>
 			</div>
 		</div>
