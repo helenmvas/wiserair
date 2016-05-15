@@ -21,7 +21,7 @@ get_header(); ?>
 	<div class="homepage-featured-image" style="background-image: url(<?php echo $src[0]; ?> )">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6 col-md-6 col-sm-6 text-left">
+				<div class="col-lg-5 col-md-5 col-sm-5 text-left">
 					<h2><?php the_field('homepage_section_1_title'); ?></h2>
 					<p class="subtitle"><?php the_field('homepage_section_1_subtitle'); ?></p>
 				</div>
