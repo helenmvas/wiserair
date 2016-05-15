@@ -37,7 +37,44 @@ Credits:
 
  * http://getbootstrap.com/components/
 
-*/
+*/#wonderplugintabs-7 > .wonderplugintabs-header-wrap .wonderplugintabs-header-li-first, #wonderplugintabs-8 > .wonderplugintabs-header-wrap .wonderplugintabs-header-li-first {
+border-right: 1px solid #fff !important;
+color: #fff !important;
+}
+
+.page-template-page-homepage h2 {
+margin-top: 28%;
+}
+
+.wonderplugintabs .left {
+width: 60%;
+float: left;
+ margin-top: 20%;
+}
+
+
+.wonderplugintabs .right{
+ text-align: center;
+float: right;
+width: 40%;
+
+}
+
+.page-template-page-blog h1 {
+margin-top: 20px;
+font-size: 30px;
+}
+
+.blog-col-2 {
+width: 100%;
+}
+
+blog-col-2 {
+margin: 0px 0px 100px 0px;
+width: 100%;
+border-bottom: 1px dotted #ddd;
+padding: 0px 0px 20px 0px;
+}
 
 /* My Minimal WordPress Styling comes here */
 
@@ -1395,7 +1432,46 @@ div#highcharts-0 {
     text-align: center !important;
 }
 
-/* New Up Close */
+#wonderplugintabs-7 > .wonderplugintabs-header-wrap .wonderplugintabs-header-li-first, #wonderplugintabs-8 > .wonderplugintabs-header-wrap .wonderplugintabs-header-li-first {
+    border-right: 1px solid #fff !important;
+    color: #fff !important;
+}
+
+.page-template-page-homepage h2 {
+    
+}
+
+.wonderplugintabs .left {
+    width: 60%;
+    float: left;
+    margin-top: 20%;
+}
+
+
+.wonderplugintabs .right{
+    text-align: center;
+    float: right;
+    width: 40%;
+
+}
+
+.page-template-page-blog h1 {
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.blog-col-2 {
+    width: 100%;
+}
+
+.blog-col-2 {
+    margin: 0px 0px 100px 0px;
+    width: 100%;
+    border-bottom: 1px dotted #ddd;
+    padding: 0px 0px 20px 0px;
+}
+
+/* Eco IQ Page */
 .page-template-page-eco-iq .homepage-featured-image {
     min-height: 600px;
     background-size: 100%;
@@ -1669,6 +1745,11 @@ border-right: 0px !important;
 #wonderplugintabs-5 .subtitle,
 #wonderplugintabs-6 .subtitle {
     margin-bottom: 30px;
+}
+
+#wonderplugintabs-5 > .wonderplugintabs-header-wrap .wonderplugintabs-header-title,
+#wonderplugintabs-6 > .wonderplugintabs-header-wrap .wonderplugintabs-header-title {
+    padding: 15px !important;
 }
 
 div#wonderplugintabs-5 {
