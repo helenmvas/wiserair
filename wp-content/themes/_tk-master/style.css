@@ -1455,20 +1455,18 @@ div#highcharts-0 {
 
 }
 
-.page-template-page-blog h1 {
-    margin-top: 20px;
-    font-size: 30px;
+div#wonderplugintabs-2 .left {
+    width: 40%;
+    margin-top: 0%;
 }
 
-.blog-col-2 {
-    width: 100%;
+
+div#wonderplugintabs-2 .right {
+    width: 60%;
 }
 
-.blog-col-2 {
-    margin: 0px 0px 100px 0px;
-    width: 100%;
-    border-bottom: 1px dotted #ddd;
-    padding: 0px 0px 20px 0px;
+.wonderplugintabs-header-title {
+    letter-spacing: 1px;
 }
 
 /* Eco IQ Page */
@@ -1508,10 +1506,10 @@ div#highcharts-0 {
     line-height: 36px;
 }*/
 
-#what-is-eco-iq {
+/*#what-is-eco-iq {
     padding: 240px 0px 80px;
     margin-top: -210px;
-}
+}*/
 
 #what-is-eco-iq img {
     width: 350px;
@@ -1697,6 +1695,7 @@ div#highcharts-0 {
 #get-in-touch #eco-iq-form {
     margin-top: 30px;
 } 
+
 /* Getting Started */
 
 #sync {
@@ -1966,6 +1965,23 @@ div#cptbc-item-1651 p, div#cptbc-item-1651 h4 {
 .carousel .item:nth-of-type(4) .carousel-caption {
     left: 50%;
     width: 45%;
+}
+
+/* Blog */
+.page-template-page-blog h1 {
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.blog-col-2 {
+    width: 100%;
+}
+
+.blog-col-2 {
+    margin: 0px 0px 100px 0px;
+    width: 100%;
+    border-bottom: 1px dotted #ddd;
+    padding: 0px 0px 20px 0px;
 }
 
 /* Search */

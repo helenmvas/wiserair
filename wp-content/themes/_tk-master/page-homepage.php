@@ -46,7 +46,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="homepage-section-3" id="control-fingertips">
+<section class="homepage-section-3" id="control-fingertips" style="background-image: url(<?php the_field('homepage_section_3_background_image'); ?>)">>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center">
@@ -61,7 +61,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="homepage-section-4" id="precise-weather">
+<section class="homepage-section-4" id="precise-weather" style="background-image: url(<?php the_field('homepage_section_4_background_image'); ?>)">>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-offset-6 col-lg-6 col-md-offset-6 col-md-6 col-sm-offset-6 col-sm-6 col-xs-12 push-left">
@@ -73,7 +73,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="homepage-section-5" id="utility-rebates">
+<section class="homepage-section-5" id="utility-rebates" style="background-image: url(<?php the_field('homepage_section_5_background_image'); ?>)">>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
