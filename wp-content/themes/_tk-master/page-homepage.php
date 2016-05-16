@@ -46,7 +46,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="homepage-section-3" id="control-fingertips" style="background-image: url('<?php the_field('homepage_section_3_background_image'); ?>')">>
+<section class="homepage-section-3" id="control-fingertips" style="background-image: url('<?php the_field('homepage_section_3_background_image'); ?>')">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center">

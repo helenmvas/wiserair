@@ -37,44 +37,7 @@ Credits:
 
  * http://getbootstrap.com/components/
 
-*/#wonderplugintabs-7 > .wonderplugintabs-header-wrap .wonderplugintabs-header-li-first, #wonderplugintabs-8 > .wonderplugintabs-header-wrap .wonderplugintabs-header-li-first {
-border-right: 1px solid #fff !important;
-color: #fff !important;
-}
-
-.page-template-page-homepage h2 {
-margin-top: 28%;
-}
-
-.wonderplugintabs .left {
-width: 60%;
-float: left;
- margin-top: 20%;
-}
-
-
-.wonderplugintabs .right{
- text-align: center;
-float: right;
-width: 40%;
-
-}
-
-.page-template-page-blog h1 {
-margin-top: 20px;
-font-size: 30px;
-}
-
-.blog-col-2 {
-width: 100%;
-}
-
-blog-col-2 {
-margin: 0px 0px 100px 0px;
-width: 100%;
-border-bottom: 1px dotted #ddd;
-padding: 0px 0px 20px 0px;
-}
+*/
 
 /* My Minimal WordPress Styling comes here */
 
@@ -1296,6 +1259,10 @@ section {
 
 /* Homepage */
 
+.page-template-page-homepage .homepage-featured-image h2 {
+    margin-top: 28%;
+}
+
 .homepage-featured-image {
     background-image: url(http://dev-wiserair-mlp.azurewebsites.net/wp-content/uploads/2016/02/1.0.0_background.jpg );
     min-height: 600px;
@@ -1467,6 +1434,25 @@ div#wonderplugintabs-2 .right {
 
 .wonderplugintabs-header-title {
     letter-spacing: 1px;
+}
+
+#wonderplugintabs-7 > .wonderplugintabs-header-wrap .wonderplugintabs-header-li-first, #wonderplugintabs-8 > .wonderplugintabs-header-wrap .wonderplugintabs-header-li-first {
+    border-right: 1px solid #fff !important;
+    color: #fff !important;
+}
+
+.wonderplugintabs .left {
+    width: 60%;
+    float: left;
+    margin-top: 20%;
+}
+
+
+.wonderplugintabs .right{
+    text-align: center;
+    float: right;
+    width: 40%;
+
 }
 
 /* Eco IQ Page */
