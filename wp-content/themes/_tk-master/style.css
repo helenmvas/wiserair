@@ -1533,10 +1533,12 @@ div#wonderplugintabs-2 .right {
 }
 
 .page-template-page-eco-iq .metaslider .slides img {
-    width: 100%;
+    width: 45%;
     display: block;
-    margin: 80px auto 20px auto;
+    margin: 0px auto 0 auto;
     padding: 0;
+    height: 100%;
+    margin-left: 21%;
 }
 
 .flex-direction-nav {
