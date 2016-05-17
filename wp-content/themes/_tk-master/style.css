@@ -96,7 +96,7 @@ h2 {
 .dark-grey {
     background-color: #404040;
     color: #fff;
-    padding: 80px 0px;
+    padding: 50px 0px;
 }
 
 .grey, .gray {
@@ -106,7 +106,7 @@ h2 {
 .blue {
     background-color: #62baea;
     color: #fff;
-    padding: 80px 0px;
+    padding: 50px 0px;
 }
 
 .subtitle {
@@ -1455,6 +1455,10 @@ div#wonderplugintabs-2 .right {
 
 }
 
+.page-template-page-up-close video {
+    height: 500px;
+}
+
 /* Eco IQ Page */
 .page-template-page-eco-iq .homepage-featured-image {
     min-height: 600px;
@@ -1472,30 +1476,22 @@ div#wonderplugintabs-2 .right {
     padding: 0px 80px;
 }
 
-/*#ecoiq {
-    background: #fff;
-    margin-top: 275px;
-    padding: 80px 0px;
-    border-radius: 30px;
-    z-index: 9999;
+#wonderplugintabs-7 > .wonderplugintabs-header-wrap .wonderplugintabs-header-li,
+    #wonderplugintabs-8 > .wonderplugintabs-header-wrap .wonderplugintabs-header-li {
+    color: #fff !important;
 }
 
-#ecoiq hr {
-    width: 50%;
+.metaslider#metaslider_3756 .slides img{
+    width: 34%;
+    display: block;
+    height: 100%;
+    margin: 0 auto 0 auto;
+    margin-left: 27%;
 }
 
-#ecoiq h4 a {
-    font-family: Lato-Regular;
-    font-size: 16px;
-    color: #3F97C5;
-    letter-spacing: -0.06px;
-    line-height: 36px;
-}*/
-
-/*#what-is-eco-iq {
-    padding: 240px 0px 80px;
-    margin-top: -210px;
-}*/
+.metaslider .flexslider {
+    margin-bottom: 0px;
+}
 
 #what-is-eco-iq img {
     width: 350px;
