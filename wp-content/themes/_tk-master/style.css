@@ -1481,7 +1481,7 @@ div#wonderplugintabs-2 .right {
     color: #fff !important;
 }
 
-.metaslider#metaslider_3756 .slides img{
+.metaslider .slides img {
     width: 34%;
     display: block;
     height: 100%;
@@ -1489,7 +1489,7 @@ div#wonderplugintabs-2 .right {
     margin-left: 27%;
 }
 
-.metaslider .flexslider {
+.page-template-page-eco-iq .metaslider .flexslider {
     margin-bottom: 0px;
 }
 
