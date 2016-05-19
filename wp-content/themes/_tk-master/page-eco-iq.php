@@ -20,8 +20,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 <div class="homepage-featured-image" style="background-image: url(<?php echo $src[0]; ?> )">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-lg-9 col-md-9 col-sm-9 text-center" id="ecoiq">
-			</div>
+			<div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-lg-9 col-md-9 col-sm-9 text-center" id="ecoiq"></div>
 		</div>
 	</div>
 </div>
@@ -147,7 +146,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 		<div class="row">
 			<div class="col-lg-12 text-center">
 				<h2>Contact Us</h2>
-				<p class="subtitle">Use the form below to submit your product comments or support questions. Or, give us a call at 1-(855)-55-WISER.</p>
+				<p class="subtitle">Submit the form below to inquire about partnership opportunities. Or, give us a call at 1-(855)-55-WISER.</p>
 
 				<p class="subtitle">Monday - Friday: 8am-12am EST | Saturday - Sunday: 10am-7pm EST</p>
 
@@ -161,18 +160,6 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	</div>
 </section>
 
-<!-- <section class="text-center" id="get-in-touch">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
-				<h2>Get in touch</h2>
-				<p class="subtitle">Whether you are home or away, Wiser Air works to save you energy. Let us know how Wiser Air is helping you manage your comfort at <a href="mailto:wisermarketing@schneider-electric.com"/>wisermarketing@schneider-electric.com</a>. We look forward to hearing for you.</p>
-				<img src="/images/get-in-touch-thermo.png" />
-				<p class="subtitle">Stay up to date on new features and releases by subscribing to our mailing list below.</p>
-				<div id="eco-iq-form"><?php echo do_shortcode('[sg-subscription-form]'); ?></div>
-			</div>
-		</div>
-	</div>
-</section> -->
+
 
 <?php get_footer(); ?>
