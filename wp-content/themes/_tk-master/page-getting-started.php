@@ -76,7 +76,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="homepage-section-6" id="retailers">
+<!-- <section class="homepage-section-6" id="retailers">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
@@ -101,5 +101,5 @@ get_header(); ?>
 			</ul>
         </div>
 	</div>
-</section>
+</section> -->
 <?php get_footer(); ?>

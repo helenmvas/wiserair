@@ -24,6 +24,7 @@ get_header(); ?>
 				<div class="col-lg-5 col-md-5 col-sm-5 text-left">
 					<h2><?php the_field('homepage_section_1_title'); ?></h2>
 					<p class="subtitle"><?php the_field('homepage_section_1_subtitle'); ?></p>
+					<p class="btn-space"><?php the_field('homepage_section_1_button'); ?></p>
 				</div>
 			</div>
 		</div>

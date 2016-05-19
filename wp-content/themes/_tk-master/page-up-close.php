@@ -150,6 +150,10 @@ get_header(); ?>
 	</div>
 </section>
 
+<section class="container-fluid">
+    <img src="<?php the_field('up_close_background_image'); ?>" />
+</section>
+
 <section class="grey text-center">
 	<div class="container">
 		<div class="row">
