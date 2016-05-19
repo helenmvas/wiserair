@@ -206,7 +206,7 @@ class WonderPlugin_Tabs_View {
 		
 		<tr>
 			<th>Scripts position</th>
-			<td><label><input name='addjstofooter' type='checkbox' id='addjstofooter' <?php echo ($addjstofooter == 1) ? 'checked' : ''; ?> /> Add plugin js scripts to the footer</label>
+			<td><label><input name='addjstofooter' type='checkbox' id='addjstofooter' <?php echo ($addjstofooter == 1) ? 'checked' : ''; ?> /> Add plugin js scripts to the footer (wp_footer hook must be implemented by the WordPress theme)</label>
 			</td>
 		</tr>
 		

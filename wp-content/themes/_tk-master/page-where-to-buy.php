@@ -48,4 +48,8 @@ get_header(); ?>
 	</div>
 </section>
 
+<section class="container-fluid">
+    <img src="<?php the_field('where_to_buy_image'); ?>" />
+</section>
+
 <?php get_footer(); ?>

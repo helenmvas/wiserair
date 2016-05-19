@@ -302,19 +302,19 @@ class Ai1wm_Import_Database {
 		}
 
 		// Get URL IP
-		$url_ip = get_site_option( AI1WM_URL_IP, false, false );
+		$url_ip = get_option( AI1WM_URL_IP );
 
 		// Get URL transport
-		$url_transport = get_site_option( AI1WM_URL_TRANSPORT, false, false );
+		$url_transport = get_option( AI1WM_URL_TRANSPORT );
 
 		// Get secret key
-		$secret_key = get_site_option( AI1WM_SECRET_KEY, false, false );
+		$secret_key = get_option( AI1WM_SECRET_KEY );
 
 		// Get HTTP user
-		$auth_user = get_site_option( AI1WM_AUTH_USER, false, false );
+		$auth_user = get_option( AI1WM_AUTH_USER );
 
 		// Get HTTP password
-		$auth_password = get_site_option( AI1WM_AUTH_PASSWORD, false, false );
+		$auth_password = get_option( AI1WM_AUTH_PASSWORD );
 
 		// Get active ServMask plugins
 		$active_servmask_plugins = ai1wm_active_servmask_plugins();
@@ -378,26 +378,26 @@ class Ai1wm_Import_Database {
 		// Import database
 		$client->import( ai1wm_database_path( $params ) );
 
-		// Clear WP options cache
-		wp_cache_flush();
+		// Initialize empty WP cache
+		wp_cache_init();
 
 		// Activate plugins
-		activate_plugins( $active_servmask_plugins, null , is_multisite() );
+		activate_plugins( $active_servmask_plugins, null, is_multisite() );
 
 		// Set the new URL IP
-		update_site_option( AI1WM_URL_IP, $url_ip );
+		update_option( AI1WM_URL_IP, $url_ip );
 
 		// Set the new URL transport
-		update_site_option( AI1WM_URL_TRANSPORT, $url_transport );
+		update_option( AI1WM_URL_TRANSPORT, $url_transport );
 
 		// Set the new secret key value
-		update_site_option( AI1WM_SECRET_KEY, $secret_key );
+		update_option( AI1WM_SECRET_KEY, $secret_key );
 
 		// Set the new HTTP user
-		update_site_option( AI1WM_AUTH_USER, $auth_user );
+		update_option( AI1WM_AUTH_USER, $auth_user );
 
 		// Set the new HTTP password
-		update_site_option( AI1WM_AUTH_PASSWORD, $auth_password );
+		update_option( AI1WM_AUTH_PASSWORD, $auth_password );
 
 		return $params;
 	}

@@ -575,7 +575,7 @@ function ai1wm_active_servmask_plugins( $plugins = array() ) {
  * @return array
  */
 function ai1wm_active_sitewide_plugins() {
-	return array_keys( get_site_option( AI1WM_ACTIVE_SITEWIDE_PLUGINS, array(), false ) );
+	return array_keys( get_site_option( AI1WM_ACTIVE_SITEWIDE_PLUGINS, array() ) );
 }
 
 /**

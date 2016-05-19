@@ -38,8 +38,8 @@
 				?>
 			</div> -->
 			<div class="col-lg-5 col-md-5 col-sm-6">
-				<h5>Make the Wiser choice. Be one of the first to get Wiser Air.</h5>
-				<p>Sign up below and we’ll keep you updated on the latest Wiser Air news.</p>
+				<h5>Stay connected by receiving important Wiser news.</h5>
+				<p>Private. Secure. Spam-free.</p>
 				<div>
 					<?php echo do_shortcode('[sg-subscription-form]'); ?>
 					

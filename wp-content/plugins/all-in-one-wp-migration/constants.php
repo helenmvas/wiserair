@@ -39,7 +39,7 @@ if ( function_exists( 'gethostname' ) && in_array( gethostname(), $local ) ) {
 // ==================
 // = Plugin Version =
 // ==================
-define( 'AI1WM_VERSION', '5.41' );
+define( 'AI1WM_VERSION', '5.42' );
 
 // ===============
 // = Plugin Name =
@@ -180,21 +180,6 @@ define( 'AI1WM_IMPORT_NAME', 'import.log' );
 // = Error Log Name =
 // ==================
 define( 'AI1WM_ERROR_NAME', 'error.log' );
-
-// ======================
-// = Export Options Key =
-// ======================
-define( 'AI1WM_EXPORT_OPTIONS', 'ai1wm_export_options' );
-
-// =====================
-// = Error Handler Key =
-// =====================
-define( 'AI1WM_ERROR_HANDLER', 'ai1wm_error_handler' );
-
-// =========================
-// = Exception Handler Key =
-// =========================
-define( 'AI1WM_EXCEPTION_HANDLER', 'ai1wm_exception_handler' );
 
 // ==========
 // = URL IP =

@@ -28,11 +28,14 @@ class Ai1wm_Import_Compatibility {
 	public static function execute( $params ) {
 		$messages = Ai1wm_Compatibility::get( $params );
 
+		// Set messages
 		if ( empty( $messages ) ) {
 			return $params;
 		}
 
+		// Set progress
 		Ai1wm_Status::error( implode( $messages ) );
+
 		exit;
 	}
 }

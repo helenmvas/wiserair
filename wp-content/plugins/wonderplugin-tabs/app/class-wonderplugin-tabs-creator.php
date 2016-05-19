@@ -183,6 +183,13 @@ class WonderPlugin_Tabs_Creator {
 								</tr>
 
 								<tr>
+									<th></th>
+									<td>
+										<label><input name='wonderplugin-tabs-savestatusincookie' type='checkbox' id='wonderplugin-tabs-savestatusincookie'  /> Save active tab id in session cookie</label>
+									</td>
+								</tr>
+								
+								<tr>
 									<th>Page Tabs</th>
 									<td>
 										<label><input name='wonderplugin-tabs-disablewpautop' type='checkbox' id='wonderplugin-tabs-disablewpautop'  /> Disable wpautop for WordPress page contents </label>

@@ -21,14 +21,25 @@ get_header(); ?>
 	<div class="homepage-featured-image" style="background-image: url(<?php echo $src[0]; ?> )">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-6 col-md-6 col-sm-6 text-left">
-					<h2><?php the_field('homepage_section_1_title'); ?></h2>
-					<p class="subtitle"><?php the_field('homepage_section_1_subtitle'); ?></p>
+				<div class="col-lg-offset-6 col-lg-6 col-md-offset-6 col-md-6 col-sm-offset-6 col-sm-6 text-left">
+					
 				</div>
 			</div>
 		</div>
 	</div>
 <!-- </div> -->
+
+<section class="homepage-section-1">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+				<h2><?php the_field('homepage_section_1_title'); ?></h2>
+				<p class="subtitle"><?php the_field('homepage_section_1_subtitle'); ?></p>
+				<p class="btn-space"><?php the_field('homepage_section_1_button'); ?></p>
+			</div>
+		</div>
+	</div>
+</section>
 
 <section class="homepage-section-2" id="in-control">
 	<div class="container">
@@ -46,7 +57,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="homepage-section-3" id="control-fingertips">
+<section class="homepage-section-3" id="control-fingertips" style="background-image: url('<?php the_field('homepage_section_3_background_image'); ?>')">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center">
@@ -61,8 +72,8 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="homepage-section-4" id="precise-weather">
-	<div class="container">
+<section class="homepage-section-4" id="precise-weather" style="background-image: url('<?php the_field('homepage_section_4_background_image'); ?>')">
+	<div class="container"
 		<div class="row">
 			<div class="col-lg-offset-6 col-lg-6 col-md-offset-6 col-md-6 col-sm-offset-6 col-sm-6 col-xs-12 push-left">
 				<h2><?php the_field('homepage_section_4_title'); ?></h2>
@@ -73,7 +84,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="homepage-section-5" id="utility-rebates">
+<section class="homepage-section-5" id="utility-rebates" style="background-image: url('<?php the_field('homepage_section_5_background_image'); ?>')">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
@@ -88,13 +99,21 @@ get_header(); ?>
 <section class="homepage-section-1">
 	<div class="container">
 		<div class="row text-center" id="video">
-			<div class="col-lg-offset-2 col-md-offset-2 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 				<?php the_field('homepage_section_1_video'); ?>
 				<h6 class="text-center"><?php the_field('homepage_section_1_video_title'); ?></h6>
 			</div>
-			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 				<?php the_field('homepage_section_1_video2'); ?>
 				<h6 class="text-center"><?php the_field('homepage_section_1_video_2_title'); ?></h6>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<?php the_field('homepage_section_1_video3'); ?>
+				<h6 class="text-center"><?php the_field('homepage_section_1_video_3_title'); ?></h6>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<?php the_field('homepage_section_1_video4'); ?>
+				<h6 class="text-center"><?php the_field('homepage_section_1_video_4_title'); ?></h6>
 			</div>
 		</div>
 	</div>

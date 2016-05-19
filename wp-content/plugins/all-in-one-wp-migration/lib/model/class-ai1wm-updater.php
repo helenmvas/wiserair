@@ -44,7 +44,7 @@ class Ai1wm_Updater {
 		if ( isset( $args->slug ) && isset( $extensions[ $args->slug ] ) && $action === 'plugin_information' ) {
 
 			// Get current updates
-			$updates = get_site_option( AI1WM_UPDATER, array() );
+			$updates = get_option( AI1WM_UPDATER, array() );
 
 			// Plugin details
 			if ( isset( $updates[ $args->slug ] ) && ( $details = $updates[ $args->slug ] ) ) {
@@ -65,19 +65,19 @@ class Ai1wm_Updater {
 		$extensions = Ai1wm_Extensions::get();
 
 		// Get current updates
-		$updates = get_site_option( AI1WM_UPDATER, array() );
+		$updates = get_option( AI1WM_UPDATER, array() );
 
 		// Get extension updates
 		foreach ( $updates as $slug => $update ) {
 			if ( isset( $extensions[ $slug ]) && ( $extension = $extensions[ $slug ] ) ) {
-				if ( get_site_option( $extension['key'] ) ) {
+				if ( get_option( $extension['key'] ) ) {
 					if ( version_compare( $extension['version'], $update['version'], '<' ) ) {
 
 						// Get Site URL
 						$url = urlencode( get_site_url() );
 
 						// Get Purchase ID
-						$key = get_site_option( $extension['key'], false, false );
+						$key = get_option( $extension['key'] );
 
 						// Set plugin details
 						$transient->response[ $extension['basename'] ] = (object) array(
@@ -102,7 +102,7 @@ class Ai1wm_Updater {
 	 */
 	public static function check_for_updates() {
 		// Get current updates
-		$updates = get_site_option( AI1WM_UPDATER, array() );
+		$updates = get_option( AI1WM_UPDATER, array() );
 
 		// Get extension updates
 		foreach ( Ai1wm_Extensions::get() as $slug => $extension ) {
@@ -140,7 +140,7 @@ class Ai1wm_Updater {
 		}
 
 		// Set new updates
-		update_site_option( AI1WM_UPDATER, $updates );
+		update_option( AI1WM_UPDATER, $updates );
 	}
 
 	/**
@@ -162,7 +162,7 @@ class Ai1wm_Updater {
 				$url = add_query_arg( array( 'ai1wm_updater' => 1 ), network_admin_url( 'plugins.php' ) );
 
 				// Check Purchase ID
-				if ( get_site_option( $extension['key'] ) ) {
+				if ( get_option( $extension['key'] ) ) {
 
 					// Add "Check for updates" link
 					$links[] = Ai1wm_Template::get_content( 'updater/check', array(

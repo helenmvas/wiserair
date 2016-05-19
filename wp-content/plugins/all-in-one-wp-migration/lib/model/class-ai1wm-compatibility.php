@@ -53,11 +53,11 @@ class Ai1wm_Compatibility {
 		if ( $extension['version'] !== 'develop' ) {
 			if ( version_compare( $extension['version'], $extension['requires'], '<' ) ) {
 				$plugin = get_plugin_data( sprintf( '%s/%s', WP_PLUGIN_DIR, $extension['basename'] ) );
-				return __( sprintf(
+				return sprintf( __(
 					'<strong>%s</strong> is not the latest version. ' .
-					'You must update the plugin before you can use it.',
-					$plugin['Name']
-				), AI1WM_PLUGIN_NAME );
+					'You must update the plugin before you can use it. ',
+					AI1WM_PLUGIN_NAME
+				), $plugin['Name'] );
 			}
 		}
 	}
