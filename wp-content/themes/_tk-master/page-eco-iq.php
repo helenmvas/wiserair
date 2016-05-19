@@ -12,20 +12,20 @@
  */
 
 get_header(); ?>
-<!-- <div class="container-fluid"> -->
-	<?php global $post; ?>
-	<?php
-	$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
-	?>
-	<div class="homepage-featured-image" style="background-image: url(<?php echo $src[0]; ?> )">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-lg-9 col-md-9 col-sm-9 text-center" id="ecoiq">
-				</div>
+
+<?php global $post; ?>
+<?php
+$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
+?>
+<div class="homepage-featured-image" style="background-image: url(<?php echo $src[0]; ?> )">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-lg-9 col-md-9 col-sm-9 text-center" id="ecoiq">
 			</div>
 		</div>
 	</div>
-<!-- </div> -->
+</div>
+
 
 <section class="dark-grey text-center" id="what-is-eco-iq">
 	<div class="container">
@@ -70,6 +70,7 @@ get_header(); ?>
 				<h4><?php the_field('section_2:_subsection_title_4'); ?></h4>
 				<p><?php the_field('section_2:_subsection_text_area_4'); ?></p>
 			</div>
+		</div>
 	</div>
 </section>
 
