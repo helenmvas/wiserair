@@ -233,7 +233,7 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-lg-12 text-center">
 				<h2>Contact Us</h2>
-				<p class="subtitle">Use the form below to submit your product comments or support questions. Or, give us a call at 1-(855)-55-WISER.</p>
+				<p class="subtitle">Submit the form below to inquire about partnership opportunities. Or, give us a call at 1-(855)-55-WISER.</p>
 
 				<p class="subtitle">Monday - Friday: 8am-12am EST | Saturday - Sunday: 10am-7pm EST</p>
 

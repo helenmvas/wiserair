@@ -176,7 +176,7 @@ class WonderPlugin_Tabs_Model {
 				$ret .= ' ' . stripslashes($data->dataoptions);
 			}
 			
-			$boolOptions = array('extendedheight', 'responsive', 'fullwidth', 'applydisplaynonetohiddenpanel', 'triggerresize', 'triggerresizeonload', 'disablewpautop', 'hidetitleonsmallscreen', 'donotinit', 'addinitscript', 'fullwidthtabsonsmallscreen');
+			$boolOptions = array('savestatusincookie', 'extendedheight', 'responsive', 'fullwidth', 'applydisplaynonetohiddenpanel', 'triggerresize', 'triggerresizeonload', 'disablewpautop', 'hidetitleonsmallscreen', 'donotinit', 'addinitscript', 'fullwidthtabsonsmallscreen');
 			foreach ( $boolOptions as $key )
 			{
 				if (isset($data->{$key}) )
@@ -231,7 +231,7 @@ class WonderPlugin_Tabs_Model {
 					
 						if (strlen($slide->tabtitle) > 0)
 						{
-							$ret_header .= '<div class="wonderplugintabs-header-title">' . $slide->tabtitle . '</div>';
+							$ret_header .= '<div class="wonderplugintabs-header-title">' . do_shortcode($slide->tabtitle) . '</div>';
 						}
 					}
 					else if ($slide->tabicon == 'image')
@@ -249,7 +249,7 @@ class WonderPlugin_Tabs_Model {
 					
 						if (strlen($slide->tabtitle) > 0)
 						{
-							$ret_header .= '<div class="wonderplugintabs-header-title">' . $slide->tabtitle . '</div>';
+							$ret_header .= '<div class="wonderplugintabs-header-title">' . do_shortcode($slide->tabtitle) . '</div>';
 						}
 					}
 						
@@ -323,7 +323,7 @@ class WonderPlugin_Tabs_Model {
 					$ret .= $ret_panel . $ret_header;
 			}
 			
-			if ('F' == 'F')
+			if ('C' == 'F')
 				$ret .= '<div class="wonderplugin-engine"><a href="http://www.wonderplugin.com/wordpress-tabs/" title="'. get_option('wonderplugin-tabs-engine')  .'">' . get_option('wonderplugin-tabs-engine') . '</a></div>';
 			
 			$ret .= '</div>';
@@ -424,7 +424,7 @@ class WonderPlugin_Tabs_Model {
 		global $wpdb;
 		$table_name = $wpdb->prefix . "wonderplugin_tabs";
 	
-		return ( $wpdb->get_var("SHOW TABLES LIKE '$table_name'") == $table_name );
+		return ( strtolower($wpdb->get_var("SHOW TABLES LIKE '$table_name'")) == strtolower($table_name) );
 	}
 	
 	function is_id_exist($id)
@@ -468,7 +468,7 @@ class WonderPlugin_Tabs_Model {
 		{
 			$this->create_db_table();
 			
-			$create_error = $wpdb->last_error;
+			$create_error = "CREATE DB TABLE - ". $wpdb->last_error;
 			if ( !$this->is_db_table_exists() )
 			{
 				return array(

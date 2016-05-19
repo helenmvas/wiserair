@@ -67,12 +67,6 @@ class Ai1wm_Export_Enumerate {
 		// Create map file
 		$filemap = fopen( ai1wm_filemap_path( $params ) , 'a+' );
 
-		// Start time
-		$start = microtime( true );
-
-		// Flag to hold if all files have been processed
-		$completed = true;
-
 		try {
 
 			// Iterate over content directory
@@ -84,9 +78,6 @@ class Ai1wm_Export_Enumerate {
 			// Recursively iterate over content directory
 			$iterator = new RecursiveIteratorIterator( $iterator, RecursiveIteratorIterator::LEAVES_ONLY, RecursiveIteratorIterator::CATCH_GET_CHILD );
 
-			// Limit content directory
-			$iterator = new LimitIterator( $iterator, $total_files );
-
 			// Write path line
 			foreach ( $iterator as $item ) {
 				if ( $item->isFile() ) {
@@ -97,21 +88,10 @@ class Ai1wm_Export_Enumerate {
 						$total_size += filesize( $iterator->getPathname() );
 					}
 				}
-
-				// More than 3 seconds have passed, break and do another request
-				if ( ( microtime( true ) - $start ) > 3 ) {
-					$completed = false;
-					break;
-				}
 			}
 
 		} catch ( Exception $e ) {
 			// Skip bad file permissions
-		}
-
-		// Set progress
-		if ( $completed ) {
-			Ai1wm_Status::info( __( 'Done retrieving a list of all WordPress files.', AI1WM_PLUGIN_NAME ) );
 		}
 
 		// Set total files
@@ -120,11 +100,11 @@ class Ai1wm_Export_Enumerate {
 		// Set total size
 		$params['total_size'] = $total_size;
 
-		// Set completed flag
-		$params['completed'] = $completed;
-
 		// Close the filemap file
 		fclose( $filemap );
+
+		// Set progress
+		Ai1wm_Status::info( __( 'Done retrieving a list of all WordPress files.', AI1WM_PLUGIN_NAME ) );
 
 		return $params;
 	}
