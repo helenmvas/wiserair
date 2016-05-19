@@ -565,7 +565,7 @@ li#menu-item-3349 a:hover > .dropdown-menu a {
 
 /* Footer */
 footer.site-footer {
-    background: #00a550;
+    background: #404040;
     padding-top: 50px;
     padding-bottom: 50px;
     font-size: 12px;
@@ -618,7 +618,7 @@ footer .nav>li>a:hover, footer .nav>li>a:focus {
 }
 
 footer #copyright {
-    border-top: 1px dotted #1d711b;
+    border-top: 1px dotted #ccc;
     padding: 40px 0px;
     margin-top: 40px;
 }
@@ -1868,6 +1868,24 @@ ul.documents li {
     border: 1px solid #ddd;
     padding: 50px 15px;
 }
+
+.documents {
+border: 1px solid #ddd;
+height: 200px;
+text-align: center;
+margin-bottom: 30px;
+}
+
+
+.documents img {
+margin-bottom: 20px;
+height: 125px;
+}
+
+.page-template-page-press hr {
+width: 100%;
+}
+
 
 /* About */
 

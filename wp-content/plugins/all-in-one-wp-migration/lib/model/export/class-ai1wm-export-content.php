@@ -88,7 +88,7 @@ class Ai1wm_Export_Content {
 				try {
 
 					// Add file to archive
-					if ( ( $content_offset = $archive->add_file( WP_CONTENT_DIR . DIRECTORY_SEPARATOR . $path, $path, $content_offset, 3 ) ) ) {
+					if ( ( $content_offset = $archive->add_file( WP_CONTENT_DIR . DIRECTORY_SEPARATOR . $path, $path, $content_offset, 10 ) ) ) {
 
 						// Set progress
 						if ( ( $processed += $content_offset ) ) {
@@ -126,8 +126,8 @@ class Ai1wm_Export_Content {
 				// Increment processed files
 				$processed += $archive->get_current_filesize();
 
-				// More than 3 seconds have passed, break and do another request
-				if ( ( microtime( true ) - $start ) > 3 ) {
+				// More than 10 seconds have passed, break and do another request
+				if ( ( microtime( true ) - $start ) > 10 ) {
 					$completed = false;
 					break;
 				}

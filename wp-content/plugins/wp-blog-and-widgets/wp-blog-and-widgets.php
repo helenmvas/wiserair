@@ -5,14 +5,14 @@ Plugin URL: http://www.wponlinesupport.com/
 Text Domain: wp-blog-and-widgets
 Domain Path: /languages/
 Description: Display Blog on your website.
-Version: 1.2.5
+Version: 1.2.6
 Author: WP Online Support
 Author URI: http://www.wponlinesupport.com/
 Contributors: WP Online Support
 */
 
 if( !defined( 'WPBW_VERSION' ) ) {
-    define( 'WPBW_VERSION', '1.2.5' ); // Version of plugin
+    define( 'WPBW_VERSION', '1.2.6' ); // Version of plugin
 }
 if( !defined( 'WPBAW_DIR' ) ) {
     define( 'WPBAW_DIR', dirname( __FILE__ ) ); // Plugin dir
@@ -315,8 +315,8 @@ function get_wpbaw_blog( $atts, $content = null ){
 					<div class="blog-content-excerpt">
 					<?php  if($showFullContent == "false" ) { 
 					$excerpt = get_the_content();?>
-                    <p class="blog-short-content"><?php echo blog_limit_words($excerpt,$words_limit); ?>...</p>
-                   
+                    <p class="blog-short-content"><?php echo blog_limit_words( $post->ID, $excerpt, $words_limit, '...'); ?></p>
+                    
                         <a href="<?php the_permalink(); ?>" class="more-link"> <?php _e( 'Read More', 'wp-blog-and-widgets' ); ?></a>	
 						<?php } else { 
 							the_content();
@@ -499,7 +499,7 @@ function get_wpbaw_homeblog( $atts, $content = null ){
                      <?php if($showContent == 'true'){?>   
 					<div class="blog-content-excerpt">
 					<?php $excerpt = get_the_excerpt();?>
-                    <p class="blog-short-content"><?php echo blog_limit_words($excerpt,$words_limit); ?>...</p>
+                    <p class="blog-short-content"><?php echo blog_limit_words($post->ID, $excerpt, $words_limit, '...'); ?></p>
                    
                          <a href="<?php the_permalink(); ?>" class="more-link"> <?php _e( 'Read More', 'wp-blog-and-widgets' ); ?></a>	
 					</div><!-- .entry-content -->
@@ -518,13 +518,30 @@ function get_wpbaw_homeblog( $atts, $content = null ){
 add_shortcode('recent_blog_post','get_wpbaw_homeblog');
 
 
-function blog_limit_words($string, $word_limit)
-{
-  $words = explode(' ', $string, ($word_limit + 1));
-  if(count($words) > $word_limit)
-  array_pop($words);
-  return implode(' ', $words);
-}	
+function blog_limit_words( $post_id = null, $content = '', $word_length = '55', $more = '...' ) {
+    
+    $has_excerpt  = false;
+    $word_length    = !empty($word_length) ? $word_length : '55';
+
+    // If post id is passed
+    if( !empty($post_id) ) {
+        if (has_excerpt($post_id)) {
+
+            $has_excerpt    = true;
+            $content        = get_the_excerpt();
+
+        } else {
+            $content = !empty($content) ? $content : get_the_content();
+        }
+    }
+
+    if( !empty($content) && (!$has_excerpt) ) {
+        $content = strip_shortcodes( $content ); // Strip shortcodes
+        $content = wp_trim_words( $content, $word_length, $more );
+    }
+
+    return $content;
+}
 
 function spblog_display_tags( $query ) {
     if( is_tag() && $query->is_main_query() ) {       

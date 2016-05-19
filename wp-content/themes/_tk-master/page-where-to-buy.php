@@ -13,21 +13,6 @@
 
 get_header(); ?>
 
-
-<?php global $post; ?>
-<?php
-$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
-?>
-<div class="homepage-featured-image" style="background-image: url(<?php echo $src[0]; ?> )">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5 col-md-5 col-sm-5 text-left">
-            </div>
-        </div>
-    </div>
-</div>
-
-
 <section>
 	<div class="container">
 		<div class="row">

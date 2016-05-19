@@ -108,7 +108,7 @@ class Ai1wm_Import_Content {
 			try {
 
 				// Extract a file from archive to WP_CONTENT_DIR
-				if ( ( $content_offset = $archive->extract_one_file_to( WP_CONTENT_DIR, array( AI1WM_PACKAGE_NAME, AI1WM_MULTISITE_NAME, AI1WM_DATABASE_NAME, AI1WM_MUPLUGINS_NAME ), $old_paths, $new_paths, $content_offset, 3 ) ) ) {
+				if ( ( $content_offset = $archive->extract_one_file_to( WP_CONTENT_DIR, array( AI1WM_PACKAGE_NAME, AI1WM_MULTISITE_NAME, AI1WM_DATABASE_NAME, AI1WM_MUPLUGINS_NAME ), $old_paths, $new_paths, $content_offset, 10 ) ) ) {
 
 					// Set progress
 					if ( ( $processed += $content_offset ) ) {
@@ -146,8 +146,8 @@ class Ai1wm_Import_Content {
 			// Increment processed files
 			$processed += $archive->get_current_filesize();
 
-			// More than 3 seconds have passed, break and do another request
-			if ( ( microtime( true ) - $start ) > 3 ) {
+			// More than 10 seconds have passed, break and do another request
+			if ( ( microtime( true ) - $start ) > 10 ) {
 				$completed = false;
 				break;
 			}

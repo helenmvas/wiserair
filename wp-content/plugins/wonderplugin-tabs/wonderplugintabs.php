@@ -3,17 +3,17 @@
 Plugin Name: WonderPlugin Tabs
 Plugin URI: http://www.wonderplugin.com
 Description: WordPress Tabs Plugin
-Version: 2.7
+Version: 2.8C
 Author: Magic Hills Pty Ltd
 Author URI: http://www.wonderplugin.com
 License: Copyright 2015 Magic Hills Pty Ltd, All Rights Reserved
 */
 
-define('WONDERPLUGIN_TABS_VERSION', '2.7');
+define('WONDERPLUGIN_TABS_VERSION', '2.8C');
 define('WONDERPLUGIN_TABS_URL', plugin_dir_url( __FILE__ ));
 define('WONDERPLUGIN_TABS_PATH', plugin_dir_path( __FILE__ ));
 define('WONDERPLUGIN_TABS_PLUGIN', basename(dirname(__FILE__)) . '/' . basename(__FILE__));
-define('WONDERPLUGIN_TABS_PLUGIN_VERSION', '2.7');
+define('WONDERPLUGIN_TABS_PLUGIN_VERSION', '2.8');
 
 require_once 'app/class-wonderplugin-tabs-controller.php';
 
@@ -101,6 +101,14 @@ class WonderPlugin_Tabs_Plugin {
 				array($this, 'edit_settings' ) );
 		add_action( 'admin_print_styles-' . $menu, array($this, 'enqueue_admin_script') );
 		
+		$menu = add_submenu_page(
+				'wonderplugin_tabs_overview',
+				__('Register', 'wonderplugin_tabs'),
+				__('Register', 'wonderplugin_tabs'),
+				'manage_options',
+				'wonderplugin_tabs_register',
+				array($this, 'register' ) );
+		add_action( 'admin_print_styles-' . $menu, array($this, 'enqueue_admin_script') );
 		
 		$menu = add_submenu_page(
 				null,
@@ -359,4 +367,4 @@ if ( function_exists('register_uninstall_hook') )
 	register_uninstall_hook( __FILE__, 'wonderplugin_tabs_uninstall' );
 }
 
-define('WONDERPLUGIN_TABS_VERSION_TYPE', 'F');
+define('WONDERPLUGIN_TABS_VERSION_TYPE', 'C');

@@ -28,18 +28,27 @@ class Ai1wm_Export_Compatibility {
 	public static function execute( $params ) {
 		$messages = Ai1wm_Compatibility::get( $params );
 
+		// Set messages
 		if ( empty( $messages ) ) {
 			return $params;
 		}
 
+		// Set progress
 		Ai1wm_Status::error( implode( $messages ) );
 
-		if ( ! isset( $params['ai1wm-manual-export'] ) ) {
+		// Manual export
+		if ( empty( $params['ai1wm_manual_export'] ) ) {
 			if ( function_exists( 'wp_mail' ) ) {
-				$recipient = get_site_option( 'admin_email', '' );
+				// Set recipient
+				$recipient = get_option( 'admin_email', '' );
+
+				// Set subject
 				$subject = __( 'Unable to backup your site', AI1WM_PLUGIN_NAME );
-				$message = __( sprintf( 'All-in-One WP Migration was unable to backup %s.', site_url() ) );
-				$message .= implode( $messages );
+
+				// Set message
+				$message = sprintf( __( 'All-in-One WP Migration was unable to backup %s. %s', AI1WM_PLUGIN_NAME ), site_url(), implode( $messages ) );
+
+				// Send email
 				wp_mail( $recipient, $subject, $message );
 			}
 		}
