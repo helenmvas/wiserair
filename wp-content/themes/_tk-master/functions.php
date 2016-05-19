@@ -69,13 +69,6 @@ function _tk_setup() {
 endif; // _tk_setup
 add_action( 'after_setup_theme', '_tk_setup' );
 
-function my_add_scripts() {
-    wp_enqueue_script('jquery');
-    wp_enqueue_script('flexslider', get_template_directory_uri().'/includes/js/jquery.flexslider-min.js', array('jquery'));
-    wp_enqueue_script('flexslider-init', get_template_directory_uri().'/includes/js/flexslider-init.js', array('jquery', 'flexslider'));
-}
-add_action('wp_enqueue_scripts', 'my_add_scripts');
-
 /**
  * Register widgetized area and update sidebar with default widgets
  */
