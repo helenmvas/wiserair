@@ -141,7 +141,26 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="text-center" id="get-in-touch">
+<section class="main-content">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2>Contact Us</h2>
+				<p class="subtitle">Use the form below to submit your product comments or support questions. Or, give us a call at 1-(855)-55-WISER.</p>
+
+				<p class="subtitle">Monday - Friday: 8am-12am EST | Saturday - Sunday: 10am-7pm EST</p>
+
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<?php echo do_shortcode('[contact-form-7 id="4" title="Contact form 1"]'); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- <section class="text-center" id="get-in-touch">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
@@ -153,6 +172,6 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 
 <?php get_footer(); ?>
