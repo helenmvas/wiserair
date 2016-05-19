@@ -61,7 +61,7 @@ class WonderPlugin_Tabs_Update {
 				{
 					if (WONDERPLUGIN_TABS_VERSION_TYPE == 'F')
 					{
-						echo '<div class="error notice is-dismissible"><p><strong>' . $info->name . '</strong>: To update the plugin in WordPress backend, please <a href="https://www.wonderplugin.com/order/" target="_blank">upgrade to a commercial license</a>, otherwise, you will get the <strong>Update package not available</strong> error.</div>';				
+						echo '<div class="error notice is-dismissible"><p><strong>' . $info->name . '</strong>: To update the plugin in WordPress backend, please <a href="https://www.wonderplugin.com/order/?product=tabs" target="_blank">upgrade to a commercial license</a>, otherwise, you will get the <strong>Update package not available</strong> error.</div>';				
 					}
 					else
 					{
@@ -184,7 +184,7 @@ class WonderPlugin_Tabs_Update {
 		{
 			if (WONDERPLUGIN_TABS_VERSION_TYPE == 'F')
 			{
-				echo '<br>To get automatic update, please <a href="https://www.wonderplugin.com/order/" target="_blank">upgrade to a commercial license</a>.';
+				echo '<br>To get automatic update, please <a href="https://www.wonderplugin.com/order/?product=tabs" target="_blank">upgrade to a commercial license</a>.';
 			}
 			else
 			{

@@ -77,28 +77,42 @@ class Ai1wm_Import_Done {
 	public static function shutdown() {
 		$error = error_get_last();
 
-		// Deactivate must-use plugins on fatal errors
-		if ( $error ) {
-			if ( $error['type'] === E_ERROR && stripos( $error['file'], AI1WM_MUPLUGINS_NAME ) !== false ) {
-				if ( is_dir( ai1wm_content_path( AI1WM_MUPLUGINS_NAME ) ) ) {
-					@rename( ai1wm_content_path( AI1WM_MUPLUGINS_NAME ), sprintf( '%s-%s', ai1wm_content_path( AI1WM_MUPLUGINS_NAME ), date( 'YmdHis' ) ) );
+		// Set error type
+		$type = null;
+		if ( isset( $error['type'] ) ) {
+			$type = $error['type'];
+		}
+
+		// Set error file
+		$file = null;
+		if ( isset( $error['file'] ) ) {
+			$file = $error['file'];
+		}
+
+		// Deactivate must-use plugins on fatal and parse errors
+		if ( in_array( $type, array( E_ERROR, E_PARSE ) ) && stripos( $file, AI1WM_MUPLUGINS_NAME ) !== false ) {
+			foreach ( wp_get_mu_plugins() as $mu_plugin ) {
+				if ( copy( $mu_plugin, sprintf( '%s-%s', $mu_plugin, date( 'YmdHis' ) ) ) ) {
+					if ( ( $handle = fopen( $mu_plugin, 'w' ) ) ) {
+						fclose( $handle );
+					}
 				}
 			}
 		}
 
-		// Get permalink URL
-		$permalink = admin_url( 'options-permalink.php#submit' );
-
 		// Set progress
 		Ai1wm_Status::done(
-			__(
-				"You need to perform two more steps:<br />" .
-				"<strong>1. You must save your permalinks structure twice. <a class=\"ai1wm-no-underline\" href=\"{$permalink}\" target=\"_blank\">Permalinks Settings</a></strong> <small>(opens a new window)</small><br />" .
-				"<strong>2. <a class=\"ai1wm-no-underline\" href=\"https://wordpress.org/support/view/plugin-reviews/all-in-one-wp-migration?rate=5#postform\" target=\"_blank\">Optionally, review the plugin</a>.</strong> <small>(opens a new window)</small>",
-				AI1WM_PLUGIN_NAME
+			sprintf(
+				__(
+					'You need to perform two more steps:<br />' .
+					'<strong>1. You must save your permalinks structure twice. <a class="ai1wm-no-underline" href="%s" target="_blank">Permalinks Settings</a></strong> <small>(opens a new window)</small><br />' .
+					'<strong>2. <a class="ai1wm-no-underline" href="https://wordpress.org/support/view/plugin-reviews/all-in-one-wp-migration?rate=5#postform" target="_blank">Optionally, review the plugin</a>.</strong> <small>(opens a new window)</small>',
+					AI1WM_PLUGIN_NAME
+				),
+				admin_url( 'options-permalink.php#submit' )
 			),
 			__(
-				"Your data has been imported successfuly!",
+				'Your data has been imported successfuly!',
 				AI1WM_PLUGIN_NAME
 			)
 		);
