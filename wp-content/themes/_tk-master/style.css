@@ -526,7 +526,7 @@ nav.site-navigation {
 
 .menu-item-3349 .dropdown-menu>li:nth-of-type(2) a {
     color: #000;
-    background-image: url("/images/0.0.0_hd_logo_300x300.jpg") !important;
+    background-image: url("/uploads/2016/05/APC_by_Schneider_Electric_CMYK.jpg") !important;
     background-size: 17%;
     background-repeat: no-repeat;
     background-position: 8% 0%;
@@ -535,7 +535,34 @@ nav.site-navigation {
 
 .menu-item-3349 .dropdown-menu>li:nth-of-type(3) a {
     color: #000;
+    background-image: url("/uploads/2016/05/BBY_Logo_4C.jpg") !important;
+    background-size: 17%;
+    background-repeat: no-repeat;
+    background-position: 8% 0%;
+    padding-left: 50px;
+}
+
+.menu-item-3349 .dropdown-menu>li:nth-of-type(4) a {
+    color: #000;
     background-image: url("/images/0.0.0_cc_logo_100x100.jpg") !important;
+    background-size: 17%;
+    background-repeat: no-repeat;
+    background-position: 8% 0%;
+    padding-left: 50px;
+}
+
+.menu-item-3349 .dropdown-menu>li:nth-of-type(5) a {
+    color: #000;
+    background-image: url("/images/0.0.0_hd_logo_300x300.jpg") !important;
+    background-size: 17%;
+    background-repeat: no-repeat;
+    background-position: 8% 0%;
+    padding-left: 50px;
+}
+
+.menu-item-3349 .dropdown-menu>li:nth-of-type(6) a {
+    color: #000;
+    background-image: url("/uploads/2016/05/newegg_bluelogo.jpg") !important;
     background-size: 17%;
     background-repeat: no-repeat;
     background-position: 8% 0%;
@@ -1920,7 +1947,6 @@ section.about-section-two {
 
 ul.wtb-retailers li {
     float: left;
-    width: 30%;
     list-style-type: none;
     border: 1px solid #eee;
     margin-right: 36px;
