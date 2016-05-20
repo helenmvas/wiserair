@@ -31,7 +31,7 @@ get_header(); ?>
 		<div class="row">
 			<ul class="wtb-retailers">
             <?php $retailers = new WP_Query(array(
-                'post_type' => 'retailers'
+                'post_type' => 'retailers', 'orderby' => 'title', 'order' => 'ASC'
                 )); ?>
 
             <?php while($retailers->have_posts()) : $retailers->the_post(); ?>
