@@ -29,7 +29,7 @@ get_header(); ?>
 	</div>
 <!-- </div> -->
 
-<section id="support-intro">
+<section id="support-intro" class="dark-grey">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
