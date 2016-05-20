@@ -1458,6 +1458,7 @@ section {
 
 div#highcharts-0 {
     text-align: center !important;
+    margin-right: 0px !important;
 }
 
 #wonderplugintabs-7 > .wonderplugintabs-header-wrap .wonderplugintabs-header-li-first, #wonderplugintabs-8 > .wonderplugintabs-header-wrap .wonderplugintabs-header-li-first {
@@ -1544,6 +1545,10 @@ div#wonderplugintabs-2 .right {
     color: #fff !important;
 }
 
+#wonderplugintabs-7 > .wonderplugintabs-header-wrap .wonderplugintabs-header-li-last,
+#wonderplugintabs-8 > .wonderplugintabs-header-wrap .wonderplugintabs-header-li-last {
+    border-right: 0px;
+}
 .metaslider .slides img {
     width: 34%;
     display: block;
@@ -1592,12 +1597,12 @@ div#wonderplugintabs-2 .right {
 }
 
 .page-template-page-eco-iq .metaslider .slides img {
-    width: 77%;
+    width: 60%;
     display: block;
     margin: 0px auto 0 auto;
     padding: 0;
     height: 100%;
-    margin-left: 10%;
+    margin-left: 19%;
 }
 
 .flex-direction-nav {
