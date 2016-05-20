@@ -478,7 +478,7 @@ nav.site-navigation {
 }
 
 .menu-item-3349 .dropdown-menu>li>a {
-    margin: 15px 10px;
+    margin: 22px 10px;
 }
 
 .navbar-nav>li>.dropdown-menu {
@@ -529,7 +529,7 @@ nav.site-navigation {
     background-image: url("/wp-content/uploads/2016/05/APC_by_Schneider_Electric_CMYK.jpg") !important;
     background-size: 17%;
     background-repeat: no-repeat;
-    background-position: 8% 0%;
+    background-position: 8% 38%;
     padding-left: 50px;
 }
 
@@ -572,9 +572,9 @@ nav.site-navigation {
 .menu-item-3349 .dropdown-menu>li:nth-of-type(7) a {
     color: #000;
     background-image: url("/wp-content/uploads/2016/05/newegg_bluelogo.jpg") !important;
-    background-size: 17%;
+    background-size: 19%;
     background-repeat: no-repeat;
-    background-position: 8% 0%;
+    background-position: 8% 27%;
     padding-left: 50px;
 }
 
