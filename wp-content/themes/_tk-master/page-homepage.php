@@ -22,24 +22,14 @@ get_header(); ?>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-5 col-md-5 col-sm-5 text-left">
-					
+					<h2><?php the_field('homepage_section_1_title'); ?></h2>
+					<p class="subtitle"><?php the_field('homepage_section_1_subtitle'); ?></p>
+					<p class="btn-space"><?php the_field('homepage_section_1_button'); ?></p>
 				</div>
 			</div>
 		</div>
 	</div>
 <!-- </div> -->
-
-<section class="homepage-section-1">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
-				<h2><?php the_field('homepage_section_1_title'); ?></h2>
-				<p class="subtitle"><?php the_field('homepage_section_1_subtitle'); ?></p>
-				<p class="btn-space"><?php the_field('homepage_section_1_button'); ?></p>
-			</div>
-		</div>
-	</div>
-</section>
 
 <section class="homepage-section-2" id="in-control">
 	<div class="container">
