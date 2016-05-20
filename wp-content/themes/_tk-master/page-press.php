@@ -44,10 +44,8 @@ get_header(); ?>
             <?php while($press->have_posts()) : $press->the_post(); ?>
 
                 <div class="col-lg-6 col-md-6 col-sm-6" class="press-releases">
-                    <a href="<?php the_field('full_document_download'); ?>" target="_blank">
-                        <h4><?php the_title(); ?></h4>
-                        <p><?php the_excerpt(); ?></p>
-                    </a>
+                    <a href="<?php the_field('full_document_download'); ?>" target="_blank"><h4><?php the_title(); ?></h4></a>
+                    <p><?php the_excerpt(); ?></p>
                 </div>
             <?php endwhile; // end of the loop. ?>
             <?php wp_reset_postdata(); ?>
