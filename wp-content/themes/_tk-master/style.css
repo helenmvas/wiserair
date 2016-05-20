@@ -1406,11 +1406,11 @@ section {
     height: 400px;
     background: url("/images/1.4.0_background.jpg") 0 100%/200% no-repeat;
     color: #fff;
-    background-size: 192%;
+    background-size: 207%;
 }
 
 .homepage-section-5 h2 {
-    padding-top: 10%;
+    padding-top: 7%;
 }
 
 .homepage-section-6#retailers .row {
@@ -1965,7 +1965,7 @@ ul.wtb-retailers li {
     border: 1px solid #eee;
     margin-right: 36px;
     height: 200px;
-    line-height: 200px
+    line-height: 200px;
     margin-bottom: 30px;
 }
 
