@@ -1926,6 +1926,7 @@ ul.wtb-retailers li {
     margin-right: 36px;
     height: 200px;
     padding-top: 50px;
+    margin-bottom: 30px;
 }
 
 ul.wtb-retailers li img {
@@ -2027,6 +2028,10 @@ div#cptbc-item-1651 p, div#cptbc-item-1651 h4 {
     border-right: 1px dotted #ddd;;
 }
 
+.post-content-text {
+    padding-right: 7%;
+}
+
 /* Search */
 
 .search-form {
@@ -2047,6 +2052,7 @@ select#searchform_cat {
     padding-left: 11px;
     border-radius: 5px;
     outline-color: #00a550;
+    color: #000;
 }
 
 .search-submit, input#searchsubmit {
