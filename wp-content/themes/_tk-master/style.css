@@ -1721,7 +1721,7 @@ div#wonderplugintabs-2 .right {
     margin-top: 30px;
 } 
 
-/* Getting Started */
+/* Getting Started/Quick Start */
 
 #sync {
     padding: 0px;
@@ -1825,6 +1825,10 @@ div#wonderplugintabs-5 {
 #wonderplugintabs-5 .wonderplugintabs-header-li-active .wonderplugintabs-header-title,
 #wonderplugintabs-6 .wonderplugintabs-header-li-active .wonderplugintabs-header-title {
     color: #009530 !important;
+}
+
+.gray#getting-started img {
+    margin: 40px 0px 15px 0px;
 }
 
 /* Press */
@@ -2170,6 +2174,13 @@ article .entry-meta {
             padding: 0px;
         }
 
+        .page-template-page-up-close video {
+            height: 355px;
+        }
+
+        .wonderplugintabs .left, .wonderplugintabs .right {
+            width: 50%;
+        }
     }
 
     /* Small Devices, Tablets */
@@ -2491,6 +2502,22 @@ article .entry-meta {
         #eco-iq-working h2 {
             margin-top: 550px;
         }
+
+        .wonderplugintabs .left {
+            width: 100%;
+            float: none;
+            margin-top: 0%;
+        }
+
+        .wonderplugintabs .left img, .wonderplugintabs .right img {
+            width: 50%;
+        }
+
+        .wonderplugintabs .right {
+            text-align: center;
+            float: none;
+            width: 100%;
+        }
     }
 
 
@@ -2630,7 +2657,6 @@ article .entry-meta {
 
         #support-intro input#searchsubmit {
             margin-top: 14px !important;
-            border-radius: 5px;
         }
 
         .support-featured-image {
@@ -2713,6 +2739,11 @@ article .entry-meta {
 
     /* Extra Small Devices, Phones */ 
     @media only screen and (max-width : 480px) {
+        #support-intro input#searchsubmit {
+            margin-top: 14px !important;
+            border-radius: 5px;
+        }
+
         .navbar li {
             padding: 10px 0px;
             border-top: 1px solid #ddd;
