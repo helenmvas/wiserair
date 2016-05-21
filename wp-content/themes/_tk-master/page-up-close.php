@@ -48,6 +48,8 @@ get_header(); ?>
 			<div class="col-lg-12 text-center">
 				<?php echo do_shortcode('[wonderplugin_tabs id="3"]'); ?>
 			</div>
+			<script src="https://code.highcharts.com/highcharts.js"></script>
+			<script src="https://code.highcharts.com/modules/exporting.js"></script>
 			<script type="text/javascript">
 				jQuery( document ).ready(function($) {
 				    $('#chart-container').highcharts({
@@ -144,8 +146,6 @@ get_header(); ?>
 				    });
 				});
 			</script>
-			<script src="https://code.highcharts.com/highcharts.js"></script>
-			<script src="https://code.highcharts.com/modules/exporting.js"></script>
 		</div>
 	</div>
 </section>
