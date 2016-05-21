@@ -51,9 +51,6 @@ get_header(); ?>
 			<script type="text/javascript">
 				jQuery( document ).ready(function($) {
 				    $('#chart-container').highcharts({
-					chart: {
-          				  width: $('#clear-information .container').width(),
-        				},
 				        credits: {
 				            enabled: false
 				        },
