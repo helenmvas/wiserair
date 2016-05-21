@@ -1,4 +1,6 @@
 jQuery( document ).ready(function($) {
+    $(window).resize();
+    
     $('#chart-container').highcharts({
         credits: {
             enabled: false
