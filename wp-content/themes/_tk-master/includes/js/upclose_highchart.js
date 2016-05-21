@@ -94,7 +94,7 @@ jQuery( document ).ready(function($) {
     });
 });
 
-jQuery( document ).load(function($) {
+jQuery( window ).load(function($) {
     alert('b');
     $(window).resize(
         function() {
