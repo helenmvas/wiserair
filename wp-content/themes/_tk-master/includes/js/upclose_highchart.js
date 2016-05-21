@@ -97,5 +97,4 @@ jQuery( document ).ready(function($) {
 });
 
 jQuery(window).bind('resize', function () {
-    resizeElements();
 }).trigger('resize');
