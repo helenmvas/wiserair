@@ -94,7 +94,7 @@ jQuery( document ).ready(function($) {
 });
 
 jQuery(window).load(function($) {
-    jQuery(window).trigger('resize');
+    window.dispatchEvent(new Event('resize'));
 
     jQuery(window).resize(
         function() {
