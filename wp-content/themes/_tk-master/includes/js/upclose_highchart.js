@@ -94,9 +94,5 @@ jQuery( document ).ready(function($) {
 });
 
 jQuery(window).load(function($) {
-    jQuery(window).resize(
-        function() {
-            alert('resized');
-        }
-    );
+    jQuery(window).trigger("resize");
 });
