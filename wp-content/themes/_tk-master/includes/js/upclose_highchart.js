@@ -93,9 +93,6 @@ jQuery( document ).ready(function($) {
         }]
     });
 });
-
-jQuery(document).load(
-    function($) {
-        alert('b');
-    }
-)
+jQuery( document ).load(function($) {
+    alert('b');
+}
