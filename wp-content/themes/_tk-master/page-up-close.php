@@ -43,7 +43,7 @@ get_header(); ?>
 </section>
 
 <section class="text-center" id="clear-information">
-	<div class="container">
+	<div id="highchartcontainer" class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
 				<h2>Clear information for clear results.</h2>
