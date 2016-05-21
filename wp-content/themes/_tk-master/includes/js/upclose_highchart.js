@@ -1,5 +1,4 @@
 jQuery( document ).ready(function($) {
-    alert('a');
     $('#chart-container').highcharts({
         credits: {
             enabled: false
@@ -94,9 +93,8 @@ jQuery( document ).ready(function($) {
     });
 });
 
-jQuery( window ).load(function($) {
-    alert('b');
-    $(window).resize(
+jQuery(window).load(function($) {
+    jQuery(window).resize(
         function() {
             alert('resized');
         }
