@@ -95,4 +95,4 @@ jQuery( document ).ready(function($) {
 
 jQuery( document ).load(function($) {
     $(window).resize();
-}
+});
