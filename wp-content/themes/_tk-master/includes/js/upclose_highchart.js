@@ -93,8 +93,9 @@ jQuery( document ).ready(function($) {
     });
 });
 
+window.dispatchEvent(new Event('resize'));
+
 jQuery(window).load(function($) {
-    window.dispatchEvent(new Event('resize'));
 
     jQuery(window).resize(
         function() {
