@@ -1,3 +1,6 @@
+jQuery().
+
+
 jQuery( document ).ready(function($) {
     alert('a');
     $('#chart-container').highcharts({
