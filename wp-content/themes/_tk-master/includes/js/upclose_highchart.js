@@ -1,8 +1,5 @@
 jQuery( document ).ready(function($) {
     $('#chart-container').highcharts({
-        chart: {
-            height: $('#chart-container').width(),
-        },
         credits: {
             enabled: false
         },
