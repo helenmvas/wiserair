@@ -92,14 +92,3 @@ jQuery( document ).ready(function($) {
         }]
     });
 });
-
-window.dispatchEvent(new Event('resize'));
-
-jQuery(window).load(function($) {
-
-    jQuery(window).resize(
-        function() {
-            alert('resized');
-        }
-    );
-});
