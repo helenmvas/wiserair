@@ -52,7 +52,7 @@ get_header(); ?>
 				jQuery( document ).ready(function($) {
 				    $('#chart-container').highcharts({
 					chart: {
-          				  width: $('#chart-container').width(),
+          				  width: $('#clear-information').width(),
         				},
 				        credits: {
 				            enabled: false
