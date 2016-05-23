@@ -22,8 +22,8 @@
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
-	<script src="https://wiserairmlp-dev.azurewebsites.net/wp-content/themes/_tk-master/includes/js/jquery.flexslider-min.js"></script>
-	<script src="https://wiserairmlp-dev.azurewebsites.net/js/main.js"></script>
+	<script src="./wp-content/themes/_tk-master/includes/js/jquery.flexslider-min.js"></script>
+	<script src="./js/main.js"></script>
 
 	<style type="text/css">
 		${demo.css}
