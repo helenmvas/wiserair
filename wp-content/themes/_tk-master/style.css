@@ -2998,6 +2998,10 @@ article .entry-meta {
             background-size: cover;
         }
 
+        .page-template-page-homepage .homepage-section-3 {
+            height: 850px !important;
+        }
+
         .page-template-page-homepage .homepage-section-4 .btn-space {
             margin-top: 300px;
             text-align: center;
@@ -3006,6 +3010,10 @@ article .entry-meta {
         .page-template-page-homepage .homepage-section-3 img#control_hand {
             margin-top: 11%;
             margin-left: 0%;
+        }
+
+        .page-template-page-homepage .homepage-featured-image h2 {
+            margin-top: 71%;
         }
     }
 
@@ -3029,10 +3037,6 @@ article .entry-meta {
             padding: 0px;
         }
 
-        .homepage-section-3 {
-            height: 850px !important;
-        }
-        
         .page-template-page-homepage .homepage-section-4 .btn-space {
             margin-top: 280px;
             text-align: center;
