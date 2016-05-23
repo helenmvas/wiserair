@@ -2987,8 +2987,8 @@ article .entry-meta {
 
         .page-template-page-homepage  .homepage-featured-image {
             background-size: cover;
-            background-position: 36% 50%;
-            height: 450px !important;
+            background-position: 45% 50%;
+            min-height: 500px !important;
         }
 
         .page-template-page-homepage .homepage-section-5 {
@@ -3009,7 +3009,7 @@ article .entry-meta {
 
         .page-template-page-homepage .homepage-section-3 img#control_hand {
             margin-top: 11%;
-            margin-left: 0%;
+            margin-left: 9%;
         }
 
         .page-template-page-homepage .homepage-featured-image h2 {
