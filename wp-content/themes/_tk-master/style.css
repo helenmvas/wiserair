@@ -1330,7 +1330,7 @@ section {
 /* Homepage */
 
 .page-template-page-homepage .homepage-featured-image h2 {
-    margin-top: 28%;
+    margin-top: 48%;
 }
 
 .homepage-featured-image {
@@ -1556,7 +1556,7 @@ div#wonderplugintabs-2 .right {
 
 #wonderplugintabs-7 > .wonderplugintabs-header-wrap .wonderplugintabs-header-li-last,
 #wonderplugintabs-8 > .wonderplugintabs-header-wrap .wonderplugintabs-header-li-last {
-    border-right: 0px;
+    border-right: 0px !important;
 }
 .metaslider .slides img {
     width: 34%;
@@ -2990,6 +2990,38 @@ article .entry-meta {
     @media only screen and (max-width : 320px) {
         .support-featured-image .col-sm-6 {
             margin-left: 0%; 
+        }
+
+        .page-template-page-homepage .homepage-featured-image h2 {
+            margin-top: 177%;
+        }
+
+        .page-template-page-homepage  .homepage-featured-image {
+            background-size: cover;
+            background-position: 36% 50%;
+            height: 450px !important;
+        }
+
+        .site-navigation-inner {
+            padding: 0px;
+        }
+
+        .page-template-page-homepage .homepage-section-4 .btn-space {
+            margin-top: 280px;
+            text-align: center;
+        }
+
+        .page-template-page-homepage .homepage-section-5 {
+            height: 400px;
+            background: url("/images/1.4.0_background.jpg") 0 100%/200% no-repeat;
+            color: #fff;
+            background-size: cover;
+        }
+
+        .page-template-page-homepage .homepage-section-3 img#control_hand {
+            margin-top: 11%;
+            margin-left: 0%;
+            height: 850px !important;
         }
     }
 
