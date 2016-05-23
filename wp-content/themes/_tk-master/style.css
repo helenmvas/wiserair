@@ -2981,8 +2981,21 @@ article .entry-meta {
         }
 
         .page-template-page-eco-iq .homepage-featured-image {
-            background-position: 63% 50%;
+            background-position: 31% 50%;
             height: 400px;
+        }
+
+        .page-template-page-homepage  .homepage-featured-image {
+            background-size: cover;
+            background-position: 36% 50%;
+            height: 450px !important;
+        }
+        
+        .page-template-page-homepage .homepage-section-5 {
+            height: 400px;
+            background: url("/images/1.4.0_background.jpg") 0 100%/200% no-repeat;
+            color: #fff;
+            background-size: cover;
         }
     }
 
