@@ -784,6 +784,10 @@ article .page-title:first-child {
 
 /* Support */
 
+.search-results article {
+    display: none;
+}
+
 .support-featured-image {
     height: 450px;
     background-repeat: no-repeat !important;
