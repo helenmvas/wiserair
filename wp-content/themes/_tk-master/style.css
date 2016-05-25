@@ -784,7 +784,7 @@ article .page-title:first-child {
 
 /* Support */
 
-.search-results article {
+.search-results article, #recent-posts-2 ul, #categories-2 ul {
     display: none;
 }
 
@@ -3039,6 +3039,23 @@ article .entry-meta {
         .page-template-page-homepage .homepage-featured-image h2 {
             margin-top: 71%;
         }
+
+        .page-template-page-up-close video {
+            height: 355px;
+            width: 100%;
+        }
+
+        .page-template-page-eco-iq .homepage-featured-image {
+            background-position: 95% 0%;
+            min-height: 300px !important;
+            /* background: 0 100%/200%; */
+            background-repeat: no-repeat;
+        }
+
+        .homepage-section-4 .push-left {
+            padding-left: 4%;
+            padding: 0%;
+        }
     }
 
     /* Custom, iPhone Retina */ 
@@ -3050,10 +3067,10 @@ article .entry-meta {
         .support-featured-image .col-sm-6 {
             margin-left: 0%; 
         }
-
+/*
         .page-template-page-homepage .homepage-featured-image h2 {
             margin-top: 40%;
-        }
+        }*/
 
         .page-template-page-homepage .col-lg-5.col-md-5.col-sm-5.col-xs-8.text-left {
             width: 100%;
@@ -3081,9 +3098,9 @@ article .entry-meta {
             background-size: cover;
         }
 
-        .page-template-page-up-close video {
-            height: 355px;
-            width: 100%;
+        .wonderplugintabs-header-title {
+            letter-spacing: 1px;
+            font-size: 11px !important;
         }
     }
 
