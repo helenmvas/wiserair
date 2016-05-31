@@ -1,5 +1,6 @@
 <?php
 /**
+*  multisite enabled`
  * The base configuration for WordPress
  *
  * The wp-config.php creation script uses this file during the
