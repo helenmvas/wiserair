@@ -80,6 +80,8 @@ function icl_sitepress_activate() {
                 KEY `id_type_language` (`element_id`, `element_type`, `language_code`)
             ) {$charset_collate}";
 			if ( $wpdb->query( $sql ) === false ) {
+        echo "83";
+        exit;
 				throw new Exception( $wpdb->last_error );
 			}
 		}
@@ -106,6 +108,8 @@ function icl_sitepress_activate() {
                 ) {$charset_collate}    
             ";
 			if ( $wpdb->query( $sql ) === false ) {
+        echo "111";
+        exit;
 				throw new Exception( $wpdb->last_error );
 			}
 		}
@@ -125,6 +129,8 @@ function icl_sitepress_activate() {
                 ) {$charset_collate}    
             ";
 			if ( $wpdb->query( $sql ) === false ) {
+        echo "132";
+        exit;
 				throw new Exception( $wpdb->last_error );
 			}
 		}
@@ -148,6 +154,8 @@ function icl_sitepress_activate() {
                 ) {$charset_collate}
             ";
 			if ( $wpdb->query( $sql ) === false ) {
+        echo "157";
+        exit;
 				throw new Exception( $wpdb->last_error );
 			}
 		}
@@ -166,6 +174,8 @@ function icl_sitepress_activate() {
                 ) {$charset_collate}
             ";
 			if ( $wpdb->query( $sql ) === false ) {
+        echo "177";
+        exit;
 				throw new Exception( $wpdb->last_error );
 			}
 		}
@@ -180,6 +190,8 @@ function icl_sitepress_activate() {
                     UNIQUE (`code` ,`locale`)
                 ) {$charset_collate}";
 			if ( $wpdb->query( $sql ) === false ) {
+        echo "193";
+        exit;
 				throw new Exception( $wpdb->last_error );
 			}
 		}
@@ -206,6 +218,8 @@ function icl_sitepress_activate() {
                   ) {$charset_collate}
                   ";
 			if ( $wpdb->query( $sql ) === false ) {
+        echo "221";
+        exit;
 				throw new Exception( $wpdb->last_error );
 			}
 		}
@@ -227,6 +241,8 @@ function icl_sitepress_activate() {
                   UNIQUE KEY `string_language` (`string_id`,`language`)
                 ) {$charset_collate}";
 			if ( $wpdb->query( $sql ) === false ) {
+        echo "244";
+        exit;
 				throw new Exception( $wpdb->last_error );
 			}
 		}
@@ -243,6 +259,8 @@ function icl_sitepress_activate() {
                 INDEX ( `string_translation_id` )
                 ) {$charset_collate}";
 			if ( $wpdb->query( $sql ) === false ) {
+        echo "262";
+        exit;
 				throw new Exception( $wpdb->last_error );
 			}
 		}
@@ -258,6 +276,8 @@ function icl_sitepress_activate() {
                 INDEX ( `string_id` )
                 ) {$charset_collate}";
 			if ( $wpdb->query( $sql ) === false ) {
+        echo "279";
+        exit;
 				throw new Exception( $wpdb->last_error );
 			}
 		}
@@ -281,6 +301,8 @@ function icl_sitepress_activate() {
                       KEY `object_id` (`object_id`)
                 ) {$charset_collate}";
 			if ( $wpdb->query( $sql ) === false ) {
+        echo "304";
+        exit;
 				throw new Exception( $wpdb->last_error );
 			}
 		}
@@ -299,6 +321,8 @@ function icl_sitepress_activate() {
             ) {$charset_collate}
       ";
 		if ( $wpdb->query( $icl_translation_sql ) === false ) {
+      echo "324";
+        exit;
 			throw new Exception( $wpdb->last_error );
 		}
 
@@ -313,6 +337,8 @@ function icl_sitepress_activate() {
             ) {$charset_collate} 
       ";
 		if ( $wpdb->query( $icl_translation_sql ) === false ) {
+      echo "340";
+        exit;
 			throw new Exception( $wpdb->last_error );
 		}
 
@@ -325,6 +351,8 @@ function icl_sitepress_activate() {
             ) {$charset_collate}  
       ";
 		if ( $wpdb->query( $icl_translation_sql ) === false ) {
+      echo "354";
+        exit;
 			throw new Exception( $wpdb->last_error );
 		}
 
@@ -339,10 +367,14 @@ function icl_sitepress_activate() {
             ) {$charset_collate}  
       ";
 		if ( $wpdb->query( $icl_translation_sql ) === false ) {
+      echo "370";
+        exit;
 			throw new Exception( $wpdb->last_error );
 		}
 
 	} catch ( Exception $e ) {
+    echo "376";
+        exit;
 		trigger_error( $e->getMessage(), E_USER_ERROR );
 		exit;
 	}
