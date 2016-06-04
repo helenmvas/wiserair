@@ -1537,6 +1537,10 @@ div#wonderplugintabs-2 .right {
     margin-top: 6%;
 }
 
+div#html5-watermark {
+    display: none !important;
+}
+
 /* Eco IQ Page */
 .page-template-page-eco-iq .homepage-featured-image {
     min-height: 500px;
@@ -3056,6 +3060,21 @@ article .entry-meta {
         .homepage-section-4 .push-left {
             padding-left: 4%;
             padding: 0%;
+        }
+
+        input.wpcf7-form-control {
+            margin-left: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-bottom: 5px;
+            width: 100%;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .wpcf7-submit {
+            margin-top: 30px !important;
         }
     }
 
