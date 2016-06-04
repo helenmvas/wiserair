@@ -1537,6 +1537,10 @@ div#wonderplugintabs-2 .right {
     margin-top: 6%;
 }
 
+div#html5-watermark {
+    display: none !important;
+}
+
 /* Eco IQ Page */
 .page-template-page-eco-iq .homepage-featured-image {
     min-height: 500px;
