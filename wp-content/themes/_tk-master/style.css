@@ -784,7 +784,7 @@ article .page-title:first-child {
 
 /* Support */
 
-#recent-posts-2 {
+.search-results article, #recent-posts-2 {
     display: none;
 }
 
