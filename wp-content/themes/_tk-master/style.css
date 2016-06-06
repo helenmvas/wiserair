@@ -1974,6 +1974,10 @@ width: 100%;
 .date-post {
     display: none;
 }
+
+.post-content-text {
+    padding: 0% !important;
+}
 /* About */
 
 .about-featured-image {
