@@ -1895,6 +1895,9 @@ div#wonderplugintabs-5 {
 
 .page-template-page-press h4{
     line-height: 25px;
+    color: #000;
+    font-weight: 300;
+    font-size: 17px;
 }
 
 .blog-col-2 {
@@ -1902,8 +1905,10 @@ div#wonderplugintabs-5 {
 }
 
 .blog .blog-title a {
-    font-size: 18px;
+    font-size: 17px;
     line-height: 26px;
+    color: #000;
+    font-weight: 400;
 }
 
 .blog-author {
