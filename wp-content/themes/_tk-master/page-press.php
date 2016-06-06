@@ -209,7 +209,7 @@ get_header(); ?>
         <div class="row">
             <div class="col-lg-12">
                 <h3>Blog</h3>
-                <?php echo do_shortcode('[recent_blog_post limit="20" grid="2"]'); ?>
+                <?php echo do_shortcode('[recent_blog_post limit="20" grid="1"]'); ?>
             </div>
         </div>
     </div>

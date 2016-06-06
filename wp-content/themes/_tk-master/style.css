@@ -1951,10 +1951,17 @@ width: 100%;
 
 .blog-col-1 .grid-blog-thumb {
     height: 200px;
+    width: 200px;
+}
+
+.blog-thumb {
+    float: left;
+    width: 20%;
+    margin-bottom: 15px;
 }
 
 .blog-col-1 .grid-blog-thumb img {
-    width: 100%;
+    width: 100% !important;
 }
 
 .blog-content {
@@ -2099,8 +2106,6 @@ div#cptbc-item-1651 p, div#cptbc-item-1651 h4 {
 
 .page-template-page-blog .blog.first {
     clear: both !important;
-    padding: 0px;
-    border-right: 1px dotted #ddd;;
 }
 
 .post-content-text {
