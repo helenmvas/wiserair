@@ -1,4 +1,4 @@
-<?php
+?php
 /**
  * The Header for our theme.
  *
@@ -21,7 +21,7 @@
 	
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-	<script src="./wp-content/themes/_tk-master/includes/js/jquery.flexslider-min.js"></script>
+	<script src="https://www.wiserair.com/wp-content/themes/_tk-master/includes/js/jquery.flexslider-min.js"></script>
     	<script src="./js/main.js"></script>
 	<style type="text/css">
 		${demo.css}
