@@ -2104,8 +2104,7 @@ div#cptbc-item-1651 p, div#cptbc-item-1651 h4 {
 
 .page-template-page-blog .blog.first {
     clear: both !important;
-    padding: 0px;
-    border-right: 1px dotted #ddd;;
+    padding-top: 30px;
 }
 
 .post-content-text {
