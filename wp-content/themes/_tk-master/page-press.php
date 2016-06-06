@@ -42,10 +42,12 @@ get_header(); ?>
                 )); ?>
 
             <?php while($press->have_posts()) : $press->the_post(); ?>
-
-                <div class="col-lg-6 col-md-6 col-sm-6" class="press-releases">
-                    <h4><?php the_title(); ?></h4>
-                    <p><?php the_excerpt(); ?></p>
+                <div class="press-releases">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <?php the_post_thumbnail('medium'); ?>
+                        <h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
+                        <p><?php the_excerpt(); ?></p>
+                    </div>
                 </div>
             <?php endwhile; // end of the loop. ?>
             <?php wp_reset_postdata(); ?>
@@ -205,7 +207,7 @@ get_header(); ?>
         <div class="row">
             <div class="col-lg-12">
                 <h3>Blog</h3>
-                <?php echo do_shortcode('[recent_blog_post limit="20" grid="2"]'); ?>
+                <?php echo do_shortcode('[recent_blog_post limit="20" grid="1"]'); ?>
             </div>
         </div>
     </div>
