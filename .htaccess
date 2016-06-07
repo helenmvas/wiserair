@@ -1,9 +1,10 @@
-# Images, Stylesheets etc. don't need a HTML 404
-RewriteCond %{REQUEST_URI} !.+\.\w{2,4}$
-# Existing file
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
-# Existing directory
 RewriteCond %{REQUEST_FILENAME} !-d
-# Symbolic link
-RewriteCond %{REQUEST_FILENAME} !-l
-RewriteRule ^ index.php [L]
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
