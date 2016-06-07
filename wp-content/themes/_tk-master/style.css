@@ -1983,6 +1983,14 @@ width: 100%;
 .post-content-text {
     padding: 0% !important;
 }
+
+/* Marketing Landing Pages */
+
+.page-template-page-landing article .page-title {
+    font-size: 28px;
+    margin-top: 50px !important;
+}
+
 /* About */
 
 .about-featured-image {
