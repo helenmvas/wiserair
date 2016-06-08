@@ -25,8 +25,8 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2>Wiser Air Support</h2>
-				<p>We're here to assist you.</p>
+				<!-- <h2>Wiser Air Support</h2>
+				<p>We're here to assist you.</p> -->
 				<?php echo do_shortcode('[widget id="category_wise_search-3"]'); ?>
 			</div>
 		</div>
