@@ -37,7 +37,7 @@ get_header(); ?>
             <?php while($retailers->have_posts()) : $retailers->the_post(); ?>
 
            		<li class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
-                	<a href="<?php the_field('retailer_link'); ?>">	
+                	<a href="<?php the_field('retailer_link'); ?>" target="_blank">	
                 		<img src="<?php the_field('retailer_image'); ?>"/>
                 	</a>
             	</li>
