@@ -762,7 +762,7 @@ button.SGML_submit_button img.emailarrow {
 
 article .page-title {
     font-size: 18px;
-    line-height: 25px;
+    line-height: 32px;
     margin-top: 30px;
 }
 
@@ -784,7 +784,11 @@ article .page-title:first-child {
 
 /* Support */
 
-#recent-posts-2 {
+.single-format-standard #recent-posts-2 {
+    display: none;
+}
+
+.postid-3972 aside#categories-2 {
     display: none;
 }
 
@@ -1986,9 +1990,13 @@ width: 100%;
 
 /* Marketing Landing Pages */
 
+.apss-social-share {
+    margin-bottom: 20px;
+}
+
 .page-template-page-landing article .page-title {
     font-size: 28px;
-    margin-top: 50px !important;
+    margin-top: -60px !important;
 }
 
 /* About */
@@ -2172,6 +2180,18 @@ select#searchform_cat {
 
 article .entry-meta {
     display: none;
+}
+
+/* Additional */
+
+.apss-theme-1 .apss-single-icon .apss-icon-block {
+    width: 90px;
+}
+
+.apss-theme-1 .apss-share {
+    color: #636363;
+    font-size: 13px !important;
+    margin: 0 !important;
 }
 
 /*==================================================
