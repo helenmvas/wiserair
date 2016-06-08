@@ -10,6 +10,13 @@ jQuery(document).ready(
       }
     );
 
+    $('#html5-text').load(
+      function() {
+        alert('b');
+      }
+
+    );
+
 
   }
 
