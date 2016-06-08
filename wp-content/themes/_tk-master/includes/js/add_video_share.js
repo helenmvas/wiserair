@@ -24,7 +24,7 @@
 
 // );
 
-jQuery('#html5-elem-box').load (
+jQuery('#html5-elem-box').ready (
 
   function($) {
     alert('a');
