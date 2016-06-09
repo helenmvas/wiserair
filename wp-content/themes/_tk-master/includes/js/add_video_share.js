@@ -31,6 +31,6 @@ jQuery(document).ready(
 
 jQuery(document).on('DOMNodeInserted', function(e) {
     if (e.target.id == 'html5box-html5-lightbox') {
-       alert('inserted');
+       jQuery('#html5-text').append('<div class="videoShare">SHARE</div>');
     }
 });
