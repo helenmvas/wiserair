@@ -17,9 +17,9 @@ jQuery(document).ready(
 
     // );
 
-    function createMarkeup() {
-      alert('a');
-    }
+    // function createMarkeup() {
+    //   alert('a');
+    // }
 
 
   }
@@ -27,3 +27,10 @@ jQuery(document).ready(
 
 
 );
+
+
+$(document).on('DOMNodeInserted', function(e) {
+    if (e.target.id == 'html5-lightbox-box') {
+       alert('inserted');
+    }
+});
