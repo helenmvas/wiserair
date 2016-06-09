@@ -1,5 +1,5 @@
 jQuery(document).on('DOMNodeInserted', function(e) {
-    if (e.target.id == 'html5-text') {
+    if (e.target.id == 'html5-elem-box') {
       var link = jQuery('iframe#html5boxiframevideo').attr('src');
       alert("link = " + link);
       if(link) {
