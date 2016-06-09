@@ -30,7 +30,7 @@ jQuery(document).ready(
 
 
 jQuery(document).on('DOMNodeInserted', function(e) {
-    if (e.target.id == 'html5box-html5-lightbox') {
+    if (e.target.id == 'html5-text') {
        jQuery(e).append('<div class="videoShare">APPEND</div>');
     }
 });
