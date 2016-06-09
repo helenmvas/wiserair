@@ -1442,6 +1442,12 @@ section {
     width: 70px;
 }
 
+.videoShare {
+    width: 100px;
+    float: right;
+    background-color: red;
+}
+
 /* Up Close */
 #smarter {
     color: #fff;
