@@ -31,6 +31,7 @@ jQuery(document).ready(
 
 jQuery(document).on('DOMNodeInserted', function(e) {
     if (e.target.id == 'html5-text') {
+      alert('a');
        jQuery(e).append('<div class="videoShare">APPEND</div>');
     }
 });
