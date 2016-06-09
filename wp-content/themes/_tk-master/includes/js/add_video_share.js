@@ -29,7 +29,7 @@ jQuery(document).ready(
 );
 
 
-$(document).on('DOMNodeInserted', function(e) {
+jQuery(document).on('DOMNodeInserted', function(e) {
     if (e.target.id == 'html5-lightbox-box') {
        alert('inserted');
     }
