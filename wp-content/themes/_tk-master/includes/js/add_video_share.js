@@ -30,7 +30,7 @@ jQuery(document).ready(
 
 
 jQuery(document).on('DOMNodeInserted', function(e) {
-    if (e.target.id == 'html5-lightbox-box') {
+    if (e.target.id == 'html5box-html5-lightbox') {
        alert('inserted');
     }
 });
