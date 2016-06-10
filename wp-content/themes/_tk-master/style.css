@@ -1338,6 +1338,11 @@ section {
 
 /* Homepage */
 
+.shareIcons {
+    display: block;
+    float: right;
+}
+
 .shareIcons a {
     float: left;
 }
