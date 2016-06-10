@@ -11,7 +11,7 @@ function getFacebookShareHTML( link ) {
 }
 
 function getTwitterShareURL( link ) {
-  var twitterShareLink = 'https://twitter.com/home?status=' + link;
+  var twitterLink = 'https://twitter.com/home?status=' + link;
   return '<a rel="nofollow" onclick="apss_open_in_popup_window(\''+twitterLink+'\');" title="Share on Twitter" target="" href="'+twitterLink+'"><div class="apss-icon-block clearfix"><i class="fa fa-twitter"></i></div></a>';
 }
 
