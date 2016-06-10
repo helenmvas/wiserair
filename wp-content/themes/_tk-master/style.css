@@ -1338,6 +1338,10 @@ section {
 
 /* Homepage */
 
+.shareIcons a {
+    float: left;
+}
+
 .page-template-page-homepage .homepage-featured-image h2 {
     margin-top: 48%;
 }
