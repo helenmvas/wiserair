@@ -10,22 +10,22 @@ function getFacebookShareHTML( link ) {
   return '<a rel="nofollow" onclick="apss_open_in_popup_window(\''+facebookShareLink+'\');" title="Share on Facebook" target href="'+facebookShareLink+'" title="Share on Facebook"><div class="apss-icon-block clearfix"><i class="fa fa-facebook"></i></div></a>';
 }
 
-function getTwitterShareURL( link ) {
+// function getTwitterShareURL( link ) {
 
-}
+// }
 
-function getGooglePlusShareURL( link ) {
+// function getGooglePlusShareURL( link ) {
 
-}
+// }
 
-function getLinkedInShareURL( link ) {
+// function getLinkedInShareURL( link ) {
 
 
-}
+// }
 
-function getEmailShareURL( link ) {
+// function getEmailShareURL( link ) {
 
-}
+// }
 
 jQuery(document).on('DOMNodeInserted', function(e) {
     if (e.target.id == 'html5-text') {
