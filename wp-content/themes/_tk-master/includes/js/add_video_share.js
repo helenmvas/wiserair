@@ -37,7 +37,7 @@ jQuery(document).on('DOMNodeInserted', function(e) {
 
       link = 'https://www.youtube.com/embed/Z6Cw-ucxkJk';
       
-      jQuery('#html5-text').append( getFacebookShareHTML(link) + getTwitterShareURL() + getGooglePlusShareURL() + getLinkedInShareURL() + getEmailShareURL() );
+      jQuery('#html5-text').append( getFacebookShareHTML(link) /** + getTwitterShareURL() + getGooglePlusShareURL() + getLinkedInShareURL() + getEmailShareURL() **/ );
     }
 });
 
