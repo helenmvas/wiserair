@@ -761,9 +761,9 @@ button.SGML_submit_button img.emailarrow {
 }
 
 article .page-title {
-    font-size: 18px;
-    line-height: 25px;
-    margin-top: 30px;
+    font-size: 23px;
+    line-height: 32px;
+    margin: 30px 0px;
 }
 
 .archive .post header {
@@ -784,10 +784,14 @@ article .page-title:first-child {
 
 /* Support */
 
-#recent-posts-2 {
+/*.single-format-standard #recent-posts-2 {
     display: none;
 }
 
+.postid-3972 aside#categories-2 {
+    display: none;
+}
+*/
 .support-featured-image {
     height: 450px;
     background-repeat: no-repeat !important;
@@ -1168,17 +1172,18 @@ input.wpcf7-form-control {
 
 /* Support Center Blog */
 .support-center-featured-image {
-    background-image: url("/images/1.0.0_background.jpg");
+    background-image: url("https://www.wiserair.com/wp-content/uploads/2016/04/support-section-1-bg.jpg");
     height: 500px;
     background-position: 50% 50%;
     background-size: cover;
 }
 
 section#support-center-intro {
-    margin-top: -150px;
+/*    margin-top: -150px;*/
     /* background: #f9f9f9; */
     margin-bottom: 50px;
     border-bottom: 1px solid #eee;
+    margin-top: 50px;
 }
 
 article .entry-meta {
@@ -1956,10 +1961,6 @@ height: 125px;
 width: 100%;
 }
 
-.page-template-page-press {
-
-}
-
 .blog-col-1 .grid-blog-thumb {
     height: 200px;
     width: 200px;
@@ -1972,23 +1973,42 @@ width: 100%;
 }
 
 .blog-col-1 .grid-blog-thumb img {
-    width: 100% !important;
+    height: 100% !important;
+}
+
+.blog-col-1:last-child {
+    border-bottom: 0px;
 }
 
 .blog-content {
     float: left;
     width: 80%;
     clear: none;
-    padding-left: 2%;
 }
 
-.date-post {
+.blog-cat, .date-post {
     display: none;
 }
 
 .post-content-text {
     padding: 0% !important;
 }
+
+/* Marketing Landing Pages */
+
+.apss-social-share {
+    margin-bottom: 20px;
+}
+
+.apss-theme-1 .apss-single-icon a {
+    margin: 0px 5px !important;
+}
+
+.page-template-page-landing article .page-title {
+    font-size: 28px;
+    margin-top: -60px !important;
+}
+
 /* About */
 
 .about-featured-image {
@@ -2172,6 +2192,23 @@ article .entry-meta {
     display: none;
 }
 
+/* Additional */
+
+.apss-theme-1 .apss-single-icon .apss-icon-block {
+    width: 100%;
+}
+
+.apss-theme-1 .apss-icon-block .fa {
+    margin-right: 0px;
+}
+
+.apss-theme-1 .apss-share {
+    color: #636363;
+    font-size: 13px !important;
+    margin: 0 !important;
+    display: none;
+}
+
 /*==================================================
 =            Bootstrap 3 Media Queries             =
 ==================================================*/
@@ -2242,21 +2279,26 @@ article .entry-meta {
             padding: 0px 20px;
         }
 
-/*        .page-template-page-eco-iq .metaslider .slides img {
-            width: 100%;
-            margin-left: -3%;
-        }*/
+        .post-content-text {
+            float: right;
+            width: 87%;
+            margin-left: 7%;
+        }
     }
 
     /* Medium Devices, Desktops */
     @media only screen and (max-width : 1021px) {
-        /*.site-navigation-inner {
-            padding: 0px 60px;
-        }*/
+        
     }
 
     /* Medium Devices, Desktops */
     @media only screen and (max-width : 992px) {
+        .post-content-text {
+            float: right;
+            width: 87%;
+            margin-left: 20%;
+        }
+
         .carousel-inner>.item>img, .carousel-inner>.item>a>img {
             max-width: 138%;
         }
@@ -2856,6 +2898,20 @@ article .entry-meta {
             background-position: 70% 100%;
             background-size: 263%;
             height: 600px;
+        }
+
+        .blog-thumb {
+            width: 100%;
+        }
+
+        .blog-content {
+            width: 100%;
+            display: block;
+        }
+
+        .post-content-text {
+            width: 100%;
+            padding-left: 0%;
         }
     }
 
