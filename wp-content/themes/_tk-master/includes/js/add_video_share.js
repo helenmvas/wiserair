@@ -9,8 +9,8 @@ jQuery(document).on('DOMNodeInserted', function(e) {
       // }
 
       link = 'https://www.youtube.com/embed/Z6Cw-ucxkJk';
-
-      jQuery('#html5-text').append('<a rel="nofollow" onclick="apss_open_in_popup_window(\'https://www.facebook.com/sharer/sharer.php?u='+link+'\');" title="Share on Facebook">Share on Facebook</a>');
+      facebookShareLink = 'https://www.facebook.com/sharer/sharer.php?u='+link;
+      jQuery('#html5-text').append('<a rel="nofollow" onclick="apss_open_in_popup_window(\''+facebookShareLink+'\');" href="'+facebookShareLink+'" title="Share on Facebook">Share on Facebook</a>');
     }
 });
 
