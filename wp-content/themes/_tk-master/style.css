@@ -2273,21 +2273,26 @@ article .entry-meta {
             padding: 0px 20px;
         }
 
-/*        .page-template-page-eco-iq .metaslider .slides img {
-            width: 100%;
-            margin-left: -3%;
-        }*/
+        .post-content-text {
+            float: right;
+            width: 87%;
+            margin-left: 7%;
+        }
     }
 
     /* Medium Devices, Desktops */
     @media only screen and (max-width : 1021px) {
-        /*.site-navigation-inner {
-            padding: 0px 60px;
-        }*/
+        
     }
 
     /* Medium Devices, Desktops */
     @media only screen and (max-width : 992px) {
+        .post-content-text {
+            float: right;
+            width: 87%;
+            margin-left: 20%;
+        }
+
         .carousel-inner>.item>img, .carousel-inner>.item>a>img {
             max-width: 138%;
         }
@@ -2887,6 +2892,20 @@ article .entry-meta {
             background-position: 70% 100%;
             background-size: 263%;
             height: 600px;
+        }
+
+        .blog-thumb {
+            width: 100%;
+        }
+
+        .blog-content {
+            width: 100%;
+            display: block;
+        }
+
+        .post-content-text {
+            width: 100%;
+            padding-left: 0%;
         }
     }
 
