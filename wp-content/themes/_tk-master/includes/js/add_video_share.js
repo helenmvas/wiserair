@@ -8,7 +8,9 @@ jQuery(document).on('DOMNodeInserted', function(e) {
         // jQuery('#html5-text').append('<a href="'+link+'" class="videoShare">SHARE</a>');
       // }
 
-      jQuery('#html5-text').append("<?php echo do_shortcode('[apss_share]'); ?>");
+      link = 'https://www.youtube.com/embed/Z6Cw-ucxkJk';
+
+      jQuery('#html5-text').append('<a rel="nofollow" onclick="apss_open_in_popup_window(\'https://www.facebook.com/sharer/sharer.php?u='+link+'\');" title="Share on Facebook">Share on Facebook</a>');
     }
 });
 
