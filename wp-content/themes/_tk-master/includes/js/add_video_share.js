@@ -19,11 +19,6 @@ function getGooglePlusShareURL( link ) {
   return '<a rel="nofollow" onclick="apss_open_in_popup_window(\''+googleShareLink+'\');" title="Share on Google Plus" target="" href="'+googleShareLink+'"><div class="apss-icon-block clearfix"><i class="fa fa-google-plus"></i></div></a>';
 }
 
-function pinIt( link ) {
-  return '<a rel="nofollow" title="Share on Pinterest" href="javascript:pinIt();"><div class="apss-icon-block clearfix"><i class="fa fa-pinterest"></i></div></a>';
-} 
-
-
 function getEmailShareURL( link ) {
   return '<a rel="nofollow" class="share-email-popup" title="Share it on Email" target="" href="mailto:?subject=Please visit this link '+link+'/&amp;body=Hey Buddy!, I found this information for you; Here is the video link: '+link+'. Thank you."><div class="apss-icon-block clearfix"><i class="fa  fa-envelope"></i></a>';
 }
@@ -38,6 +33,6 @@ jQuery(document).on('DOMNodeInserted', function(e) {
 
       link = 'https://www.youtube.com/embed/Z6Cw-ucxkJk';
       
-      jQuery('#html5-text').append( getFacebookShareHTML(link)  + getTwitterShareURL(link) + getGooglePlusShareURL(link) + pinIt(link) + getEmailShareURL(link));
+      jQuery('#html5-text').append( getFacebookShareHTML(link)  + getTwitterShareURL(link) + getGooglePlusShareURL(link)+ getEmailShareURL(link));
     }
 });
