@@ -10,7 +10,7 @@ jQuery(document).on('DOMNodeInserted', function(e) {
 
       link = 'https://www.youtube.com/embed/Z6Cw-ucxkJk';
       facebookShareLink = 'https://www.facebook.com/sharer/sharer.php?u='+link;
-      jQuery('#html5-text').append('<a rel="nofollow" onclick="apss_open_in_popup_window(\''+facebookShareLink+'\');" href="'+facebookShareLink+'" title="Share on Facebook">Share on Facebook</a>');
+      jQuery('#html5-text').append('<a rel="nofollow" onclick="apss_open_in_popup_window(\''+facebookShareLink+'\');" title="Share on Facebook" target href="'+facebookShareLink+'" title="Share on Facebook">Share on Facebook</a>');
     }
 });
 
