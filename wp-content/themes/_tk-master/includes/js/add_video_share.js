@@ -6,6 +6,6 @@ jQuery(document).on('DOMNodeInserted', function(e) {
         // jQuery('#html5-text').append('<a href="'+link+'" class="videoShare">SHARE</a>');
       // }
 
-      jQuery('#html5-text').load('./socialShareButtons.php');
+      jQuery('#html5-text').append("<?php echo do_shortcode('[apss_share]'); ?>");
     }
 });
