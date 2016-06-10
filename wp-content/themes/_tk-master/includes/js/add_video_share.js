@@ -1,5 +1,10 @@
 <!--
 
+function apss_open_in_popup_window(url){
+    event.preventDefault();
+    window.open(url, 'fdadas', 'toolbars=0,width=640,height=320,left=200,top=200,scrollbars=1,resizable=1');
+}
+
 jQuery(document).on('DOMNodeInserted', function(e) {
     if (e.target.id == 'html5-text') {
       var link = jQuery('iframe#html5boxiframevideo').attr('src');
