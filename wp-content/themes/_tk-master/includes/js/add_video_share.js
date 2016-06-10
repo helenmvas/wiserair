@@ -1,3 +1,5 @@
+<!--
+
 jQuery(document).on('DOMNodeInserted', function(e) {
     if (e.target.id == 'html5-text') {
       var link = jQuery('iframe#html5boxiframevideo').attr('src');
@@ -9,3 +11,6 @@ jQuery(document).on('DOMNodeInserted', function(e) {
       jQuery('#html5-text').append("<?php echo do_shortcode('[apss_share]'); ?>");
     }
 });
+
+
+//-->
