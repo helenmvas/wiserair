@@ -16,7 +16,7 @@ function getTwitterShareURL( link ) {
 }
 
 function getGooglePlusShareURL( link ) {
-  var googleShareLink = 'https://plus.google.com/share?url=https://www.wiserair.com/2016/05/25/i-activated-a-comfort-boost-heating-or-cooling-and-i-would-like-to-know-how-to-cancel-it-on-the-thermostat-2/';
+  var googleShareLink = 'https://plus.google.com/share?url=' + link;
   return '<a rel="nofollow" onclick="apss_open_in_popup_window(\''+googleShareLink+'\');" title="Share on Google Plus" target="" href="'+googleShareLink+'"><div class="apss-icon-block clearfix"><i class="fa fa-google-plus"></i><span class="apss-social-text">Share on Google Plus</span><span class="apss-share">Share</span></div></a>';
 }
 
