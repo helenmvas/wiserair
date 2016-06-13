@@ -25,15 +25,8 @@ function getEmailShareURL( link ) {
 
 jQuery(document).on('DOMNodeInserted', function(e) {
     if (e.target.id == 'html5-text') {
-      alert(jQuery('a.wplightbox').attr('href'));
-      var link = jQuery('iframe#html5boxiframevideo').attr('src');
-      // alert("link = " + link);
-      // if(link) {
-        // jQuery('#html5-text').append('<a href="'+link+'" class="videoShare">SHARE</a>');
-      // }
-
-      link = 'https://www.youtube.com/embed/Z6Cw-ucxkJk';
-      
+      // alert(jQuery('a.wplightbox').attr('href'));
+      var link = jQuery('a.wplightbox').attr('href');
       jQuery('#html5-text').append( '<div class="shareIcons">' + getFacebookShareHTML(link)  + getTwitterShareURL(link) + getGooglePlusShareURL(link)+ getEmailShareURL(link) + '</div>');
     }
 });
