@@ -25,6 +25,7 @@ function getEmailShareURL( link ) {
 
 jQuery(document).on('DOMNodeInserted', function(e) {
     if (e.target.id == 'html5-text') {
+      alert(jQuery('a.wplightbox').attr('href'));
       var link = jQuery('iframe#html5boxiframevideo').attr('src');
       // alert("link = " + link);
       // if(link) {
