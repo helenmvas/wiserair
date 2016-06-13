@@ -20,7 +20,7 @@ function getGooglePlusShareURL( link ) {
 }
 
 function getEmailShareURL( link ) {
-  return '<a rel="nofollow" class="share-email-popup" title="Share it on Email" target="" href="mailto:?subject=Please visit this link '+link+'/&amp;body=Hey Buddy!, I found this information for you; Here is the video link: '+link+'. Thank you."><div class="apss-icon-block clearfix"><i class="fa  fa-envelope"></i></a>';
+  return '<a rel="nofollow" class="share-email-popup" title="Share it on Email" target="" href="mailto:?subject=Please visit this link '+link+'/&amp;body=Hey Buddy!, I found this information for you; Here is the video link: '+link+'. Thank you."><div class="apss-icon-block clearfix"><i class="fa fa-envelope"></i></div></a>';
 }
 
 var currentLink;
