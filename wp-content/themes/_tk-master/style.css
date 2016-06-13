@@ -1954,20 +1954,20 @@ ul.documents li {
 }
 
 .documents {
-border: 1px solid #ddd;
-height: 200px;
-text-align: center;
-margin-bottom: 30px;
+    border: 1px solid #ddd;
+    height: 200px;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 
 .documents img {
-margin-bottom: 20px;
-height: 125px;
+    margin-bottom: 20px;
+    height: 125px;
 }
 
 .page-template-page-press hr {
-width: 100%;
+    width: 100%;
 }
 
 .blog-col-1 .grid-blog-thumb {
@@ -2001,6 +2001,23 @@ width: 100%;
 
 .post-content-text {
     padding: 0% !important;
+}
+
+.featured-logos {
+    text-align: center;
+}
+
+.featured-logos a {
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.featured-logos img {
+    vertical-align: middle;
+    margin-bottom: 0.25em;
+    text-align: center;
 }
 
 /* Marketing Landing Pages */
