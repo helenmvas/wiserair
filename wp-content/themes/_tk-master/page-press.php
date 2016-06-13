@@ -95,7 +95,7 @@ get_header(); ?>
             <?php while($product_images->have_posts()) : $product_images->the_post(); ?>
 
                 <div class="col-lg-3 col-md-3 col-sm-6">
-                    <a href="<?php the_field('product_image'); ?>" target="_blank">
+                    <a download="<?php the_field('product_image'); ?>" href="<?php the_field('product_image'); ?>" target="_blank">
                      <img src="<?php the_field('product_image'); ?>"/>
                     </a>
                 </div>
@@ -150,7 +150,7 @@ get_header(); ?>
             <?php while($logos->have_posts()) : $logos->the_post(); ?>
 
                 <div class="col-lg-3 col-md-3 col-sm-3 logos text-center">
-                    <a href="<?php the_field('product_logo_download'); ?>" target="_blank"><img src="<?php the_field('product_logo'); ?>"/></a>
+                    <a download="<?php the_field('product_logo'); ?>" href="<?php the_field('product_logo_download'); ?>" target="_blank"><img src="<?php the_field('product_logo'); ?>"/></a>
                      <h5><?php the_title(); ?></h5>
                 </div>
             <?php endwhile; // end of the loop. ?>

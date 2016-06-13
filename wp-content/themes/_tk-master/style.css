@@ -1338,6 +1338,15 @@ section {
 
 /* Homepage */
 
+.shareIcons {
+    display: block;
+    float: right;
+}
+
+.shareIcons a {
+    float: left;
+}
+
 .page-template-page-homepage .homepage-featured-image h2 {
     margin-top: 48%;
 }
@@ -1445,6 +1454,12 @@ section {
 .homepage-section-6#retailers li img {
     height: 70px;
     width: 70px;
+}
+
+.videoShare {
+    width: 100px;
+    float: right;
+    background-color: red;
 }
 
 /* Up Close */
