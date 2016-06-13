@@ -37,8 +37,6 @@ jQuery(document).ready(
 
 jQuery(document).on('DOMNodeInserted', function(e) {
     if (e.target.id == 'html5-text') {
-      // alert(jQuery('a.wplightbox').attr('href'));
-      alert(currentLink);
       var link = currentLink;
       jQuery('#html5-text').append( '<div class="shareIcons">' + getFacebookShareHTML(link)  + getTwitterShareURL(link) + getGooglePlusShareURL(link)+ getEmailShareURL(link) + '</div>');
     }
