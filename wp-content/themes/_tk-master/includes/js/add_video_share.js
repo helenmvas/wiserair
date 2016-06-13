@@ -23,10 +23,23 @@ function getEmailShareURL( link ) {
   return '<a rel="nofollow" class="share-email-popup" title="Share it on Email" target="" href="mailto:?subject=Please visit this link '+link+'/&amp;body=Hey Buddy!, I found this information for you; Here is the video link: '+link+'. Thank you."><div class="apss-icon-block clearfix"><i class="fa  fa-envelope"></i></a>';
 }
 
+var currentLink;
+
+jQuery(document).ready(
+  function($) {
+    $('a.wplightbox').click(
+      function() {
+        currentLink = $(this).attr('href');
+      }
+    );
+  }
+);
+
 jQuery(document).on('DOMNodeInserted', function(e) {
     if (e.target.id == 'html5-text') {
       // alert(jQuery('a.wplightbox').attr('href'));
-      var link = jQuery('a.wplightbox').attr('href');
+      alert(currentLink);
+      var link = currentLink;
       jQuery('#html5-text').append( '<div class="shareIcons">' + getFacebookShareHTML(link)  + getTwitterShareURL(link) + getGooglePlusShareURL(link)+ getEmailShareURL(link) + '</div>');
     }
 });
