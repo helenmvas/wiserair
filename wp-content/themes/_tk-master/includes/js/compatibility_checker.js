@@ -1,6 +1,7 @@
-jQuery(window).load(function($){
-  jQuery('form').submit(function(e){
-    alert("triggered");
+jQuery(document).ready(
+  function(){
+  jQuery('#compat-submit-button').click(function(e){
+      alert("triggered");
         var status = "NOTCOMPATIBLE";
       e.preventDefault();
       var checked = getCheckedStatus('.compat-widget-form *', true);
