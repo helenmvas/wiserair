@@ -114,11 +114,14 @@ jQuery(window).load(function(){
       }
 
         if (status === "COMPATIBLE") {
-            window.location.href = "https://www.wiserhome.com/compatibility-success/";
+            window.location.href = "/compatibility-success/";
+            alert("Compatible");
         }else if (status === "CLOSERLOOK") {
-            window.location.href = "https://www.wiserhome.com/compatibility-closer-look/";
+            window.location.href = "/compatibility-closer-look/";
+            alert("Our team needs to take a closer look");
         }else{
-            window.location.href = "https://www.wiserhome.com/compatibility-failure/";
+            alert("Not compatible");
+            window.location.href = "/compatibility-failure/";
         }
   });
 });
