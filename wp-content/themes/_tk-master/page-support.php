@@ -98,7 +98,7 @@ get_header(); ?>
 	                </tbody>
 	            </table>
                 <div class="submit-container">
-                    <button id="compat-submit-button" type="button" class="button">CHECK WISER COMPATIBILITY</button>
+                    <button type="submit" class="button">CHECK WISER COMPATIBILITY</button>
                 </div>
             </form>
 		</div>
