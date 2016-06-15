@@ -13,7 +13,7 @@
 
 get_header(); ?>
 
-<script src="<?php echo get_template_directory(); ?>/includes/js/compatibility_checker.js"></script>
+<script src="<?php echo get_template_uri(); ?>/includes/js/compatibility_checker.js"></script>
 
 <!-- <div class="container-fluid"> -->
 	<?php global $post; ?>
