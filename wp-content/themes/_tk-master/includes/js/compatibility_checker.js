@@ -7,7 +7,8 @@ jQuery(document).ready(
       var checked = getCheckedStatus('.compat-widget-form *', true);
       var unchecked = getCheckedStatus('.compat-widget-form *', false);
       //Electrical Heat
-      if(this.C.checked && this.G.checked && this.RH.checked && this.W.checked){
+      
+      if(jQuery('form').C.checked && jQuery('form').G.checked && jQuery('form').RH.checked && jQuery('form').W.checked){
         if (checked.length == 4) {
           status = "COMPATIBLE";
         }else{
@@ -15,7 +16,7 @@ jQuery(document).ready(
         }
       }
       //Heat Pump w/ Aux heat Electric ||  Heat Pump w/ Aux Heat Gas ||  Heat Pump w/ Aux heat Oil & Dual Fuel
-      else if(this.RC.checked && this.C.checked && this.G.checked && this.W.checked && this.Y.checked && this.OB.checked){
+      else if(jQuery('form').RC.checked && jQuery('form').C.checked && jQuery('form').G.checked && jQuery('form').W.checked && jQuery('form').Y.checked && jQuery('form').OB.checked){
         if (checked.length == 6) {
                 status = "COMPATIBLE";
             }else{
@@ -23,7 +24,7 @@ jQuery(document).ready(
             }
       }
       //Heat Pump – 1H/1C
-      else if(this.RC.checked && this.C.checked && this.G.checked && this.Y.checked && this.OB.checked){
+      else if(jQuery('form').RC.checked && jQuery('form').C.checked && jQuery('form').G.checked && jQuery('form').Y.checked && jQuery('form').OB.checked){
         if (checked.length == 5) {
                 status = "COMPATIBLE";
             }else{
@@ -31,7 +32,7 @@ jQuery(document).ready(
             }
       }
       //2 Stage Air Condition – 2C
-      else if(this.RC.checked && this.C.checked && this.G.checked && this.Y.checked && this.Y2.checked){
+      else if(jQuery('form').RC.checked && jQuery('form').C.checked && jQuery('form').G.checked && jQuery('form').Y.checked && jQuery('form').Y2.checked){
         if (checked.length == 5) {
                 status = "COMPATIBLE";
             }else{
@@ -39,7 +40,7 @@ jQuery(document).ready(
             }
       }
       //Electrical 1H / 1 C (A/c)
-      else if(this.RC.checked && this.C.checked && this.G.checked && this.Y.checked && this.W.checked){
+      else if(jQuery('form').RC.checked && jQuery('form').C.checked && jQuery('form').G.checked && jQuery('form').Y.checked && jQuery('form').W.checked){
         if (checked.length == 5) {
                 status = "COMPATIBLE";
             }else{
@@ -47,7 +48,7 @@ jQuery(document).ready(
             }
       }
       //Air Condition – 1C
-      else if(this.RC.checked && this.C.checked && this.G.checked && this.Y.checked){
+      else if(jQuery('form').RC.checked && jQuery('form').C.checked && jQuery('form').G.checked && jQuery('form').Y.checked){
         if (checked.length == 4) {
                 status = "COMPATIBLE";
             }else{
@@ -55,7 +56,7 @@ jQuery(document).ready(
             }
       }
       //Heat Pump w/ Aux heat Electric  (2Pwr) || Heat Pump w/ Aux heat Gas  (2Pwr) || Heat Pump w/ Aux heat Oil  (2Pwr)
-      else if(this.RC.checked && this.C.checked && this.G.checked && this.RH.checked && this.W.checked && this.Y.checked && this.OB.checked){
+      else if(jQuery('form').RC.checked && jQuery('form').C.checked && jQuery('form').G.checked && jQuery('form').RH.checked && jQuery('form').W.checked && jQuery('form').Y.checked && jQuery('form').OB.checked){
         if (checked.length == 7) {
                 status = "COMPATIBLE";
             }else{
@@ -63,7 +64,7 @@ jQuery(document).ready(
             }
       }
       //Electrical 1H / 1 C (A/c)
-      else if(this.RC.checked && this.C.checked && this.G.checked && this.RH.checked && this.W.checked && this.Y.checked){
+      else if(jQuery('form').RC.checked && jQuery('form').C.checked && jQuery('form').G.checked && jQuery('form').RH.checked && jQuery('form').W.checked && jQuery('form').Y.checked){
         if (checked.length == 6) {
                 status = "COMPATIBLE";
             }else{
@@ -71,7 +72,7 @@ jQuery(document).ready(
             }
       }
       //Heat Gas || Heat Oil ||  Heat Dual Fuel ||  Heat Hot Water
-      else if(this.C.checked && this.RH.checked && this.W.checked ){
+      else if(jQuery('form').C.checked && jQuery('form').RH.checked && jQuery('form').W.checked ){
         if (checked.length == 3) {
                 status = "COMPATIBLE";
             }else{
@@ -79,7 +80,7 @@ jQuery(document).ready(
             }
       }
       //Heat Pump – 2H/2C
-      else if(this.RC.checked && this.C.checked && this.G.checked && this.Y2.checked && this.Y.checked && this.OB.checked){
+      else if(jQuery('form').RC.checked && jQuery('form').C.checked && jQuery('form').G.checked && jQuery('form').Y2.checked && jQuery('form').Y.checked && jQuery('form').OB.checked){
         if (checked.length == 6) {
                 status = "COMPATIBLE";
             }else{
@@ -87,7 +88,7 @@ jQuery(document).ready(
             }
       }
       //Heat Pump w/ Aux Heat Electric + Gas
-      else if(this.RC.checked && this.C.checked && this.G.checked && this.W2.checked && this.W.checked && this.Y.checked && this.OB.checked){
+      else if(jQuery('form').RC.checked && jQuery('form').C.checked && jQuery('form').G.checked && jQuery('form').W2.checked && jQuery('form').W.checked && jQuery('form').Y.checked && jQuery('form').OB.checked){
         if (checked.length == 7) {
                 status = "COMPATIBLE";
             }else{
@@ -95,7 +96,7 @@ jQuery(document).ready(
             }
       }
       //Heat Pump 2H/2C w/ Aux Heat Electric
-      else if(this.RC.checked && this.C.checked && this.G.checked && this.W.checked && this.Y2.checked && this.Y.checked && this.OB.checked){
+      else if(jQuery('form').RC.checked && jQuery('form').C.checked && jQuery('form').G.checked && jQuery('form').W.checked && jQuery('form').Y2.checked && jQuery('form').Y.checked && jQuery('form').OB.checked){
         if (checked.length == 7) {
                 status = "COMPATIBLE";
             }else{
@@ -103,7 +104,7 @@ jQuery(document).ready(
             }
       }
       //Heat Pump 2H/2C w/  || Prim Heat Electric || Sec Heat Gas || Aux Heat Oil
-      else if(this.RC.checked && this.C.checked && this.G.checked && this.W2.checked && this.W.checked && this.Y2.checked && this.Y.checked && this.OB.checked && this.U.checked){
+      else if(jQuery('form').RC.checked && jQuery('form').C.checked && jQuery('form').G.checked && jQuery('form').W2.checked && jQuery('form').W.checked && jQuery('form').Y2.checked && jQuery('form').Y.checked && jQuery('form').OB.checked && jQuery('form').U.checked){
         if (checked.length == 9) {
                 status = "COMPATIBLE";
             }else{
