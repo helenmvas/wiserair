@@ -1,5 +1,5 @@
-jQuery(window).load(function(){
-  jQuery('.compat-widget-form').submit(function(e){
+jQuery(document).ready(function(){
+    function checkCompatibility() {
         var status = "NOTCOMPATIBLE";
       e.preventDefault();
       var checked = getCheckedStatus('.compat-widget-form *', true);
@@ -120,7 +120,7 @@ jQuery(window).load(function(){
         }else{
             window.location.href = "https://www.wiserhome.com/compatibility-failure/";
         }
-  });
+  }
 });
 
 function getCheckedStatus(form, checked){
