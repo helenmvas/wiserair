@@ -13,6 +13,8 @@
 
 get_header(); ?>
 
+<script src="<?php echo get_template_directory(); ?>/includes/js/compatibility_checker.js"></script>
+
 <!-- <div class="container-fluid"> -->
 	<?php global $post; ?>
 	<?php
@@ -96,40 +98,9 @@ get_header(); ?>
 	                </tbody>
 	            </table>
                 <div class="submit-container">
-                    <button id="compat-submit-button" type="button" class="button" onclick="javascript:checkCompatibility(); return false;">CHECK WISER COMPATIBILITY</button>
+                    <button id="compat-submit-button" type="button" class="button">CHECK WISER COMPATIBILITY</button>
                 </div>
             </form>
-            <script>
-		        function checkCompatibility(){
-		            document.getElementById('compat-submit-button').className = "btn btn-success";
-		            document.getElementById('compat-submit-button').innerHTML = '<i class="fa fa-spinner fa-fw rotate"></i>';
-
-		            //add client side validation
-		            var checkboxes = document.querySelectorAll('form.compat-widget-form input[type=checkbox]:checked');
-
-		            var body = {};
-		            for(var i = 0; i < checkboxes.length; i++){
-		                var input = checkboxes[i];
-		                body[input.name] = 'checked';
-		            }
-
-		            var xhttp = new XMLHttpRequest();
-		            xhttp.onreadystatechange = function() {
-		                if (xhttp.readyState == 4 && xhttp.status == 200) {
-		                    var results = JSON.parse(xhttp.response);
-		                    window.location = results.result.redirectPath;
-		                }else if (xhttp.readyState == 4 && xhttp.status != 200) {
-		                    document.getElementById('compat-submit-button').className = "btn btn-failure";
-		                    document.getElementById('compat-submit-button').innerHTML = "OOPS, TRY AGAIN";
-		                }
-		            };
-		            xhttp.open("POST", "https://api.parse.com/1/functions/checkCompatibility", true);
-		            xhttp.setRequestHeader("X-Parse-Application-Id", "ShjkmO2pvxzuGKh1Eo1QeoC9fwIR04vQnXPbIkx0");
-		            xhttp.setRequestHeader("X-Parse-REST-API-Key", "jHA6MAg2esq7UVJ5Ax6GLx4qyAEjUuhlfz6VXx8O");
-		            xhttp.setRequestHeader("Content-type", "application/json; charset=utf-8");
-		            xhttp.send(JSON.stringify(body));
-		        }
-		    </script>
 		</div>
 	</div>
 </section>
