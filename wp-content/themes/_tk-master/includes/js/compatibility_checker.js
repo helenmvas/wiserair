@@ -1,6 +1,5 @@
 jQuery(window).load(function($){
-  alert('a');
-  $('.compat-widget-form').submit(function(e){
+  jQuery('.compat-widget-form').submit(function(e){
     alert("triggered");
         var status = "NOTCOMPATIBLE";
       e.preventDefault();
