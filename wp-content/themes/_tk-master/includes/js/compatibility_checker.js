@@ -1,6 +1,7 @@
-
-    function checkCompatibility() {
-      var status = "NOTCOMPATIBLE";
+jQuery(window).load(function(){
+  jQuery('.compat-widget-form').submit(function(e){
+        var status = "NOTCOMPATIBLE";
+      e.preventDefault();
       var checked = getCheckedStatus('.compat-widget-form *', true);
       var unchecked = getCheckedStatus('.compat-widget-form *', false);
       //Electrical Heat
@@ -119,15 +120,16 @@
         }else{
             window.location.href = "https://www.wiserhome.com/compatibility-failure/";
         }
-  }
+  });
+});
 
-  function getCheckedStatus(form, checked){
-    var checkedStatus = new Array();
-    var inputs = jQuery(form).filter(':input');
-    for(var i = 0; i<inputs.length; i++){
-      if(inputs[i].type == 'checkbox' && inputs[i].checked == checked){
-        checkedStatus.push(inputs[i]);
-      }
+function getCheckedStatus(form, checked){
+  var checkedStatus = new Array();
+  var inputs = jQuery(form).filter(':input');
+  for(var i = 0; i<inputs.length; i++){
+    if(inputs[i].type == 'checkbox' && inputs[i].checked == checked){
+      checkedStatus.push(inputs[i]);
     }
-    return checkedStatus;
   }
+  return checkedStatus;
+}
