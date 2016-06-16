@@ -26,12 +26,5 @@ get_header(); ?>
 	</div>
 </section>
 
-<section>
-	<div class="container">
-		<div class="row">
-			<iframe src="http://www.apc.com/shop/us/en/products/Wiser-Air-White-Smart-WI-FI-Thermostat/P-WISERAIR10WHTUS" width="1100" height="500" border="0"></iframe>
-        </div>
-	</div>
-</section>
 
 <?php get_footer(); ?>
