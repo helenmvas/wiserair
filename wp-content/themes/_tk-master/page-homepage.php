@@ -56,7 +56,8 @@ get_header(); ?>
 				<p class="btn-space"><?php the_field('homepage_section_3_button'); ?></p>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-				<img src="/images/1.2.0_hand_device.png" id="control_hand" alt="1.2.0_hand_device">
+				<!-- <img src="/images/1.2.0_hand_device.png" id="control_hand" alt="1.2.0_hand_device"> -->
+				<div><?php the_field('homepage_section_3_image'); ?></div>
 			</div>
 		</div>
 	</div>
@@ -104,6 +105,46 @@ get_header(); ?>
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 				<?php the_field('homepage_section_1_video4'); ?>
 				<h6 class="text-center"><?php the_field('homepage_section_1_video_4_title'); ?></h6>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="homepage-section-7" id="homepage-slideshow">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<?php echo do_shortcode('[metaslider id=4110]'); ?>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="homepage-section-8" style="background-image: url('<?php the_field('homepage_section_8_background_image'); ?>')">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-5 col-sm-4">
+				<div><?php the_field('homepage_section_8_image'); ?></div>
+			</div>
+			<div class="col-lg-8 col-md-6 col-sm-8 text-center">
+				<h2><?php the_field('homepage_section_8_title'); ?></h2>
+				<p class="subtitle"><?php the_field('homepage_section_8_subtitle'); ?></p>
+				<p class="btn-space"><?php the_field('homepage_section_8_button'); ?></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="homepage-section-9" style="background-image: url('<?php the_field('homepage_section_9_background_image'); ?>')">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-5 col-sm-4">
+				<div><?php the_field('homepage_section_9_image'); ?></div>	
+			</div>
+			<div class="col-lg-8 col-md-6 col-sm-8 text-center">
+				<h2><?php the_field('homepage_section_9_title'); ?></h2>
+				<p class="subtitle"><?php the_field('homepage_section_9_subtitle'); ?></p>
+				<p class="btn-space"><?php the_field('homepage_section_9_button'); ?></p>
 			</div>
 		</div>
 	</div>
