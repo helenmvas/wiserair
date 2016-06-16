@@ -57,7 +57,7 @@ get_header(); ?>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
 				<!-- <img src="/images/1.2.0_hand_device.png" id="control_hand" alt="1.2.0_hand_device"> -->
-				<div><?php the_field('homepage_section_3_image'); ?></div>
+				<div><img src="<?php the_field('homepage_section_3_image'); ?>"/></div>
 			</div>
 		</div>
 	</div>
