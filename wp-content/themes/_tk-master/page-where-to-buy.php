@@ -49,7 +49,7 @@ get_header(); ?>
 </section>
 
 <section class="container-fluid">
-    <img src="<?php the_field('where_to_buy_image'); ?>" />
+    <?php echo do_shortcode('[metaslider id=4119]'); ?>
 </section>
 
 <?php get_footer(); ?>

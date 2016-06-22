@@ -13,7 +13,18 @@
 
 get_header(); ?>
 
-<section class="green" id="utility-intro">
+<div class="homepage-featured-image about-featured-image" style="background-image: url(<?php echo $src[0]; ?> )">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-md-5 col-sm-5 text-left">
+				<h2><?php the_field('partners_featured_image_title'); ?></h2>
+        		<div><?php the_field('partners_featured_image_text'); ?></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- <section class="green" id="utility-intro">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
@@ -38,7 +49,7 @@ get_header(); ?>
 			<?php wp_reset_postdata(); ?>
         </div>
 	</div>
-</section>
+</section> -->
 
 <section id="utility-customized">
 	<div class="container">

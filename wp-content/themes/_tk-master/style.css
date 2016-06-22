@@ -1964,6 +1964,7 @@ ul.documents li {
 .documents img {
     margin-bottom: 20px;
     height: 125px;
+    width: 100%;
 }
 
 .page-template-page-press hr {

@@ -33,7 +33,7 @@ get_header(); ?>
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
-                <h3>Press Release</h3>
+                <h3>Press Releases</h3>
             </div>
         </div>
         <div class="row">
@@ -45,6 +45,7 @@ get_header(); ?>
 
                 <div class="col-lg-6 col-md-6 col-sm-6" class="press-releases">
                     <a href="<?php the_field('full_document_download'); ?>" target="_blank"><h4><?php the_title(); ?></h4></a>
+                    <span><?php the_field('full_document_date'); ?></span>
                     <p><a href="<?php the_permalink(); ?>">Read press release</a></p>
                 </div>
             <?php endwhile; // end of the loop. ?>
