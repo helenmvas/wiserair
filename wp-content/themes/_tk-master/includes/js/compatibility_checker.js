@@ -136,8 +136,8 @@ function showResult(status) {
   }
 
   jQuery('#comp_result p').text(message);
-  jQuery('#comp_result').css('background-color: ' + backgroundColor);
   jQuery('#comp_result').show();
+  jQuery('#comp_result').css('background-color: ' + backgroundColor);
 }
 
 function getCheckedStatus(form, checked){

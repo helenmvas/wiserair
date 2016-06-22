@@ -1073,6 +1073,8 @@ li.resp-tab-item:hover {
 #comp_result {
     display: none;
     width: 240px;
+    text-align: center;
+    padding: 20px;
 }
 
 #first h4 {
