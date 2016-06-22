@@ -113,18 +113,32 @@ jQuery(window).load(function(){
         status = "NOTCOMPATIBLE";
       }
 
-        if (status === "COMPATIBLE") {
-            window.location.href = "/compatibility-success/";
-            alert("Compatible");
-        }else if (status === "CLOSERLOOK") {
-            window.location.href = "/compatibility-closer-look/";
-            alert("Our team needs to take a closer look");
-        }else{
-            alert("Not compatible");
-            window.location.href = "/compatibility-failure/";
-        }
+      showResult(status);
+
   });
 });
+
+function showResult(status) {
+  var message;
+  var backgroundColor;
+
+  if (status === "COMPATIBLE") {
+      message = "Compatible";
+      backgroundColor = "#00a550";
+  }
+  else if (status === "CLOSERLOOK") {
+      message = "Closer Look";
+      backgroundColor = "#E4DD6B";
+  }
+  else{
+      message = "Not Compatible";
+      backgroundColor = "#C07D74";
+  }
+
+  jQuery('#comp_result p').text(message);
+  jQuery('#comp_result').show();
+  jQuery('#comp_result').css('background-color' , backgroundColor);
+}
 
 function getCheckedStatus(form, checked){
   var checkedStatus = new Array();
