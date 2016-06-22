@@ -1070,6 +1070,12 @@ li.resp-tab-item:hover {
     display: table;
 }
 
+.comp-result {
+    height: 0;
+    background-color: red;
+    width: 240px;
+}
+
 #first h4 {
     border-top: 0px !important;
 }
