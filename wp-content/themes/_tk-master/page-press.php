@@ -43,7 +43,7 @@ get_header(); ?>
 
             <?php while($press->have_posts()) : $press->the_post(); ?>
 
-                <div class="col-lg-4 col-md-4 col-sm-4" class="press-releases">
+                <div class="col-lg-6 col-md-6 col-sm-6" class="press-releases">
                     <a href="<?php the_field('full_document_download'); ?>" target="_blank"><h4><?php the_title(); ?></h4></a>
                     <p><a href="<?php the_permalink(); ?>">Read press release</a></p>
                 </div>
@@ -69,7 +69,7 @@ get_header(); ?>
 
             <?php while($featured_in->have_posts()) : $featured_in->the_post(); ?>
 
-                <div class="col-lg-3 col-md-3 col-sm-3" class="logos">
+                <div class="col-lg-2 col-md-2 col-sm-2 featured-logos">
                     <a href="<?php the_field('featured_url'); ?>" target="_blank"><img src="<?php the_field('featured_logo'); ?>"/></a>
                 </div>
             <?php endwhile; // end of the loop. ?>
@@ -95,7 +95,7 @@ get_header(); ?>
             <?php while($product_images->have_posts()) : $product_images->the_post(); ?>
 
                 <div class="col-lg-3 col-md-3 col-sm-6">
-                    <a href="<?php the_field('product_image'); ?>" target="_blank">
+                    <a download="<?php the_field('product_image'); ?>" href="<?php the_field('product_image'); ?>" target="_blank">
                      <img src="<?php the_field('product_image'); ?>"/>
                     </a>
                 </div>
@@ -150,7 +150,7 @@ get_header(); ?>
             <?php while($logos->have_posts()) : $logos->the_post(); ?>
 
                 <div class="col-lg-3 col-md-3 col-sm-3 logos text-center">
-                    <a href="<?php the_field('product_logo_download'); ?>" target="_blank"><img src="<?php the_field('product_logo'); ?>"/></a>
+                    <a download="<?php the_field('product_logo'); ?>" href="<?php the_field('product_logo_download'); ?>" target="_blank"><img src="<?php the_field('product_logo'); ?>"/></a>
                      <h5><?php the_title(); ?></h5>
                 </div>
             <?php endwhile; // end of the loop. ?>
