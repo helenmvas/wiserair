@@ -113,19 +113,31 @@ jQuery(window).load(function(){
         status = "NOTCOMPATIBLE";
       }
 
-        if (status === "COMPATIBLE") {
-            showResult("green");
-        }else if (status === "CLOSERLOOK") {
-            showResult("yellow");
-        }else{
-            showResult("red");
-        }
+      showResult(status);
+
   });
 });
 
-function showResult(backgroundColor) {
+function showResult(status) {
+  var message;
+  var backgroundColor;
+
+  if (status === "COMPATIBLE") {
+      message = "Compatible";
+      backgroundColor = "#00a550";
+  }
+  else if (status === "CLOSERLOOK") {
+      message = "Closer Look";
+      backgroundColor = "#E4DD6B";
+  }
+  else{
+      message = "Not Compatible";
+      backgroundColor = "#C07D74";
+  }
+
+  jQuery('#comp_result p').text(message);
   jQuery('#comp_result').css('background-color: ' + backgroundColor);
-    jQuery('#comp_result').show();
+  jQuery('#comp_result').show();
 }
 
 function getCheckedStatus(form, checked){
