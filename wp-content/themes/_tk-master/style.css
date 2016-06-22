@@ -1074,8 +1074,7 @@ li.resp-tab-item:hover {
     display: none;
     width: 240px;
     text-align: center;
-    padding: 20px;
-    background-color: red;
+    padding: 17px 0 10px 0;
 }
 
 #first h4 {
