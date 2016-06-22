@@ -1075,6 +1075,7 @@ li.resp-tab-item:hover {
     width: 240px;
     text-align: center;
     padding: 20px;
+    background-color: red;
 }
 
 #first h4 {
