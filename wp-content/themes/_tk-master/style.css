@@ -1071,7 +1071,7 @@ li.resp-tab-item:hover {
 }
 
 .comp-result {
-    height: 0;
+    display: none;
     background-color: red;
     width: 240px;
 }

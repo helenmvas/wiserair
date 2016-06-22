@@ -114,16 +114,10 @@ jQuery(window).load(function(){
       }
 
         if (status === "COMPATIBLE") {
-            window.location.href = "/compatibility-success/";
-            // alert("Compatible");
             showResult("green");
         }else if (status === "CLOSERLOOK") {
-            window.location.href = "/compatibility-closer-look/";
-            // alert("Our team needs to take a closer look");
             showResult("yellow");
         }else{
-            // alert("Not compatible");
-            window.location.href = "/compatibility-failure/";
             showResult("red");
         }
   });
@@ -131,9 +125,7 @@ jQuery(window).load(function(){
 
 function showResult(backgroundColor) {
   jQuery('.comp_result').css('background-color: ' + backgroundColor);
-    jQuery('.comp_result').animate({
-      height: 70,
-  }, 5000);
+    jQuery('.comp_result').show();
 }
 
 function getCheckedStatus(form, checked){
