@@ -101,7 +101,7 @@ get_header(); ?>
                     <button type="submit" class="button">CHECK WISER COMPATIBILITY</button>
                 </div>
             </form>
-            <div class="comp_result">
+            <div id="comp_result">
             	<p>Compatible</p>
             </div>
 		</div>

@@ -124,8 +124,8 @@ jQuery(window).load(function(){
 });
 
 function showResult(backgroundColor) {
-  jQuery('.comp_result').css('background-color: ' + backgroundColor);
-    jQuery('.comp_result').show();
+  jQuery('#comp_result').css('background-color: ' + backgroundColor);
+    jQuery('#comp_result').show();
 }
 
 function getCheckedStatus(form, checked){
