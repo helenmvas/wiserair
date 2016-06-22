@@ -1070,7 +1070,7 @@ li.resp-tab-item:hover {
     display: table;
 }
 
-#comp-result {
+#comp_result {
     display: none;
     background-color: red;
     width: 240px;
