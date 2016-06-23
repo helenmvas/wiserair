@@ -1935,6 +1935,10 @@ div#wonderplugintabs-5 {
     margin-bottom: 0px;
 }
 
+.press-section-3 .col-lg-2.col-md-2.col-sm-2.featured-logos:nth-child(2) img {
+    width: 50%;
+}
+
 .blog-col-2 {
     padding: 0px;
 }
