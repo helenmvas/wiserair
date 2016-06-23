@@ -85,5 +85,9 @@ define('WP_DEBUG', false);
 if ( !defined('ABSPATH') )
 	define('ABSPATH', dirname(__FILE__) . '/');
 
+/** Memory Limit -- Remove If Error */
+define('WP_MEMORY_LIMIT', '256M');
+
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
