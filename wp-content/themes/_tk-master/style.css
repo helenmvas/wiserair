@@ -1070,6 +1070,13 @@ li.resp-tab-item:hover {
     display: table;
 }
 
+#comp_result {
+    display: none;
+    width: 247px;
+    text-align: center;
+    padding: 17px 0 10px 0;
+}
+
 #first h4 {
     border-top: 0px !important;
 }
