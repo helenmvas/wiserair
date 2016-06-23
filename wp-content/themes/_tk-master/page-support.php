@@ -154,7 +154,7 @@ get_header(); ?>
 					<p>Wiring specific to your system</p>
 				</a>
 
-				<a href="https://www.wiserair.com/wp-content/uploads/2015/07/WiserAir-InstallGuide_v13.pdf">
+				<a href="/documents/WiserAir-InstallGuide.pdf">
 					<h4>Install Guide</h4>
 					<p>Easily install your Wiser Air </p>
 				</a>
