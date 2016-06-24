@@ -1917,9 +1917,10 @@ div#wonderplugintabs-5 {
 
 /* Press */
 
-.page-template-page-press h3{
-    line-height: 25px;
-    margin-bottom: 30px;
+.page-template-page-press h2 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 35px;
 }
 
 .page-template-page-press h4{
@@ -1972,8 +1973,8 @@ ul.documents li {
 }
 
 .page-template-page-press .logos img {
-    border: 1px solid #ddd;
-    padding: 50px 15px;
+    border: 1px solid #eee;
+    padding: 50px 35px;
 }
 
 .documents {
@@ -2047,6 +2048,10 @@ ul.documents li {
     margin-bottom: 0.25em;
     text-align: center;
     max-height: 35px;
+}
+
+.logos h5 {
+    font-weight: 300;
 }
 
 /* Marketing Landing Pages */
