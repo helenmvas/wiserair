@@ -607,6 +607,7 @@ footer.site-footer {
     font-size: 12px;
     color: #fff;
     position: relative;
+    letter-spacing: .3px;
 }
 
 footer.site-footer a {
@@ -620,6 +621,7 @@ footer.site-footer img {
 
 footer h5 {
     font-size: 13px;
+    font-weight: 400;
 }
 
 footer .social {
@@ -636,8 +638,8 @@ footer .social li {
 }
 
 footer .social li img {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }
 
 footer .widget_nav_menu li>a {
@@ -1933,6 +1935,8 @@ div#wonderplugintabs-5 {
 
 .press-section-2 h4 {
     margin-bottom: 0px;
+    font-size: 15px;
+    margin: 5px 0px;
 }
 
 .press-section-3 .col-lg-2.col-md-2.col-sm-2.featured-logos:nth-child(2) img {
@@ -1944,7 +1948,7 @@ div#wonderplugintabs-5 {
 }
 
 .blog .blog-title a {
-    font-size: 17px;
+    font-size: 18px;
     line-height: 26px;
     color: #000;
     font-weight: 400;
@@ -1973,10 +1977,10 @@ ul.documents li {
 }
 
 .documents {
-    border: 1px solid #ddd;
-    height: 200px;
-    text-align: center;
-    margin-bottom: 30px;
+    /*border: 1px solid #ddd;
+    height: 200px;*/
+    text-align: left;
+    /*margin-bottom: 30px;*/
 }
 
 
@@ -2019,6 +2023,10 @@ ul.documents li {
     display: none;
 }
 
+.blog-content-excerpt {
+    font-size: 14px;
+}
+
 .post-content-text {
     padding: 0% !important;
 }
@@ -2038,6 +2046,7 @@ ul.documents li {
     vertical-align: middle;
     margin-bottom: 0.25em;
     text-align: center;
+    max-height: 35px;
 }
 
 /* Marketing Landing Pages */

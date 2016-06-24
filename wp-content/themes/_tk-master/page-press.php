@@ -33,7 +33,7 @@ get_header(); ?>
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
-                <h3>Press Releases</h3>
+                <h2>Press Releases</h2>
             </div>
         </div>
         <div class="row">
@@ -43,9 +43,9 @@ get_header(); ?>
 
             <?php while($press->have_posts()) : $press->the_post(); ?>
 
-                <div class="col-lg-6 col-md-6 col-sm-6" class="press-releases">
-                    <a href="<?php the_field('full_document_download'); ?>" target="_blank"><h4><?php the_title(); ?></h4></a>
+                <div class="col-lg-4 col-md-4 col-sm-4" class="press-releases">
                     <span><?php the_field('full_document_date'); ?></span>
+                    <a href="<?php the_field('full_document_download'); ?>" target="_blank"><h4><?php the_title(); ?></h4></a>
                     <p><a href="<?php the_permalink(); ?>">Read press release</a></p>
                 </div>
             <?php endwhile; // end of the loop. ?>
@@ -54,13 +54,11 @@ get_header(); ?>
     </div>
 </section>
 
-<hr />
-
 <section class="press-section-3">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h3>Featured In</h3>
+                <h2>Featured In</h2>
             </div>
         </div>
         <div class="row">
@@ -70,7 +68,7 @@ get_header(); ?>
 
             <?php while($featured_in->have_posts()) : $featured_in->the_post(); ?>
 
-                <div class="col-lg-2 col-md-2 col-sm-2 featured-logos">
+                <div class="col-lg-3 col-md-3 col-sm-3 featured-logos">
                     <a href="<?php the_field('featured_url'); ?>" target="_blank"><img src="<?php the_field('featured_logo'); ?>"/></a>
                 </div>
             <?php endwhile; // end of the loop. ?>
@@ -79,13 +77,11 @@ get_header(); ?>
     </div>
 </section>
 
-<hr />
-
 <section class="press-section-4">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h3>Images</h3>
+                <h2>Images</h2>
             </div>
         </div>
         <div class="row product_images">  
@@ -106,13 +102,11 @@ get_header(); ?>
     </div>
 </section>
 
-<hr />
-
 <section class="press-section-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h3>Videos</h3>
+                <h2>Videos</h2>
             </div>
         </div>
         <div class="row">
@@ -134,13 +128,11 @@ get_header(); ?>
     </div>
 </section>
 
-<hr />
-
 <section class="press-section-6">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h3>Logos</h3>
+                <h2>Logos</h2>
             </div>
         </div>
         <div class="row">
@@ -160,13 +152,11 @@ get_header(); ?>
     </div>
 </section>
 
-<hr />
-
 <section class="press-section-7">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h3>Documents/Fact Sheets</h3>
+                <h2>Documents/Fact Sheets</h2>
             </div>
         </div>
         <div class="row">
@@ -175,11 +165,10 @@ get_header(); ?>
             )); ?>
 
             <?php while($documents->have_posts()) : $documents->the_post(); ?>
-                <div class="col-lg-3 col-md-3 col-sm-3text-center">
+                <div class="col-lg-3 col-md-3 col-sm-3">
                     <div class="documents">
                         <a href="<?php the_field('document_link'); ?>" target="_blank">
-                            <img src="<?php the_field('document_image'); ?>" />
-                            <?php the_title(); ?>
+                            <i class="fa fa-file-o" aria-hidden="true"></i><?php the_title(); ?>
                         </a>
                     </div>
                     <!-- <p><?php the_field('document'); ?></p> -->
@@ -189,21 +178,6 @@ get_header(); ?>
         </div>
     </div>
 </section>
-
-<hr />
-
-<section class="press-section-8">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h3>Media Inquiries</h3>
-                <?php the_field('media_inquiries'); ?>
-            </div>
-        </div>
-    </div>
-</section>
-
-<hr />
 
 <section class="press-section-9">
     <div class="container">
@@ -215,4 +189,16 @@ get_header(); ?>
         </div>
     </div>
 </section>
+
+<section class="press-section-8">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Media Inquiries</h2>
+                <?php the_field('media_inquiries'); ?>
+            </div>
+        </div>
+    </div>
+</section>
+
 <?php get_footer(); ?>
