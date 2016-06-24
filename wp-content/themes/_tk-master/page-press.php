@@ -29,7 +29,7 @@ get_header(); ?>
     </div>
 <!-- </div> -->
 
-<section class="press-section-2">
+<section class="press-section-2" style="margin-top: -150px;">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
@@ -44,8 +44,8 @@ get_header(); ?>
             <?php while($press->have_posts()) : $press->the_post(); ?>
 
                 <div class="col-lg-4 col-md-4 col-sm-4" class="press-releases">
-                    <span><?php the_field('full_document_date'); ?></span>
                     <a href="<?php the_field('full_document_download'); ?>" target="_blank"><h4><?php the_title(); ?></h4></a>
+                    <span><?php the_field('full_document_date'); ?></span>
                     <p><a href="<?php the_permalink(); ?>">Read press release</a></p>
                 </div>
             <?php endwhile; // end of the loop. ?>
