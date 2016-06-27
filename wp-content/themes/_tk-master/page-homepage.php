@@ -121,7 +121,7 @@ get_header(); ?>
 			<!-- <div class="col-lg-4 col-md-5 col-sm-4">
 				<div><?php the_field('homepage_section_9_image'); ?></div>	
 			</div> -->
-			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+			<div class="col-lg-6 col-lg-offset-6 col-md-6 col-md-offset-6 col-sm-offset-6 col-sm-6 col-xs-12">
 				<h2><?php the_field('homepage_section_9_title'); ?></h2>
 				<p class="subtitle"><?php the_field('homepage_section_9_subtitle'); ?></p>
 				<p class="btn-space"><?php the_field('homepage_section_9_button'); ?></p>
