@@ -88,7 +88,7 @@ get_header(); ?>
 <section class="homepage-section-5" id="utility-rebates" style="background-image: url('<?php the_field('homepage_section_5_background_image'); ?>')">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-12 text-center">
+			<div class="col-lg-6 col-lg-offset-6 col-md-6 col-md-offset-6 text-left">
 				<h2><?php the_field('homepage_section_5_title'); ?></h2>
 				<p class="subtitle"><?php the_field('homepage_section_5_subtitle'); ?></p>
 				<p class="btn-space"><?php the_field('homepage_section_5_button'); ?></p>
@@ -101,7 +101,7 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4 col-md-5 col-sm-4">
-				<div><?php the_field('homepage_section_8_image'); ?></div>
+				<div><img src="<?php the_field('homepage_section_8_image'); ?>"/></div>
 			</div>
 			<div class="col-lg-8 col-md-6 col-sm-8 text-center">
 				<h2><?php the_field('homepage_section_8_title'); ?></h2>
@@ -115,10 +115,10 @@ get_header(); ?>
 <section class="homepage-section-9" style="background-image: url('<?php the_field('homepage_section_9_background_image'); ?>'); background-size: cover;">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-4 col-md-5 col-sm-4">
+			<!-- <div class="col-lg-4 col-md-5 col-sm-4">
 				<div><?php the_field('homepage_section_9_image'); ?></div>	
-			</div>
-			<div class="col-lg-8 col-md-6 col-sm-8 text-center">
+			</div> -->
+			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
 				<h2><?php the_field('homepage_section_9_title'); ?></h2>
 				<p class="subtitle"><?php the_field('homepage_section_9_subtitle'); ?></p>
 				<p class="btn-space"><?php the_field('homepage_section_9_button'); ?></p>
