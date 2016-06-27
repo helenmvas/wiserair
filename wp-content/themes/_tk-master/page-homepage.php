@@ -87,29 +87,6 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="homepage-section-1">
-	<div class="container">
-		<div class="row text-center" id="video">
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-				<?php the_field('homepage_section_1_video'); ?>
-				<h6 class="text-center"><?php the_field('homepage_section_1_video_title'); ?></h6>
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-				<?php the_field('homepage_section_1_video2'); ?>
-				<h6 class="text-center"><?php the_field('homepage_section_1_video_2_title'); ?></h6>
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-				<?php the_field('homepage_section_1_video3'); ?>
-				<h6 class="text-center"><?php the_field('homepage_section_1_video_3_title'); ?></h6>
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-				<?php the_field('homepage_section_1_video4'); ?>
-				<h6 class="text-center"><?php the_field('homepage_section_1_video_4_title'); ?></h6>
-			</div>
-		</div>
-	</div>
-</section>
-
 <section class="homepage-section-7" id="homepage-slideshow">
 	<div class="container-fluid">
 		<div class="row">
@@ -145,6 +122,29 @@ get_header(); ?>
 				<h2><?php the_field('homepage_section_9_title'); ?></h2>
 				<p class="subtitle"><?php the_field('homepage_section_9_subtitle'); ?></p>
 				<p class="btn-space"><?php the_field('homepage_section_9_button'); ?></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="homepage-section-1">
+	<div class="container">
+		<div class="row text-center" id="video">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<?php the_field('homepage_section_1_video'); ?>
+				<h6 class="text-center"><?php the_field('homepage_section_1_video_title'); ?></h6>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<?php the_field('homepage_section_1_video2'); ?>
+				<h6 class="text-center"><?php the_field('homepage_section_1_video_2_title'); ?></h6>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<?php the_field('homepage_section_1_video3'); ?>
+				<h6 class="text-center"><?php the_field('homepage_section_1_video_3_title'); ?></h6>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<?php the_field('homepage_section_1_video4'); ?>
+				<h6 class="text-center"><?php the_field('homepage_section_1_video_4_title'); ?></h6>
 			</div>
 		</div>
 	</div>

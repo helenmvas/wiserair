@@ -1995,6 +1995,10 @@ ul.documents li {
     width: 100%;
 }
 
+.page-template-page-press .post-content-text {
+    width: 100%;
+}
+
 .blog-col-1 .grid-blog-thumb {
     height: 200px;
     width: 200px;
@@ -2018,6 +2022,10 @@ ul.documents li {
     float: left;
     width: 80%;
     clear: none;
+}
+
+.page-template-page-press .blog .blog-title a {
+    font-weight: 300;
 }
 
 .blog-cat, .date-post {
