@@ -48,7 +48,7 @@ get_header(); ?>
 
 				<img src="/images/1.1.0_thermostat2.png" alt="Wiser Air" height="367" width="366">
 			</div>
-			<div class="col-lg-8 col-md-6 col-sm-8 text-center">
+			<div class="col-lg-8 col-md-6 col-sm-8">
 				<h2><?php the_field('homepage_section_2_title'); ?></h2>
 				<p class="subtitle"><?php the_field('homepage_section_2_subtitle'); ?></p>
 				<p class="btn-space"><?php the_field('homepage_section_2_button'); ?></p>
@@ -103,7 +103,7 @@ get_header(); ?>
 <section class="homepage-section-8 light-grey">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-8 col-md-6 col-sm-8 text-center">
+			<div class="col-lg-8 col-md-6 col-sm-8">
 				<h2><?php the_field('homepage_section_8_title'); ?></h2>
 				<p class="subtitle"><?php the_field('homepage_section_8_subtitle'); ?></p>
 				<p class="btn-space"><?php the_field('homepage_section_8_button'); ?></p>
