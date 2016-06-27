@@ -76,10 +76,10 @@ get_header(); ?>
 <section class="homepage-section-4 blue" id="precise-weather">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-4 col-md-4 col-sm-4">
+			<div class="col-lg-5 col-md-5 col-sm-5">
 				<div><img src="<?php the_field('homepage_section_4_image'); ?>"/></div>
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
 				<h2><?php the_field('homepage_section_4_title'); ?></h2>
 				<p class="subtitle"><?php the_field('homepage_section_4_subtitle'); ?></p>
 				<p class="btn-space"><?php the_field('homepage_section_4_button'); ?></p>
@@ -103,13 +103,13 @@ get_header(); ?>
 <section class="homepage-section-8 light-grey">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-4 col-md-5 col-sm-4">
-				<div><img src="<?php the_field('homepage_section_8_image'); ?>"/></div>
-			</div>
 			<div class="col-lg-8 col-md-6 col-sm-8 text-center">
 				<h2><?php the_field('homepage_section_8_title'); ?></h2>
 				<p class="subtitle"><?php the_field('homepage_section_8_subtitle'); ?></p>
 				<p class="btn-space"><?php the_field('homepage_section_8_button'); ?></p>
+			</div>
+			<div class="col-lg-4 col-md-5 col-sm-4">
+				<div><img src="<?php the_field('homepage_section_8_image'); ?>"/></div>
 			</div>
 		</div>
 	</div>
