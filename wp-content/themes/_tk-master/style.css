@@ -1386,9 +1386,9 @@ section {
     margin: 0 auto;
 }
 
-.homepage-section-2 {
+/*.homepage-section-2 {
     background: #ececec;
-}
+}*/
 
 .homepage-section-2 h2 {
     margin-top: 9%;
@@ -1397,7 +1397,7 @@ section {
 .homepage-section-3 {
     background: url("/images/1.2.0_background.jpg") top center repeat;
     height: 100%;
-    min-height: 720px;
+/*    min-height: 720px;*/
     max-height: 720px;
     overflow: hidden;
     padding-top: 40px;
@@ -1433,7 +1433,7 @@ section {
     height: 400px;
     background: url("/images/1.4.0_background.jpg") 0 100%/200% no-repeat;
     color: #fff;
-    background-size: 207%;
+    background-size: cover;
 }
 
 .homepage-section-5 h2 {
@@ -1469,6 +1469,32 @@ section {
     width: 100px;
     float: right;
     background-color: red;
+}
+
+#homepage-slideshow {
+    padding: 0px;
+}
+
+#homepage-slideshow .metaslider {
+    padding: 0px;
+    max-width: 100% !important;
+}
+
+#homepage-slideshow .metaslider .slides img {
+    margin: 0px !important;
+    padding: 0 !important;
+    width: 100%;
+}
+
+#homepage-slideshow .flex-control-nav {
+    margin: auto;
+    z-index: 9999;
+    bottom: 15px !important;
+    position: absolute;
+}
+
+#homepage-slideshow .metaslider .flexslider {
+    margin-bottom: 0px;
 }
 
 /* Up Close */

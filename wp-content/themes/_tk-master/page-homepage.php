@@ -31,7 +31,17 @@ get_header(); ?>
 	</div>
 <!-- </div> -->
 
-<section class="homepage-section-2" id="in-control">
+<section class="homepage-section-7" id="homepage-slideshow">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="text-center">
+				<?php echo do_shortcode('[metaslider id=4110]'); ?>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="homepage-section-2 dark-grey" id="in-control">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4 col-md-5 col-sm-4">
@@ -63,7 +73,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="homepage-section-4" id="precise-weather" style="background-image: url('<?php the_field('homepage_section_4_background_image'); ?>')">
+<section class="homepage-section-4 blue" id="precise-weather">
 	<div class="container"
 		<div class="row">
 			<div class="col-lg-offset-6 col-lg-6 col-md-offset-6 col-md-6 col-sm-offset-6 col-sm-6 col-xs-12 push-left">
@@ -87,17 +97,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="homepage-section-7" id="homepage-slideshow">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-lg-12 text-center">
-				<?php echo do_shortcode('[metaslider id=4110]'); ?>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="homepage-section-8" style="background-image: url('<?php the_field('homepage_section_8_background_image'); ?>')">
+<section class="homepage-section-8 light-grey">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4 col-md-5 col-sm-4">
@@ -112,7 +112,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="homepage-section-9" style="background-image: url('<?php the_field('homepage_section_9_background_image'); ?>')">
+<section class="homepage-section-9" style="background-image: url('<?php the_field('homepage_section_9_background_image'); ?>'); background-size: cover;">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4 col-md-5 col-sm-4">
