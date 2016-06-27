@@ -1940,6 +1940,10 @@ div#wonderplugintabs-5 {
     margin: 5px 0px;
 }
 
+.press-section-5 h5 {
+    font-weight: 300;
+}
+
 /*.press-section-3 .col-lg-2.col-md-2.col-sm-2.featured-logos:nth-child(2) img {
     width: 50%;
 }
@@ -1967,9 +1971,15 @@ ul.documents li {
     list-style-type: none;
 }
 
-.product_images img {
-    border: 1px solid #ddd;
+.product_images div {
+    height: 148px;
+    overflow: hidden;
     margin-bottom: 30px;
+}
+
+.product_images img {
+    border: 1px solid #ddd;/*
+    margin-bottom: 30px;*/
 }
 
 .page-template-page-press .logos img {
