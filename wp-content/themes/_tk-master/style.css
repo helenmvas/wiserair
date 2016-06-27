@@ -607,6 +607,7 @@ footer.site-footer {
     font-size: 12px;
     color: #fff;
     position: relative;
+    letter-spacing: .3px;
 }
 
 footer.site-footer a {
@@ -620,6 +621,7 @@ footer.site-footer img {
 
 footer h5 {
     font-size: 13px;
+    font-weight: 400;
 }
 
 footer .social {
@@ -636,8 +638,8 @@ footer .social li {
 }
 
 footer .social li img {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }
 
 footer .widget_nav_menu li>a {
@@ -1915,9 +1917,10 @@ div#wonderplugintabs-5 {
 
 /* Press */
 
-.page-template-page-press h3{
-    line-height: 25px;
-    margin-bottom: 30px;
+.page-template-page-press h2 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 35px;
 }
 
 .page-template-page-press h4{
@@ -1933,18 +1936,24 @@ div#wonderplugintabs-5 {
 
 .press-section-2 h4 {
     margin-bottom: 0px;
+    font-size: 15px;
+    margin: 5px 0px;
 }
 
-.press-section-3 .col-lg-2.col-md-2.col-sm-2.featured-logos:nth-child(2) img {
+.press-section-5 h5 {
+    font-weight: 300;
+}
+
+/*.press-section-3 .col-lg-2.col-md-2.col-sm-2.featured-logos:nth-child(2) img {
     width: 50%;
 }
-
+*/
 .blog-col-2 {
     padding: 0px;
 }
 
 .blog .blog-title a {
-    font-size: 17px;
+    font-size: 18px;
     line-height: 26px;
     color: #000;
     font-weight: 400;
@@ -1962,21 +1971,27 @@ ul.documents li {
     list-style-type: none;
 }
 
-.product_images img {
-    border: 1px solid #ddd;
+.product_images div {
+    height: 148px;
+    overflow: hidden;
     margin-bottom: 30px;
+}
+
+.product_images img {
+    border: 1px solid #ddd;/*
+    margin-bottom: 30px;*/
 }
 
 .page-template-page-press .logos img {
-    border: 1px solid #ddd;
-    padding: 50px 15px;
+    border: 1px solid #eee;
+    padding: 50px 35px;
 }
 
 .documents {
-    border: 1px solid #ddd;
-    height: 200px;
-    text-align: center;
-    margin-bottom: 30px;
+    /*border: 1px solid #ddd;
+    height: 200px;*/
+    text-align: left;
+    /*margin-bottom: 30px;*/
 }
 
 
@@ -1987,6 +2002,10 @@ ul.documents li {
 }
 
 .page-template-page-press hr {
+    width: 100%;
+}
+
+.page-template-page-press .post-content-text {
     width: 100%;
 }
 
@@ -2015,8 +2034,16 @@ ul.documents li {
     clear: none;
 }
 
+.page-template-page-press .blog .blog-title a {
+    font-weight: 300;
+}
+
 .blog-cat, .date-post {
     display: none;
+}
+
+.blog-content-excerpt {
+    font-size: 14px;
 }
 
 .post-content-text {
@@ -2038,6 +2065,11 @@ ul.documents li {
     vertical-align: middle;
     margin-bottom: 0.25em;
     text-align: center;
+    max-height: 35px;
+}
+
+.logos h5 {
+    font-weight: 300;
 }
 
 /* Marketing Landing Pages */
