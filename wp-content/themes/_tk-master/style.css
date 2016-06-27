@@ -1434,10 +1434,11 @@ section {
     background: url("/images/1.4.0_background.jpg") 0 100%/200% no-repeat;
     color: #fff;
     background-size: cover;
+    background-position: 50%
 }
 
 .homepage-section-5 h2 {
-    padding-top: 7%;
+    padding-top: 12%;
 }
 
 .homepage-section-6#retailers .row {
