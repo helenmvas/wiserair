@@ -76,7 +76,7 @@ get_header(); ?>
 <section class="homepage-section-4 blue" id="precise-weather">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-5 col-md-5 col-sm-5">
+			<div class="col-lg-5 col-md-5 col-sm-5 text-center">
 				<div><img src="<?php the_field('homepage_section_4_image'); ?>"/></div>
 			</div>
 			<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
