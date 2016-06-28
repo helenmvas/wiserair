@@ -2894,22 +2894,46 @@ article .entry-meta {
         .homepage-section-4 {
             background-size: cover;
             background-position: 22% 50%;
-            height: 600px;
+            min-height: 800px;
+            text-decoration: center;
         }
 
-        .homepage-section-4 .push-left h2 {
+        .homepage-section-4 h2 {
             margin-top: 10%;
-            color: #000;
-            text-align: center;
         }
+
 
         .homepage-section-4 .btn-space {
             margin-top: 350px;
             text-align: center;
         }
 
+        .homepage-section-5 {
+            text-align: center;
+        }
+        
         .homepage-section-5 h2 {
-            padding-top: 75px;
+            padding-top: 5%;
+        }
+
+        .page-template-page-homepage .homepage-section-5 {
+            height: 400px;
+            background: url("/images/1.4.0_background.jpg") no-repeat;
+            /* background-size: cover; */
+            background-position: 17% 50%;
+            color: #000;
+        }
+
+        .homepage-section-8 {
+            text-align: center;
+        }
+
+        .homepage-section-8 h2 {
+            margin-top: 10%;
+        }
+
+        .homepage-section-8 img {
+            margin-top: 10%;
         }
 
         #sync .app-links {
@@ -3237,10 +3261,15 @@ article .entry-meta {
         }
 
         .page-template-page-homepage .homepage-section-5 {
+            text-align: center;
+        }
+
+        .page-template-page-homepage .homepage-section-5 {
             height: 400px;
-            background: url("/images/1.4.0_background.jpg") 0 100%/200% no-repeat;
-            color: #fff;
-            background-size: cover;
+            background: url("/images/1.4.0_background.jpg") no-repeat;
+            /* background-size: cover; */
+            background-position: 17% 50%;
+            color: #000;
         }
 
         .page-template-page-homepage .homepage-section-3 {
@@ -3248,7 +3277,7 @@ article .entry-meta {
         }
 
         .page-template-page-homepage .homepage-section-4 .btn-space {
-            margin-top: 300px;
+            margin-top: 40px;
             text-align: center;
         }
 
@@ -3258,7 +3287,7 @@ article .entry-meta {
         }
 
         .page-template-page-homepage .homepage-featured-image h2 {
-            margin-top: 71%;
+            margin-top: 35%;
         }
 
         .page-template-page-up-close video {

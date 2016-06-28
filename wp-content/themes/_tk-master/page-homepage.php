@@ -21,7 +21,7 @@ get_header(); ?>
 	<div class="homepage-featured-image" style="background-image: url(<?php echo $src[0]; ?> )">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-5 col-md-5 col-sm-5 col-xs-8 text-left">
+				<div class="col-lg-5 col-md-6 col-sm-7 col-xs-12">
 					<h2><?php the_field('homepage_section_1_title'); ?></h2>
 					<p class="subtitle"><?php the_field('homepage_section_1_subtitle'); ?></p>
 					<p class="btn-space"><?php the_field('homepage_section_1_button'); ?></p>
@@ -133,19 +133,19 @@ get_header(); ?>
 <section class="homepage-section-1">
 	<div class="container">
 		<div class="row text-center" id="video">
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
 				<?php the_field('homepage_section_1_video'); ?>
 				<h6 class="text-center"><?php the_field('homepage_section_1_video_title'); ?></h6>
 			</div>
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
 				<?php the_field('homepage_section_1_video2'); ?>
 				<h6 class="text-center"><?php the_field('homepage_section_1_video_2_title'); ?></h6>
 			</div>
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
 				<?php the_field('homepage_section_1_video3'); ?>
 				<h6 class="text-center"><?php the_field('homepage_section_1_video_3_title'); ?></h6>
 			</div>
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
 				<?php the_field('homepage_section_1_video4'); ?>
 				<h6 class="text-center"><?php the_field('homepage_section_1_video_4_title'); ?></h6>
 			</div>
