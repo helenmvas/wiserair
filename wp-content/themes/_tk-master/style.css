@@ -1419,16 +1419,20 @@ section {
     background-size: cover;
     overflow: hidden;
     padding: 80px 0px;
-    color: #fff;
+    color: #000;
 }
 
-.homepage-section-4 .push-left {
+.homepage-section-4 h2 {
+    margin-top: 20%;
+}
+
+/*.homepage-section-4 .push-left {
     padding-left: 4%;
 }
 
 .homepage-section-4 .push-left h2 {
     margin-top: 30%;
-}
+}*/
 
 .homepage-section-5 {
     height: 400px;
