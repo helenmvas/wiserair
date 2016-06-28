@@ -91,7 +91,7 @@ get_header(); ?>
 <section class="homepage-section-5" id="utility-rebates" style="background-image: url('<?php the_field('homepage_section_5_background_image'); ?>')">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6 col-lg-offset-6 col-md-6 col-md-offset-6 text-left">
+			<div class="col-lg-6 col-lg-offset-6 col-md-6 col-md-offset-6">
 				<h2><?php the_field('homepage_section_5_title'); ?></h2>
 				<p class="subtitle"><?php the_field('homepage_section_5_subtitle'); ?></p>
 				<p class="btn-space"><?php the_field('homepage_section_5_button'); ?></p>

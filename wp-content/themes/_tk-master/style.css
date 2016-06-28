@@ -2875,6 +2875,12 @@ article .entry-meta {
             /* width: 100%; */
         }
 
+        .homepage-featured-image a.button {
+            display: block;
+            padding: 8px 45px !important;
+            text-align: center;
+        }
+
         .homepage-section-2 {
             text-align: center;
         }
@@ -2894,8 +2900,9 @@ article .entry-meta {
         .homepage-section-4 {
             background-size: cover;
             background-position: 22% 50%;
-            min-height: 800px;
+            min-height: inherit;
             text-decoration: center;
+            text-align: center;
         }
 
         .homepage-section-4 h2 {
@@ -2911,7 +2918,7 @@ article .entry-meta {
         .homepage-section-5 {
             text-align: center;
         }
-        
+
         .homepage-section-5 h2 {
             padding-top: 5%;
         }
@@ -2922,6 +2929,8 @@ article .entry-meta {
             /* background-size: cover; */
             background-position: 17% 50%;
             color: #000;
+            padding-left: 15px;
+            padding-right: 15px;
         }
 
         .homepage-section-8 {
@@ -2934,6 +2943,11 @@ article .entry-meta {
 
         .homepage-section-8 img {
             margin-top: 10%;
+        }
+
+        .homepage-section-9 {
+            padding: 50px 0px;
+            text-align: center;
         }
 
         #sync .app-links {
@@ -3124,7 +3138,7 @@ article .entry-meta {
         }
 
         .homepage-section-5 h2 {
-            padding-top: 15%;
+            padding-top: 5%;
         }
 
         .homepage-section-6#retailers li {
@@ -3260,9 +3274,9 @@ article .entry-meta {
             min-height: 500px !important;
         }
 
-        .page-template-page-homepage .homepage-section-5 {
+/*        .page-template-page-homepage .homepage-section-5 {
             text-align: center;
-        }
+        }*/
 
         .page-template-page-homepage .homepage-section-5 {
             height: 400px;
