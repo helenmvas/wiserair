@@ -80,7 +80,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="text-center dark-grey">
+<section class="text-center blue">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6" id="schedules" style="background-image: url('<?php the_field('schedules_background_image'); ?>')">
@@ -95,7 +95,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="text-center dark-grey">
+<section class="text-center">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center" id="energy-insight" style="background-image: url('<?php the_field('energy_insights_background_image'); ?>')">
