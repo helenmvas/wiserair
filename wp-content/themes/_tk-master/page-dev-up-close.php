@@ -53,7 +53,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="text-center" id="bells">
+<section class="text-center dark-grey" id="bells">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
@@ -67,13 +67,12 @@ get_header(); ?>
 <section class="text-center">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center" id="comfort-boost">
-				<img src="<?php the_field('comfort_boost_image'); ?>"/>
-				<h2>Touchscreen<?php the_field('comfort_boost_title'); ?></h2>
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center" id="touchscreen">
+				<h2>Touchscreen</h2>
 				<p>TBC</p>
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6" id="my-wiser">
-				<h2>Smart Sense<?php the_field('my_wiser_title'); ?></h2>
+			<div class="col-lg-6 col-md-6 col-sm-6" id="smart-sense">
+				<h2>Smart Sense</h2>
 				<p>TBC</p>
 			</div>
 			</div>
@@ -81,7 +80,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="text-center">
+<section class="text-center dark-grey">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6" id="schedules" style="background-image: url('<?php the_field('schedules_background_image'); ?>')">
