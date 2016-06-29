@@ -17,23 +17,48 @@ get_header(); ?>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="<? echo get_template_directory_uri() ?>/includes/js/upclose_highchart.js"></script>
 
+<?php global $post; ?>
+<?php
+$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
+?>
+<div class="homepage-featured-image" style="background-image: url(<?php echo $src[0]; ?> )">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-md-6 col-sm-7 col-xs-12">
+				<h2><?php the_field('upclose_title'); ?></h2>
+				<p class="subtitle"><?php the_field('upclose_text'); ?></p>
+				<p class="btn-space"><?php the_field('upclose_title_button'); ?></p>
+			</div>
+		</div>
+	</div>
+</div>
+
 <section class="text-center light-grey">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center" id="touchscreen">
-				<h2>Touchscreen</h2>
-				<p>TBC</p>
-			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6" id="smart-sense">
-				<h2>Smart Sense</h2>
-				<p>TBC</p>
-			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+				<h2>Touchscreen/Smart Sense</h2>
+				<p>Wonderplugin</p>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="text-center blue">
+<section class="text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
+				<img src="<?php the_field('wiser_pulse_image'); ?>"/>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
+				<h2><?php the_field('wiser_pulse_title'); ?></h2>
+				<p class="subtitle"><?php the_field('wiser_pulse_text'); ?></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="text-center dark-grey">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6" id="schedules" style="background-image: url('<?php the_field('schedules_background_image'); ?>')">
@@ -65,19 +90,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="text-center dark-grey" id="bells">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<img src="<?php the_field('wiser_pulse_image'); ?>"/>
-			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<h2><?php the_field('wiser_pulse_title'); ?></h2>
-				<p class="subtitle"><?php the_field('wiser_pulse_text'); ?></p>
-			</div>
-		</div>
-	</div>
-</section>
+
 
 <section class="text-center">
 	<div class="container-fluid">
