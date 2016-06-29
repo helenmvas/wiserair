@@ -59,49 +59,62 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 </section>
 
 <section class="text-center dark-grey">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
+				<img src="<?php the_field('intuitive_app_image'); ?>"/>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
+				<h2><?php the_field('intuitive_app_title'); ?></h2>
+				<p class="subtitle"><?php the_field('intuitive_app_text'); ?></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="text-center">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6" id="schedules" style="background-image: url('<?php the_field('schedules_background_image'); ?>')">
-				<h2><?php the_field('schedules_title'); ?></h2>
-				<p class="subtitle"><?php the_field('schedules_text'); ?></p>
-			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6" id="ready-mode" style="background-image: url('<?php the_field('ready_mode_background_image'); ?>')">
-				<h2><?php the_field('ready_mode_title'); ?></h2>
-				<p class="subtitle"><?php the_field('ready_mode_text'); ?></p>
+				<h2>Schedules/Ready Mode</h2>
+				<p>Wonderplugin</p>
 			</div>
 		</div>
 	</div>
 </section>
-
-<section class="text-center">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center" id="comfort-boost" style="background-image: url('<?php the_field('comfort_boost_background_image'); ?>')">>
-				<img src="<?php the_field('comfort_boost_image'); ?>"/>
-				<h2><?php the_field('comfort_boost_title'); ?></h2>
-				<p class="subtitle"><?php the_field('comfort_boost_text'); ?></p>
-			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6" id="my-wiser" style="background-image: url('<?php the_field('my_wiser_background_image'); ?>')">
-				<h2><?php the_field('my_wiser_title'); ?></h2>
-				<p class="subtitle"><?php the_field('my_wiser_text'); ?></p>
-			</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-
 
 <section class="text-center">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center" id="energy-insight" style="background-image: url('<?php the_field('energy_insights_background_image'); ?>')">
-				<h2><?php the_field('energy_insights_title'); ?></h2>
-				<p class="subtitle"><?php the_field('energy_insights_text'); ?></p>
+			<div class="col-lg-12 col-md-12 col-sm-12" id="schedules" style="background-image: url('<?php the_field('schedules_background_image'); ?>')">
+				<h2>Energy Insights/Auto Updates</h2>
+				<p>Wonderplugin</p>
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center" id="auto-updates" style="background-image: url('<?php the_field('auto_updates_background_image'); ?>')">
-				<h2><?php the_field('auto_updates_title'); ?></h2>
-				<p class="subtitle"><?php the_field('auto_updates_text'); ?></p>
+		</div>
+	</div>
+</section>
+
+<section class="text-center blue">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
+				<img src="<?php the_field('comfort_features_image'); ?>"/>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
+				<h2><?php the_field('comfort_features_title'); ?></h2>
+				<p class="subtitle"><?php the_field('comfort_features_text'); ?></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="text-center dark-grey">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 text-center" id="comfort-boost" style="background-image: url('<?php the_field('comfort_boost_background_image'); ?>')">>
+				<img src="<?php the_field('comfort_boost_image'); ?>"/>
+				<h2><?php the_field('comfort_boost_title'); ?></h2>
+				<p class="subtitle"><?php the_field('comfort_boost_text'); ?></p>
 			</div>
 		</div>
 	</div>
@@ -110,15 +123,64 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 <section class="text-center light-grey">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-6" id="eco-iq">
+			<div class="col-lg-6 col-md-6 col-sm-6" id="my-wiser" style="background-image: url('<?php the_field('my_wiser_background_image'); ?>')">
+				<h2><?php the_field('humidity_balance_title'); ?></h2>
+				<p class="subtitle"><?php the_field('humidity_balance_text'); ?></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="text-center dark-grey">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
+				<img src="<?php the_field('exclusive_tech_image'); ?>"/>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
+				<h2><?php the_field('exclusive_tech_title'); ?></h2>
+				<p class="subtitle"><?php the_field('exclusive_tech_text'); ?></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="text-center light-grey">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<img src="<?php the_field('eco_iq_image'); ?>"/>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<h2><?php the_field('eco_iq_title'); ?></h2>
 				<p class="subtitle"><?php the_field('eco_iq_text'); ?></p>
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6" id="wiser-forecast">
+		</div>
+	</div>
+</section>
+
+<section class="text-center dark-grey">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<img src="<?php the_field('wiser_forecast_image'); ?>"/>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<h2><?php the_field('wiser_forecast_title'); ?></h2>
 				<p class="subtitle"><?php the_field('wiser_forecast_text'); ?></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="grey text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h2>Specifications</h2>
+			</div>
+			<div class="col-lg-12 text-center">
+				<?php echo do_shortcode('[wonderplugin_tabs id="4"]'); ?>
 			</div>
 		</div>
 	</div>
