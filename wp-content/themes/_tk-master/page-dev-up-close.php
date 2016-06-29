@@ -35,12 +35,12 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6" id="eco-iq">
-				<img src="<?php the_field('eco_iq_image'); ?>"/></div>
+				<img src="<?php the_field('eco_iq_image'); ?>"/>
 				<h2><?php the_field('eco_iq_title'); ?></h2>
 				<p class="subtitle"><?php the_field('eco_iq_text'); ?></p>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6" id="wiser-forecast">
-				<div><img src="<?php the_field('wiser_forecast_image'); ?>"/>
+				<img src="<?php the_field('wiser_forecast_image'); ?>"/>
 				<h2><?php the_field('wiser_forecast_title'); ?></h2>
 				<p class="subtitle"><?php the_field('wiser_forecast_text'); ?></p>
 			</div>
