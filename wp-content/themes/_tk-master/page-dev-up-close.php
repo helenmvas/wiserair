@@ -48,7 +48,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="text-center light-grey">
+<section class="text-center">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center" id="comfort-boost" style="background-image: url('<?php the_field('comfort_boost_background_image'); ?>')">>
@@ -68,9 +68,12 @@ get_header(); ?>
 <section class="text-center dark-grey" id="bells">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
-				<h2>Wiser Pulse</h2>
-				<p>TBC</p>
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
+				<img src="<?php the_field('wiser_pulse_image'); ?>"/>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
+				<h2><?php the_field('wiser_pulse_title'); ?></h2>
+				<p class="subtitle"><?php the_field('wiser_pulse_text'); ?></p>
 			</div>
 		</div>
 	</div>
@@ -91,7 +94,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="text-center">
+<section class="text-center light-grey">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6" id="eco-iq">
