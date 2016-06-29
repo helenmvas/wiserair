@@ -17,21 +17,9 @@ get_header(); ?>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="<? echo get_template_directory_uri() ?>/includes/js/upclose_highchart.js"></script>
 
-<section class="text-center" id="comfort-boost">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-5 text-center">
-				<div><img src="<?php the_field('comfort_boost_image'); ?>"/></div>
-			</div>
-			<div class="col-lg-7 text-center">
-				<h2><?php the_field('comfort_boost_title'); ?></h2>
-				<p class="subtitle"><?php the_field('comfort_boost_text'); ?></p>
-			</div>
-		</div>
-	</div>
-</section>
 
-<section class="text-center">
+
+<section class="text-center blue">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6" id="eco-iq">
@@ -48,29 +36,59 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="text-center" id="bells">
+<section class="text-center">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
-				<h2>Wiser Pulse / Touchscreen / Smart Sense</h2>
-				<?php echo do_shortcode('[wonderplugin_tabs id="9"]'); ?>
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center" id="comfort-boost" style="background-image: url('<?php the_field('comfort_boost_background_image'); ?>')">>
+				<img src="<?php the_field('comfort_boost_image'); ?>"/>
+				<h2><?php the_field('comfort_boost_title'); ?></h2>
+				<p class="subtitle"><?php the_field('comfort_boost_text'); ?></p>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6" id="my-wiser" style="background-image: url('<?php the_field('my_wiser_background_image'); ?>')">
+				<h2><?php the_field('my_wiser_title'); ?></h2>
+				<p class="subtitle"><?php the_field('my_wiser_text'); ?></p>
+			</div>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="text-center up-close-three">
+<section class="text-center" id="bells">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+				<h2>Wiser Pulse</h2>
+				<p>TBC</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="text-center">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center" id="comfort-boost">
+				<img src="<?php the_field('comfort_boost_image'); ?>"/>
+				<h2>Touchscreen<?php the_field('comfort_boost_title'); ?></h2>
+				<p>TBC</p>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6" id="my-wiser">
+				<h2>Smart Sense<?php the_field('my_wiser_title'); ?></h2>
+				<p>TBC</p>
+			</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="text-center">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-lg-4 col-md-4 col-sm-4" id="my-wiser" style="background-image: url('<?php the_field('my_wiser_background_image'); ?>')">
-				<h2><?php the_field('my_wiser_title'); ?></h2>
-				<p class="subtitle"><?php the_field('my_wiser_text'); ?></p>
-			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4" id="schedules" style="background-image: url('<?php the_field('schedules_background_image'); ?>')">
+			<div class="col-lg-6 col-md-6 col-sm-6" id="schedules" style="background-image: url('<?php the_field('schedules_background_image'); ?>')">
 				<h2><?php the_field('schedules_title'); ?></h2>
 				<p class="subtitle"><?php the_field('schedules_text'); ?></p>
 			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4" id="ready-mode" style="background-image: url('<?php the_field('ready_mode_background_image'); ?>')">
+			<div class="col-lg-6 col-md-6 col-sm-6" id="ready-mode" style="background-image: url('<?php the_field('ready_mode_background_image'); ?>')">
 				<h2><?php the_field('ready_mode_title'); ?></h2>
 				<p class="subtitle"><?php the_field('ready_mode_text'); ?></p>
 			</div>
@@ -78,7 +96,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="text-center up-close-three">
+<section class="text-center dark-grey">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center" id="energy-insight" style="background-image: url('<?php the_field('energy_insights_background_image'); ?>')">
