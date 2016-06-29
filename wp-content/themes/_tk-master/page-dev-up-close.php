@@ -75,7 +75,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 <section class="text-center">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-6" id="schedules" style="background-image: url('<?php the_field('schedules_background_image'); ?>')">
+			<div class="col-lg-12 col-md-12 col-sm-12" id="schedules" style="background-image: url('<?php the_field('schedules_background_image'); ?>')">
 				<h2>Schedules/Ready Mode</h2>
 				<p>Wonderplugin</p>
 			</div>
@@ -111,10 +111,12 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 <section class="text-center dark-grey">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-12 col-md-12 col-sm-12 text-center" id="comfort-boost" style="background-image: url('<?php the_field('comfort_boost_background_image'); ?>')">>
-				<img src="<?php the_field('comfort_boost_image'); ?>"/>
+			<div class="col-lg-6 col-md-6 col-sm-6" id="comfort-boost">
 				<h2><?php the_field('comfort_boost_title'); ?></h2>
 				<p class="subtitle"><?php the_field('comfort_boost_text'); ?></p>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6">
+				<img src="<?php the_field('comfort_boost_image'); ?>"/>
 			</div>
 		</div>
 	</div>
