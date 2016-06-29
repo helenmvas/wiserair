@@ -60,7 +60,7 @@ get_header(); ?>
 <section class="homepage-section-3" id="control-fingertips" style="background-image: url('<?php the_field('homepage_section_3_background_image'); ?>')">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-center">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 				<h2><?php the_field('homepage_section_3_title'); ?></h2>
 				<p class="subtitle"><?php the_field('homepage_section_3_subtitle'); ?></p>
 				<p class="btn-space"><?php the_field('homepage_section_3_button'); ?></p>
