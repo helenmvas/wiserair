@@ -62,11 +62,11 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<img src="<?php the_field('intuitive_app_image'); ?>"/>
-			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<h2><?php the_field('intuitive_app_title'); ?></h2>
 				<p class="subtitle"><?php the_field('intuitive_app_text'); ?></p>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
+				<img src="<?php the_field('intuitive_app_image'); ?>"/>
 			</div>
 		</div>
 	</div>
@@ -140,11 +140,11 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<img src="<?php the_field('exclusive_technology_image'); ?>"/>
-			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<h2><?php the_field('exclusive_technology_title'); ?></h2>
 				<p class="subtitle"><?php the_field('exclusive_tech_text'); ?></p>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
+				<img src="<?php the_field('exclusive_technology_image'); ?>"/>
 			</div>
 		</div>
 	</div>
@@ -168,11 +168,11 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<img src="<?php the_field('wiser_forecast_image'); ?>"/>
-			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<h2><?php the_field('wiser_forecast_title'); ?></h2>
 				<p class="subtitle"><?php the_field('wiser_forecast_text'); ?></p>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
+				<img src="<?php the_field('wiser_forecast_image'); ?>"/>
 			</div>
 		</div>
 	</div>
