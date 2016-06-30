@@ -24,10 +24,10 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 <div class="homepage-featured-image" style="background-image: url(<?php echo $src[0]; ?> )">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-5 col-md-6 col-sm-7 col-xs-12">
-				<h2><?php the_field('upclose_title'); ?></h2>
-				<p class="subtitle"><?php the_field('upclose_text'); ?></p>
-				<p class="btn-space"><?php the_field('upclose_title_button'); ?></p>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<h2><?php the_field('up_close_featured_image_title'); ?></h2>
+				<p class="subtitle"><?php the_field('up_close_featured_image_text'); ?></p>
+				<p class="btn-space"><?php the_field('up_close_featured_image_button'); ?></p>
 			</div>
 		</div>
 	</div>
@@ -38,7 +38,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
 				<h2>Touchscreen/Smart Sense</h2>
-				<p>Wonderplugin</p>
+				<p><?php echo do_shortcode('[wonderplugin_tabs id="9"]'); ?></p>
 			</div>
 		</div>
 	</div>
@@ -77,7 +77,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12" id="schedules" style="background-image: url('<?php the_field('schedules_background_image'); ?>')">
 				<h2>Schedules/Ready Mode</h2>
-				<p>Wonderplugin</p>
+				<p><?php echo do_shortcode('[wonderplugin_tabs id="10"]'); ?></p>
 			</div>
 		</div>
 	</div>
@@ -88,7 +88,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12" id="schedules" style="background-image: url('<?php the_field('schedules_background_image'); ?>')">
 				<h2>Energy Insights/Auto Updates</h2>
-				<p>Wonderplugin</p>
+				<p><?php echo do_shortcode('[wonderplugin_tabs id="11"]'); ?></p>
 			</div>
 		</div>
 	</div>
@@ -125,7 +125,10 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 <section class="text-center light-grey">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-6" id="my-wiser" style="background-image: url('<?php the_field('my_wiser_background_image'); ?>')">
+			<div class="col-lg-6 col-md-6 col-sm-6">
+				<img src="<?php the_field('humidity_balance_image'); ?>"/>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6" id="my-wiser">
 				<h2><?php the_field('humidity_balance_title'); ?></h2>
 				<p class="subtitle"><?php the_field('humidity_balance_text'); ?></p>
 			</div>
@@ -137,10 +140,10 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<img src="<?php the_field('exclusive_tech_image'); ?>"/>
+				<img src="<?php the_field('exclusive_technology_image'); ?>"/>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<h2><?php the_field('exclusive_tech_title'); ?></h2>
+				<h2><?php the_field('exclusive_technology_title'); ?></h2>
 				<p class="subtitle"><?php the_field('exclusive_tech_text'); ?></p>
 			</div>
 		</div>
