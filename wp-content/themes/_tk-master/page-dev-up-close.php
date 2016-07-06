@@ -47,10 +47,10 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 <section class="text-center">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-4 col-md-4 col-sm-4 text-center">
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<img src="<?php the_field('wiser_pulse_image'); ?>"/>
 			</div>
-			<div class="col-lg-8 col-md-8 col-sm-8 text-center">
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<h2><?php the_field('wiser_pulse_title'); ?></h2>
 				<p class="subtitle"><?php the_field('wiser_pulse_text'); ?></p>
 			</div>
@@ -153,10 +153,10 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 <section class="text-center light-grey">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-4 col-md-4 col-sm-4 text-center">
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<img src="<?php the_field('eco_iq_image'); ?>"/>
 			</div>
-			<div class="col-lg-8 col-md-8 col-sm-8 text-center">
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<h2><?php the_field('eco_iq_title'); ?></h2>
 				<p class="subtitle"><?php the_field('eco_iq_text'); ?></p>
 			</div>
@@ -167,11 +167,11 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 <section class="text-center dark-grey">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-8 col-md-8 col-sm-8 text-center">
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<h2><?php the_field('wiser_forecast_title'); ?></h2>
 				<p class="subtitle"><?php the_field('wiser_forecast_text'); ?></p>
 			</div>
-			<div class="col-lg-4 col-md-4 col-sm-4 text-center">
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<img src="<?php the_field('wiser_forecast_image'); ?>"/>
 			</div>
 		</div>

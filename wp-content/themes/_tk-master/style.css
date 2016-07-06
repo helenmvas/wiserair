@@ -1849,15 +1849,21 @@ div#html5-watermark {
 /* New Up Close */
 
 div#updates .left {
-    margin-top: 0%;
-    width: 40%;
-    text-align: right;
+    margin-top: 2%;
+    width: 60%;
+    text-align: center;
+    padding-left: 12%;
+}
+
+div#updates .right .fa-refresh {
+    font-size: 150px;
 }
 
 div#updates .right {
-    width: 60%;
-    text-align: left;
+    width: 40%;
+    text-align: center;
     float: right;
+    padding-right: 30%;
 }
 
 .page-id-4115 svg .highcharts-background {
