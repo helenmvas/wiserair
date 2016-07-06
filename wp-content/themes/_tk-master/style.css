@@ -1846,6 +1846,24 @@ div#html5-watermark {
     margin-top: 30px;
 } 
 
+/* New Up Close */
+
+div#updates .left {
+    margin-top: 0%;
+    width: 40%;
+    text-align: right;
+}
+
+div#updates .right {
+    width: 60%;
+    text-align: left;
+    float: right;
+}
+
+.page-id-4115 svg .highcharts-background {
+    fill: #f9f9f9 !important;
+}
+
 /* Getting Started/Quick Start */
 
 #sync {
