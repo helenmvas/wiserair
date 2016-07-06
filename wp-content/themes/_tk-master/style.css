@@ -1400,15 +1400,15 @@ section {
     min-height: 547px;
     max-height: 720px;
     overflow: hidden;
-    padding-top: 40px;
     color: #000;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
+    padding: 200px 0px 250px;
 }
 
 .homepage-section-3 h2 {
-    margin-top: 35%;
+    margin-top: 25%;
 }
 
 .homepage-section-3 img#control_hand {
