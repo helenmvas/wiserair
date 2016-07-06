@@ -1436,15 +1436,16 @@ section {
 }*/
 
 .homepage-section-5 {
-    height: 400px;
-    background: url("/images/1.4.0_background.jpg") 0 100%/200% no-repeat;
-    color: #000;
     background-size: cover;
     background-position: 50%
 }
 
-.homepage-section-5 h2 {
+/*.homepage-section-5 h2 {
     padding-top: 12%;
+}*/
+
+.homepage-section-5 .icons {
+    margin-right: 20px;
 }
 
 .homepage-section-6#retailers .row {
@@ -1473,15 +1474,9 @@ section {
 }
 
 .homepage-section-8 {
-    height: 400px;
     background: url("/images/halo_bkg.jpg") 0 100%/200% no-repeat;
-    color: #000;
     background-size: cover;
     background-position: 50%
-}
-
-.homepage-section-8 h2 {
-    margin-top: 20%;
 }
 
 .homepage-section-9 {
