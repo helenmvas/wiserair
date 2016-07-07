@@ -122,13 +122,14 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	</div>
 </section>
 
-<section class="text-center light-grey">
+<section class="text-center blue">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6">
-				<img src="<?php the_field('humidity_balance_image'); ?>" height="500"/>
+				<img src="<?php the_field('humidity_balance_image'); ?>" style="height: 500px;"/>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6" id="my-wiser">
+				<img src="/images/humidty_icon.png" />
 				<h2><?php the_field('humidity_balance_title'); ?></h2>
 				<p class="subtitle"><?php the_field('humidity_balance_text'); ?></p>
 			</div>
@@ -154,7 +155,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<img src="<?php the_field('eco_iq_image'); ?>"/>
+				<img src="<?php the_field('eco_iq_image'); ?>" width="350"/>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<h2><?php the_field('eco_iq_title'); ?></h2>
@@ -172,7 +173,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 				<p class="subtitle"><?php the_field('wiser_forecast_text'); ?></p>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<img src="<?php the_field('wiser_forecast_image'); ?>"/>
+				<img src="<?php the_field('wiser_forecast_image'); ?>" style="height: 500px;"/>
 			</div>
 		</div>
 	</div>
