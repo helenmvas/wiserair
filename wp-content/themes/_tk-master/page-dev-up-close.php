@@ -52,6 +52,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<h2><?php the_field('wiser_pulse_title'); ?></h2>
 				<p class="subtitle"><?php the_field('wiser_pulse_text'); ?></p>
+				<p class="btn-space"><?php the_field('wiser_pulse_button'); ?></p>
 			</div>
 		</div>
 	</div>
@@ -63,6 +64,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<h2><?php the_field('intuitive_app_title'); ?></h2>
 				<p class="subtitle"><?php the_field('intuitive_app_text'); ?></p>
+				<p class="btn-space"><?php the_field('intuitive_app_button'); ?></p>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<img src="<?php the_field('intuitive_app_image'); ?>"/>
@@ -100,6 +102,8 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<h2><?php the_field('comfort_features_title'); ?></h2>
 				<p class="subtitle"><?php the_field('comfort_features_text'); ?></p>
+				<p class="btn-space"><?php the_field('comfort_features_button'); ?></p>
+
 			</div>
 		</div>
 	</div>
@@ -111,6 +115,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 			<div class="col-lg-6 col-md-6 col-sm-6" id="comfort-boost">
 				<h2><?php the_field('comfort_boost_title'); ?></h2>
 				<p class="subtitle"><?php the_field('comfort_boost_text'); ?></p>
+				<p class="btn-space"><?php the_field('comfort_boost_button'); ?></p>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6">
 				<img src="<?php the_field('comfort_boost_image'); ?>"/>
@@ -129,6 +134,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 				<img src="/images/humidty_icon_blue.png" style="height: 45px;"/>
 				<h2><?php the_field('humidity_balance_title'); ?></h2>
 				<p class="subtitle"><?php the_field('humidity_balance_text'); ?></p>
+				<p class="btn-space"><?php the_field('humidity_balance_button'); ?></p>
 			</div>
 		</div>
 	</div>
@@ -140,6 +146,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<h2><?php the_field('exclusive_technology_title'); ?></h2>
 				<p class="subtitle"><?php the_field('exclusive_technology_text'); ?></p>
+				<p class="btn-space"><?php the_field('exclusive_technology_button'); ?></p>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<img src="<?php the_field('exclusive_technology_image'); ?>"/>
@@ -157,6 +164,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center text">
 				<h2><?php the_field('eco_iq_title'); ?></h2>
 				<p class="subtitle"><?php the_field('eco_iq_text'); ?></p>
+				<p class="btn-space"><?php the_field('eco_iq_button'); ?></p>
 			</div>
 		</div>
 	</div>
@@ -168,6 +176,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center text">
 				<h2><?php the_field('wiser_forecast_title'); ?></h2>
 				<p class="subtitle"><?php the_field('wiser_forecast_text'); ?></p>
+				<p class="btn-space"><?php the_field('wiser_forecast_button'); ?></p>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<img src="<?php the_field('wiser_forecast_image'); ?>" style="height: 500px;"/>

@@ -1370,9 +1370,9 @@ section {
 .page-template-page-homepage .homepage-featured-image {
     background-size: 50% 99% !important;
     -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
 }
 
 .page-template-page-homepage .homepage-featured-image h2 {
