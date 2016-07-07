@@ -70,7 +70,7 @@ h2 {
     font-size: 30px;
     font-weight: 300;
     margin-bottom: 12px;
-    line-height: 32px;
+    line-height: 40px;
 }
 
 .fa {
@@ -1390,9 +1390,9 @@ section {
     background: #ececec;
 }*/
 
-.homepage-section-2 h2 {
+/*.homepage-section-2 h2 {
     margin-top: 9%;
-}
+}*/
 
 .homepage-section-3 {
     background: url("/images/1.2.0_background.jpg");
@@ -1446,6 +1446,7 @@ section {
 
 .homepage-section-5 .icons {
     margin-right: 20px;
+    margin-top: 70px;
 }
 
 .homepage-section-6#retailers .row {
@@ -1477,6 +1478,10 @@ section {
     background: url("/images/halo_bkg.jpg") 0 100%/200% no-repeat;
     background-size: cover;
     background-position: 50%
+}
+
+.homepage-section-8 h2 {
+    margin-top: -15px;
 }
 
 .homepage-section-9 {
@@ -1873,6 +1878,17 @@ div#updates .right {
     fill: #f9f9f9 !important;
 }
 
+#humidity .text {
+    margin-top: 12%;
+}
+
+#eco-iq .text {
+    margin-top: 24%;
+}
+
+#wiser-forecast .text {
+    margin-top: 40%;
+}
 /* Getting Started/Quick Start */
 
 #sync {
