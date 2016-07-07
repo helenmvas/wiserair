@@ -89,10 +89,10 @@ get_header(); ?>
 <section class="homepage-section-4" id="precise-weather">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-5 text-center">
+			<div class="col-lg-offset-1 col-md-offset-1 col-lg-4 col-md-4 col-sm-4 col-xs-5 text-center">
 				<div><img src="<?php the_field('homepage_section_4_image'); ?>"/></div>
 			</div>
-			<div class="col-offset-lg-3 col-md-offset-3 col-sm-offset-3 col-lg-5 col-md-5 col-sm-5 col-xs-5">
+			<div class="col-offset-lg-2 col-md-offset-2 col-sm-offset-3 col-lg-5 col-md-5 col-sm-5 col-xs-5">
 				<h2><?php the_field('homepage_section_4_title'); ?></h2>
 				<p class="subtitle"><?php the_field('homepage_section_4_subtitle'); ?></p>
 				<p class="btn-space"><?php the_field('homepage_section_4_button'); ?></p>

@@ -126,7 +126,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6">
-				<img src="<?php the_field('humidity_balance_image'); ?>"/>
+				<img src="<?php the_field('humidity_balance_image'); ?>" height="500"/>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6" id="my-wiser">
 				<h2><?php the_field('humidity_balance_title'); ?></h2>
