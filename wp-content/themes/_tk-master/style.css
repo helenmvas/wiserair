@@ -1368,7 +1368,7 @@ section {
 }
 
 .page-template-page-homepage .homepage-featured-image {
-    background-size: 50% 99%;
+    background-size: 50% 99% !important;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -1376,8 +1376,8 @@ section {
 }
 
 .page-template-page-homepage .homepage-featured-image h2 {
-    font-weight: 400;
-    margin-top: 55%;
+/*    font-weight: 400;*/
+    margin-top: 76%;
 }
 
 .page-template-page-homepage .homepage-featured-image .subtitle {
