@@ -24,7 +24,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 <div class="homepage-featured-image" style="background-image: url(<?php echo $src[0]; ?> )">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 				<h2><?php the_field('up_close_featured_image_title'); ?></h2>
 				<p class="subtitle"><?php the_field('up_close_featured_image_text'); ?></p>
 				<p class="btn-space"><?php the_field('up_close_featured_image_button'); ?></p>
@@ -126,7 +126,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 				<img src="<?php the_field('humidity_balance_image'); ?>" style="height: 500px;"/>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 text">
-				<img src="/images/humidty_icon.png" style="height: 45px;"/>
+				<img src="/images/humidty_icon_blue.png" style="height: 45px;"/>
 				<h2><?php the_field('humidity_balance_title'); ?></h2>
 				<p class="subtitle"><?php the_field('humidity_balance_text'); ?></p>
 			</div>

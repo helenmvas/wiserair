@@ -1361,10 +1361,10 @@ section {
 }
 
 .homepage-featured-image {
-    background-image: url(http://dev-wiserair-mlp.azurewebsites.net/wp-content/uploads/2016/02/1.0.0_background.jpg );
     min-height: 600px;
     background-size: cover;
     background-position: 50% 50%;
+    background: 0 100%/100% no-repeat;
 }
 
 .homepage-section-1 #video {
@@ -1872,6 +1872,10 @@ div#updates .right {
     text-align: center;
     float: right;
     padding-right: 30%;
+}
+
+.page-id-4115 .homepage-featured-image h2 {
+    margin-top: 40%;
 }
 
 .page-id-4115 svg .highcharts-background {
