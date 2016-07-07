@@ -1364,7 +1364,16 @@ section {
     min-height: 600px;
     background-size: cover;
     background-position: 50% 50%;
-    background: 0 100%/100% no-repeat;
+/*    background: 0 100%/100% no-repeat;*/
+}
+
+.page-template-page-homepage .homepage-featured-image {
+    background-size: 50% 99%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
 }
 
 .homepage-section-1 #video {
