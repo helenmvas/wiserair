@@ -76,8 +76,8 @@ get_header(); ?>
 <section class="homepage-section-8 dark-grey">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-5 col-md-5 col-sm-5 text-center">
-				<img src="<?php the_field('homepage_section_8_image'); ?>" height="300"/>
+			<div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-5 text-center">
+				<img src="<?php the_field('homepage_section_8_image'); ?>" width="250"/>
 				<h2><?php the_field('homepage_section_8_title'); ?></h2>
 				<p class="subtitle"><?php the_field('homepage_section_8_subtitle'); ?></p>
 				<p class="btn-space"><?php the_field('homepage_section_8_button'); ?></p>
