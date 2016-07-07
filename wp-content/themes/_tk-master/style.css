@@ -1376,6 +1376,15 @@ section {
     height: 100vh;
 }
 
+.page-template-page-homepage .homepage-featured-image h2 {
+    font-weight: 400;
+    margin-top: 55%;
+}
+
+.page-template-page-homepage .homepage-featured-image .subtitle {
+    font-size: 20px;
+}
+
 .homepage-section-1 #video {
     margin-top: 50px;
 }
