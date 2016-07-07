@@ -76,7 +76,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12" id="schedules" style="background-image: url('<?php the_field('schedules_background_image'); ?>')">
-				<h2>Schedules/Ready Mode</h2>
+				<h2>Schedules/Ready Modes</h2>
 				<p><?php echo do_shortcode('[wonderplugin_tabs id="10"]'); ?></p>
 			</div>
 		</div>
@@ -108,7 +108,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	</div>
 </section>
 
-<section class="text-center dark-grey">
+<section class="text-center light-grey">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6" id="comfort-boost">
@@ -122,7 +122,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	</div>
 </section>
 
-<section class="text-center blue" id="humidity">
+<section class="text-center" id="humidity">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6">
@@ -165,7 +165,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	</div>
 </section>
 
-<section class="text-center dark-grey" id="wiser-forecast">
+<section class="text-center" id="wiser-forecast">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center text">

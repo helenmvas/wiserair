@@ -41,17 +41,16 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="homepage-section-5 dark-grey">
+<section class="homepage-section-2 dark-grey" id="in-control">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-6">
-				<img src="<?php the_field('homepage_section_5_background_image'); ?>"/>
+			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-5 text-center">
+				<img src="/images/1.1.0_thermostat2.png" alt="Wiser Air" height="367" width="366">
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6">
-				<img class="icons" src="/images/cool_blast_icon.png" width="50"/><img class="icons" src="/images/heat_blast_icon.png" width="50"/>
-				<h2><?php the_field('homepage_section_5_title'); ?></h2>
-				<p class="subtitle"><?php the_field('homepage_section_5_subtitle'); ?></p>
-				<p class="btn-space"><?php the_field('homepage_section_5_button'); ?></p>
+			<div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-7 col-md-7 col-sm-7">
+				<h2><?php the_field('homepage_section_2_title'); ?></h2>
+				<p class="subtitle"><?php the_field('homepage_section_2_subtitle'); ?></p>
+				<p class="btn-space"><?php the_field('homepage_section_2_button'); ?></p>
 			</div>
 		</div>
 	</div>
@@ -68,6 +67,22 @@ get_header(); ?>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
 				<!-- <img src="/images/1.2.0_hand_device.png" id="control_hand" alt="1.2.0_hand_device"> -->
 				<div><img src="<?php the_field('homepage_section_3_image'); ?>"/></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="homepage-section-5 dark-grey">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6">
+				<img src="<?php the_field('homepage_section_5_background_image'); ?>"/>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6">
+				<img class="icons" src="/images/cool_blast_icon.png" width="50"/><img class="icons" src="/images/heat_blast_icon.png" width="50"/>
+				<h2><?php the_field('homepage_section_5_title'); ?></h2>
+				<p class="subtitle"><?php the_field('homepage_section_5_subtitle'); ?></p>
+				<p class="btn-space"><?php the_field('homepage_section_5_button'); ?></p>
 			</div>
 		</div>
 	</div>
@@ -96,21 +111,6 @@ get_header(); ?>
 				<h2><?php the_field('homepage_section_4_title'); ?></h2>
 				<p class="subtitle"><?php the_field('homepage_section_4_subtitle'); ?></p>
 				<p class="btn-space"><?php the_field('homepage_section_4_button'); ?></p>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="homepage-section-2 light-grey" id="in-control">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-5 text-center">
-				<img src="/images/1.1.0_thermostat2.png" alt="Wiser Air" height="367" width="366">
-			</div>
-			<div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-7 col-md-7 col-sm-7">
-				<h2><?php the_field('homepage_section_2_title'); ?></h2>
-				<p class="subtitle"><?php the_field('homepage_section_2_subtitle'); ?></p>
-				<p class="btn-space"><?php the_field('homepage_section_2_button'); ?></p>
 			</div>
 		</div>
 	</div>
