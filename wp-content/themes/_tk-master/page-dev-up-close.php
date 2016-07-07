@@ -37,7 +37,6 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
-				<h2>Touchscreen/Smart Sense</h2>
 				<p><?php echo do_shortcode('[wonderplugin_tabs id="9"]'); ?></p>
 			</div>
 		</div>
@@ -76,7 +75,6 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12" id="schedules" style="background-image: url('<?php the_field('schedules_background_image'); ?>')">
-				<h2>Schedules/Ready Modes</h2>
 				<p><?php echo do_shortcode('[wonderplugin_tabs id="10"]'); ?></p>
 			</div>
 		</div>
@@ -87,7 +85,6 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12" id="updates">
-				<h2>Energy Insights/Auto Updates</h2>
 				<p><?php echo do_shortcode('[wonderplugin_tabs id="11"]'); ?></p>
 			</div>
 		</div>
