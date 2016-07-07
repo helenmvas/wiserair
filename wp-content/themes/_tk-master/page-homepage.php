@@ -45,7 +45,7 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6">
-				<img src="<?php the_field('homepage_section_5_background_image'); ?>')"/>
+				<img src="<?php the_field('homepage_section_5_background_image'); ?>"/>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6">
 				<img class="icons" src="/images/cool_blast_icon.png" width="50"/><img class="icons" src="/images/heat_blast_icon.png" width="50"/>
@@ -76,7 +76,7 @@ get_header(); ?>
 <section class="homepage-section-8 dark-grey">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-offset-1 col-md-offset-1 col-lg-5 col-md-5 col-sm-5 text-center">
+			<div class="col-lg-offset-1 col-md-offset-1 col-lg-6 col-md-6 col-sm-6 text-center">
 				<img src="<?php the_field('homepage_section_8_image'); ?>" width="250"/>
 				<h2><?php the_field('homepage_section_8_title'); ?></h2>
 				<p class="subtitle"><?php the_field('homepage_section_8_subtitle'); ?></p>
@@ -92,7 +92,7 @@ get_header(); ?>
 			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-5 text-center">
 				<div><img src="<?php the_field('homepage_section_4_image'); ?>"/></div>
 			</div>
-			<div class="col-offset-lg-3 col-md-offset-3 col-lg-5 col-md-5 col-sm-5 col-xs-5">
+			<div class="col-offset-lg-3 col-md-offset-3 col-sm-offset-3 col-lg-5 col-md-5 col-sm-5 col-xs-5">
 				<h2><?php the_field('homepage_section_4_title'); ?></h2>
 				<p class="subtitle"><?php the_field('homepage_section_4_subtitle'); ?></p>
 				<p class="btn-space"><?php the_field('homepage_section_4_button'); ?></p>
