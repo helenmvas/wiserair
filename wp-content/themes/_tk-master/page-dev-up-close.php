@@ -33,7 +33,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	</div>
 </div>
 
-<section class="text-center light-grey">
+<section class="text-center light-grey" id="touchscreen-smartsense">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
@@ -47,7 +47,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<img src="<?php the_field('wiser_pulse_image'); ?>" width="300"/>
+				<img src="<?php the_field('wiser_pulse_image'); ?>"/>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<h2><?php the_field('wiser_pulse_title'); ?></h2>
@@ -58,7 +58,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	</div>
 </section>
 
-<section class="text-center dark-grey">
+<section class="text-center dark-grey" id="intuitive-app">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
@@ -67,7 +67,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 				<p class="btn-space"><?php the_field('intuitive_app_button'); ?></p>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<img src="<?php the_field('intuitive_app_image'); ?>"/>
+				<img src="<?php the_field('intuitive_app_image'); ?>" width="350"/>
 			</div>
 		</div>
 	</div>
@@ -93,7 +93,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	</div>
 </section>
 
-<section class="text-center blue">
+<section class="text-center blue" id="comfort-features">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
@@ -109,16 +109,21 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	</div>
 </section>
 
-<section class="text-center light-grey">
+<section class="text-center light-grey" id="comfort-boost">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-6" id="comfort-boost">
+			<div class="col-lg-6 col-md-6 col-sm-6">
+				<img class="icons" src="/images/heat_blast_icon.png" width="50"/><img class="icons" src="/images/cool_blast_icon.png" width="50"/>
 				<h2><?php the_field('comfort_boost_title'); ?></h2>
 				<p class="subtitle"><?php the_field('comfort_boost_text'); ?></p>
 				<p class="btn-space"><?php the_field('comfort_boost_button'); ?></p>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6">
-				<img src="<?php the_field('comfort_boost_image'); ?>"/>
+				<!-- <img src="<?php the_field('comfort_boost_image'); ?>"/> -->
+				<video poster="/images/2.0.0_phone_boost.jpg" autoplay="autoplay" loop="loop" controls="controls" height="500">
+					<source src="https://m.wiserair.com/videos/2.0.0_phone_boost.mp4" type="video/mp4">
+					Your browser does not support HTML5 video
+				</video>
 			</div>
 		</div>
 	</div>
@@ -140,15 +145,15 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	</div>
 </section>
 
-<section class="text-center dark-grey">
+<section class="text-center dark-grey" id="exclusive-technology">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
+			<div class="col-lg-7 col-md-7 col-sm-7 text-center">
 				<h2><?php the_field('exclusive_technology_title'); ?></h2>
 				<p class="subtitle"><?php the_field('exclusive_technology_text'); ?></p>
 				<p class="btn-space"><?php the_field('exclusive_technology_button'); ?></p>
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
+			<div class="col-lg-5 col-md-5 col-sm-5 text-center">
 				<img src="<?php the_field('exclusive_technology_image'); ?>"/>
 			</div>
 		</div>
@@ -198,7 +203,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	</div>
 </section>
 
-<section class="homepage-section-7" id="homepage-slideshow">
+<!-- <section class="homepage-section-7" id="homepage-slideshow">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="text-center">
@@ -206,6 +211,6 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 
 <?php get_footer(); ?>

@@ -72,14 +72,13 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="homepage-section-5 dark-grey">
+<section class="homepage-section-5 blue">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6">
 				<img src="<?php the_field('homepage_section_5_background_image'); ?>"/>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6">
-				<img class="icons" src="/images/heat_blast_icon.png" width="50"/><img class="icons" src="/images/cool_blast_icon.png" width="50"/>
 				<h2><?php the_field('homepage_section_5_title'); ?></h2>
 				<p class="subtitle"><?php the_field('homepage_section_5_subtitle'); ?></p>
 				<p class="btn-space"><?php the_field('homepage_section_5_button'); ?></p>

@@ -1621,7 +1621,6 @@ div#wonderplugintabs-2 .right {
     text-align: center;
     float: right;
     width: 40%;
-
 }
 
 .page-template-page-up-close video {
@@ -1635,6 +1634,15 @@ div#wonderplugintabs-2 .right {
 div#html5-watermark {
     display: none !important;
 }
+
+#intuitive-app {
+    padding-bottom: 0px;
+}
+
+#intuitive-app .container {
+    margin-bottom: 0px;
+}
+
 
 /* Eco IQ Page */
 .page-template-page-eco-iq .homepage-featured-image {
@@ -1908,7 +1916,16 @@ div#updates .right {
 }
 
 #wiser-forecast .text {
-    margin-top: 12%;
+    margin-top: 10%;
+}
+
+#touchscreen-smartsense {
+    background: url("/images/5.4.0_background.jpg");
+    background-size: cover;
+}
+
+#touchscreen-smartsense .wonderplugintabs * {
+    text-align: left;
 }
 /* Getting Started/Quick Start */
 
