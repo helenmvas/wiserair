@@ -1883,12 +1883,16 @@ div#updates .right {
     margin-top: 7%;
 }
 
+#eco-iq img {
+    max-height: 500px;
+}
+
 #wiser-forecast .text {
     margin-top: 7%;
 }
 
 #wiser-forecast img {
-    height: 500px;
+    max-height: 500px;
 }
 
 #touchscreen-smartsense {
