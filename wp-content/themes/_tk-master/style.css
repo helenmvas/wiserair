@@ -2056,6 +2056,28 @@ div#wonderplugintabs-5 {
     margin: 40px 0px 15px 0px;
 }
 
+/* Comparison */
+
+.wpsm-thead-default th {
+    background-color: #00a550;
+    color: #fff;
+    border-color: #f8f8f8;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: .2px;
+    border-right: 0px solid #fff;
+}
+
+.wpsm-comptable td {
+    text-align: center;
+}
+
+.wpsm-comptable td:first-child {
+    text-align: left;
+    font-weight: 400;
+}
+
 /* Press */
 
 .page-template-page-press h2 {
