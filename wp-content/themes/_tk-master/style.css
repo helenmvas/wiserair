@@ -1902,7 +1902,7 @@ div#updates .right {
 }
 
 #wiser-forecast .text {
-    margin-top: 10%;
+    margin-top: 7%;
 }
 
 #touchscreen-smartsense {
@@ -1924,7 +1924,7 @@ div#updates .right {
 }
 
 #comfort-boost .col-lg-6:first-child {
-    margin-top: 11%;
+    margin-top: 5%;
 }
 
 #exclusive-technology h2 {
@@ -1936,7 +1936,7 @@ div#updates .right {
 }
 
 #intuitive-app .container {
-    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
 #intuitive-app h2 {
@@ -3030,15 +3030,14 @@ article .entry-meta {
             padding-top: 5%;
         }
 
-        .page-template-page-homepage .homepage-section-5 {
+        /*.page-template-page-homepage .homepage-section-5 {
             height: 400px;
             background: url("/images/1.4.0_background.jpg") no-repeat;
-            /* background-size: cover; */
             background-position: 17% 50%;
             color: #000;
             padding-left: 15px;
             padding-right: 15px;
-        }
+        }*/
 
         .homepage-section-8 {
             text-align: center;
@@ -3244,8 +3243,21 @@ article .entry-meta {
             margin-top: 18%;
         }
 
-        .homepage-section-5 h2 {
-            padding-top: 5%;
+        ..homepage-section-5 h2 {
+            padding-top: 0;
+            margin-top: -5%;
+        }
+
+        .homepage-section-4 {
+            color: #000;
+        }
+
+        section#precise-weather {
+            color: #000;
+        }
+
+        #precise-weather h2 {
+            margin-top: 0%;
         }
 
         .homepage-section-6#retailers li {
@@ -3377,7 +3389,7 @@ article .entry-meta {
 
         .page-template-page-homepage  .homepage-featured-image {
             background-size: cover;
-            background-position: 45% 50%;
+            background-position: 33% 100%;
             min-height: 500px !important;
         }
 
@@ -3385,16 +3397,16 @@ article .entry-meta {
             text-align: center;
         }*/
 
-        .page-template-page-homepage .homepage-section-5 {
+        /*.page-template-page-homepage .homepage-section-5 {
             height: 400px;
             background: url("/images/1.4.0_background.jpg") no-repeat;
-            /* background-size: cover; */
             background-position: 17% 50%;
             color: #000;
-        }
+        }*/
 
         .page-template-page-homepage .homepage-section-3 {
             height: 850px !important;
+            background: 38% 45%;
         }
 
         .page-template-page-homepage .homepage-section-4 .btn-space {
@@ -3442,6 +3454,50 @@ article .entry-meta {
 
         .wpcf7-submit {
             margin-top: 30px !important;
+        }
+
+        #wiser-pulse h2 {
+            margin-top: -3%;
+        }
+
+        #intuitive-app h2 {
+            margin-top: 0%;
+        }
+
+        #schedules video {
+            margin-top: 40px;
+        }
+
+        #comfort-features h2 {
+            margin-top: -4%;
+        }
+
+        #comfort-boost .col-lg-6:first-child {
+            margin-top: 0%;
+        }
+
+        #comfort-boost .icons {
+            margin-top: 0px;
+        }
+
+        #comfort-boost video {
+            margin-top: 40px;
+        }
+
+        #exclusive-technology h2 {
+            margin-top: 0%;
+        }
+
+        #wiser-forecast .text {
+            margin-top: 0%;
+        }
+
+        #wiser-forecast h2 {
+            margin: 0%;
+        }
+
+        #wiser-forecast img {
+            margin-top: 40px;
         }
     }
 

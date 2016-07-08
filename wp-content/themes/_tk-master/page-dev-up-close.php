@@ -184,7 +184,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 				<p class="btn-space"><?php the_field('wiser_forecast_button'); ?></p>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<img src="<?php the_field('wiser_forecast_image'); ?>"/>
+				<img src="<?php the_field('wiser_forecast_image'); ?>" width="450"/>
 			</div>
 		</div>
 	</div>
