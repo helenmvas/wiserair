@@ -24,7 +24,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 <div class="homepage-featured-image" style="background-image: url(<?php echo $src[0]; ?> )">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-7">
 				<h2><?php the_field('up_close_featured_image_title'); ?></h2>
 				<p class="subtitle"><?php the_field('up_close_featured_image_text'); ?></p>
 				<p class="btn-space"><?php the_field('up_close_featured_image_button'); ?></p>
@@ -178,19 +178,19 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 <section class="text-center" id="wiser-forecast">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center text">
+			<div class="col-lg-7 col-md-7 col-sm-7 text-center text">
 				<h2><?php the_field('wiser_forecast_title'); ?></h2>
 				<p class="subtitle"><?php the_field('wiser_forecast_text'); ?></p>
 				<p class="btn-space"><?php the_field('wiser_forecast_button'); ?></p>
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<img src="<?php the_field('wiser_forecast_image'); ?>" width="450"/>
+			<div class="col-lg-5 col-md-5 col-sm-5 text-center">
+				<img src="<?php the_field('wiser_forecast_image'); ?>"/>
 			</div>
 		</div>
 	</div>
 </section>
 
-<section class="grey text-center">
+<!-- <section class="grey text-center">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
@@ -201,7 +201,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 
 <section class="blue">
 	<div class="container">

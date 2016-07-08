@@ -1381,6 +1381,10 @@ section {
     margin-top: 9%;
 }*/
 
+.homepage-section-2.dark-grey {
+    padding: 100px 0px;
+}
+
 .homepage-section-3 {
     background: url("/images/1.2.0_background.jpg");
     height: 100%;
@@ -1411,7 +1415,11 @@ section {
 }
 
 .homepage-section-4 h2 {
-    margin-top: 20%;
+    margin-top: 30%;
+}
+
+.homepage-section-4 img {
+    margin-top: 10%;
 }
 
 /*.homepage-section-4 .push-left {
@@ -1428,7 +1436,11 @@ section {
 }
 
 .homepage-section-5 h2 {
-    margin-top: 20%;
+    margin-top: 28%;
+}
+
+.homepage-section-5 img {
+    margin-top: 11%;
 }
 
 .homepage-section-6#retailers .row {
@@ -1875,13 +1887,22 @@ div#updates .right {
     margin-top: 7%;
 }
 
+#wiser-forecast img {
+    margin-top: 500px;
+}
+
 #touchscreen-smartsense {
     background: url("/images/5.4.0_background.jpg");
     background-size: cover;
+    min-height: 500px;
 }
 
 #touchscreen-smartsense .wonderplugintabs * {
     text-align: left;
+}
+
+#touchscreen-smartsense .wonderplugintabs-panel-inner {
+    width: 50%;
 }
 
 #comfort-features h2 {
@@ -1910,7 +1931,7 @@ div#updates .right {
 }
 
 #intuitive-app h2 {
-    margin-top: 35%;
+    margin-top: 28%;
 }
 
 #wiser-pulse h2 {
@@ -2518,6 +2539,19 @@ article .entry-meta {
         .wonderplugintabs .left, .wonderplugintabs .right {
             width: 50%;
         }
+
+        .homepage-section-5 h2 {
+            margin-top: 12%;
+        }
+
+        .homepage-section-4 h2 {
+            margin-top: 3%;
+        }
+
+        .homepage-section-8 {
+            background-position: 78% 42%;
+        }
+
     }
 
     /* Small Devices, Tablets */
@@ -2930,11 +2964,34 @@ article .entry-meta {
         #wiser-forecast img {
             margin-top: 40px;
         }
+
+        .homepage-section-5 h2 {
+            margin-top: -12%;
+        }
+
+        #control-fingertips .col-xs-10 {
+            width: 53%;
+        }
+
+        #touchscreen-smartsense {
+            background-position: 79% 50%;
+        }
     }
 
 
     /* Extra Small Devices, Phones */ 
     @media only screen and (max-width : 680px) {
+        .page-id-4115 .homepage-featured-image {
+            min-height: 500px;
+            background-size: 150%;
+            background-position: 83% 125%;
+            background-repeat: no-repeat;
+        }
+
+        .page-id-4115 .homepage-featured-image h2 {
+            margin-top: 25%;
+        }
+
         .navbar li {
             padding: 10px 0px;
             border-top: 1px solid #ddd;
@@ -3516,6 +3573,10 @@ article .entry-meta {
 
         #wiser-forecast img {
             margin-top: 40px;
+        }
+
+        #control-fingertips .col-xs-10 {
+            width: 83%;
         }
     }
 
