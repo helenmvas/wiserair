@@ -43,7 +43,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	</div>
 </section>
 
-<section class="text-center" id="wiser-pulse">
+<section class="text-center dark-grey" id="wiser-pulse">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
@@ -58,7 +58,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	</div>
 </section>
 
-<section class="text-center dark-grey" id="intuitive-app">
+<section class="text-center blue" id="intuitive-app">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
