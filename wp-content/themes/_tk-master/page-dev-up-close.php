@@ -43,7 +43,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	</div>
 </section>
 
-<section class="text-center">
+<section class="text-center" id="wiser-pulse">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
@@ -184,7 +184,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 				<p class="btn-space"><?php the_field('wiser_forecast_button'); ?></p>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
-				<img src="<?php the_field('wiser_forecast_image'); ?>" style="height: 500px;"/>
+				<img src="<?php the_field('wiser_forecast_image'); ?>"/>
 			</div>
 		</div>
 	</div>
@@ -202,15 +202,5 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 		</div>
 	</div>
 </section>
-
-<!-- <section class="homepage-section-7" id="homepage-slideshow">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="text-center">
-				<?php echo do_shortcode('[metaslider id=4110]'); ?>
-			</div>
-		</div>
-	</div>
-</section> -->
 
 <?php get_footer(); ?>

@@ -1461,11 +1461,6 @@ section {
     padding-top: 12%;
 }*/
 
-.homepage-section-5 .icons {
-    margin-right: 20px;
-    margin-top: 70px;
-}
-
 .homepage-section-6#retailers .row {
     display: table;
     margin: 0 auto;
@@ -1634,15 +1629,6 @@ div#wonderplugintabs-2 .right {
 div#html5-watermark {
     display: none !important;
 }
-
-#intuitive-app {
-    padding-bottom: 0px;
-}
-
-#intuitive-app .container {
-    margin-bottom: 0px;
-}
-
 
 /* Eco IQ Page */
 .page-template-page-eco-iq .homepage-featured-image {
@@ -1927,6 +1913,40 @@ div#updates .right {
 #touchscreen-smartsense .wonderplugintabs * {
     text-align: left;
 }
+
+#comfort-features h2 {
+    margin-top: 26%;
+}
+
+#comfort-boost .icons {
+    margin-right: 20px;
+    margin-top: 70px;
+}
+
+#comfort-boost .col-lg-6:first-child {
+    margin-top: 11%;
+}
+
+#exclusive-technology h2 {
+    margin-top: 18%;
+}
+
+#intuitive-app {
+    padding-bottom: 0px;
+}
+
+#intuitive-app .container {
+    margin-bottom: 0px;
+}
+
+#intuitive-app h2 {
+    margin-top: 35%;
+}
+
+#wiser-pulse h2 {
+    margin-top: 13%;
+}
+
 /* Getting Started/Quick Start */
 
 #sync {
