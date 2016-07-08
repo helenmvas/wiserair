@@ -115,13 +115,10 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="homepage-section-9" style="background-image: url('<?php the_field('homepage_section_9_background_image'); ?>'); background-size: cover;">
+<section class="homepage-section-9 blue">
 	<div class="container">
 		<div class="row">
-			<!-- <div class="col-lg-4 col-md-5 col-sm-4">
-				<div><?php the_field('homepage_section_9_image'); ?></div>	
-			</div> -->
-			<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
 				<h2><?php the_field('homepage_section_9_title'); ?></h2>
 				<p class="subtitle"><?php the_field('homepage_section_9_subtitle'); ?></p>
 				<p class="btn-space"><?php the_field('homepage_section_9_button'); ?></p>

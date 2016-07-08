@@ -203,4 +203,16 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	</div>
 </section>
 
+<section class="blue">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+				<h2><?php the_field('up_close_marketing_title'); ?></h2>
+				<p class="subtitle"><?php the_field('up_close_marketing_text'); ?></p>
+				<p class="btn-space"><?php the_field('up_close_marketing_button'); ?></p>
+			</div>
+		</div>
+	</div>
+</section>
+
 <?php get_footer(); ?>

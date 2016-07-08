@@ -1376,7 +1376,7 @@ section {
 }
 
 .page-template-page-homepage .homepage-featured-image h2 {
-/*    font-weight: 400;*/
+    font-weight: 400;
     margin-top: 76%;
 }
 
@@ -2582,6 +2582,10 @@ article .entry-meta {
             margin-top: 5px;
         }
 
+        .homepage-section-2 {
+            text-align: center;
+        }
+
         .homepage-section-2 h2 {
             margin-top: 0%;
         }
@@ -2591,45 +2595,50 @@ article .entry-meta {
         }
 
         .homepage-section-3 img#control_hand {
-            margin-top: 10%;
-            height: 500px;
-            margin-left: 25%;
+            margin-top: 18%;
         }
 
         .homepage-section-4 {
             background-size: cover;
             background-position: 22% 50%;
-            /*height: 600px;*/
+            min-height: inherit;
+            text-decoration: center;
             text-align: center;
         }
 
-        .homepage-section-4 .push-left h2 {
+        .homepage-section-4 h2 {
             margin-top: 10%;
-            color: #000;
-            text-align: center;
         }
+
 
         .homepage-section-4 .btn-space {
             margin-top: 40px;
             text-align: center;
         }
 
-        .homepage-section-5 h2 {
-            padding-top: 75px;
-        }
-        /* Stop Testing */
-        /* Homepage */
-
-        .homepage-section-2 {
+        .homepage-section-5 {
             text-align: center;
         }
-        
-        .homepage-section-1 h2 {
-            margin-top: -200px;
+
+        .homepage-section-5 h2 {
+            padding-top: 5%;
         }
 
-        .homepage-section-2 h2 {
+        .homepage-section-8 {
+            text-align: center;
+        }
+
+        .homepage-section-8 h2 {
             margin-top: 0%;
+        }
+
+        .homepage-section-8 img {
+            margin-top: 10%;
+        }
+
+        .homepage-section-9 {
+            padding: 50px 0px;
+            text-align: center;
         }
 
         .navbar-brand {
@@ -2903,6 +2912,50 @@ article .entry-meta {
             float: none !important;
             width: 100% !important;
         }
+
+                #wiser-pulse h2 {
+            margin-top: -3%;
+        }
+
+        #intuitive-app h2 {
+            margin-top: 0%;
+        }
+
+        #schedules video {
+            margin-top: 40px;
+        }
+
+        #comfort-features h2 {
+            margin-top: -4%;
+        }
+
+        #comfort-boost .col-lg-6:first-child {
+            margin-top: 0%;
+        }
+
+        #comfort-boost .icons {
+            margin-top: 0px;
+        }
+
+        #comfort-boost video {
+            margin-top: 40px;
+        }
+
+        #exclusive-technology h2 {
+            margin-top: 0%;
+        }
+
+        #wiser-forecast .text {
+            margin-top: 0%;
+        }
+
+        #wiser-forecast h2 {
+            margin: 0%;
+        }
+
+        #wiser-forecast img {
+            margin-top: 40px;
+        }
     }
 
 
@@ -2988,7 +3041,7 @@ article .entry-meta {
             text-align: center;
         }
 
-        .homepage-section-2 {
+/*        .homepage-section-2 {
             text-align: center;
         }
 
@@ -3030,15 +3083,6 @@ article .entry-meta {
             padding-top: 5%;
         }
 
-        /*.page-template-page-homepage .homepage-section-5 {
-            height: 400px;
-            background: url("/images/1.4.0_background.jpg") no-repeat;
-            background-position: 17% 50%;
-            color: #000;
-            padding-left: 15px;
-            padding-right: 15px;
-        }*/
-
         .homepage-section-8 {
             text-align: center;
         }
@@ -3054,7 +3098,7 @@ article .entry-meta {
         .homepage-section-9 {
             padding: 50px 0px;
             text-align: center;
-        }
+        }*/
 
         #sync .app-links {
             text-align: center;
