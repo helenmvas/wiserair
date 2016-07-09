@@ -2667,7 +2667,8 @@ article .entry-meta {
         }
 
         .homepage-section-5 img {
-            max-width: 100%;
+            /*max-width: 100%;*/
+            margin-top: 0%;
         }
 
         .homepage-section-5 h2 {
@@ -3017,11 +3018,6 @@ article .entry-meta {
 
         #touchscreen-smartsense {
             background-position: 79% 50%;
-        }
-
-        #wiser-start a {
-            display: inline-block;
-            padding: 7px 15px;
         }
 
         section#precise-weather {
@@ -3645,9 +3641,14 @@ article .entry-meta {
             margin-top: 40%;
         }*/
 
-        .page-template-page-homepage .col-lg-5.col-md-5.col-sm-5.col-xs-8.text-left {
-            width: 100%;
+        #wiser-start a {
+            display: inline-block;
+            padding: 7px 15px;
         }
+        
+/*        .page-template-page-homepage .col-lg-5.col-md-5.col-sm-5.col-xs-8.text-left {
+            width: 100%;
+        }*/
 
         .page-template-page-homepage  .homepage-featured-image {
             background-size: cover;
@@ -3659,7 +3660,7 @@ article .entry-meta {
             padding: 0px;
         }
 
-        .page-template-page-homepage .homepage-section-4 .btn-space {
+/*        .page-template-page-homepage .homepage-section-4 .btn-space {
             margin-top: 280px;
             text-align: center;
         }
@@ -3669,20 +3670,20 @@ article .entry-meta {
             background: url("/images/1.4.0_background.jpg") 0 100%/200% no-repeat;
             color: #fff;
             background-size: cover;
-        }
+        }*/
 
         .wonderplugintabs-header-title {
             letter-spacing: 1px;
             font-size: 11px !important;
         }
 
-        .homepage-section-4 .col-lg-5.col-md-5.col-sm-5.col-xs-5 {
+/*        .homepage-section-4 .col-lg-5.col-md-5.col-sm-5.col-xs-5 {
             width: 100%;
         }
 
         .homepage-section-4 .col-lg-7.col-md-7.col-sm-7.col-xs-7 {
             width: 100%;
-        }
+        }*/
     }
 
     @media only screen and (min-width: 481px) and (max-width: 767px) {
