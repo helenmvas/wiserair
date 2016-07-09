@@ -77,11 +77,14 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
-				<p>Graph code</p>
+				<h2><?php the_field('wiser_start_title'); ?></h2>
+				<p class="subtitle"><?php the_field('wiser_start_text'); ?></p>
+				<p class="btn-space"><?php the_field('wiser_start_button'); ?></p>
 			</div>
 		</div>
 	</div>
 </section>
+
 
 <section class="text-center blue" id="how-to-enable-eco-iq">
 	<div class="container">

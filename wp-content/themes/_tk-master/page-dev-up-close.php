@@ -163,10 +163,10 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 <section class="text-center light-grey" id="eco-iq">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
+			<div class="col-lg-5 col-md-5 col-sm-5 text-center">
 				<img src="<?php the_field('eco_iq_image'); ?>"/>
 			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6 text-center text">
+			<div class="col-lg-7 col-md-7 col-sm-7 text-center text">
 				<h2><?php the_field('eco_iq_title'); ?></h2>
 				<p class="subtitle"><?php the_field('eco_iq_text'); ?></p>
 				<p class="btn-space"><?php the_field('eco_iq_button'); ?></p>
@@ -179,7 +179,9 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
-				<p>Graph code</p>
+				<h2><?php the_field('wiser_start_title'); ?></h2>
+				<p class="subtitle"><?php the_field('wiser_start_text'); ?></p>
+				<p class="btn-space"><?php the_field('wiser_start_button'); ?></p>
 			</div>
 		</div>
 	</div>
