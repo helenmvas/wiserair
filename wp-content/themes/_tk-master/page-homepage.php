@@ -75,7 +75,7 @@ get_header(); ?>
 <section class="homepage-section-5 blue">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6 col-md-6 col-sm-6">
+			<div class="col-lg-6 col-md-6 col-sm-6 text-center">
 				<img src="<?php the_field('homepage_section_5_background_image'); ?>"/>
 			</div>
 			<div class="col-lg-6 col-md-6 col-sm-6">
@@ -115,7 +115,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section class="homepage-section-9 blue">
+<section class="homepage-section-9 blue" id="get-wiser">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">

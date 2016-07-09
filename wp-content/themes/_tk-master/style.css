@@ -1420,6 +1420,7 @@ section {
 
 .homepage-section-4 img {
     margin-top: 10%;
+    max-width: 365px;
 }
 
 /*.homepage-section-4 .push-left {
@@ -1436,11 +1437,12 @@ section {
 }
 
 .homepage-section-5 h2 {
-    margin-top: 28%;
+    margin-top: 35%;
 }
 
 .homepage-section-5 img {
     margin-top: 11%;
+    max-width: 425px;
 }
 
 .homepage-section-6#retailers .row {
@@ -2571,7 +2573,7 @@ article .entry-meta {
         }
 
         .homepage-section-5 h2 {
-            margin-top: 12%;
+            margin-top: 19%;
         }
 
         .homepage-section-4 h2 {
@@ -2615,6 +2617,10 @@ article .entry-meta {
             margin-left: 0px;
         }
 
+        .page-template-page-homepage .homepage-featured-image h2 {
+            margin-top: 26%;
+        }
+
         /* Start Testing */
         .page-template-page-utilities section#utility-customized h2 {
             margin-top: 5px;
@@ -2622,10 +2628,11 @@ article .entry-meta {
 
         .homepage-section-2 {
             text-align: center;
+            padding: 50px 0px;
         }
 
         .homepage-section-2 h2 {
-            margin-top: 0%;
+            margin-top: 26%;
         }
 
         .homepage-section-3 h2 {
@@ -2642,10 +2649,11 @@ article .entry-meta {
             min-height: inherit;
             text-decoration: center;
             text-align: center;
+            color: #000 !important;
         }
 
         .homepage-section-4 h2 {
-            margin-top: 10%;
+            margin-top: 0%;
         }
 
 
@@ -2656,6 +2664,10 @@ article .entry-meta {
 
         .homepage-section-5 {
             text-align: center;
+        }
+
+        .homepage-section-5 img {
+            max-width: 100%;
         }
 
         .homepage-section-5 h2 {
@@ -2951,7 +2963,7 @@ article .entry-meta {
             width: 100% !important;
         }
 
-                #wiser-pulse h2 {
+        #wiser-pulse h2 {
             margin-top: -3%;
         }
 
@@ -3005,6 +3017,15 @@ article .entry-meta {
 
         #touchscreen-smartsense {
             background-position: 79% 50%;
+        }
+
+        #wiser-start a {
+            display: inline-block;
+            padding: 7px 15px;
+        }
+
+        section#precise-weather {
+            color: #000;
         }
     }
 
@@ -3348,18 +3369,18 @@ article .entry-meta {
             margin-top: 18%;
         }
 
-        ..homepage-section-5 h2 {
+        .homepage-section-5 h2 {
             padding-top: 0;
             margin-top: -5%;
         }
 
-        .homepage-section-4 {
+        /*.homepage-section-4 {
             color: #000;
-        }
+        }*/
 
-        section#precise-weather {
+        /*section#precise-weather {
             color: #000;
-        }
+        }*/
 
         #precise-weather h2 {
             margin-top: 0%;
