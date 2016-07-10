@@ -3198,6 +3198,10 @@ article .entry-meta {
             width: 100%;
             padding-left: 0%;
         }
+
+        div#wonderplugintabs-5 {
+            margin-top: 0px;
+        }
     }
 
     /* Extra Small Devices, Phones */ 
