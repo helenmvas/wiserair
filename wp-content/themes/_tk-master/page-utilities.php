@@ -22,7 +22,7 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-lg-5 col-md-5 col-sm-5 text-left">
 				<h2><?php the_field('partners_featured_image_title'); ?></h2>
-        		<div><?php the_field('partners_featured_image_text'); ?></div>
+        		<div><p class="subtitle"><?php the_field('partners_featured_image_text'); ?></p></div>
 			</div>
 		</div>
 	</div>

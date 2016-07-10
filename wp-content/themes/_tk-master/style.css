@@ -627,6 +627,10 @@ footer #copyright {
     margin-top: 40px;
 }
 
+footer #copyright a {
+    text-decoration: underline;
+}
+
 footer .SGML_form_container input[type="email"] {
     background: #fff !important;
     border: 1px solid #ddd !important;
@@ -920,19 +924,10 @@ li.resp-tab-item:hover {
     padding-left: 25px !important;
 }
 
-/*#wonderplugintabs-1 .wonderplugintabs-header-title:hover {
-    color: #fff;
-}*/
-
-/*#wonderplugintabs-1 .wonderplugintabs-header-title {
-    font-weight: 300 !important;
-}*/
 
 .ffs-tabbed-nav .resp-tabs-list li {
     font-weight: 300 !important;
-    font-size: 15px !important;/*
-    transition: all 0.5s !important;*/
-/*    margin: 10px 0px !important;*/
+    font-size: 15px !important;
 }
 
 
@@ -1101,6 +1096,20 @@ li.resp-tab-item:hover {
     padding: 30px 0px 20px 0px;
     border-radius: 5px;
     margin-left: 2%;
+}
+
+.wpcf7-response-output {
+    font-weight: bold;
+    border: 0px !important;
+    font-size: 15px;
+}
+
+.wpcf7-response-output.wpcf7-validation-errors {
+    color: red;
+}
+
+span.wpcf7-not-valid-tip {
+    margin-left: 11px;
 }
 
 span.wpcf7-form-control-wrap.UploadFile input {
@@ -1317,6 +1326,7 @@ section {
 .page-template-page-homepage .homepage-featured-image h2 {
     font-weight: 400;
     margin-top: 76%;
+    text-shadow: 1px 0px 3px #ccc;
 }
 
 .page-template-page-homepage .homepage-featured-image .subtitle {
@@ -1819,7 +1829,9 @@ div#updates .right {
 }
 
 .page-id-4115 .homepage-featured-image {
-    background-position: 75% 100%;
+    background-position: 100% 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .page-id-4115 .homepage-featured-image h2 {
@@ -1935,11 +1947,11 @@ div#updates .right {
 }
 
 #wonderplugintabs-2 > .wonderplugintabs-header-wrap .wonderplugintabs-header-li-first {
-border-right: 1px solid #fff!important;
+    border-right: 1px solid #fff!important;
 }
 
 #wonderplugintabs-2 > .wonderplugintabs-header-wrap .wonderplugintabs-header-li-last {
-border-right: 0px !important;
+    border-right: 0px !important;
 }
 
 #wonderplugintabs-5 .subtitle,
@@ -2001,6 +2013,11 @@ div#wonderplugintabs-5 {
 #wonderplugintabs-5 .wonderplugintabs-header-li-active .wonderplugintabs-header-title,
 #wonderplugintabs-6 .wonderplugintabs-header-li-active .wonderplugintabs-header-title {
     color: #009530 !important;
+}
+
+#wonderplugintabs-5 > .wonderplugintabs-header-wrap .wonderplugintabs-header-ul,
+#wonderplugintabs-6 > .wonderplugintabs-header-wrap .wonderplugintabs-header-ul {
+    margin-top: 30%;
 }
 
 .gray#getting-started img {
@@ -2434,9 +2451,28 @@ article .entry-meta {
         .homepage-section-2 h2 {
             margin-top: 10%;
         }
+
+        .page-id-4115 .homepage-featured-image {
+             background-size: 85%;           
+        }
+
     }
 
+    /* X-Large Devices, Wide Screens */
+    @media only screen and (min-width : 1300px) {
+        .page-id-4115 .homepage-featured-image {
+            background-position: 75% 50%;
+            background-size: 60%;          
+        }
+    }
 
+    /* X-Large Devices, Wide Screens */
+    @media only screen and (min-width : 1400px) {
+        .page-id-4115 .homepage-featured-image {
+            background-position: 80% 50%;
+            background-size: 70%; 
+        }
+    }
 
     /*==========  Non-Mobile First Method  ==========*/
 
@@ -2521,11 +2557,15 @@ article .entry-meta {
         }
 
         .homepage-section-4 h2 {
-            margin-top: 3%;
+            margin-top: 34%;
         }
 
         .homepage-section-8 {
             background-position: 78% 42%;
+        }
+
+        .page-template-page-homepage .homepage-featured-image h2 {
+            margin-top: 32%;
         }
 
     }
@@ -3283,6 +3323,23 @@ article .entry-meta {
             text-align: center;
         }
 
+        .submit-container {
+            margin-top: 15px;
+        }
+
+        #comp_result {
+            display: none;
+            width: 247px;
+            text-align: center;
+            padding: 15px 0 10px 0;
+            background-color: transparent !important;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 15px;
+            letter-spacing: .3px;
+            color: #00a550;
+        }
+
         .page-template-page-eco-iq video {
             height: 500px;
         }
@@ -3443,6 +3500,20 @@ article .entry-meta {
         #control-fingertips .col-xs-10 {
             width: 83%;
         }
+
+        #copyright div {
+            margin: 0px;
+            padding: 0;
+        }
+
+        footer #copyright {
+            border-top: 1px dotted #ccc;
+            padding: 22px 0px;
+            margin-top: 40px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
     }
 
     /* Custom, iPhone Retina */ 
