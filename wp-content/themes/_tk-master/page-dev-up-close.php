@@ -190,15 +190,14 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 <section class="text-center" id="wiser-forecast">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-5 col-md-5 col-sm-5 text-center">
-				<img src="<?php the_field('wiser_forecast_image'); ?>"/>
-			</div>
 			<div class="col-lg-7 col-md-7 col-sm-7 text-center text">
 				<h2><?php the_field('wiser_forecast_title'); ?></h2>
 				<p class="subtitle"><?php the_field('wiser_forecast_text'); ?></p>
 				<p class="btn-space"><?php the_field('wiser_forecast_button'); ?></p>
 			</div>
-			
+			<div class="col-lg-5 col-md-5 col-sm-5 text-center">
+				<img src="<?php the_field('wiser_forecast_image'); ?>"/>
+			</div>
 		</div>
 	</div>
 </section>

@@ -179,7 +179,7 @@ get_header(); ?>
     </div>
 </section>
 
-<section class="press-section-9">
+<!-- <section class="press-section-9">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -188,7 +188,7 @@ get_header(); ?>
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <section class="press-section-8">
     <div class="container">
