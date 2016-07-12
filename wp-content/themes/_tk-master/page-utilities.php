@@ -74,7 +74,7 @@ get_header(); ?>
 	<?php echo do_shortcode('[image-carousel category="utilities"]'); ?>
 </div> -->
 
-<section class="main-content">
+<section class="main-content light-grey">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
