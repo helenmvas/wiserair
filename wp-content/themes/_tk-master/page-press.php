@@ -179,17 +179,6 @@ get_header(); ?>
     </div>
 </section>
 
-<!-- <section class="press-section-9">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2>Blog</h2>
-                <?php echo do_shortcode('[recent_blog_post limit="20" grid="1"]'); ?>
-            </div>
-        </div>
-    </div>
-</section> -->
-
 <section class="press-section-8">
     <div class="container">
         <div class="row">

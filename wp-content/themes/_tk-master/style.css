@@ -1850,6 +1850,10 @@ div#updates .right {
     fill: #f9f9f9 !important;
 }
 
+.page-id-4115 #wiser-forecast h2 {
+    margin-top: 20%;
+}
+
 #humidity .text {
     margin-top: 12%;
 }
@@ -3007,6 +3011,10 @@ article .entry-meta {
 
         section#precise-weather {
             color: #000;
+        }
+
+        .page-id-4115 #wiser-forecast h2 {
+            margin-top: 0%;
         }
     }
 
