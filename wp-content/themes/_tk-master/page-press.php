@@ -44,7 +44,8 @@ get_header(); ?>
             <?php while($press->have_posts()) : $press->the_post(); ?>
 
                 <div class="col-lg-4 col-md-4 col-sm-4" class="press-releases">
-                    <a href="<?php the_field('full_document_download'); ?>" target="_blank"><h4><?php the_title(); ?></h4></a>
+                    <a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
+                    <!-- <a href="<?php the_field('full_document_download'); ?>" target="_blank"><h4><?php the_title(); ?></h4></a> -->
                     <span><?php the_field('full_document_date'); ?></span>
                     <p><a href="<?php the_permalink(); ?>">Read press release</a></p>
                 </div>
