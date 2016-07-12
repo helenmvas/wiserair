@@ -31,7 +31,7 @@ get_header(); ?>
 	</div>
 <!-- </div> -->
 
-<section class="homepage-section-7" id="homepage-slideshow">
+<!-- <section class="homepage-section-7" id="homepage-slideshow">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="text-center">
@@ -39,7 +39,7 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 
 <section class="homepage-section-2 dark-grey" id="in-control">
 	<div class="container">

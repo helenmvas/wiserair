@@ -109,7 +109,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	</div>
 </section>
 
-<section class="text-center light-grey" id="comfort-boost">
+<section class="text-center" id="comfort-boost">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6">
@@ -129,7 +129,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	</div>
 </section>
 
-<section class="text-center" id="humidity">
+<section class="text-center light-grey" id="humidity">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6">
@@ -160,7 +160,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	</div>
 </section>
 
-<section class="text-center light-grey" id="eco-iq">
+<section class="text-center" id="eco-iq">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-5 col-md-5 col-sm-5 text-center">
@@ -175,7 +175,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	</div>
 </section>
 
-<section class="text-center" id="wiser-start">
+<section class="text-center light-grey" id="wiser-start">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 text-center">
@@ -187,7 +187,7 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	</div>
 </section>
 
-<section class="text-center light-grey" id="wiser-forecast">
+<section class="text-center" id="wiser-forecast">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-5 col-md-5 col-sm-5 text-center">

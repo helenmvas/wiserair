@@ -70,9 +70,9 @@ get_header(); ?>
 	</div>
 </section>
 
-<div id="utility-slideshow">
+<!-- <div id="utility-slideshow">
 	<?php echo do_shortcode('[image-carousel category="utilities"]'); ?>
-</div>
+</div> -->
 
 <section class="main-content">
 	<div class="container">
