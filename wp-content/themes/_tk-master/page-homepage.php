@@ -31,16 +31,6 @@ get_header(); ?>
 	</div>
 <!-- </div> -->
 
-<section class="homepage-section-7" id="homepage-slideshow">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="text-center">
-				<?php echo do_shortcode('[metaslider id=4110]'); ?>
-			</div>
-		</div>
-	</div>
-</section>
-
 <section class="homepage-section-2 dark-grey" id="in-control">
 	<div class="container">
 		<div class="row">

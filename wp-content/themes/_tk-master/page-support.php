@@ -132,6 +132,10 @@ get_header(); ?>
 					<h4>Install Guide</h4>
 					<p>Easily install your Wiser Air </p>
 				</a>
+				<a href="/documents/WiserAir-Specifications.pdf">
+					<h4>Specifications</h4>
+					<p>Quick information on Wiser Air specifications</p>
+				</a>
 			</div>
 		</div>
 	</div>
