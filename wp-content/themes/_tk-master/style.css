@@ -103,9 +103,9 @@ h2 {
     transition: all 0.5s;
     border-radius: 4px;
     border: 0px;
-    width: 230px;
+    width: inherit;
     margin: 5px 0px;
-    padding: 15px 45px;
+    padding: 10px 45px;
     font-size: 13px;
     letter-spacing: .5px;
 }
@@ -3029,7 +3029,7 @@ article .entry-meta {
         .page-id-4115 .homepage-featured-image {
             min-height: 500px;
             background-size: 180%;
-            background-position: 83% 92%;
+            background-position: 83% 100%;
             background-repeat: no-repeat;
         }
 
@@ -3579,7 +3579,8 @@ article .entry-meta {
 
         #humidity .col-lg-6:last-child {
             position: absolute;
-            margin-top: -800px;
+            margin-top: -825px;
+            margin-bottom: 35px;
         }
 
         #humidity .col-lg-6:first-child {
