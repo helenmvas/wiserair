@@ -3119,6 +3119,7 @@ article .entry-meta {
         .homepage-featured-image a.button {
             display: inline-block;
             text-align: center;
+            padding: 10px 45px;
         }
 
         #sync .app-links {
@@ -3554,8 +3555,9 @@ article .entry-meta {
         }
 
         #get-wiser a.button {
-            display: block;
+            display: inline-block;
             margin: 10px auto;
+            padding: 10px 45px;
         }
 
         .homepage-section-4 img {
