@@ -3502,6 +3502,7 @@ article .entry-meta {
 
         #schedules video {
             margin-top: 40px;
+            width: 100%;
         }
 
         #comfort-features h2 {
@@ -3553,6 +3554,37 @@ article .entry-meta {
             margin-right: 10px;
         }
 
+        #get-wiser a.button {
+            display: block;
+            margin: 10px auto;
+        }
+
+        .homepage-section-4 img {
+            margin-top: 0%;
+            max-width: 100%;
+        }
+
+        #touchscreen-smartsense {
+            background-position: 46% 100%;
+        }
+
+        #touchscreen-smartsense .wonderplugintabs-panel-inner {
+            width: 90%;
+            margin-top: 17%;
+        }
+
+        section#humidity {
+            min-height: 900px;
+        }
+
+        #humidity .col-lg-6:last-child {
+            position: absolute;
+            margin-top: -800px;
+        }
+
+        #humidity .col-lg-6:first-child {
+            margin-top: 315px;
+        }
     }
 
     /* Custom, iPhone Retina */ 
