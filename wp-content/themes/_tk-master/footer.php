@@ -16,14 +16,14 @@
 <?php // substitute the class "container-fluid" below if you want a wider content area ?>
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-3 col-md-3 col-sm-3">
+			<div class="col-lg-3 col-md-3 col-sm-2">
 				<?php
 				if(is_active_sidebar('footer-sidebar-1')){
 				dynamic_sidebar('footer-sidebar-1');
 				}
 				?>
 			</div>
-			<div class="col-lg-3 col-md-3 col-sm-3">
+			<div class="col-lg-4 col-md-4 col-sm-4">
 				<?php
 				if(is_active_sidebar('footer-sidebar-2')){
 				dynamic_sidebar('footer-sidebar-2');

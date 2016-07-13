@@ -19,7 +19,7 @@ get_header(); ?>
 		</div>
 	</div>
 
-	<div class="container" style="margin-top: -150px;">
+	<div class="container">
 		<div class="row">
 			<?php // add the class "panel" below here to wrap the content-padder in Bootstrap style ;) ?>
 			<section class="content-padder error-404 not-found col-lg-12 col-md-12 col-sm-12 text-center">

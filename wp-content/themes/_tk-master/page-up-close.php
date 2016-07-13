@@ -16,7 +16,7 @@ get_header(); ?>
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="<? echo get_template_directory_uri() ?>/includes/js/upclose_highchart.js"></script>
-<section class="text-center"id="bells">
+<section class="text-center" id="bells">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
