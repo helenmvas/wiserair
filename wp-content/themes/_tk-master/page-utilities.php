@@ -13,7 +13,22 @@
 
 get_header(); ?>
 
-<section class="green" id="utility-intro">
+<?php global $post; ?>
+	<?php
+	$src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
+	?>
+<div class="homepage-featured-image about-featured-image" style="background-image: url(<?php echo $src[0]; ?> )">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-md-5 col-sm-5 text-left">
+				<h2><?php the_field('partners_featured_image_title'); ?></h2>
+        		<div><p class="subtitle"><?php the_field('partners_featured_image_text'); ?></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- <section class="green" id="utility-intro">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
@@ -38,7 +53,7 @@ get_header(); ?>
 			<?php wp_reset_postdata(); ?>
         </div>
 	</div>
-</section>
+</section> -->
 
 <section id="utility-customized">
 	<div class="container">
@@ -55,11 +70,11 @@ get_header(); ?>
 	</div>
 </section>
 
-<div id="utility-slideshow">
+<!-- <div id="utility-slideshow">
 	<?php echo do_shortcode('[image-carousel category="utilities"]'); ?>
-</div>
+</div> -->
 
-<section class="main-content">
+<section class="main-content light-grey">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">

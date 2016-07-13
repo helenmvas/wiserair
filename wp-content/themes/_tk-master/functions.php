@@ -5,6 +5,12 @@
  * @package _tk
  */
 
+/* Memory - Remove if any issues */
+@ini_set( 'upload_max_size' , '64M' );
+@ini_set( 'post_max_size', '64M');
+@ini_set( 'max_execution_time', '300' );
+@ini_set('memory_limit','512M');
+
 /**
  * Set the content width based on the theme's design and stylesheet.
  */

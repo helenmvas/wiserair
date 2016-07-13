@@ -1,47 +1,13 @@
 /*
-Theme Name: _tk
-Theme URI: http://themekraft.com/store/_tk-free-wordpress-starter-theme-based-on-twitter-bootstrap/
-Author: ThemeKraft
-Author URI: http://themekraft.com/
-Description: Hi, I am the ultra minimal starter theme _tk, ready for your next awesome WordPress project! I am the most seamless and minimalistic integration of Twitter Bootstrap Framework into the _s starter theme from Automattic, the guys behind WordPress. You can find me on GitHub. Fork me! I'm waiting for you ;)
-Version: 1.1.10
-License: GNU General Public License v3.0 /
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Tags: gray, light, two-columns, right-sidebar, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, featured-images, flexible-header, sticky-post,  theme-options, threaded-comments, translation-ready
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-This theme is the most seamless and minimalistic integration of Twitter Bootstrap Framework into
-the _s starter theme from Automattic, the guys behind WordPress.
-
-_s (or Underscores) http://underscores.me/, (C) 2012-2013 Automattic, Inc. Twitter Bootstrap
-
-Credits:
-
-1. Bootstrap
-
- * Bootstrap v3.3.6 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
-
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=f58353a31151a8c05d7c)
- * Config saved to config.json and https://gist.github.com/f58353a31151a8c05d7c
-
-2. wp_bootstrap_navwalker
-
-* Class Name: wp_bootstrap_navwalker
-* GitHub URI: https://github.com/twittem/wp-bootstrap-navwalker
-
-3. Glyphicons
-
- * http://getbootstrap.com/components/
+Theme Name: Wiser Air
+Author: Brittany Glover
+Author URI: www.brittanyglover.com
+Description: Wiser Air - Custom Theme
+Version: 1.0
 
 */
 
-/* My Minimal WordPress Styling comes here */
-
-/* This is a small security for too long strings titles */
 body {
     word-wrap: break-word;
     font-family: 'Lato', sans-serif;
@@ -70,7 +36,7 @@ h2 {
     font-size: 30px;
     font-weight: 300;
     margin-bottom: 12px;
-    line-height: 32px;
+    line-height: 40px;
 }
 
 .fa {
@@ -124,11 +90,10 @@ h2 {
     transition: all 0.5s;
     border-radius: 4px;
     border: 0px;
-    width: 230px;
-    margin: 5px 0px;
-    height: 42px;
+    width: inherit;
     font-size: 13px;
     letter-spacing: .5px;
+    padding: 10px 45px;
 }
 
  a.button {
@@ -518,13 +483,22 @@ nav.site-navigation {
 .menu-item-3349 .dropdown-menu>li:nth-of-type(1) a {
     color: #000;
     background-image: url("/images/0.0.0_amz_logo_300x300.jpg") !important;
-    background-size: 17%;
+    background-size: 16%;
     background-repeat: no-repeat;
     background-position: 8% 0%;
     padding-left: 50px;
 }
 
 .menu-item-3349 .dropdown-menu>li:nth-of-type(2) a {
+    color: #000;
+    background-image: url("/images/maple-canda.gif") !important;
+    background-size: 14%;
+    background-repeat: no-repeat;
+    background-position: 9% 0%;
+    padding-left: 50px;
+}
+
+.menu-item-3349 .dropdown-menu>li:nth-of-type(3) a {
     color: #000;
     background-image: url("/wp-content/uploads/2016/05/APC_by_Schneider_Electric_CMYK.jpg") !important;
     background-size: 17%;
@@ -533,7 +507,7 @@ nav.site-navigation {
     padding-left: 50px;
 }
 
-.menu-item-3349 .dropdown-menu>li:nth-of-type(3) a {
+.menu-item-3349 .dropdown-menu>li:nth-of-type(4) a {
     color: #000;
     background-image: url("/wp-content/uploads/2016/05/BBY_Logo_4C.jpg") !important;
     background-size: 17%;
@@ -551,25 +525,25 @@ nav.site-navigation {
     padding-left: 50px;
 }*/
 
-.menu-item-3349 .dropdown-menu>li:nth-of-type(4) a {
-    color: #000;
-    background-image: url("/images/0.0.0_hd_logo_300x300.jpg") !important;
-    background-size: 17%;
-    background-repeat: no-repeat;
-    background-position: 8% 0%;
-    padding-left: 50px;
-}
-
 .menu-item-3349 .dropdown-menu>li:nth-of-type(5) a {
     color: #000;
-    background-image: url("/wp-content/uploads/2016/06/microsoft.jpg") !important;
-    background-size: 17%;
+    background-image: url("/images/0.0.0_hd_logo_300x300.jpg") !important;
+    background-size: 14%;
     background-repeat: no-repeat;
-    background-position: 8% 0%;
+    background-position: 9% 0%;
     padding-left: 50px;
 }
 
 .menu-item-3349 .dropdown-menu>li:nth-of-type(6) a {
+    color: #000;
+    background-image: url("/wp-content/uploads/2016/06/microsoft.jpg") !important;
+    background-size: 16%;
+    background-repeat: no-repeat;
+    background-position: 8% 0%;
+    padding-left: 50px;
+}
+
+.menu-item-3349 .dropdown-menu>li:nth-of-type(7) a {
     color: #000;
     background-image: url("/wp-content/uploads/2016/05/newegg_bluelogo.jpg") !important;
     background-size: 19%;
@@ -577,6 +551,7 @@ nav.site-navigation {
     background-position: 8% 27%;
     padding-left: 50px;
 }
+
 
 #main-menu {
     margin-top: 22px !important;
@@ -607,6 +582,7 @@ footer.site-footer {
     font-size: 12px;
     color: #fff;
     position: relative;
+    letter-spacing: .3px;
 }
 
 footer.site-footer a {
@@ -620,6 +596,7 @@ footer.site-footer img {
 
 footer h5 {
     font-size: 13px;
+    font-weight: 400;
 }
 
 footer .social {
@@ -636,8 +613,8 @@ footer .social li {
 }
 
 footer .social li img {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }
 
 footer .widget_nav_menu li>a {
@@ -657,6 +634,10 @@ footer #copyright {
     border-top: 1px dotted #ccc;
     padding: 40px 0px;
     margin-top: 40px;
+}
+
+footer #copyright a {
+    text-decoration: underline;
 }
 
 footer .SGML_form_container input[type="email"] {
@@ -784,14 +765,6 @@ article .page-title:first-child {
 
 /* Support */
 
-/*.single-format-standard #recent-posts-2 {
-    display: none;
-}
-
-.postid-3972 aside#categories-2 {
-    display: none;
-}
-*/
 .support-featured-image {
     height: 450px;
     background-repeat: no-repeat !important;
@@ -960,19 +933,10 @@ li.resp-tab-item:hover {
     padding-left: 25px !important;
 }
 
-/*#wonderplugintabs-1 .wonderplugintabs-header-title:hover {
-    color: #fff;
-}*/
-
-/*#wonderplugintabs-1 .wonderplugintabs-header-title {
-    font-weight: 300 !important;
-}*/
 
 .ffs-tabbed-nav .resp-tabs-list li {
     font-weight: 300 !important;
-    font-size: 15px !important;/*
-    transition: all 0.5s !important;*/
-/*    margin: 10px 0px !important;*/
+    font-size: 15px !important;
 }
 
 
@@ -1143,6 +1107,20 @@ li.resp-tab-item:hover {
     margin-left: 2%;
 }
 
+.wpcf7-response-output {
+    font-weight: bold;
+    border: 0px !important;
+    font-size: 15px;
+}
+
+.wpcf7-response-output.wpcf7-validation-errors {
+    color: red;
+}
+
+span.wpcf7-not-valid-tip {
+    margin-left: 11px;
+}
+
 span.wpcf7-form-control-wrap.UploadFile input {
     margin-left: 5%;
     color: #000;
@@ -1238,16 +1216,6 @@ section {
     font-size: 13px;
 }
 
-#install {
-}
-
-/*#install h4 {
-    margin-top: 35px;
-    font-size: 16px;
-    font-weight: 300;
-    margin-bottom: 4px;
-}
-*/
 #install p {
     color: #000;
 }
@@ -1281,19 +1249,6 @@ section {
 #contact {
     background: #f9f9f9;
 }
-
-/*#faq p {
-    color: #000;
-}
-
-#faq a:hover {
-    text-decoration: none;
-    color: #000;
-}
-
-#faq {
-    background: #f9f9f9;
-}*/
 
 #faq a h4 {
     color: #fff;
@@ -1345,6 +1300,10 @@ section {
 
 /* Homepage */
 
+.slide-4368 .caption {
+    padding: 0px !important;
+}
+
 .shareIcons {
     display: block;
     float: right;
@@ -1359,10 +1318,27 @@ section {
 }
 
 .homepage-featured-image {
-    background-image: url(http://dev-wiserair-mlp.azurewebsites.net/wp-content/uploads/2016/02/1.0.0_background.jpg );
     min-height: 600px;
     background-size: cover;
     background-position: 50% 50%;
+/*    background: 0 100%/100% no-repeat;*/
+}
+
+.page-template-page-homepage .homepage-featured-image {
+    background-position: 50% 99%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;
+}
+
+.page-template-page-homepage .homepage-featured-image h2 {
+    margin-top: 76%;
+}
+
+.page-template-page-homepage .homepage-featured-image .subtitle {
+    font-size: 20px;
+    font-weight: 400;
 }
 
 .homepage-section-1 #video {
@@ -1384,26 +1360,26 @@ section {
     margin: 0 auto;
 }
 
-.homepage-section-2 {
-    background: #ececec;
-}
-
-.homepage-section-2 h2 {
-    margin-top: 9%;
+.homepage-section-2.dark-grey {
+    padding: 100px 0px;
+    margin-top: -1px;
 }
 
 .homepage-section-3 {
-    background: url("/images/1.2.0_background.jpg") top center repeat;
+    background: url("/images/1.2.0_background.jpg");
     height: 100%;
-    min-height: 720px;
+    min-height: 547px;
     max-height: 720px;
     overflow: hidden;
-    padding-top: 40px;
-    color: #fff;
+    color: #000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 200px 0px 250px;
 }
 
 .homepage-section-3 h2 {
-    margin-top: 35%;
+    margin-top: 25%;
 }
 
 .homepage-section-3 img#control_hand {
@@ -1411,31 +1387,34 @@ section {
 }
 
 .homepage-section-4 {
-    background: url("/images/1.3.0_background.jpg") 42% 45%;
+    background: url("/images/weather_bkg.jpg") 42% 45%;
     background-size: cover;
     overflow: hidden;
-    padding-top: 30px;
-    height: 450px;
+    padding: 80px 0px;
     color: #fff;
 }
 
-.homepage-section-4 .push-left {
-    padding-left: 4%;
-}
-
-.homepage-section-4 .push-left h2 {
+.homepage-section-4 h2 {
     margin-top: 30%;
 }
 
+.homepage-section-4 img {
+    margin-top: 10%;
+    max-width: 365px;
+}
+
 .homepage-section-5 {
-    height: 400px;
-    background: url("/images/1.4.0_background.jpg") 0 100%/200% no-repeat;
-    color: #fff;
-    background-size: 207%;
+    background-size: cover;
+    background-position: 50%
 }
 
 .homepage-section-5 h2 {
-    padding-top: 7%;
+    margin-top: 35%;
+}
+
+.homepage-section-5 img {
+    margin-top: 11%;
+/*    max-width: 425px;*/
 }
 
 .homepage-section-6#retailers .row {
@@ -1463,10 +1442,50 @@ section {
     width: 70px;
 }
 
+.homepage-section-8 {
+    background: url("/images/halo_bkg.jpg") 0 100%/200% no-repeat;
+    background-size: cover;
+    background-position: 50%
+}
+
+.homepage-section-8 h2 {
+    margin-top: -15px;
+}
+
+.homepage-section-9 {
+    padding: 100px 0px;
+}
+
 .videoShare {
     width: 100px;
     float: right;
     background-color: red;
+}
+
+#homepage-slideshow {
+    padding: 0px;
+}
+
+#homepage-slideshow .metaslider {
+    padding: 0px;
+    max-width: 100% !important;
+}
+
+#homepage-slideshow .metaslider .slides img {
+    margin: 0px !important;
+    padding: 0 !important;
+    width: 100%;
+}
+
+#homepage-slideshow .flex-control-nav {
+    margin: auto;
+    z-index: 9999;
+    bottom: 15px !important;
+    position: absolute;
+}
+
+#homepage-slideshow .metaslider .flexslider {
+    margin-bottom: 0px;
 }
 
 /* Up Close */
@@ -1553,7 +1572,6 @@ div#wonderplugintabs-2 .right {
     text-align: center;
     float: right;
     width: 40%;
-
 }
 
 .page-template-page-up-close video {
@@ -1575,10 +1593,6 @@ div#html5-watermark {
     background-position: 50% 0%;
     background-repeat: no-repeat;
 }
-
-/*.page-template-page-eco-iq .col-lg-12 {
-    padding: 0px 172px;
-}*/
 
 .page-template-page-eco-iq p.subtitle {
     padding: 0px 80px;
@@ -1803,6 +1817,111 @@ div#html5-watermark {
     margin-top: 30px;
 } 
 
+/* New Up Close */
+
+div#updates .left {
+    margin-top: 2%;
+    width: 60%;
+    text-align: center;
+    padding-left: 12%;
+}
+
+div#updates .right .fa-refresh {
+    font-size: 150px;
+}
+
+div#updates .right {
+    width: 40%;
+    text-align: center;
+    float: right;
+    padding-right: 30%;
+}
+
+.page-id-4115 .homepage-featured-image {
+    background-position: 100% 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.page-id-4115 .homepage-featured-image h2 {
+    margin-top: 40%;
+}
+
+.page-id-4115 svg .highcharts-background {
+    fill: #f9f9f9 !important;
+}
+
+.page-id-4115 #wiser-forecast h2 {
+    margin-top: 20%;
+}
+
+#humidity .text {
+    margin-top: 12%;
+}
+
+#eco-iq .text {
+    margin-top: 7%;
+}
+
+#eco-iq img {
+    max-height: 500px;
+}
+
+#wiser-forecast .text {
+    margin-top: 7%;
+}
+
+#wiser-forecast img {
+    max-height: 500px;
+}
+
+#touchscreen-smartsense {
+    background: url("/images/5.4.0_background.jpg");
+    background-size: cover;
+    min-height: 500px;
+}
+
+#touchscreen-smartsense .wonderplugintabs * {
+    text-align: left;
+}
+
+#touchscreen-smartsense .wonderplugintabs-panel-inner {
+    width: 50%;
+}
+
+#comfort-features h2 {
+    margin-top: 26%;
+}
+
+#comfort-boost .icons {
+    margin-right: 20px;
+    margin-top: 70px;
+}
+
+#comfort-boost .col-lg-6:first-child {
+    margin-top: 5%;
+}
+
+#exclusive-technology h2 {
+    margin-top: 18%;
+}
+
+#intuitive-app {
+    padding-bottom: 0px;
+}
+
+#intuitive-app .container {
+    padding-bottom: 0px;
+}
+
+#intuitive-app h2 {
+    margin-top: 28%;
+}
+
+#wiser-pulse h2 {
+    margin-top: 13%;
+}
+
 /* Getting Started/Quick Start */
 
 #sync {
@@ -1841,11 +1960,11 @@ div#html5-watermark {
 }
 
 #wonderplugintabs-2 > .wonderplugintabs-header-wrap .wonderplugintabs-header-li-first {
-border-right: 1px solid #fff!important;
+    border-right: 1px solid #fff!important;
 }
 
 #wonderplugintabs-2 > .wonderplugintabs-header-wrap .wonderplugintabs-header-li-last {
-border-right: 0px !important;
+    border-right: 0px !important;
 }
 
 #wonderplugintabs-5 .subtitle,
@@ -1909,15 +2028,43 @@ div#wonderplugintabs-5 {
     color: #009530 !important;
 }
 
+#wonderplugintabs-5 > .wonderplugintabs-header-wrap .wonderplugintabs-header-ul,
+#wonderplugintabs-6 > .wonderplugintabs-header-wrap .wonderplugintabs-header-ul {
+    margin-top: 30%;
+}
+
 .gray#getting-started img {
     margin: 40px 0px 15px 0px;
 }
 
+/* Comparison */
+
+.wpsm-thead-default th {
+    background-color: #00a550;
+    color: #fff;
+    border-color: #f8f8f8;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: .2px;
+    border-right: 0px solid #fff;
+}
+
+.wpsm-comptable td {
+    text-align: center;
+}
+
+.wpsm-comptable td:first-child {
+    text-align: left;
+    font-weight: 400;
+}
+
 /* Press */
 
-.page-template-page-press h3{
-    line-height: 25px;
-    margin-bottom: 30px;
+.page-template-page-press h2 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 35px;
 }
 
 .page-template-page-press h4{
@@ -1931,20 +2078,30 @@ div#wonderplugintabs-5 {
     font-size: 12px;
 }
 
+.press-section-2 .col-lg-4.col-md-4.col-sm-4 {
+    height: 200px;
+}
+
 .press-section-2 h4 {
     margin-bottom: 0px;
+    font-size: 15px;
+    margin: 5px 0px;
 }
 
-.press-section-3 .col-lg-2.col-md-2.col-sm-2.featured-logos:nth-child(2) img {
+.press-section-5 h5 {
+    font-weight: 300;
+}
+
+/*.press-section-3 .col-lg-2.col-md-2.col-sm-2.featured-logos:nth-child(2) img {
     width: 50%;
 }
-
+*/
 .blog-col-2 {
     padding: 0px;
 }
 
 .blog .blog-title a {
-    font-size: 17px;
+    font-size: 18px;
     line-height: 26px;
     color: #000;
     font-weight: 400;
@@ -1962,21 +2119,27 @@ ul.documents li {
     list-style-type: none;
 }
 
-.product_images img {
-    border: 1px solid #ddd;
+.product_images div {
+    height: 148px;
+    overflow: hidden;
     margin-bottom: 30px;
+}
+
+.product_images img {
+    border: 1px solid #ddd;/*
+    margin-bottom: 30px;*/
 }
 
 .page-template-page-press .logos img {
-    border: 1px solid #ddd;
-    padding: 50px 15px;
+    border: 1px solid #eee;
+    padding: 50px 35px;
 }
 
 .documents {
-    border: 1px solid #ddd;
-    height: 200px;
-    text-align: center;
-    margin-bottom: 30px;
+    /*border: 1px solid #ddd;
+    height: 200px;*/
+    text-align: left;
+    /*margin-bottom: 30px;*/
 }
 
 
@@ -1987,6 +2150,10 @@ ul.documents li {
 }
 
 .page-template-page-press hr {
+    width: 100%;
+}
+
+.page-template-page-press .post-content-text {
     width: 100%;
 }
 
@@ -2015,8 +2182,16 @@ ul.documents li {
     clear: none;
 }
 
+.page-template-page-press .blog .blog-title a {
+    font-weight: 300;
+}
+
 .blog-cat, .date-post {
     display: none;
+}
+
+.blog-content-excerpt {
+    font-size: 14px;
 }
 
 .post-content-text {
@@ -2038,6 +2213,11 @@ ul.documents li {
     vertical-align: middle;
     margin-bottom: 0.25em;
     text-align: center;
+    max-height: 35px;
+}
+
+.logos h5 {
+    font-weight: 300;
 }
 
 /* Marketing Landing Pages */
@@ -2093,7 +2273,7 @@ ul.wtb-retailers li {
 }
 
 ul.wtb-retailers li img {
-    width: 85px;
+    width: 160px;
 }
 
 /* Utility */
@@ -2103,8 +2283,6 @@ ul.wtb-retailers li img {
 }
 
 .boxes img {
-/*    width: 175px;
-    height: 175px;*/
     border-radius: 50%;
     border: 4px solid #fff;
     margin-top: 50px;
@@ -2259,9 +2437,6 @@ article .entry-meta {
 =            Bootstrap 3 Media Queries             =
 ==================================================*/
 
-
-
-
     /*==========  Mobile First Method  ==========*/
 
     /* Custom, iPhone Retina */ 
@@ -2289,9 +2464,32 @@ article .entry-meta {
             margin-left: 18%;
             margin-right: 18%;
         }
+
+        .homepage-section-2 h2 {
+            margin-top: 10%;
+        }
+
+        .page-id-4115 .homepage-featured-image {
+             background-size: 85%;           
+        }
+
     }
 
+    /* X-Large Devices, Wide Screens */
+    @media only screen and (min-width : 1300px) {
+        .page-id-4115 .homepage-featured-image {
+            background-position: 100% 50%;
+            /*background-size: 60%;     */     
+        }
+    }
 
+    /* X-Large Devices, Wide Screens */
+    @media only screen and (min-width : 1400px) {
+        .page-id-4115 .homepage-featured-image {
+            background-position: 80% 50%;
+            background-size: 70%; 
+        }
+    }
 
     /*==========  Non-Mobile First Method  ==========*/
 
@@ -2370,6 +2568,23 @@ article .entry-meta {
         .wonderplugintabs .left, .wonderplugintabs .right {
             width: 50%;
         }
+
+        .homepage-section-5 h2 {
+            margin-top: 19%;
+        }
+
+        .homepage-section-4 h2 {
+            margin-top: 34%;
+        }
+
+        .homepage-section-8 {
+            background-position: 78% 42%;
+        }
+
+        .page-template-page-homepage .homepage-featured-image h2 {
+            margin-top: 32%;
+        }
+
     }
 
     /* Small Devices, Tablets */
@@ -2403,9 +2618,18 @@ article .entry-meta {
             margin-left: 0px;
         }
 
+        .page-template-page-homepage .homepage-featured-image h2 {
+            margin-top: 26%;
+        }
+
         /* Start Testing */
         .page-template-page-utilities section#utility-customized h2 {
             margin-top: 5px;
+        }
+
+        .homepage-section-2.dark-grey {
+            text-align: center;
+            padding: 50px 0px;
         }
 
         .homepage-section-2 h2 {
@@ -2417,44 +2641,56 @@ article .entry-meta {
         }
 
         .homepage-section-3 img#control_hand {
-            margin-top: 10%;
-            height: 500px;
-            margin-left: 25%;
+            margin-top: 18%;
         }
 
         .homepage-section-4 {
             background-size: cover;
             background-position: 22% 50%;
-            height: 600px;
+            min-height: inherit;
+            text-decoration: center;
+            text-align: center;
+            color: #000 !important;
         }
 
-        .homepage-section-4 .push-left h2 {
-            margin-top: 10%;
-            color: #000;
-            text-align: center;
+        .homepage-section-4 h2 {
+            margin-top: 0%;
         }
+
 
         .homepage-section-4 .btn-space {
-            margin-top: 350px;
+            margin-top: 40px;
             text-align: center;
+        }
+
+        .homepage-section-5 {
+            text-align: center;
+        }
+
+        .homepage-section-5 img {
+            /*max-width: 100%;*/
+            margin-top: 0%;
         }
 
         .homepage-section-5 h2 {
-            padding-top: 75px;
+            padding-top: 5%;
         }
-        /* Stop Testing */
-        /* Homepage */
 
-        .homepage-section-2 {
+        .homepage-section-8 {
             text-align: center;
         }
-        
-        .homepage-section-1 h2 {
-            margin-top: -200px;
+
+        .homepage-section-8 h2 {
+            margin-top: 0%;
         }
 
-        .homepage-section-2 h2 {
-            margin-top: 0%;
+        .homepage-section-8 img {
+            margin-top: 10%;
+        }
+
+        .homepage-section-9 {
+            padding: 50px 0px;
+            text-align: center;
         }
 
         .navbar-brand {
@@ -2567,13 +2803,6 @@ article .entry-meta {
             border-top: 0px;
         }
 
-        .menu-item-3349 .dropdown-menu>li:nth-of-type(1) a {
-            background-size: 27px;
-            background-repeat: no-repeat;
-            background-position: 1% 0%;
-            padding-left: 50px;
-        }
-
         .menu-item-3349 .dropdown-menu>li:nth-of-type(2) a {
             background-size: 27px;
             background-repeat: no-repeat;
@@ -2588,22 +2817,24 @@ article .entry-meta {
             padding-left: 50px;
         }
 
-        /*.menu-item-3349 .dropdown-menu>li:nth-of-type(4) a {
-            background-size: 27px;
-            background-position: 2%;
-        }*/
-
         .menu-item-3349 .dropdown-menu>li:nth-of-type(4) a {
+            background-size: 27px;
+            background-repeat: no-repeat;
+            background-position: 1% 0%;
+            padding-left: 50px;
+        }
+
+        .menu-item-3349 .dropdown-menu>li:nth-of-type(5) a {
             background-size: 23px;
             background-position: 3%;
         }
 
-        .menu-item-3349 .dropdown-menu>li:nth-of-type(5) a {
+        .menu-item-3349 .dropdown-menu>li:nth-of-type(6) a {
             background-size: 27px;
             background-position: 3%;
         }
 
-        .menu-item-3349 .dropdown-menu>li:nth-of-type(6) a {
+        .menu-item-3349 .dropdown-menu>li:nth-of-type(7) a {
             background-size: 39px;
             background-position: 0%;
         }
@@ -2679,9 +2910,7 @@ article .entry-meta {
             margin-top: 0px;
             padding-bottom: 50px;
             margin-bottom: 0px;
-            /* overflow: hidden; */
             z-index: 99;
-            /* width: 100%; */
         }
 
         .carousel-inner>.item>img, .carousel-inner>.item>a>img {
@@ -2728,11 +2957,86 @@ article .entry-meta {
             float: none !important;
             width: 100% !important;
         }
+
+        #wiser-pulse h2 {
+            margin-top: -3%;
+        }
+
+        #intuitive-app h2 {
+            margin-top: 0%;
+        }
+
+        #schedules video {
+            margin-top: 40px;
+        }
+
+        #comfort-features h2 {
+            margin-top: -4%;
+        }
+
+        #comfort-boost .col-lg-6:first-child {
+            margin-top: 0%;
+        }
+
+        #comfort-boost .icons {
+            margin-top: 0px;
+        }
+
+        #comfort-boost video {
+            margin-top: 40px;
+        }
+
+        #exclusive-technology h2 {
+            margin-top: 0%;
+        }
+
+        #wiser-forecast .text {
+            margin-top: 0%;
+        }
+
+        #wiser-forecast h2 {
+            margin: 0%;
+        }
+
+        #wiser-forecast img {
+            margin-top: 40px;
+        }
+
+        .homepage-section-5 h2 {
+            margin-top: -12%;
+        }
+
+        #control-fingertips .col-xs-10 {
+            width: 53%;
+        }
+
+        #touchscreen-smartsense {
+            background-position: 79% 50%;
+        }
+
+        section#precise-weather {
+            color: #000;
+        }
+
+        .page-id-4115 #wiser-forecast h2 {
+            margin-top: 0%;
+        }
     }
 
 
     /* Extra Small Devices, Phones */ 
     @media only screen and (max-width : 680px) {
+        .page-id-4115 .homepage-featured-image {
+            min-height: 500px;
+            background-size: 180%;
+            background-position: 83% 92%;
+            background-repeat: no-repeat;
+        }
+
+        .page-id-4115 .homepage-featured-image h2 {
+            margin-top: 25%;
+        }
+
         .navbar li {
             padding: 10px 0px;
             border-top: 1px solid #ddd;
@@ -2786,6 +3090,13 @@ article .entry-meta {
             padding-left: 50px;
         }
 
+        .menu-item-3349 .dropdown-menu>li:nth-of-type(4) a {
+            background-size: 27px;
+            background-repeat: no-repeat;
+            background-position: 1% 0%;
+            padding-left: 50px;
+        }
+
         .wpcf7 .right, .wpcf7 .left {
             float: none;
         }
@@ -2802,46 +3113,13 @@ article .entry-meta {
             margin-top: 0px;
             padding-bottom: 50px;
             margin-bottom: 0px;
-            /* overflow: hidden; */
             z-index: 99;
-            /* width: 100%; */
         }
 
-        .homepage-section-2 {
+        .homepage-featured-image a.button {
+            display: block;
+            padding: 8px 45px !important;
             text-align: center;
-        }
-
-        .homepage-section-2 h2 {
-            margin-top: 0%;
-        }
-
-        .homepage-section-3 h2 {
-            margin-top: 10%;
-        }
-
-        .homepage-section-3 img#control_hand {
-            margin-top: 18%;
-        }
-
-        .homepage-section-4 {
-            background-size: cover;
-            background-position: 22% 50%;
-            height: 600px;
-        }
-
-        .homepage-section-4 .push-left h2 {
-            margin-top: 10%;
-            color: #000;
-            text-align: center;
-        }
-
-        .homepage-section-4 .btn-space {
-            margin-top: 350px;
-            text-align: center;
-        }
-
-        .homepage-section-5 h2 {
-            padding-top: 75px;
         }
 
         #sync .app-links {
@@ -2880,10 +3158,6 @@ article .entry-meta {
         .wpcf7 .upload {
             margin-left: 0%;
         }
-        
-/*        footer .SGML_form_container .SGML_form button {
-            width: 60px;
-        }*/
 
         footer .SGML_form_container input[type="email"] {
             width: 224px !important;
@@ -2903,13 +3177,6 @@ article .entry-meta {
             left: 5% !important;
             right: 0% !important;
         }
-
-        /*.wonderplugintabs-header-wrap {
-            width: 100% !important;
-            float: none !important;
-            margin-top: 30px !important;
-            margin-left: 5%;
-        }*/
 
         .page-template-page-getting-started ul.wonderplugintabs-header-ul {
             display: table !important;
@@ -2958,6 +3225,10 @@ article .entry-meta {
         .post-content-text {
             width: 100%;
             padding-left: 0%;
+        }
+
+        div#wonderplugintabs-5 {
+            margin-top: 0px;
         }
     }
 
@@ -3016,6 +3287,13 @@ article .entry-meta {
             padding-left: 50px;
         }
 
+        .menu-item-3349 .dropdown-menu>li:nth-of-type(4) a {
+            background-size: 27px;
+            background-repeat: no-repeat;
+            background-position: 1% 0%;
+            padding-left: 50px;
+        }
+
         /* Homepage */
 
         .homepage-featured-image {
@@ -3032,7 +3310,12 @@ article .entry-meta {
         }
 
         .homepage-section-5 h2 {
-            padding-top: 15%;
+            padding-top: 0;
+            margin-top: -5%;
+        }
+
+        #precise-weather h2 {
+            margin-top: 0%;
         }
 
         .homepage-section-6#retailers li {
@@ -3051,9 +3334,7 @@ article .entry-meta {
             margin-top: 0px;
             padding-bottom: 50px;
             margin-bottom: 0px;
-            /* overflow: hidden; */
             z-index: 99;
-            /* width: 100%; */
         }
 
         .support-featured-image .col-sm-6 {
@@ -3081,27 +3362,22 @@ article .entry-meta {
             text-align: center;
         }
 
-/*        #first h4 {
-            border-top: 0px;
+        .submit-container {
+            margin-top: 15px;
         }
 
-        #faq h4 {
-            padding-top: 15px;
-            margin-top: 0px;
-            font-size: 16px;
-            font-weight: 300;
-            margin-bottom: 4px;
-            border-top: 1px solid #ddd;
+        #comp_result {
+            display: none;
+            width: 247px;
+            text-align: center;
+            padding: 15px 0 10px 0;
+            background-color: transparent !important;
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 15px;
+            letter-spacing: .3px;
+            color: #00a550;
         }
-
-        #install h4 {
-            padding-top: 15px;
-            margin-top: 0px;
-            font-size: 16px;
-            font-weight: 300;
-            margin-bottom: 4px;
-            border-top: 1px solid #ddd;
-        }*/
 
         .page-template-page-eco-iq video {
             height: 500px;
@@ -3125,12 +3401,6 @@ article .entry-meta {
             background-position: 90% 0%;
             background-repeat: no-repeat;
         }
-
-/*        #ecoiq {
-            margin-top: 248px;
-            padding: 80px 20px;
-            border-radius: 0px;
-        }*/
 
         #eco-iq-working {
             background: url(/images/Eco_IQ_lifestyle.png)no-repeat;
@@ -3164,23 +3434,17 @@ article .entry-meta {
 
         .page-template-page-homepage  .homepage-featured-image {
             background-size: cover;
-            background-position: 45% 50%;
+            background-position: 67% 100%;
             min-height: 500px !important;
-        }
-
-        .page-template-page-homepage .homepage-section-5 {
-            height: 400px;
-            background: url("/images/1.4.0_background.jpg") 0 100%/200% no-repeat;
-            color: #fff;
-            background-size: cover;
         }
 
         .page-template-page-homepage .homepage-section-3 {
             height: 850px !important;
+            background: 38% 45%;
         }
 
         .page-template-page-homepage .homepage-section-4 .btn-space {
-            margin-top: 300px;
+            margin-top: 40px;
             text-align: center;
         }
 
@@ -3190,7 +3454,9 @@ article .entry-meta {
         }
 
         .page-template-page-homepage .homepage-featured-image h2 {
-            margin-top: 71%;
+            margin-top: 20%;
+            font-size: 24px;
+            margin-bottom: 0px;
         }
 
         .page-template-page-up-close video {
@@ -3225,6 +3491,68 @@ article .entry-meta {
         .wpcf7-submit {
             margin-top: 30px !important;
         }
+
+        #wiser-pulse h2 {
+            margin-top: -3%;
+        }
+
+        #intuitive-app h2 {
+            margin-top: 0%;
+        }
+
+        #schedules video {
+            margin-top: 40px;
+        }
+
+        #comfort-features h2 {
+            margin-top: -4%;
+        }
+
+        #comfort-boost .col-lg-6:first-child {
+            margin-top: 0%;
+        }
+
+        #comfort-boost .icons {
+            margin-top: 0px;
+        }
+
+        #comfort-boost video {
+            margin-top: 40px;
+        }
+
+        #exclusive-technology h2 {
+            margin-top: 0%;
+        }
+
+        #wiser-forecast .text {
+            margin-top: 0%;
+        }
+
+        #wiser-forecast h2 {
+            margin: 0%;
+        }
+
+        #wiser-forecast img {
+            margin-top: 40px;
+        }
+
+        #control-fingertips .col-xs-10 {
+            width: 83%;
+        }
+
+        #copyright div {
+            margin: 0px;
+            padding: 0;
+        }
+
+        footer #copyright {
+            border-top: 1px dotted #ccc;
+            padding: 22px 0px;
+            margin-top: 40px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
     }
 
     /* Custom, iPhone Retina */ 
@@ -3236,13 +3564,10 @@ article .entry-meta {
         .support-featured-image .col-sm-6 {
             margin-left: 0%; 
         }
-/*
-        .page-template-page-homepage .homepage-featured-image h2 {
-            margin-top: 40%;
-        }*/
 
-        .page-template-page-homepage .col-lg-5.col-md-5.col-sm-5.col-xs-8.text-left {
-            width: 100%;
+        #wiser-start a {
+            display: inline-block;
+            padding: 7px 15px;
         }
 
         .page-template-page-homepage  .homepage-featured-image {
@@ -3255,21 +3580,15 @@ article .entry-meta {
             padding: 0px;
         }
 
-        .page-template-page-homepage .homepage-section-4 .btn-space {
-            margin-top: 280px;
-            text-align: center;
-        }
-
-        .page-template-page-homepage .homepage-section-5 {
-            height: 400px;
-            background: url("/images/1.4.0_background.jpg") 0 100%/200% no-repeat;
-            color: #fff;
-            background-size: cover;
-        }
-
         .wonderplugintabs-header-title {
             letter-spacing: 1px;
             font-size: 11px !important;
+        }
+
+        .page-template-page-homepage .homepage-featured-image {
+            background-size: cover;
+            background-position: 59% 100%;
+            min-height: 550px !important;
         }
     }
 
@@ -3306,51 +3625,11 @@ article .entry-meta {
             margin-top: 0px;
             padding-bottom: 50px;
             margin-bottom: 0px;
-            /* overflow: hidden; */
             z-index: 99;
-            /* width: 100%; */
         }
 
         .navbar li {
             padding: 10px 0px;
             border-top: 1px solid #ddd;
         }
-
-
-
-        /* Start Testing */
-/*        .homepage-section-2 h2 {
-            margin-top: 0%;
-        }
-
-        .homepage-section-3 h2 {
-            margin-top: 10%;
-        }
-
-        .homepage-section-3 img#control_hand {
-            margin-top: 18%;
-        }
-
-        .homepage-section-4 {
-            background-size: cover;
-            background-position: 22% 50%;
-            height: 600px;
-        }
-
-        .homepage-section-4 .push-left h2 {
-            margin-top: 10%;
-            color: #000;
-            text-align: center;
-        }
-
-        .homepage-section-4 .btn-space {
-            margin-top: 350px;
-            text-align: center;
-        }
-
-        .homepage-section-5 h2 {
-            padding-top: 75px;
-        }*/
-        /* Stop Testing */
-
     }
