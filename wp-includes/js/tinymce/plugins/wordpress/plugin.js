@@ -902,12 +902,7 @@ tinymce.PluginManager.add( 'wordpress', function( editor ) {
 				if ( activeToolbar.tempHide || event.type === 'hide' ) {
 					activeToolbar.hide();
 					activeToolbar = false;
-				} else if ( (
-					event.type === 'resizewindow' ||
-					event.type === 'scrollwindow' ||
-					event.type === 'resize' ||
-					event.type === 'scroll'
-				) && ! activeToolbar.blockHide ) {
+				} else if ( ( event.type === 'resize' || event.type === 'scroll' ) && ! activeToolbar.blockHide ) {
 					clearTimeout( timeout );
 
 					timeout = setTimeout( function() {
@@ -923,13 +918,11 @@ tinymce.PluginManager.add( 'wordpress', function( editor ) {
 			}
 		}
 
-		// For full height editor.
-		editor.on( 'resizewindow scrollwindow', hide );
-		// For scrollable editor.
+		DOM.bind( window, 'resize scroll', hide );
 		editor.dom.bind( editor.getWin(), 'resize scroll', hide );
 
 		editor.on( 'remove', function() {
-			editor.off( 'resizewindow scrollwindow', hide );
+			DOM.unbind( window, 'resize scroll', hide );
 			editor.dom.unbind( editor.getWin(), 'resize scroll', hide );
 		} );
 

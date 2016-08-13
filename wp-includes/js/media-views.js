@@ -462,14 +462,14 @@ EditImage = wp.media.controller.State.extend({
 	 * @since 3.9.0
 	 */
 	activate: function() {
-		this.frame.on( 'toolbar:render:edit-image', _.bind( this.toolbar, this ) );
+		this.listenTo( this.frame, 'toolbar:render:edit-image', this.toolbar );
 	},
 
 	/**
 	 * @since 3.9.0
 	 */
 	deactivate: function() {
-		this.frame.off( 'toolbar:render:edit-image' );
+		this.stopListening( this.frame );
 	},
 
 	/**
@@ -4085,8 +4085,8 @@ AttachmentsBrowser = View.extend({
 		});
 
 		// Add keydown listener to the instance of the Attachments view
-		this.controller.on( 'attachment:keydown:arrow',     _.bind( this.attachments.arrowEvent, this.attachments ) );
-		this.controller.on( 'attachment:details:shift-tab', _.bind( this.attachments.restoreFocus, this.attachments ) );
+		this.attachments.listenTo( this.controller, 'attachment:keydown:arrow',     this.attachments.arrowEvent );
+		this.attachments.listenTo( this.controller, 'attachment:details:shift-tab', this.attachments.restoreFocus );
 
 		this.views.add( this.attachments );
 
