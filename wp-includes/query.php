@@ -2354,8 +2354,7 @@ class WP_Query {
                 $orderbyfields = $orderbyfields . ", $wpdb->posts.{$orderby}";
 				break;
 			case 'rand':
-				$orderby_clause = 'randid';
-				$orderbyfields = $orderbyfields . ", NEWID() as randid";
+				$orderby_clause = 'NEWID()';
 				break;
 			case $primary_meta_key:
 			case 'meta_value':

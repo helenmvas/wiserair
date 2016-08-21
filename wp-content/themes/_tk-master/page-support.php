@@ -58,51 +58,102 @@ get_header(); ?>
 	                            <span><input type="checkbox" name="RC" value="true">RC</span>
 	                        </td>
 	                        <td>
+	                            <span><input type="checkbox" name="R" value="true">R</span>
+	                        </td>
+	                        <td>
+	                            <span><input type="checkbox" name="RH" value="true">RH</span>
+	                        </td>
+	                        <td>
 	                            <span><input type="checkbox" name="C" value="true">C</span>
+	                        </td>
+	                    </tr>
+	                    <tr>
+	                        <td>
+	                            <span><input type="checkbox" name="X" value="true">X</span>
+	                        </td>
+	                        <td>
+	                            <span><input type="checkbox" name="B" value="true">B</span>
 	                        </td>
 	                        <td>
 	                            <span><input type="checkbox" name="G" value="true">G</span>
 	                        </td>
 	                        <td>
-	                            <span><input type="checkbox" name="RH" value="true">RH</span>
+	                            <span><input type="checkbox" name="F" value="true">F</span>
 	                        </td>
 	                    </tr>
 	                    <tr>
-	                        <td>
-	                            <span><input type="checkbox" name="W2" value="true">W2</span>
-	                        </td>
 	                        <td>
 	                            <span><input type="checkbox" name="W" value="true">W</span>
 	                        </td>
 	                        <td>
-	                            <span><input type="checkbox" name="Y2" value="true">Y2</span>
+	                            <span><input type="checkbox" name="W1" value="true">W1</span>
 	                        </td>
 	                        <td>
-	                            <span><input type="checkbox" name="Y" value="true">Y</span>
+	                            <span><input type="checkbox" name="W2" value="true">W2</span>
+	                        </td>
+	                        <td>
+	                            <span><input type="checkbox" name="W3" value="true">W3</span>
 	                        </td>
 	                    </tr>
 	                    <tr>
 	                        <td>
-	                            <span><input type="checkbox" name="O/B" value="true">O/B</span>
+	                            <span><input type="checkbox" name="AUX" value="true">AUX</span>
+	                        </td>
+	                        <td>
+	                            <span><input type="checkbox" name="Y" value="true">Y</span>
+	                        </td>
+	                        <td>
+	                            <span><input type="checkbox" name="Y1" value="true">Y1</span>
+	                        </td>
+	                        <td>
+	                            <span><input type="checkbox" name="Y2" value="true">Y2</span>
+	                        </td>
+	                    </tr>
+	                    <tr>
+	                        <td>
+	                            <span><input type="checkbox" name=")B" value="true">O/B</span>
+	                        </td>
+	                        <td>
+	                            <span><input type="checkbox" name="O" value="true">O</span>
+	                        </td>
+	                        <td>
+	                            <span><input type="checkbox" name="B" value="true">B</span>
 	                        </td>
 	                        <td>
 	                            <span><input type="checkbox" name="U" value="true">U</span>
 	                        </td>
+	                    </tr>
+	                    <tr>
 	                        <td>
 	                            <span><input type="checkbox" name="S1" value="true">S1</span>
 	                        </td>
 	                        <td>
 	                            <span><input type="checkbox" name="S2" value="true">S2</span>
 	                        </td>
+	                        <td>
+	                            <span><input type="checkbox" name="E" value="true">E</span>
+	                        </td>
+	                        <td>
+	                            <span><input type="checkbox" name="D" value="true">D</span>
+	                        </td>
+	                    </tr>
+	                    <tr>
+	                        <td>
+	                            <span><input type="checkbox" name="H" value="true">H</span>
+	                        </td>
+	                        <td>
+	                            <span><input type="checkbox" name="other_wires" value="true">Other wires</span>
+	                        </td>
 	                    </tr>
 	                </tbody>
+	            </table>
 	            </table>
                 <div class="submit-container">
                     <button type="submit" class="button">CHECK WISER COMPATIBILITY</button>
                 </div>
             </form>
             <div id="comp_result">
-            	<p>Compatible</p>
+            	<p></p>
             </div>
 		</div>
 	</div>
