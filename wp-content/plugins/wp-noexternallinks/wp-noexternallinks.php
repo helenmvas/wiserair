@@ -7,12 +7,12 @@ if (!defined('DB_NAME'))
 Plugin Name: WP No External Links
 Plugin URI: http://jehy.ru/articles/2008/10/05/wordpress-plugin-no-external-links/
 Description: This plugin will allow you to mask all external links to internal, or to hide them. Your own posts, comments pages, authors pages... To set up, visit <a href="options-general.php?page=wp-noexternallinks/wp-noexternallinks-options.php">configuration panel</a>.
-Version: 3.5.15
+Version: 3.5.17
 Author: Jehy
 Author URI: http://jehy.ru/articles/
 Update Server: http://jehy.ru/articles/2008/10/05/wordpress-plugin-no-external-links/
 Min WP Version: 2.6
-Max WP Version: 4.2.3
+Max WP Version: 4.5.3
 */
 
 /*  Copyright 2012  Jehy  (email : fate@jehy.ru)
@@ -141,12 +141,12 @@ class wp_noexternallinks
         if (!$site)
             $site = get_option('siteurl');
         $this->options['site'] = $site;
-        $site=str_replace(array("http://","https://"),'',$site);
-        $p = strpos($site,'/');
-        if ($p!==FALSE)
+        $site = str_replace(array("http://", "https://"), '', $site);
+        $p = strpos($site, '/');
+        if ($p !== FALSE)
             $site = substr($site, 0, $p);/*site root is excluded from masking, not only blog url*/
-        $exclude_links[] = "http://".$site;
-        $exclude_links[] = "https://".$site;
+        $exclude_links[] = "http://" . $site;
+        $exclude_links[] = "https://" . $site;
         $exclude_links[] = 'javascript';
         $exclude_links[] = 'mailto';
         $exclude_links[] = 'skype';

@@ -3,8 +3,8 @@ Contributors: foomagoo
 Donate link: http://www.jsterup.com/donate
 Tags: plugin organizer, load order, organize plugins, plugin order, sort plugin, group plugin, disable plugins by post, disable plugins by page, disable plugins by custom post type, turn off plugins for post, turn off plugins for page, turn off plugins for custom post type
 Requires at least: 3.8
-Tested up to: 4.2.2
-Stable tag: 6.0.4
+Tested up to: 4.5.4
+Stable tag: 6.0.10
 
 
 This plugin allows you to do the following:
@@ -31,9 +31,13 @@ IMPORTANT: To enable selective plugin loading you must move the /wp-content/plug
 Note: If you are having troubles you can view the documentation by going to http://www.jsterup.com/dev/wordpress/plugins/plugin-organizer/documentation/
 
 == Frequently Asked Questions ==
+Q. I upgraded and the metabox has disappeared from the post edit screen where I can enable/disable plugins.
+
+A. Go to the Plugin Organizer settings page and click the button under selective plugin loading to turn it on.  During the upgrade process selective plugin loading got turned off.
+
 Q. How do I enable the selective plugin loading functionality?
 
-A. Go to the Plugin Organizer settings page and check the enable radio button under selective plugin loading.  Then visit your homepage.  Finally return to the Plugin Organizer settings page and see if the enable radio button is still checked.  If it is not then you are running an old version of the MU component.  Copy the PluginOrganizerMU.class.php file to the mu-plugins folder then deactivate and reactivate the plugin.  Repeat these steps to ensure that the plugin is working.  Remember that you will need to update the PluginOrganizerMU.class.php file whenever the plugin is updated and check your settings afterward.
+A. Go to the Plugin Organizer settings page and click the button under selective plugin loading to turn it on.  Then visit your homepage.  Finally return to the Plugin Organizer settings page and see if the button is still set to on.  If it is not then you are running an old version of the MU component.  Copy the PluginOrganizerMU.class.php file to the mu-plugins folder then deactivate and reactivate the plugin.  Repeat these steps to ensure that the plugin is working.  Remember that you will need to update the PluginOrganizerMU.class.php file whenever the plugin is updated and check your settings afterward.
 
 Q. Does this plugin work with wordpress multi-site?
 
@@ -69,7 +73,26 @@ Note: If you are having troubles you can view the documentation by going to http
 
 == Changelog ==
 
-= 6.0.4 = 
+= 6.0.10 =
+Changed function that determines absolute path to use the DIRECTORY_SEPARATOR constant.
+
+= 6.0.9 =
+Removed use of WP_PLUGIN_DIR constant and replaced with a custom function to determine plugin directory.
+
+= 6.0.8 =
+Removed plugin order check from activation function because it seems to be causing problems for some users.
+
+= 6.0.7 =
+Fixing database table name check to not correct uppercase table name when OS ignores case.
+
+= 6.0.6 =
+Updating uninstall.php file with new table and option names from the last update.
+
+= 6.0.5 =
+Fixed problem where plugins were not removed from groups when plugin was uninstalled.
+Fixed database name.  Removed capital letters since it was causing issues with older versions of MySQL.
+
+= 6.0.4 =
 Fixed issue with missing css and javascript on certain custom post types.
 Fixed issue with saving post type plugins.  An error was encountered some times when saving the plugins.
 Added code to ensure the sql indexes exist to improve query times.
@@ -491,7 +514,5 @@ Initial version.
 
 == Upgrade Notice ==
 
-= 6.0.4 = 
-Fixed issue with missing css and javascript on certain custom post types.
-Fixed issue with saving post type plugins.  An error was encountered some times when saving the plugins.
-Added code to ensure the sql indexes exist to improve query times.
+= 6.0.10 =
+Changed function that determines absolute path to use the DIRECTORY_SEPARATOR constant.

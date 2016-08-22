@@ -1,8 +1,8 @@
 === WP Blog and Widget  ===
 Contributors: wponlinesupport, anoopranawat 
-Tags: wordpress blog , wordpress blog widget, Free wordpress blog, blog custom post type, blog tab, blog menu, blog page with custom post type, blog, latest blog, custom post type, cpt, widget
+Tags: blog design, blog layout, wordpress blog , custom blog template, wordpress blog widget, blog layout design, custom blog layout, Free wordpress blog, blog custom post type, blog tab, blog menu, blog page with custom post type, blog, latest blog, custom post type, cpt, widget
 Requires at least: 3.1
-Tested up to: 4.5.2
+Tested up to: 4.6
 Author URI: http://wponlinesupport.com
 Stable tag: trunk
 License: GPLv2 or later
@@ -22,6 +22,19 @@ View [DEMO](http://wponlinesupport.com/wp-plugin/wp-blog-and-widgets/) for addit
 View [PRO DEMO and Features](http://wponlinesupport.com/wp-plugin/wp-blog-and-widgets/) for additional information.
 
 View [Masonry Add-on](http://wponlinesupport.com/wordpress-plugin-addon/masonry-addon-wp-blog-widgets/) with 12 designs and 7 effects.
+
+> <strong>Have you checked our latest Blog / News Themes?</strong><br>
+>
+> * 100% Multilanguage.
+> * Fully Responsive.
+> * Multiple layouts.
+> * 3 Featured Posts grid and slider designs.
+> * Google Fonts.
+> * Fully Customizable.
+> * Easy Installation.
+>
+> View [DEMO and Features](http://wponlinesupport.com/themes/) for additional information.
+>
 
 **WordPress blog plugin contains two shortcodes**
 <code>
@@ -147,6 +160,11 @@ Finally, the plugin adds a Recent Blog Post widget  which can be placed on any s
 
 == Changelog ==
 
+= 1.2.7 =
+* Fixed Image display issue.
+* Fixed css issue.
+* Fixed widget image display issue.
+
 = 1.2.6 =
 * Added excerpt functionality in post description.
 * Resolved display post content issue.
@@ -185,6 +203,11 @@ Finally, the plugin adds a Recent Blog Post widget  which can be placed on any s
 
 
 == Upgrade Notice ==
+
+= 1.2.7 =
+* Fixed Image display issue.
+* Fixed css issue.
+* Fixed widget image display issue.
 
 = 1.2.6 =
 * Added excerpt functionality in post description.

@@ -20,6 +20,7 @@ class wp_noexternallinks_parser extends wp_noexternallinks
             if ($return)
                 return $t;
         }
+        return '';
     }
 
     function check_exclusions($matches)
@@ -101,7 +102,7 @@ class wp_noexternallinks_parser extends wp_noexternallinks
                 $sep = substr($sep, 1);
             $tmp = $this->options['site'];
             //add "/" to site url- some servers dont't work with urls like xxx.ru?goto, but with xxx.ru/?goto
-            if (substr($this->options['site'],0, -1) !== '/')
+            if (substr($this->options['site'], 0, -1) !== '/')
                 $tmp .= '/';
             $url = $tmp . $sep . $url;
         }
@@ -163,7 +164,7 @@ class wp_noexternallinks_parser extends wp_noexternallinks
         return $url;
     }
 
-    function wp_noexternallinks_parser()#constructor
+    function __construct()
     {
         $this->load_options();
         $this->set_filters();
@@ -179,6 +180,7 @@ class wp_noexternallinks_parser extends wp_noexternallinks
             $goto = $_REQUEST[$this->options['LINK_SEP']];
         elseif ($p !== FALSE)
             $goto = substr($_SERVER['REQUEST_URI'], $p + strlen($this->options['LINK_SEP']) + 2);
+        $goto=strip_tags($goto);//just in case of xss
         //what is this block?! Better remove it...
         /*else {
             $url = $_SERVER['REQUEST_URI'];
@@ -205,7 +207,7 @@ class wp_noexternallinks_parser extends wp_noexternallinks
     <body style="margin:0;">
     <div align="center" style="margin-top: 15em;">
         <?php
-        echo __('You have been redirected through this website from a suspicious source. We prevented it and you are going to be redirected to our ', 'wp-noexternallinks') . '<a href="' . get_home_url() . '">' . __('safe web site.', 'wp-noexternallinks') . '</a>';?>
+        echo __('You have been redirected through this website from a suspicious source. We prevented it and you are going to be redirected to our ', 'wp-noexternallinks') . '<a href="' . get_home_url() . '">' . __('safe web site.', 'wp-noexternallinks') . '</a>'; ?>
     </div>
     </body></html><?php die();
     }
@@ -283,7 +285,7 @@ class wp_noexternallinks_parser extends wp_noexternallinks
         elseif ($url)
             echo __('You were going to the redirect link, but something did not work properly.<br>Please, click ', 'wp-noexternallinks') . '<a href="' . $url . '">' . __('HERE ', 'wp-noexternallinks') . '</a>' . __(' to go to ', 'wp-noexternallinks') . $url . __(' manually. ', 'wp-noexternallinks');
         else
-            _e('Sorry, no url redirect specified. Can`t complete request.', 'wp-noexternallinks');?>
+            _e('Sorry, no url redirect specified. Can`t complete request.', 'wp-noexternallinks'); ?>
     </div>
     </body></html><?php die();
     }
@@ -330,7 +332,7 @@ class wp_noexternallinks_parser extends wp_noexternallinks
     {
         global $post;
         if (defined('DOING_CRON'))
-            return;//do not try to use output buffering on cron
+            return '';//do not try to use output buffering on cron
         $r = '';
         $r .= $this->debug_info("Full mask finished. Applying filter", 1);
         if (!$text)

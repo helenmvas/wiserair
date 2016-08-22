@@ -5,14 +5,14 @@ Plugin URL: http://www.wponlinesupport.com/
 Text Domain: wp-blog-and-widgets
 Domain Path: /languages/
 Description: Display Blog on your website.
-Version: 1.2.6
+Version: 1.2.7
 Author: WP Online Support
 Author URI: http://www.wponlinesupport.com/
 Contributors: WP Online Support
 */
 
 if( !defined( 'WPBW_VERSION' ) ) {
-    define( 'WPBW_VERSION', '1.2.6' ); // Version of plugin
+    define( 'WPBW_VERSION', '1.2.7' ); // Version of plugin
 }
 if( !defined( 'WPBAW_DIR' ) ) {
     define( 'WPBAW_DIR', dirname( __FILE__ ) ); // Plugin dir

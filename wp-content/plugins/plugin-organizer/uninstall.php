@@ -27,6 +27,7 @@ function PO_delete_site_data() {
 	$wpdb->query("DROP TABLE IF EXISTS `".$wpdb->prefix."PO_post_plugins");
 	$wpdb->query("DROP TABLE IF EXISTS `".$wpdb->prefix."PO_groups");
 	$wpdb->query("DROP TABLE IF EXISTS `".$wpdb->prefix."PO_plugins");
+	$wpdb->query("DROP TABLE IF EXISTS `".$wpdb->prefix."po_plugins");
 
 	delete_option("PO_mobile_user_agents");
 	delete_option("PO_disabled_plugins");
@@ -60,20 +61,20 @@ function PO_delete_site_data() {
 	delete_option("PO_disabled_mobile_search_groups");
 
 	##Delete CPT settings
-	$cptSettings = get_option('PO_cpt_stored');
+	$cptSettings = get_option('PO_pt_stored');
 
 	foreach($cptSettings as $cptSetting) {
-		delete_option('PO_disabled_cpt_plugins_'.$cptSetting);
-		delete_option('PO_enabled_cpt_plugins_'.$cptSetting);
-		delete_option('PO_disabled_mobile_cpt_plugins_'.$cptSetting);
-		delete_option('PO_enabled_mobile_cpt_plugins_'.$cptSetting);
-		delete_option('PO_disabled_cpt_groups_'.$cptSetting);
-		delete_option('PO_enabled_cpt_groups_'.$cptSetting);
-		delete_option('PO_disabled_mobile_cpt_groups_'.$cptSetting);
-		delete_option('PO_enabled_mobile_cpt_groups_'.$cptSetting);
+		delete_option('PO_disabled_pt_plugins_'.$cptSetting);
+		delete_option('PO_enabled_pt_plugins_'.$cptSetting);
+		delete_option('PO_disabled_mobile_pt_plugins_'.$cptSetting);
+		delete_option('PO_enabled_mobile_pt_plugins_'.$cptSetting);
+		delete_option('PO_disabled_pt_groups_'.$cptSetting);
+		delete_option('PO_enabled_pt_groups_'.$cptSetting);
+		delete_option('PO_disabled_mobile_pt_groups_'.$cptSetting);
+		delete_option('PO_enabled_mobile_pt_groups_'.$cptSetting);
 	}
 
-	delete_option("PO_cpt_stored");
+	delete_option("PO_pt_stored");
 
 	$customPosts = get_posts(array('post_type'=>array('plugin_filter', 'plugin_group'), 'posts_per_page'=>-1));
 	foreach($customPosts as $customPost) {

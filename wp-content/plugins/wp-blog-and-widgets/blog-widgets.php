@@ -120,14 +120,20 @@ class wpbaw_Blog_Widget extends WP_Widget {
                         <?php echo ($show_category == 'true' && $cate_name != '') ? $cate_name : ""?>
 						</div>
 					<?php } } else { ?>
-						<?php if($date == "true" ||  $show_category == "true"){ ?>
+						
+						<div class="blog_thumb_left">
+							<a class="li-link-thumb" href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array(80, 80)); ?> </a> 
+						 </div>
+						 <div class="blog_thumb_right">
+							<a class="li-link-custom" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+							<?php if($date == "true" ||  $show_category == "true"){ ?>
 						<div class="widget-date-cat" style="margin-bottom:5px;">
 						<?php echo ($date == "true")? get_the_date() : "" ;?>
                         <?php echo ($date == "true" && $show_category == "true" && $cate_name != '') ? " , " : "";?>
                         <?php echo ($show_category == 'true' && $cate_name != '') ? $cate_name : ""?>
 						</div>
 						<?php }?>
-						 <a class="li-link-custom" href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array(70, 70)); ?> </a> <a class="li-link-custom" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+						 </div>
                     <?php } ?>
 					</li>
             <?php endwhile;

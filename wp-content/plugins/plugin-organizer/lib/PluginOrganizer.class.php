@@ -4,10 +4,11 @@ require_once('PO_Ajax.class.php');
 
 class PluginOrganizer {
 	var $pluginPageActions = "1";
-	var $regex, $absPath, $urlPath, $nonce, $ajax, $tpl;
+	var $regex, $absPath, $urlPath, $nonce, $ajax, $tpl, $pluginDirPath;
 
 	function __construct($mainFile) {
-		$this->absPath = WP_PLUGIN_DIR . "/" . plugin_basename(dirname($mainFile));
+		$this->pluginDirPath = $this->get_plugin_dir();
+		$this->absPath = $this->pluginDirPath . "/" . plugin_basename(dirname($mainFile));
 		$this->urlPath = plugins_url("", $mainFile);
 		$this->regex = array(
 			"permalink" => "/^((https?):((\/\/)|(\\\\))+[\w\d:#@%\/;$()~_?\+-=\\\.&]*)$/",
@@ -19,6 +20,10 @@ class PluginOrganizer {
 		$this->addHooks($mainFile);
 	}
 
+	function get_plugin_dir() {
+		return preg_replace('/\\' . DIRECTORY_SEPARATOR . 'plugin-organizer\\' . DIRECTORY_SEPARATOR . 'lib$/', '', dirname(__FILE__));
+	}
+	
 	function addHooks($mainFile) {
 		$this->ajax = new PO_Ajax($this);
 
@@ -27,6 +32,7 @@ class PluginOrganizer {
 		
 		add_action( 'activated_plugin', array($this, 'activated_plugin' ), 10, 2 );
 		add_action( 'deactivated_plugin', array($this, 'deactivated_plugin' ), 10, 2 );
+		add_action('admin_menu', array($this, 'check_version'), 9);
 
 		if (!is_network_admin()) {
 			add_action('admin_init', array($this, 'register_admin_style'));
@@ -83,25 +89,30 @@ class PluginOrganizer {
 		}
 	}
 	
+	function check_version() {
+		global $pagenow;
+		##Check version and activate if needed.
+		if (get_option("PO_version_num") != "6.0.10" && !in_array($pagenow, array("plugins.php", "update-core.php", "update.php"))) {
+			$this->activate();
+		}
+	}
+	
 	function init() {
-		global $wpdb, $pagenow;
+		global $wpdb;
 		
 		##Create nonce
 		$this->nonce = wp_create_nonce(plugin_basename(__FILE__));
 		
-		##Check version and activate if needed.
-		if (get_option("PO_version_num") != "6.0.4" && !in_array($pagenow, array("plugins.php", "update-core.php", "update.php"))) {
-			$this->activate();
-		}
+		$this->check_version();
 
 
 		##Check for posts that have been deleted
 		if (false === get_site_transient('PO_delete_missing_posts')) {
-			$allPostsQuery = "SELECT post_id FROM ".$wpdb->prefix."PO_plugins";
+			$allPostsQuery = "SELECT post_id FROM ".$wpdb->prefix."po_plugins WHERE post_id != 0";
 			$allPosts = $wpdb->get_results($allPostsQuery, ARRAY_A);
 			foreach ($allPosts as $post) {
 				if (false === get_post_status($post['post_id'])) {
-					$deletePluginQuery = "DELETE FROM ".$wpdb->prefix."PO_plugins WHERE post_id = %d";
+					$deletePluginQuery = "DELETE FROM ".$wpdb->prefix."po_plugins WHERE post_id = %d";
 					$wpdb->query($wpdb->prepare($deletePluginQuery, $post['post_id']));
 				}
 			}
@@ -142,7 +153,7 @@ class PluginOrganizer {
 			$splitPermalink = explode('?', $permalink);
 			$permalinkNoArgs = $splitPermalink[0];
 
-			$wpdb->insert($wpdb->prefix."PO_plugins", array("enabled_mobile_plugins"=>serialize($enabledMobilePlugins), "disabled_mobile_plugins"=>serialize($disabledMobilePlugins), "enabled_plugins"=>serialize($enabledPlugins), "disabled_plugins"=>serialize($disabledPlugins), "post_type"=>get_post_type($post->ID), "permalink"=>$permalink, "permalink_hash"=>md5($permalinkNoArgs), "permalink_hash_args"=>md5($permalink), "children"=>$children, "secure"=>$secure, "post_id"=>$post->ID));
+			$wpdb->insert($wpdb->prefix."po_plugins", array("enabled_mobile_plugins"=>serialize($enabledMobilePlugins), "disabled_mobile_plugins"=>serialize($disabledMobilePlugins), "enabled_plugins"=>serialize($enabledPlugins), "disabled_plugins"=>serialize($disabledPlugins), "post_type"=>get_post_type($post->ID), "permalink"=>$permalink, "permalink_hash"=>md5($permalinkNoArgs), "permalink_hash_args"=>md5($permalink), "children"=>$children, "secure"=>$secure, "post_id"=>$post->ID));
 		}
 		update_option('PO_old_posts_moved', 1);
 		
@@ -154,32 +165,15 @@ class PluginOrganizer {
 		delete_post_meta_by_key('_PO_enabled_mobile_plugins');
 		delete_post_meta_by_key('_PO_permalink');
 	}
-
-	function correct_group_members() {
-		if (get_option('PO_group_members_corrected') != 1) {
-			$plugins = get_plugins();
-			$pluginList = array();
-			foreach ($plugins as $key=>$plugin) {
-				$pluginList[$plugin['Name']] = $key;
-			}
-			$groups = get_posts(array('post_type'=>'plugin_group', 'posts_per_page'=>-1));
-			foreach($groups as $group) {
-				$newGroupMembers = array();
-				$groupMembers = get_post_meta($group->ID, '_PO_group_members', $single=true);
-				foreach($groupMembers as $member) {
-					if (array_key_exists($member, $pluginList)) {
-						$newGroupMembers[] = $pluginList[$member];
-					}
-				}
-				update_post_meta($group->ID, '_PO_group_members', $newGroupMembers);
-			}
-			update_option('PO_group_members_corrected', 1);
-		}
-	}
 	
 	function activate() {
 		global $wpdb;
-		$poPluginTableSQL = "CREATE TABLE ".$wpdb->prefix."PO_plugins (
+		##Remove the capital letters from the plugins table if it already exists.
+		if($wpdb->get_var("SHOW TABLES LIKE '".$wpdb->prefix."PO_plugins'") == $wpdb->prefix."PO_plugins" && $wpdb->get_var("SHOW TABLES LIKE '".$wpdb->prefix."po_plugins'") != $wpdb->prefix."po_plugins") {
+			$wpdb->query("RENAME TABLE ".$wpdb->prefix."PO_plugins TO ".$wpdb->prefix."po_plugins");
+		}
+		
+		$poPluginTableSQL = "CREATE TABLE ".$wpdb->prefix."po_plugins (
 			post_id bigint(20) unsigned NOT NULL,
 			permalink longtext NOT NULL,
 			permalink_hash varchar(32) NOT NULL default '',
@@ -201,13 +195,13 @@ class PluginOrganizer {
 			KEY PO_permalink_hash (permalink_hash),
 			KEY PO_permalink_hash_args (permalink_hash_args)
 			);";
-		if($wpdb->get_var("SHOW TABLES LIKE '".$wpdb->prefix."PO_plugins'") != $wpdb->prefix."PO_plugins") {
+		if($wpdb->get_var("SHOW TABLES LIKE '".$wpdb->prefix."po_plugins'") != $wpdb->prefix."po_plugins") {
 			require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
 			dbDelta($poPluginTableSQL);
 		}
 
-		//Add new columns to PO_plugins table
-		$showColumnSql = "SHOW COLUMNS FROM ".$wpdb->prefix."PO_plugins";
+		//Add new columns to po_plugins table
+		$showColumnSql = "SHOW COLUMNS FROM ".$wpdb->prefix."po_plugins";
 		$showColumnResults = $wpdb->get_results($showColumnSql);
 		$newColumns = array(
 			'pt_override' => array(0, 'int(1) NOT NULL default 0'),
@@ -224,7 +218,7 @@ class PluginOrganizer {
 
 		foreach ($newColumns as $column=>$value) {
 			if ($value[0] == 0) {
-				$addColumnSql = "ALTER TABLE ".$wpdb->prefix."PO_plugins ADD COLUMN " . $column . " " . $value[1] . ";";
+				$addColumnSql = "ALTER TABLE ".$wpdb->prefix."po_plugins ADD COLUMN " . $column . " " . $value[1] . ";";
 				$addColumnResult = $wpdb->query($addColumnSql);
 			}
 		}
@@ -235,10 +229,10 @@ class PluginOrganizer {
 		);
 		
 		foreach ($newIndex as $index=>$value) {
-			$checkIndexSql = "SHOW INDEX FROM ".$wpdb->prefix."PO_plugins WHERE key_name = '".$index."';";
+			$checkIndexSql = "SHOW INDEX FROM ".$wpdb->prefix."po_plugins WHERE key_name = '".$index."';";
 			$checkIndexResult = $wpdb->query($checkIndexSql);
 			if ($checkIndexResult == '0') {
-				$addIndexSql = "ALTER TABLE ".$wpdb->prefix."PO_plugins ADD INDEX ".$index." (".$value.");";
+				$addIndexSql = "ALTER TABLE ".$wpdb->prefix."po_plugins ADD INDEX ".$index." (".$value.");";
 				$addIndexResult = $wpdb->query($addIndexSql);
 			}
 		}
@@ -248,6 +242,7 @@ class PluginOrganizer {
 		delete_option('PO_old_urls_moved');
 		delete_option('PO_old_groups_moved');
 		delete_option('PO_preserve_settings');
+		delete_option('PO_group_members_corrected');
 
 		$postTypeSupport = get_option("PO_custom_post_type_support");
 		if (!is_array($postTypeSupport)) {
@@ -269,8 +264,8 @@ class PluginOrganizer {
 			@unlink(WPMU_PLUGIN_DIR . "/PluginOrganizerMU.class.php");
 		}
 		
-		if (file_exists(WP_PLUGIN_DIR . "/" . plugin_basename(dirname(__FILE__)) . "/PluginOrganizerMU.class.php")) {
-			@copy(WP_PLUGIN_DIR . "/" . plugin_basename(dirname(__FILE__)) . "/PluginOrganizerMU.class.php", WPMU_PLUGIN_DIR . "/PluginOrganizerMU.class.php");
+		if (file_exists($this->pluginDirPath . "/" . plugin_basename(dirname(__FILE__)) . "/PluginOrganizerMU.class.php")) {
+			@copy($this->pluginDirPath . "/" . plugin_basename(dirname(__FILE__)) . "/PluginOrganizerMU.class.php", WPMU_PLUGIN_DIR . "/PluginOrganizerMU.class.php");
 		}
 		
 		if (!is_array(get_option("PO_custom_post_type_support"))) {
@@ -285,8 +280,8 @@ class PluginOrganizer {
 			update_option('PO_disable_plugins', 1);
 		}
 		
-		if (get_option("PO_version_num") != "6.0.4") {
-			update_option("PO_version_num", "6.0.4");
+		if (get_option("PO_version_num") != "6.0.10") {
+			update_option("PO_version_num", "6.0.10");
 		}
 
 		if (get_option('PO_mobile_user_agents') == '' || (is_array(get_option('PO_mobile_user_agents')) && sizeof(get_option('PO_mobile_user_agents')) == 0)) {
@@ -331,14 +326,14 @@ class PluginOrganizer {
 		$newActivePlugins = array();
 		$pluginDisabled = 0;
 		foreach ($activePlugins as $key=>$plugin) {
-			if (file_exists(WP_PLUGIN_DIR . "/" . $plugin)) {
+			if (file_exists($this->pluginDirPath . "/" . $plugin)) {
 				$newActivePlugins[] = $plugin;
 			} else {
 				$pluginDisabled = 1;
 			}
 		}
 		if ($pluginDisabled == 1) {
-			update_option("active_plugins", $plugins);
+			update_option("active_plugins", $newActivePlugins);
 		}
 	}
 	
@@ -401,7 +396,6 @@ class PluginOrganizer {
 	}
 	
 	function admin_menu() {
-		$this->correct_group_members();
 		if ( current_user_can( 'activate_plugins' ) ) {
 			$this->tpl = new PO_Template($this);
 			
@@ -470,7 +464,7 @@ class PluginOrganizer {
 		if ($errMsg != '') {
 			?>
 			<div class="updated" id="PO_admin_notices">
-				<h2>Pugin Organizer is not set up correctly.</h2>
+				<h2>Plugin Organizer is not set up correctly.</h2>
 				<?php _e( $errMsg, 'plugin-organizer' ); ?>
 				<a href="#" id="PO_disable_admin_notices">Disable admin notices</a> - You will still recieve admin notices when you visit the Plugin Organizer settings page.
 			</div>
@@ -505,7 +499,7 @@ class PluginOrganizer {
 			$views = array_reverse($views, true);
 		}
 		foreach ($groups as $group) {
-			$groupMembers = get_post_meta($group->ID, '_PO_group_members', $single=true);
+			$groupMembers = $this->get_group_members($group->ID);
 			if (isset($groupMembers[0]) && $groupMembers[0] != 'EMPTY') {
 				$groupCount = sizeof($groupMembers);
 			} else {
@@ -520,6 +514,25 @@ class PluginOrganizer {
 			$views[$groupName] = '<a href="'.get_admin_url().'plugins.php?PO_group_view='.$group->ID.'">'.$group->post_title.' <span class="count">('.$groupCount.')</span></a> ';
 		}
 		return $views;
+	}
+	
+	function get_group_members($groupID) {
+		$groupMembers = get_post_meta($groupID, '_PO_group_members', $single=true);
+		$allPlugins = get_plugins();
+		$groupCount = sizeof($groupMembers);
+
+		if (isset($groupMembers[0]) && $groupMembers[0] != 'EMPTY') {
+			foreach($groupMembers as $key=>$memberPlugin) {
+				if (!array_key_exists($memberPlugin, $allPlugins)) {
+					unset($groupMembers[$key]);
+				}
+			}
+			if (sizeof($groupMembers) != $groupCount) {
+				update_post_meta($groupID, '_PO_group_members', $groupMembers);
+			}
+		}
+
+		return($groupMembers);
 	}
 	
 	function create_plugin_lists($pluginList, $pluginExludeList) {
@@ -557,7 +570,7 @@ class PluginOrganizer {
 		if (is_array($networkPlugins)) {
 			$networkPluginMissing = 0;
 			foreach($networkPlugins as $key=>$pluginFile) {
-				if (array_search($key, $plugins) === FALSE && file_exists(WP_PLUGIN_DIR . "/" . $key)) {
+				if (array_search($key, $plugins) === FALSE && file_exists($this->pluginDirPath . "/" . $key)) {
 					$plugins[] = $key;
 					$networkPluginMissing = 1;
 				}
@@ -580,15 +593,10 @@ class PluginOrganizer {
 			$plugins = $this->get_active_plugins();
 		
 			$activePlugins = Array();
-			$inactivePlugins = Array();
 			$newPluginList = Array();
 			$activePluginOrder = Array();
 			
-			$globalPlugins = get_option('PO_disabled_plugins');
-			if (!is_array($globalPlugins)) {
-				$globalPlugins = array();
-			}
-			$members = get_post_meta($_REQUEST['PO_group_view'], '_PO_group_members', $single=true);
+			$members = $this->get_group_members($_REQUEST['PO_group_view']);
 			$members = stripslashes_deep($members);
 			foreach ($allPluginList as $key=>$val) {
 				if (is_array($members) && in_array($key, $members)) {
@@ -597,7 +605,7 @@ class PluginOrganizer {
 				}
 			}
 			array_multisort($activePluginOrder, $activePlugins);
-			$newPluginList = array_merge($activePlugins, $inactivePlugins);
+			$newPluginList = $activePlugins;
 		} else {
 			$newPluginList = $allPluginList;
 		}
@@ -624,11 +632,6 @@ class PluginOrganizer {
 		$newPluginList = Array();
 		$activePluginOrder = Array();
 		
-		$globalPlugins = get_option('PO_disabled_plugins');
-		if (!is_array($globalPlugins)) {
-			$globalPlugins = array();
-		}
-		
 		foreach ($allPluginList as $key=>$val) {
 			if (in_array($key, $plugins)) {
 				$activePlugins[$key] = $val;
@@ -653,11 +656,8 @@ class PluginOrganizer {
 		global $wpdb;
 		switch ($column_name) {
 			case 'PO_PF_permalink' :
-				$postSettingsQuery = "SELECT * FROM ".$wpdb->prefix."PO_plugins WHERE post_id = %d";
-				$postSettings = $wpdb->get_row($wpdb->prepare($postSettingsQuery, $post_id), ARRAY_A);
-				if (isset($postSettings['permalink'])) {
-					print $postSettings['permalink'];
-				}
+				$postSettingsQuery = "SELECT permalink FROM ".$wpdb->prefix."po_plugins WHERE post_id = %d";
+				print $wpdb->get_var($wpdb->prepare($postSettingsQuery, $post_id));
 				break;
 			default:
 		}
@@ -676,7 +676,7 @@ class PluginOrganizer {
 				$groups = get_posts(array('post_type'=>'plugin_group', 'posts_per_page'=>-1));
 				$assignedGroups = "";
 				foreach ($groups as $group) {
-					$members = get_post_meta($group->ID, '_PO_group_members', $single=true);
+					$members = $this->get_group_members($group->ID);
 					$members = stripslashes_deep($members);
 					if (is_array($members) && array_search($pluginPath, $members) !== FALSE) {
 						$assignedGroups .= '<a href="'.get_admin_url().'plugins.php?PO_group_view='.$group->ID.'">'.$group->post_title.'</a> ,';
@@ -751,12 +751,12 @@ class PluginOrganizer {
 			$permalinkHash = md5($permalink);
 			if (get_option('PO_ignore_protocol') == '0') {
 		
-				$fuzzyPostQuery = "SELECT * FROM ".$wpdb->prefix."PO_plugins WHERE ".$permalinkSearchField." = %s AND status IN ('publish','private') AND secure = %d AND children = 1 AND post_id != %d";
+				$fuzzyPostQuery = "SELECT * FROM ".$wpdb->prefix."po_plugins WHERE ".$permalinkSearchField." = %s AND status IN ('publish','private') AND secure = %d AND children = 1 AND post_id != %d";
 				$fuzzyPost = $wpdb->get_results($wpdb->prepare($fuzzyPostQuery, $permalinkHash, $secure, $currID), ARRAY_A);
 				$matchFound = (sizeof($fuzzyPost) > 0)? 1:$matchFound;
 				
 			} else {
-				$fuzzyPostQuery = "SELECT * FROM ".$wpdb->prefix."PO_plugins WHERE ".$permalinkSearchField." = %s AND status IN ('publish','private') AND children = 1 AND post_id != %d";
+				$fuzzyPostQuery = "SELECT * FROM ".$wpdb->prefix."po_plugins WHERE ".$permalinkSearchField." = %s AND status IN ('publish','private') AND children = 1 AND post_id != %d";
 				$fuzzyPost = $wpdb->get_results($wpdb->prepare($fuzzyPostQuery, $permalinkHash, $currID), ARRAY_A);
 				
 				$matchFound = (sizeof($fuzzyPost) > 0)? 1:$matchFound;
@@ -819,7 +819,7 @@ class PluginOrganizer {
 	function find_duplicate_permalinks($postID, $permalink) {
 		global $wpdb;
 		$returnDup = array();
-		$dupPostQuery = "SELECT post_id FROM ".$wpdb->prefix."PO_plugins WHERE permalink = %s and post_id != %d and post_type='plugin_filter' and status != 'trash'";
+		$dupPostQuery = "SELECT post_id FROM ".$wpdb->prefix."po_plugins WHERE permalink = %s and post_id != %d and post_type='plugin_filter' and status != 'trash'";
 		$dupPosts = $wpdb->get_results($wpdb->prepare($dupPostQuery, $permalink, $postID), ARRAY_A);
 		if (sizeOf($dupPosts) > 0) {
 			foreach ($dupPosts as $dup) {
@@ -877,7 +877,7 @@ class PluginOrganizer {
 			return $post_id;
 		}
 
-		$postExists = ($wpdb->get_var($wpdb->prepare("SELECT count(*) FROM ".$wpdb->prefix."PO_plugins WHERE post_id=%d", $post_id)) > 0) ? 1 : 0;
+		$postExists = ($wpdb->get_var($wpdb->prepare("SELECT count(*) FROM ".$wpdb->prefix."po_plugins WHERE post_id=%d", $post_id)) > 0) ? 1 : 0;
 		
 		if (isset($_POST['affectChildren'])) {
 			$affectChildren = 1;
@@ -1012,12 +1012,12 @@ class PluginOrganizer {
 		
 		if (sizeof($enabledPlugins) > 0 || sizeof($disabledPlugins) > 0 || sizeof($enabledMobilePlugins) > 0 || sizeof($disabledMobilePlugins) > 0 || sizeof($enabledGroups) > 0 || sizeof($disabledGroups) > 0 || sizeof($enabledMobileGroups) > 0 || sizeof($disabledMobileGroups) > 0 || get_post_type($post_id) == "plugin_filter" || $ptOverride == 1) {
 			if ($postExists == 1) {
-				$wpdb->update($wpdb->prefix."PO_plugins", array("permalink"=>$permalink, "permalink_hash"=>md5($permalinkNoArgs), "permalink_hash_args"=>md5($permalink), "children"=>$affectChildren, "pt_override"=>$ptOverride, "enabled_plugins"=>serialize($enabledPlugins), "disabled_plugins"=>serialize($disabledPlugins), "enabled_mobile_plugins"=>serialize($enabledMobilePlugins), "disabled_mobile_plugins"=>serialize($disabledMobilePlugins), "enabled_groups"=>serialize($enabledGroups), "disabled_groups"=>serialize($disabledGroups), "enabled_mobile_groups"=>serialize($enabledMobileGroups), "disabled_mobile_groups"=>serialize($disabledMobileGroups), "secure"=>$secure, "post_type"=>get_post_type($post_id), "status"=>$postStatus), array("post_id"=>$post_id));
+				$wpdb->update($wpdb->prefix."po_plugins", array("permalink"=>$permalink, "permalink_hash"=>md5($permalinkNoArgs), "permalink_hash_args"=>md5($permalink), "children"=>$affectChildren, "pt_override"=>$ptOverride, "enabled_plugins"=>serialize($enabledPlugins), "disabled_plugins"=>serialize($disabledPlugins), "enabled_mobile_plugins"=>serialize($enabledMobilePlugins), "disabled_mobile_plugins"=>serialize($disabledMobilePlugins), "enabled_groups"=>serialize($enabledGroups), "disabled_groups"=>serialize($disabledGroups), "enabled_mobile_groups"=>serialize($enabledMobileGroups), "disabled_mobile_groups"=>serialize($disabledMobileGroups), "secure"=>$secure, "post_type"=>get_post_type($post_id), "status"=>$postStatus), array("post_id"=>$post_id));
 			} else {
-				$wpdb->insert($wpdb->prefix."PO_plugins", array("post_id"=>$post_id, "permalink"=>$permalink, "permalink_hash"=>md5($permalinkNoArgs), "permalink_hash_args"=>md5($permalink), "children"=>$affectChildren, "pt_override"=>$ptOverride, "enabled_plugins"=>serialize($enabledPlugins), "disabled_plugins"=>serialize($disabledPlugins), "enabled_mobile_plugins"=>serialize($enabledMobilePlugins), "disabled_mobile_plugins"=>serialize($disabledMobilePlugins), "enabled_groups"=>serialize($enabledGroups), "disabled_groups"=>serialize($disabledGroups), "enabled_mobile_groups"=>serialize($enabledMobileGroups), "disabled_mobile_groups"=>serialize($disabledMobileGroups), "secure"=>$secure, "post_type"=>get_post_type($post_id), "status"=>$postStatus));
+				$wpdb->insert($wpdb->prefix."po_plugins", array("post_id"=>$post_id, "permalink"=>$permalink, "permalink_hash"=>md5($permalinkNoArgs), "permalink_hash_args"=>md5($permalink), "children"=>$affectChildren, "pt_override"=>$ptOverride, "enabled_plugins"=>serialize($enabledPlugins), "disabled_plugins"=>serialize($disabledPlugins), "enabled_mobile_plugins"=>serialize($enabledMobilePlugins), "disabled_mobile_plugins"=>serialize($disabledMobilePlugins), "enabled_groups"=>serialize($enabledGroups), "disabled_groups"=>serialize($disabledGroups), "enabled_mobile_groups"=>serialize($enabledMobileGroups), "disabled_mobile_groups"=>serialize($disabledMobileGroups), "secure"=>$secure, "post_type"=>get_post_type($post_id), "status"=>$postStatus));
 			}
 		} else if ($postExists == 1) {
-			$deletePluginQuery = "DELETE FROM ".$wpdb->prefix."PO_plugins WHERE post_id = %d";
+			$deletePluginQuery = "DELETE FROM ".$wpdb->prefix."po_plugins WHERE post_id = %d";
 			$wpdb->query($wpdb->prepare($deletePluginQuery, $post_id));
 		}
 	}
@@ -1095,7 +1095,7 @@ class PluginOrganizer {
 			return $post_id;
 		}
 		if (is_numeric($post_id)) {
-			$deletePluginQuery = "DELETE FROM ".$wpdb->prefix."PO_plugins WHERE post_id = %d";
+			$deletePluginQuery = "DELETE FROM ".$wpdb->prefix."po_plugins WHERE post_id = %d";
 			$wpdb->query($wpdb->prepare($deletePluginQuery, $post_id));
 		}
 	}
@@ -1302,7 +1302,7 @@ class PluginOrganizer {
 
 	function update_post_status($newStatus, $oldStatus, $post) {
 		global $wpdb;
-		$wpdb->update($wpdb->prefix."PO_plugins", array("status"=>$newStatus), array("post_id"=>$post->ID));
+		$wpdb->update($wpdb->prefix."po_plugins", array("status"=>$newStatus), array("post_id"=>$post->ID));
 	}
 
 	function fix_trailng_slash($permalink) {

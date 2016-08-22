@@ -303,7 +303,7 @@ class PO_Ajax {
 				$postStatus = 'publish';
 			}
 
-			$ptOverride = $wpdb->get_var($wpdb->prepare("SELECT pt_override FROM ".$wpdb->prefix."PO_plugins WHERE post_id=%d", $post->ID));
+			$ptOverride = $wpdb->get_var($wpdb->prepare("SELECT pt_override FROM ".$wpdb->prefix."po_plugins WHERE post_id=%d", $post->ID));
 
 			$secure=0;
 			if (preg_match('/^.{1,5}:\/\//', get_permalink($post->ID), $matches)) {
@@ -320,9 +320,9 @@ class PO_Ajax {
 			$permalinkNoArgs = preg_replace('/\?.*$/', '', $permalink);
 		
 			if ($ptOverride == '0') {
-				$wpdb->update($wpdb->prefix."PO_plugins", array("permalink"=>$permalink, "permalink_hash"=>md5($permalinkNoArgs), "permalink_hash_args"=>md5($permalink), "enabled_plugins"=>serialize($submittedPlugins[1]), "disabled_plugins"=>serialize($submittedPlugins[0]), "enabled_mobile_plugins"=>serialize($submittedPlugins[3]), "disabled_mobile_plugins"=>serialize($submittedPlugins[2]), "enabled_groups"=>serialize($submittedPlugins[5]), "disabled_groups"=>serialize($submittedPlugins[4]), "enabled_mobile_groups"=>serialize($submittedPlugins[7]), "disabled_mobile_groups"=>serialize($submittedPlugins[6]), "secure"=>$secure, "post_type"=>get_post_type($post->ID), "status"=>$postStatus), array("post_id"=>$post->ID));
+				$wpdb->update($wpdb->prefix."po_plugins", array("permalink"=>$permalink, "permalink_hash"=>md5($permalinkNoArgs), "permalink_hash_args"=>md5($permalink), "enabled_plugins"=>serialize($submittedPlugins[1]), "disabled_plugins"=>serialize($submittedPlugins[0]), "enabled_mobile_plugins"=>serialize($submittedPlugins[3]), "disabled_mobile_plugins"=>serialize($submittedPlugins[2]), "enabled_groups"=>serialize($submittedPlugins[5]), "disabled_groups"=>serialize($submittedPlugins[4]), "enabled_mobile_groups"=>serialize($submittedPlugins[7]), "disabled_mobile_groups"=>serialize($submittedPlugins[6]), "secure"=>$secure, "post_type"=>get_post_type($post->ID), "status"=>$postStatus), array("post_id"=>$post->ID));
 			} else if ($ptOverride == '') {
-				$wpdb->insert($wpdb->prefix."PO_plugins", array("post_id"=>$post->ID, "permalink"=>$permalink, "permalink_hash"=>md5($permalinkNoArgs), "permalink_hash_args"=>md5($permalink), "enabled_plugins"=>serialize($submittedPlugins[1]), "disabled_plugins"=>serialize($submittedPlugins[0]), "enabled_mobile_plugins"=>serialize($submittedPlugins[3]), "disabled_mobile_plugins"=>serialize($submittedPlugins[2]), "enabled_groups"=>serialize($submittedPlugins[5]), "disabled_groups"=>serialize($submittedPlugins[4]), "enabled_mobile_groups"=>serialize($submittedPlugins[7]), "disabled_mobile_groups"=>serialize($submittedPlugins[6]), "secure"=>$secure, "post_type"=>get_post_type($post->ID), "status"=>$postStatus));
+				$wpdb->insert($wpdb->prefix."po_plugins", array("post_id"=>$post->ID, "permalink"=>$permalink, "permalink_hash"=>md5($permalinkNoArgs), "permalink_hash_args"=>md5($permalink), "enabled_plugins"=>serialize($submittedPlugins[1]), "disabled_plugins"=>serialize($submittedPlugins[0]), "enabled_mobile_plugins"=>serialize($submittedPlugins[3]), "disabled_mobile_plugins"=>serialize($submittedPlugins[2]), "enabled_groups"=>serialize($submittedPlugins[5]), "disabled_groups"=>serialize($submittedPlugins[4]), "enabled_mobile_groups"=>serialize($submittedPlugins[7]), "disabled_mobile_groups"=>serialize($submittedPlugins[6]), "secure"=>$secure, "post_type"=>get_post_type($post->ID), "status"=>$postStatus));
 			}
 		}
 		
@@ -391,9 +391,9 @@ class PO_Ajax {
 		if (isset($_POST['PO_reset_all_pt']) && $_POST['PO_reset_all_pt'] == "1") {
 			$allPosts = get_posts(array('post_type'=>$postType, 'posts_per_page'=>-1));
 			foreach($allPosts as $post) {
-				$ptOverride = $wpdb->get_var($wpdb->prepare("SELECT pt_override FROM ".$wpdb->prefix."PO_plugins WHERE post_id=%d", $post->ID));
+				$ptOverride = $wpdb->get_var($wpdb->prepare("SELECT pt_override FROM ".$wpdb->prefix."po_plugins WHERE post_id=%d", $post->ID));
 				if ($ptOverride == '0') {
-					$wpdb->delete($wpdb->prefix."PO_plugins", array("post_id"=>$post->ID));
+					$wpdb->delete($wpdb->prefix."po_plugins", array("post_id"=>$post->ID));
 				}
 			}
 			print "<br />Plugin settings were also reset on each " . $postType . ".<br />";
@@ -423,7 +423,7 @@ class PO_Ajax {
 			print "You dont have permissions to access this page.";
 			die();
 		}
-		$postIDsQuery = "SELECT post_id FROM ".$wpdb->prefix."PO_plugins WHERE post_type != 'plugin_filter'";
+		$postIDsQuery = "SELECT post_id FROM ".$wpdb->prefix."po_plugins WHERE post_type != 'plugin_filter'";
 		$postIDs = $wpdb->get_results($postIDsQuery, ARRAY_A);
 		foreach ($postIDs as $postID) {
 			$post = get_post($postID['post_id']);
@@ -440,16 +440,16 @@ class PO_Ajax {
 				}
 				$permalink = preg_replace('/^.{1,5}:\/\//', '', get_permalink($post->ID));
 				
-				if ($permalink != $wpdb->get_var("SELECT permalink FROM ".$wpdb->prefix."PO_plugins WHERE post_id=".$post->ID)) {
+				if ($permalink != $wpdb->get_var("SELECT permalink FROM ".$wpdb->prefix."po_plugins WHERE post_id=".$post->ID)) {
 					
-					if ($wpdb->get_var("SELECT count(*) FROM ".$wpdb->prefix."PO_plugins WHERE post_id=".$post->ID) > 0) {
-						if($wpdb->update($wpdb->prefix."PO_plugins", array('permalink'=>$permalink, 'permalink_hash'=>md5($permalink), 'permalink_hash_args'=>md5($permalink), 'secure'=>$secure), array("post_id"=>$post->ID))) {
+					if ($wpdb->get_var("SELECT count(*) FROM ".$wpdb->prefix."po_plugins WHERE post_id=".$post->ID) > 0) {
+						if($wpdb->update($wpdb->prefix."po_plugins", array('permalink'=>$permalink, 'permalink_hash'=>md5($permalink), 'permalink_hash_args'=>md5($permalink), 'secure'=>$secure), array("post_id"=>$post->ID))) {
 							$updatedCount++;
 						} else {
 							$failedCount++;
 						}
 					} else {
-						if ($wpdb->insert($wpdb->prefix."PO_plugins", array("enabled_mobile_plugins"=>serialize(array()), "disabled_mobile_plugins"=>serialize(array()), "enabled_plugins"=>serialize(array()), "disabled_plugins"=>serialize(array()), "post_type"=>get_post_type($post->ID), "permalink"=>$permalink, "permalink_hash"=>md5($permalink), "permalink_hash_args"=>md5($permalink), "children"=>0, "secure"=>$secure, "post_id"=>$post->ID))) {
+						if ($wpdb->insert($wpdb->prefix."po_plugins", array("enabled_mobile_plugins"=>serialize(array()), "disabled_mobile_plugins"=>serialize(array()), "enabled_plugins"=>serialize(array()), "disabled_plugins"=>serialize(array()), "post_type"=>get_post_type($post->ID), "permalink"=>$permalink, "permalink_hash"=>md5($permalink), "permalink_hash_args"=>md5($permalink), "children"=>0, "secure"=>$secure, "post_id"=>$post->ID))) {
 							$updatedCount++;
 						} else {
 							$failedCount++;
@@ -464,14 +464,14 @@ class PO_Ajax {
 		}
 
 		if ($oldSiteAddress != "" && $newSiteAddress != "") {
-			$filterQuery = "SELECT * FROM ".$wpdb->prefix."PO_plugins WHERE post_type = 'plugin_filter'";
+			$filterQuery = "SELECT * FROM ".$wpdb->prefix."po_plugins WHERE post_type = 'plugin_filter'";
 			$filters = $wpdb->get_results($filterQuery, ARRAY_A);
 			foreach ($filters as $filter) {
 				$filterObject = get_post($filter['post_id']);
 				if (!is_null($filterObject)) {
 					if (preg_match('/^'.$oldSiteAddress.'/', $filter['permalink'])) {
 						$permalink = preg_replace("/^".$oldSiteAddress."/", "".$newSiteAddress."", $filter['permalink']);
-						if ($wpdb->update($wpdb->prefix."PO_plugins", array('permalink'=>$permalink, 'permalink_hash'=>md5($permalink), 'permalink_hash_args'=>md5($permalink)), array("post_id"=>$filter['post_id']))) {
+						if ($wpdb->update($wpdb->prefix."po_plugins", array('permalink'=>$permalink, 'permalink_hash'=>md5($permalink), 'permalink_hash_args'=>md5($permalink)), array("post_id"=>$filter['post_id']))) {
 							$updatedCount++;
 						} else {
 							$failedCount++;
@@ -516,9 +516,9 @@ class PO_Ajax {
 			if (!file_exists(WPMU_PLUGIN_DIR)) {
 				@mkdir(WPMU_PLUGIN_DIR);
 			}
-			if (file_exists(WP_PLUGIN_DIR . "/" . plugin_basename(dirname(__FILE__)) . "/PluginOrganizerMU.class.php")) {
+			if (file_exists($this->PO->pluginDirPath . "/" . plugin_basename(dirname(__FILE__)) . "/PluginOrganizerMU.class.php")) {
 				@unlink(WPMU_PLUGIN_DIR . "/PluginOrganizerMU.class.php");
-				@copy(WP_PLUGIN_DIR . "/" . plugin_basename(dirname(__FILE__)) . "/PluginOrganizerMU.class.php", WPMU_PLUGIN_DIR . "/PluginOrganizerMU.class.php");
+				@copy($this->PO->pluginDirPath . "/" . plugin_basename(dirname(__FILE__)) . "/PluginOrganizerMU.class.php", WPMU_PLUGIN_DIR . "/PluginOrganizerMU.class.php");
 			}
 			if (file_exists(WPMU_PLUGIN_DIR . "/PluginOrganizerMU.class.php")) {
 				$result = "The MU plugin component has been moved to the mu-plugins folder.";
@@ -722,8 +722,8 @@ class PO_Ajax {
 		}
 
 		if (is_numeric($_POST['postID'])) {
-			if ($wpdb->get_var($wpdb->prepare("SELECT count(*) FROM ".$wpdb->prefix."PO_plugins WHERE post_id=%d", $_POST['postID'])) > 0) {
-				$deletePluginQuery = "DELETE FROM ".$wpdb->prefix."PO_plugins WHERE post_id = %d";
+			if ($wpdb->get_var($wpdb->prepare("SELECT count(*) FROM ".$wpdb->prefix."po_plugins WHERE post_id=%d", $_POST['postID'])) > 0) {
+				$deletePluginQuery = "DELETE FROM ".$wpdb->prefix."po_plugins WHERE post_id = %d";
 				print $wpdb->query($wpdb->prepare($deletePluginQuery, $_POST['postID']));
 			} else {
 				print -1;
@@ -837,7 +837,7 @@ class PO_Ajax {
 		$groups = get_posts(array('post_type'=>'plugin_group', 'posts_per_page'=>-1));
 		$assignedGroups = "";
 		foreach($groups as $group) {
-			$members = get_post_meta($group->ID, '_PO_group_members', $single=true);
+			$members = $this->PO->get_group_members($group->ID);
 			$members = stripslashes_deep($members);
 			if (is_array($members) && array_search($_POST['PO_plugin_path'], $members) !== FALSE) {
 				$assignedGroups .= '<a href="'.get_admin_url().'plugins.php?PO_group_view='.$group->ID.'">'.$group->post_title.'</a><br /><hr>';
@@ -858,8 +858,8 @@ class PO_Ajax {
 	}
 	
 	function custom_sort_plugins($a, $b) { 
-		$aData = get_plugin_data(WP_PLUGIN_DIR.'/'.$a);
-		$bData = get_plugin_data(WP_PLUGIN_DIR.'/'.$b);
+		$aData = get_plugin_data($this->PO->pluginDirPath.'/'.$a);
+		$bData = get_plugin_data($this->PO->pluginDirPath.'/'.$b);
 		return strcasecmp($aData['Name'], $bData['Name']);
 	}
 }

@@ -3,7 +3,7 @@
 Plugin Name: Plugin Organizer MU
 Plugin URI: http://www.jsterup.com
 Description: A plugin for specifying the load order of your plugins.
-Version: 6.0.4
+Version: 6.0.10
 Author: Jeff Sterup
 Author URI: http://www.jsterup.com
 License: GPL2
@@ -33,7 +33,7 @@ class PluginOrganizerMU {
 				$newPluginList = $GLOBALS["PO_CACHED_PLUGIN_LIST"];
 			} else {
 				$this->set_requested_permalink();
-				if (get_option("PO_version_num") != "6.0.4" && !is_admin()) {
+				if (get_option("PO_version_num") != "6.0.10" && !is_admin()) {
 					$newPluginList = $pluginList;
 					update_option("PO_disable_plugins", "0");
 					update_option("PO_admin_disable_plugins", "0");
@@ -70,11 +70,11 @@ class PluginOrganizerMU {
 					if (sizeof($disabledPlugins) == 0 && sizeof($enabledPlugins) == 0 && sizeof($disabledGroups) == 0 && sizeof($enabledGroups) == 0) {
 						
 						if ($this->ignoreProtocol == '0') {
-							$requestedPostQuery = "SELECT * FROM ".$wpdb->prefix."PO_plugins WHERE ".$this->permalinkSearchField." = %s AND status IN ('publish','private') AND secure = %d AND post_type IN ([IN])";
+							$requestedPostQuery = "SELECT * FROM ".$wpdb->prefix."po_plugins WHERE ".$this->permalinkSearchField." = %s AND status IN ('publish','private') AND secure = %d AND post_type IN ([IN])";
 							$requestedPostQuery = $wpdb->prepare($requestedPostQuery, $this->requestedPermalinkHash, $this->secure);
 							$requestedPost = $wpdb->get_results($this->prepare_in($requestedPostQuery, $this->postTypeSupport), ARRAY_A);
 						} else {
-							$requestedPostQuery = "SELECT * FROM ".$wpdb->prefix."PO_plugins WHERE ".$this->permalinkSearchField." = %s AND status IN ('publish','private') AND post_type IN ([IN])";
+							$requestedPostQuery = "SELECT * FROM ".$wpdb->prefix."po_plugins WHERE ".$this->permalinkSearchField." = %s AND status IN ('publish','private') AND post_type IN ([IN])";
 							$requestedPostQuery = $wpdb->prepare($requestedPostQuery, $this->requestedPermalinkHash);
 							$requestedPost = $wpdb->get_results($this->prepare_in($requestedPostQuery, $this->postTypeSupport), ARRAY_A);
 						}
@@ -126,13 +126,13 @@ class PluginOrganizerMU {
 							$this->requestedPermalinkHash = md5($this->requestedPermalink);
 							if ($this->ignoreProtocol == '0') {
 						
-								$fuzzyPostQuery = "SELECT * FROM ".$wpdb->prefix."PO_plugins WHERE ".$this->permalinkSearchField." = %s AND status IN ('publish','private') AND secure = %d AND children = 1 AND post_type IN ([IN])";
+								$fuzzyPostQuery = "SELECT * FROM ".$wpdb->prefix."po_plugins WHERE ".$this->permalinkSearchField." = %s AND status IN ('publish','private') AND secure = %d AND children = 1 AND post_type IN ([IN])";
 								$fuzzyPostQuery = $wpdb->prepare($fuzzyPostQuery, $this->requestedPermalinkHash, $this->secure);
 								$fuzzyPost = $wpdb->get_results($this->prepare_in($fuzzyPostQuery, $this->postTypeSupport), ARRAY_A);
 								$matchFound = (sizeof($fuzzyPost) > 0)? 1:$matchFound;
 								
 							} else {
-								$fuzzyPostQuery = "SELECT * FROM ".$wpdb->prefix."PO_plugins WHERE ".$this->permalinkSearchField." = %s AND status IN ('publish','private') AND children = 1 AND post_type IN ([IN])";
+								$fuzzyPostQuery = "SELECT * FROM ".$wpdb->prefix."po_plugins WHERE ".$this->permalinkSearchField." = %s AND status IN ('publish','private') AND children = 1 AND post_type IN ([IN])";
 								$fuzzyPostQuery = $wpdb->prepare($fuzzyPostQuery, $this->requestedPermalinkHash);
 								$fuzzyPost = $wpdb->get_results($this->prepare_in($fuzzyPostQuery, $this->postTypeSupport), ARRAY_A);
 								

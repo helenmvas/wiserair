@@ -229,7 +229,7 @@ class PO_Template {
 		$this->common_js();
 		if ($post->ID != "" && is_numeric($post->ID)) {
 			$filterName = $post->post_title;
-			$postSettingsQuery = "SELECT * FROM ".$wpdb->prefix."PO_plugins WHERE post_id = %d";
+			$postSettingsQuery = "SELECT * FROM ".$wpdb->prefix."po_plugins WHERE post_id = %d";
 			$postSettings = $wpdb->get_row($wpdb->prepare($postSettingsQuery, $post->ID), ARRAY_A);
 			
 			$affectChildren = $postSettings['children'];

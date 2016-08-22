@@ -4,7 +4,7 @@ if (!defined('DB_NAME'))
 
 class wp_noexternallinks_admin extends wp_noexternallinks
 {
-    function wp_noexternallinks_admin()
+    function __construct()
     {
         $this->init_lang();
         $this->load_options();
@@ -27,7 +27,8 @@ class wp_noexternallinks_admin extends wp_noexternallinks
             if (!current_user_can('edit_post', $post_id))
                 return $post_id;
         }
-        update_post_meta($post_id, 'wp_noextrenallinks_mask_links', $_REQUEST['wp_noextrenallinks_mask_links']);
+        $mask = (int)$_REQUEST['wp_noextrenallinks_mask_links'];
+        update_post_meta($post_id, 'wp_noextrenallinks_mask_links', $mask);
     }
 
     function add_custom_box($page, $context)
@@ -83,21 +84,27 @@ class wp_noexternallinks_admin extends wp_noexternallinks
         );
     }
 
+    function get_admin_page()
+    {
+        return get_admin_url(null, 'options-general.php?page=wp-noexternallinks%2Fwp-noexternallinks-options.php');
+    }
+
     function show_navi()
     {
+        $page = $this->get_admin_page();
         if ($_REQUEST['action'] == 'stats') {
             ?>
-            <a href="?page=<?php echo $_REQUEST['page']; ?>"
+            <a href="<?php echo $page ?>"
                class="button-primary"><?php _e('View options', 'wp-noexternallinks'); ?></a>
         <?php } else { ?>
-            <a href="?page=<?php echo $_REQUEST['page']; ?>&action=stats"
+            <a href="<?php echo $page; ?>&action=stats"
                class="button-primary"><?php _e('View Stats', 'wp-noexternallinks'); ?></a>
         <?php } ?>
         <a href="http://jehy.ru/articles/2008/10/05/wordpress-plugin-no-external-links/"
            class="button-primary"><?php _e('Feedback', 'wp-noexternallinks'); ?></a>
         <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=EE8RM4N7BSNZ6"
            class="button-primary"><?php _e('Donate', 'wp-noexternallinks'); ?></a>
-    <?php
+        <?php
     }
 
     function view_stats()
@@ -105,7 +112,7 @@ class wp_noexternallinks_admin extends wp_noexternallinks
         global $wpdb;
         ?>
         <form method="post" action="">
-        <input type="hidden" name="page" value="<?php echo $_REQUEST['page']; ?>">
+        <input type="hidden" name="page" value="wp-noexternallinks%2Fwp-noexternallinks-options.php">
         <?php wp_nonce_field('update-options');
         $this->show_navi(); ?><br><br>
         <?php
@@ -166,8 +173,8 @@ class wp_noexternallinks_admin extends wp_noexternallinks
             <?php echo __('If you need to mask links in posts`s custom field, take a look at', 'wp-noexternallinks') . ' <a href="http://jehy.ru/articles/2015/03/06/masking-links-in-custom-fields-with-wp-noexternallinks/">' . __('this article.', 'wp-noexternallinks') . '</a>.'; ?>
         </p>
         <form method="post" action="">
-            <?php wp_nonce_field('update-options');
-            $this->show_navi();?>
+            <?php wp_nonce_field('wp-noexternallinks', 'update-options');
+            $this->show_navi(); ?>
             <br>
             <?php echo '<h2>' . __('Global links masking settings', 'wp-noexternallinks') . '</h2>' . '(' . __('You can also disable plugin on per-post basis', 'wp-noexternallinks') . ')'; ?>
             <br><br>
@@ -189,7 +196,7 @@ class wp_noexternallinks_admin extends wp_noexternallinks
             ?><input type="submit" name="submit" value="<?php _e('Save Changes', 'wp-noexternallinks') ?>"
                      class="button-primary"/>
         </form>
-    <?php
+        <?php
     }
 
     function show_option_group($opt, $name)
@@ -220,8 +227,10 @@ class wp_noexternallinks_admin extends wp_noexternallinks
     function admin_options()
     {
         echo '<div class="wrap"><h2>WP-NoExternalLinks</h2>';
-        if ($_REQUEST['submit'])
+        if ($_REQUEST['submit']) {
+            check_admin_referer('wp-noexternallinks', 'update-options');
             $this->update();
+        }
         if ($_REQUEST['action'] == 'stats')
             $this->view_stats();
         else
