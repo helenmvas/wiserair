@@ -1371,7 +1371,8 @@ function remove_accents( $string ) {
  * operating systems and special characters requiring special escaping
  * to manipulate at the command line. Replaces spaces and consecutive
  * dashes with a single dash. Trims period, dash and underscore from beginning
- * and end of filename.
+ * and end of filename. It is not guaranteed that this function will return a
+ * filename that is allowed to be uploaded.
  *
  * @since 2.1.0
  *
@@ -1395,6 +1396,14 @@ function sanitize_file_name( $filename ) {
 	$filename = str_replace( array( '%20', '+' ), '-', $filename );
 	$filename = preg_replace( '/[\r\n\t -]+/', '-', $filename );
 	$filename = trim( $filename, '.-_' );
+
+	if ( false === strpos( $filename, '.' ) ) {
+		$mime_types = wp_get_mime_types();
+		$filetype = wp_check_filetype( 'test.' . $filename, $mime_types );
+		if ( $filetype['ext'] === $filename ) {
+			$filename = 'unnamed-file.' . $filetype['ext'];
+		}
+	}
 
 	// Split the filename into a base and extension[s]
 	$parts = explode('.', $filename);
@@ -4251,18 +4260,21 @@ function wp_strip_all_tags($string, $remove_breaks = false) {
 }
 
 /**
- * Sanitize a string from user input or from the db
+ * Sanitizes a string from user input or from the database.
  *
- * check for invalid UTF-8,
- * Convert single < characters to entity,
- * strip all tags,
- * remove line breaks, tabs and extra white space,
- * strip octets.
+ * - Checks for invalid UTF-8,
+ * - Converts single `<` characters to entities
+ * - Strips all tags
+ * - Removes line breaks, tabs, and extra whitespace
+ * - Strips octets
  *
  * @since 2.9.0
  *
- * @param string $str
- * @return string
+ * @see wp_check_invalid_utf8()
+ * @see wp_strip_all_tags()
+ *
+ * @param string $str String to sanitize.
+ * @return string Sanitized string.
  */
 function sanitize_text_field( $str ) {
 	$filtered = wp_check_invalid_utf8( $str );
