@@ -60,21 +60,23 @@ class WP_Customize_Site_Icon_Control extends WP_Customize_Cropped_Image_Control 
 		</label>
 
 		<# if ( data.attachment && data.attachment.id ) { #>
+		<# if ( data.attachment.sizes ) { #>
 		<div class="current">
 			<div class="container">
 				<div class="site-icon-preview">
 					<div class="favicon-preview">
-						<img src="<?php echo esc_url( admin_url( 'images/browser.png' ) ); ?>" class="browser-preview" width="182" alt="<?php esc_attr_e( 'Browser interface preview' ); ?>" />
+						<img src="<?php echo esc_url( admin_url( 'images/browser.png' ) ); ?>" class="browser-preview" width="182" alt="" />
 
 						<div class="favicon">
 							<img id="preview-favicon" src="{{ data.attachment.sizes.full.url }}" alt="<?php esc_attr_e( 'Preview as a browser icon' ); ?>"/>
 						</div>
-						<span class="browser-title"><?php bloginfo( 'name' ); ?></span>
+						<span class="browser-title" aria-hidden="true"><?php bloginfo( 'name' ); ?></span>
 					</div>
 					<img class="app-icon-preview" src="{{ data.attachment.sizes.full.url }}" alt="<?php esc_attr_e( 'Preview as an app icon' ); ?>"/>
 				</div>
 			</div>
 		</div>
+		<# } #>
 		<div class="actions">
 			<# if ( data.canUpload ) { #>
 				<button type="button" class="button remove-button"><?php echo $this->button_labels['remove']; ?></button>

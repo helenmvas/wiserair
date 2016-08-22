@@ -268,7 +268,7 @@ function is_tag( $tag = '' ) {
 }
 
 /**
- * Is the query for an existing taxonomy archive page?
+ * Is the query for an existing custom taxonomy archive page?
  *
  * If the $taxonomy parameter is specified, this function will additionally
  * check if the query is for that specific $taxonomy.
@@ -276,6 +276,8 @@ function is_tag( $tag = '' ) {
  * If the $term parameter is specified in addition to the $taxonomy parameter,
  * this function will additionally check if the query is for one of the terms
  * specified.
+ *
+ * Returns false for built-in taxonomies (category and tag archives).
  *
  * @since 2.5.0
  *
@@ -1468,6 +1470,7 @@ class WP_Query {
 	 * @since 4.5.0 Removed the `$comments_popup` parameter.
 	 *              Introduced the `$comment_status` and `$ping_status` parameters.
 	 *              Introduced `RAND(x)` syntax for `$orderby`, which allows an integer seed value to random sorts.
+	 * @since 4.6.0 Added 'post_name__in' support for `$orderby`.
 	 * @access public
 	 *
 	 * @param string|array $query {
@@ -1523,7 +1526,8 @@ class WP_Query {
 	 *                                                 'title', 'modified', 'menu_order', 'parent', 'ID', 'rand',
 	 *                                                 'RAND(x)' (where 'x' is an integer seed value),
 	 *                                                 'comment_count', 'meta_value', 'meta_value_num', 'post__in',
-	 *                                                 and the array keys of `$meta_query`.
+	 *                                                 'post_name__in', 'post_parent__in', and the array keys
+	 *                                                 of `$meta_query`.
 	 *     @type int          $p                       Post ID.
 	 *     @type int          $page                    Show the number of posts that would show up on page X of a
 	 *                                                 static front page.
@@ -2354,7 +2358,8 @@ class WP_Query {
                 $orderbyfields = $orderbyfields . ", $wpdb->posts.{$orderby}";
 				break;
 			case 'rand':
-				$orderby_clause = 'NEWID()';
+				$orderby_clause = 'randid';
+				$orderbyfields = $orderbyfields . ", NEWID() as randid";
 				break;
 			case $primary_meta_key:
 			case 'meta_value':
@@ -2743,7 +2748,8 @@ class WP_Query {
 			$where .= " AND $wpdb->posts.post_name = '" . $q['attachment'] . "'";
 		} elseif ( is_array( $q['post_name__in'] ) && ! empty( $q['post_name__in'] ) ) {
 			$q['post_name__in'] = array_map( 'sanitize_title_for_query', $q['post_name__in'] );
-			$where .= " AND $wpdb->posts.post_name IN ('" . implode( "' ,'", $q['post_name__in'] ) . "')";
+			$post_name__in = "'" . implode( "','", $q['post_name__in'] ) . "'";
+			$where .= " AND $wpdb->posts.post_name IN ($post_name__in)";
 		}
 
 		// If an attachment is requested by number, let it supersede any post number.
@@ -2961,6 +2967,8 @@ class WP_Query {
 		} elseif ( 'none' == $q['orderby'] ) {
 			$orderby = "$wpdb->posts.post_date " . $q['order'];
             $orderbyfields = $orderbyfields . ", $wpdb->posts.post_date";
+		} elseif ( $q['orderby'] == 'post_name__in' && ! empty( $post_name__in ) ) {
+			$orderby = "FIELD( {$wpdb->posts}.post_name, $post_name__in )";
 		} elseif ( $q['orderby'] == 'post__in' && ! empty( $post__in ) ) {
 			$orderby = "CASE( {$wpdb->posts}.ID )";
             foreach ( $q['post__in'] as $order_post_key=>$order_post_id ) {
@@ -3548,7 +3556,7 @@ class WP_Query {
 			 *
 			 * @since 2.0.0
 			 *
-			 * @param array    $request The complete SQL query.
+			 * @param string   $request The complete SQL query.
 			 * @param WP_Query &$this   The WP_Query instance (passed by reference).
 			 */
 			$this->request = apply_filters_ref_array( 'posts_request', array( $this->request, &$this ) );
@@ -4339,7 +4347,7 @@ class WP_Query {
 	}
 
 	/**
-	 * Is the query for an existing taxonomy archive page?
+	 * Is the query for an existing custom taxonomy archive page?
 	 *
 	 * If the $taxonomy parameter is specified, this function will additionally
 	 * check if the query is for that specific $taxonomy.
@@ -4347,6 +4355,8 @@ class WP_Query {
 	 * If the $term parameter is specified in addition to the $taxonomy parameter,
 	 * this function will additionally check if the query is for one of the terms
 	 * specified.
+	 *
+	 * Returns false for built-in taxonomies (category and tag archives).
 	 *
 	 * @since 3.1.0
 	 *
