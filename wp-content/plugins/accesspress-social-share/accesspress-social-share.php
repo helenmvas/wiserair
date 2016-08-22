@@ -4,7 +4,7 @@ defined( 'ABSPATH' ) or die( "No script kiddies please!" );
   Plugin name: Social Share WordPress Plugin - AccessPress Social Share
   Plugin URI: https://accesspressthemes.com/wordpress-plugins/accesspress-social-share/
   Description: A plugin to add various social media shares to a site with dynamic configuration options.
-  Version: 4.1.1
+  Version: 4.1.7
   Author: AccessPress Themes
   Author URI: http://accesspressthemes.com
   Text Domain: accesspress-social-share
@@ -30,7 +30,7 @@ if ( !defined( 'APSS_LANG_DIR' ) ) {
 }
 
 if ( !defined( 'APSS_VERSION' ) ) {
-	define( 'APSS_VERSION', '4.1.1' );
+	define( 'APSS_VERSION', '4.1.7' );
 }
 
 if ( !defined( 'APSS_TEXT_DOMAIN' ) ) {
@@ -59,7 +59,7 @@ if ( !class_exists( 'APSS_Class' ) ) {
 			add_action( 'init', array( $this, 'plugin_text_domain' ) ); //load the plugin text domain
 			add_action( 'init', array( $this, 'session_init' ) ); //start the session if not started yet.
 			add_action( 'admin_enqueue_scripts', array( $this, 'register_admin_assets' ) ); //registers all the assets required for wp-admin
-			add_filter( 'the_content', array( $this, 'apss_the_content_filter' ), 12 ); // add the filter function for display of social share icons in frontend //added 12 priority level at the end to make the plugin compactible with Visual Composer.
+			add_filter( 'the_content', array( $this, 'apss_the_content_filter' ), 110 ); // add the filter function for display of social share icons in frontend //added 12 priority level at the end to make the plugin compactible with Visual Composer.
 
 			if ( isset( $this->apss_settings['disable_frontend_assets'] ) && $this->apss_settings['disable_frontend_assets'] != '1' ) {
 				add_action( 'wp_enqueue_scripts', array( $this, 'register_frontend_assets' ) ); //registers all the assets required for the frontend
@@ -84,14 +84,35 @@ if ( !class_exists( 'APSS_Class' ) ) {
 
 		//called when plugin is activated
 		function plugin_activation() {
-			if ( !get_option( APSS_SETTING_NAME ) ) {
-				include( 'inc/backend/activation.php' );
-			}
 
-			if ( !get_option( APSS_COUNT_TRANSIENTS ) ) {
-				$apss_social_counts_transients = array();
-				update_option( APSS_COUNT_TRANSIENTS, $apss_social_counts_transients );
-			}
+			global $wpdb;
+            if ( is_multisite() ) {
+                $current_blog = $wpdb->blogid;
+                // Get all blogs in the network and activate plugin on each one
+                $blog_ids = $wpdb->get_col( "SELECT blog_id FROM $wpdb->blogs" );
+                foreach ( $blog_ids as $blog_id ) {
+                    switch_to_blog( $blog_id );
+                    if ( !get_option( APSS_SETTING_NAME ) ) {
+						include( 'inc/backend/activation.php' );
+					}
+
+					if ( !get_option( APSS_COUNT_TRANSIENTS ) ) {
+						$apss_social_counts_transients = array();
+						update_option( APSS_COUNT_TRANSIENTS, $apss_social_counts_transients );
+					}
+                }
+            }else{
+                if ( !get_option( APSS_SETTING_NAME ) ) {
+					include( 'inc/backend/activation.php' );
+				}
+				
+				if ( !get_option( APSS_COUNT_TRANSIENTS ) ) {
+					$apss_social_counts_transients = array();
+					update_option( APSS_COUNT_TRANSIENTS, $apss_social_counts_transients );
+				}
+            }
+
+			
 		}
 
 		//loads the text domain for translation
@@ -129,7 +150,7 @@ if ( !class_exists( 'APSS_Class' ) ) {
 			global $post;
 			$post_content = $content;
 			$title = str_replace( '+', '%20', urlencode( $post->post_title ) );
-			$content = strip_shortcodes( strip_tags( get_the_content() ) );
+			$content = trim( strip_shortcodes( strip_tags( $post->post_content ) ) );
 
 			if ( strlen( $content ) >= 100 ) {
 				$excerpt = substr( $content, 0, 100 ) . '...';
@@ -282,12 +303,12 @@ if ( !class_exists( 'APSS_Class' ) ) {
 		}
 
 		//frontend counter only Shortcode
-		function apss_count_shortcode( $atts ) {
-			if ( isset( $atts['network'] ) ) {
-				$url    = $this->curPageURL();
-				$count  = $this->get_count( $atts['network'], $url );
-				return $count;
-			}
+		function apss_count_shortcode( $attr ) {
+			ob_start();
+			include( 'inc/frontend/count_shortcode.php' );
+			$html = ob_get_contents();
+			ob_get_clean();
+			return $html;
 		}
 
 		///////////////////////////for post meta options//////////////////////////////////
@@ -394,9 +415,9 @@ if ( !class_exists( 'APSS_Class' ) ) {
 				//for setting the counter transient in separate options value
 				$apss_social_counts_transients = get_option( APSS_COUNT_TRANSIENTS );
 				if ( false === $fb_transient_count ) {
-					$json_string    = $this->get_json_values( 'https://api.facebook.com/method/links.getStats?urls=' . $url . '&format=json' );
+					$json_string    = $this->get_json_values( 'https://graph.facebook.com/?id=' . $url );
 					$json           = json_decode( $json_string, true );
-					$facebook_count = isset( $json[0]['total_count'] ) ? intval( $json[0]['total_count'] ) : 0;
+					$facebook_count = isset( $json['share']['share_count'] ) ? intval( $json['share']['share_count'] ) : 0;
 					set_transient( $fb_transient, $facebook_count, $cache_period * HOUR_IN_SECONDS );
 					if ( !in_array( $fb_transient, $apss_social_counts_transients ) ) {
 						$apss_social_counts_transients[] = $fb_transient;
@@ -407,9 +428,9 @@ if ( !class_exists( 'APSS_Class' ) ) {
 				}
 				////////////////////////for transient ends ///////////////////////////
 			}else{
-				$json_string    = $this->get_json_values( 'https://api.facebook.com/method/links.getStats?urls=' . $url . '&format=json' );
+				$json_string    = $this->get_json_values( 'https://graph.facebook.com/?id=' . $url );
 				$json           = json_decode( $json_string, true );
-				$facebook_count = isset( $json[0]['total_count'] ) ? intval( $json[0]['total_count'] ) : 0;
+				$facebook_count = isset( $json['share']['share_count'] ) ? intval( $json['share']['share_count'] ) : 0;
 			}
 			return $facebook_count;
 		}

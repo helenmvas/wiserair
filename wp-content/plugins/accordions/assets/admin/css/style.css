@@ -192,6 +192,36 @@
 
 
 
+.our-plugins {
+  padding-top: 20px;
+}
+
+.our-plugins .single {
+  display: inline-block;
+  margin: 15px;
+  vertical-align: top;
+  width: 300px;
+}
+.our-plugins .single .thumb{}
+.our-plugins .single .title {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 7px 0;
+}
+.our-plugins .single .content {
+  margin: 10px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

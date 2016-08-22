@@ -129,6 +129,18 @@ class Ai1wm_Extensions {
 			);
 		}
 
+		// Add Box Extension
+		if ( defined( 'AI1WMBE_PLUGIN_NAME' ) ) {
+			$extensions[ AI1WMBE_PLUGIN_NAME ] = array(
+				'key'      => AI1WMBE_PLUGIN_KEY,
+				'about'    => AI1WMBE_PLUGIN_ABOUT,
+				'basename' => AI1WMBE_PLUGIN_BASENAME,
+				'version'  => AI1WMBE_VERSION,
+				'requires' => '1.0',
+				'short'    => AI1WMBE_PLUGIN_SHORT,
+			);
+		}
+
 		return $extensions;
 	}
 }

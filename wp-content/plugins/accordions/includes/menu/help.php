@@ -22,6 +22,7 @@ if ( ! defined('ABSPATH')) exit;  // if direct access
     <div class="para-settings">
         <ul class="tab-nav"> 
             <li nav="1" class="nav1 active"><i class="fa fa-hand-o-right"></i> <?php _e('Help & Support','accordions'); ?></li>
+            <li nav="2" class="nav2"><i class="fa fa-star"></i> <?php _e('Our Plugins','accordions'); ?></li>            
         </ul> <!-- tab-nav end -->  
         
 		<ul class="box">
@@ -96,7 +97,18 @@ if ( ! defined('ABSPATH')) exit;  // if direct access
                 
             </li>        
         
-        
+        	<li style="display: none;" class="box2 tab-box">
+            
+            <?php
+            
+			$class_accordions_functions = new class_accordions_functions();
+			
+			echo $class_accordions_functions->our_plugins();
+			
+			?>
+            
+            
+            </li>
     
     </div>
 

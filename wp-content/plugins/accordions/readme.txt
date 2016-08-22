@@ -3,8 +3,8 @@
 	Donate link: http://pickplugins.com
 	Tags: accordion, accordions, Responsive accordions, accordions plugin, jQuery accordions, accordions short-code, accordions Widget, accordions plugin wordpress, accordions plugin jquery, tabs, jquery tabs, tab, responsive tabs
 	Requires at least: 3.8
-	Tested up to: 4.5.1
-	Stable tag: 2.0.8
+	Tested up to: 4.6
+	Stable tag: 2.0.13
 	License: GPLv2 or later
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -93,6 +93,21 @@ then paste this shortcode anywhere in your page to display accordions<br />
 
 
 == Changelog ==
+
+	= 2.0.13 =
+    * 12/08/2016 - fix - accordion header quotes issue fixed.
+
+	= 2.0.12 =
+    * 01/08/2016 - fix - accordion header messedup in non english.
+
+	= 2.0.11 =
+    * 27/07/2016 - fix - tinyMCE error issue fixed.
+
+	= 2.0.10 =
+    * 26/07/2016 - add - tinyMCE Editor when add new accoridon
+	
+	= 2.0.9 =
+    * 21/07/2016 - add - added filter to work in sidebar.
 
 	= 2.0.8 =
     * 06/05/2016 - update - font aswesome latest version added.

@@ -3,7 +3,7 @@
 Plugin Name: Accordions
 Plugin URI: http://www.pickplugins.com/item/accordions-html-css3-responsive-accordion-grid-for-wordpress/
 Description: Fully responsive and mobile ready accordion grid for wordpress.
-Version: 2.0.8
+Version: 2.0.13
 Author: pickplugins
 Author URI: http://pickplugins.com
 License: GPLv2 or later
@@ -26,7 +26,7 @@ class Accordions{
 		define('accordions_conatct_url', 'http://pickplugins.com/contact' );
 		define('accordions_qa_url', 'http://www.pickplugins.com/questions/' );
 		define('accordions_plugin_name', 'Accordions' );
-		define('accordions_plugin_version', '2.0.8' );
+		define('accordions_plugin_version', '2.0.13' );
 		define('accordions_customer_type', 'free' );
 		define('accordions_share_url', 'https://wordpress.org/plugins/accordions/' );
 		define('accordions_tutorial_video_url', '//www.youtube.com/embed/h2wNFJaaY8s?rel=0' );
@@ -38,14 +38,18 @@ class Accordions{
 		require_once( plugin_dir_path( __FILE__ ) . 'includes/class-shortcodes.php');
 		require_once( plugin_dir_path( __FILE__ ) . 'includes/class-settings.php');		
 		
-				
+		
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'accordions_front_scripts' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'accordions_admin_scripts' ) );
 		
 		add_action( 'plugins_loaded', array( $this, 'accordions_load_textdomain' ));
 
-
+		// DIsplay shortcode in widgets
+		add_filter('widget_text', 'do_shortcode');
+		
+		add_filter( 'plugin_action_links_'.plugin_basename( __FILE__ ), array( $this, 'ts_add_plugin_action_links' ));		
+		
 		}
 	
 	
@@ -107,7 +111,16 @@ class Accordions{
 		}
 	
 	
-	
+function ts_add_plugin_action_links( $links ) {
+
+	return array_merge(
+		array(
+			'settings' => '<a style=" font-weight:bold;color:#f00;" href="http://www.pickplugins.com/item/accordions-html-css3-responsive-accordion-grid-for-wordpress/">Get Pro!</a>'
+			),
+		$links
+	);
+
+}
 	
 	
 	}

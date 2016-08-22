@@ -82,17 +82,7 @@ jQuery(document).ready(function($)
 		
 
 		
-
-		$(document).on('click', '.accordions-content-buttons .add-accordions', function()
-			{	
-				
-				var unique_key = $.now();
-				
-				$("#accordions_metabox .accordions-content").append('<div calss="items" valign="top"><div class="section-header"><div class="accordions-title-preview">Demo Title #'+unique_key+'</div><span class="removeaccordions">X</span><label><input type="checkbox" value="1" name="accordions_hide['+unique_key+']">Hide on Frontend</label></div><div class="section-panel"><input width="100%" placeholder="accordions Header" type="text" name="accordions_content_title['+unique_key+']" value="" /><br /><br /><textarea placeholder="accordions Content" name="accordions_content_body['+unique_key+']" ></textarea></div></div>');
-				
-
-				
-			})	
+	
 		
 		
 		

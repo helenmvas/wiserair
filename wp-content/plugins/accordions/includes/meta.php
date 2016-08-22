@@ -449,7 +449,7 @@ function meta_boxes_accordions_input( $post ) {
                    <strong><?php _e('Content','accordions'); ?></strong> <br>
 <?php
 
-	wp_editor( stripslashes($accordions_content_body[$accordions_key]), 'accordions_content_body'.$accordions_key, $settings = array('textarea_name'=>'accordions_content_body['.$accordions_key.']') );
+	wp_editor( $accordions_content_body[$accordions_key], 'accordions_content_body'.$accordions_key, $settings = array('textarea_name'=>'accordions_content_body['.$accordions_key.']') );
 
 
 ?>
@@ -471,10 +471,40 @@ function meta_boxes_accordions_input( $post ) {
  <script>
  jQuery(document).ready(function($)
 	{
-$(function() {
-$( "#accordions-content" ).sortable({ handle: '.section-header' });
-//$( ".items-container" ).disableSelection();
-});
+		$(function() {
+			$( "#accordions-content" ).sortable({ handle: '.section-header' });
+			//$( ".items-container" ).disableSelection();
+		});
+
+
+		// to add editor on textarea
+		tinyMCE.init({
+			mode : "none",
+			statusbar: false,
+			menubar: false,
+			statusbar: true,
+			setup: function (editor) {
+				editor.on('change', function () {
+					editor.save();
+				});
+				
+			},
+		});
+		
+
+		$(document).on('click', '.accordions-content-buttons .add-accordions', function()
+			{	
+				
+				var unique_key = $.now();
+				
+				$("#accordions_metabox .accordions-content").append('<div calss="items" valign="top"><div class="section-header"><div class="accordions-title-preview">Demo Title #'+unique_key+'</div><span class="removeaccordions">X</span><label><input type="checkbox" value="1" name="accordions_hide['+unique_key+']">Hide on Frontend</label></div><div class="section-panel"><input width="100%" placeholder="accordions Header" type="text" name="accordions_content_title['+unique_key+']" value="" /><br /><br /><textarea placeholder="Accordion content" id="content-'+unique_key+'" name="accordions_content_body['+unique_key+']" ></textarea></div></div>');
+				
+				tinyMCE.execCommand('mceAddEditor', false, 'content-'+unique_key);
+				
+			})
+
+
+
 
 })
 

@@ -1,4 +1,5 @@
-//function from https://halgatewood.com/how-to-customize-the-pin-it-button-for-pinterest
+
+// function from https://halgatewood.com/how-to-customize-the-pin-it-button-for-pinterest
 function pinIt()
 {
   var e = document.createElement('script');
@@ -8,7 +9,7 @@ function pinIt()
   document.body.appendChild(e);
 }
 
-function apss_open_in_popup_window(url){
+function apss_open_in_popup_window(event, url){
     event.preventDefault();
     window.open(url, 'fdadas', 'toolbars=0,width=640,height=320,left=200,top=200,scrollbars=1,resizable=1');
 }

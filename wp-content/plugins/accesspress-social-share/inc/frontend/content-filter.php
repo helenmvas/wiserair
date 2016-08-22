@@ -1,5 +1,4 @@
-<?php defined( 'ABSPATH' ) or die( "No script kiddies please!" ); ?>
-<?php
+<?php defined( 'ABSPATH' ) or die( "No script kiddies please!" );
 $apss_link_open_option = ($options['dialog_box_options'] == '1') ? "_blank" : "";
 $apss_link_open_option_value = intval($options['dialog_box_options']);
 $twitter_user = $options['twitter_username'];
@@ -40,7 +39,7 @@ foreach ( $options['social_networks'] as $key => $value ) {
 
 				?>
 				<div class='apss-facebook apss-single-icon'>
-					<a rel='nofollow' <?php if($apss_link_open_option_value == 2){ ?> onclick="apss_open_in_popup_window('<?php echo $link; ?>');" <?php } ?> title="<?php _e( 'Share on Facebook', 'accesspress-social-share' ); ?>" target='<?php echo $apss_link_open_option; ?>' href='<?php echo $link; ?>'>
+					<a rel='nofollow' <?php if($apss_link_open_option_value == 2){ ?> onclick="apss_open_in_popup_window(event, '<?php echo $link; ?>');" <?php } ?> title="<?php _e( 'Share on Facebook', 'accesspress-social-share' ); ?>" target='<?php echo $apss_link_open_option; ?>' href='<?php echo $link; ?>'>
 						<div class='apss-icon-block clearfix'>
 							<i class='fa fa-facebook'></i>
 							<span class='apss-social-text'><?php _e( 'Share on Facebook', 'accesspress-social-share' ); ?></span>
@@ -65,7 +64,7 @@ foreach ( $options['social_networks'] as $key => $value ) {
 				$count = $this->get_count( $key, $url );
 				?>
 				<div class='apss-twitter apss-single-icon'>
-					<a rel='nofollow' <?php if($apss_link_open_option_value == 2){ ?> onclick="apss_open_in_popup_window('<?php echo $link; ?>');" <?php } ?> title="<?php _e( 'Share on Twitter', 'accesspress-social-share' ); ?>" target='<?php echo $apss_link_open_option; ?>' href="<?php echo $link; ?>">
+					<a rel='nofollow' <?php if($apss_link_open_option_value == 2){ ?> onclick="apss_open_in_popup_window(event, '<?php echo $link; ?>');" href='javascript:void(0);' <?php }else{ ?> href="<?php echo $link; ?>" <?php } ?> title="<?php _e( 'Share on Twitter', 'accesspress-social-share' ); ?>" target='<?php echo $apss_link_open_option; ?>'>
 						<div class='apss-icon-block clearfix'>
 							<i class='fa fa-twitter'></i>
 							<span class='apss-social-text'><?php _e( 'Share on Twitter', 'accesspress-social-share' ); ?></span><span class='apss-share'><?php _e( 'Tweet', 'accesspress-social-share' ); ?></span>
@@ -84,7 +83,7 @@ foreach ( $options['social_networks'] as $key => $value ) {
 				$count = $this->get_count( $key, $url );
 				?>
 				<div class='apss-google-plus apss-single-icon'>
-					<a rel='nofollow' <?php if($apss_link_open_option_value == 2){ ?> onclick="apss_open_in_popup_window('<?php echo $link; ?>');" <?php } ?> title="<?php _e( 'Share on Google Plus', 'accesspress-social-share' ); ?>" target='<?php echo $apss_link_open_option; ?>' href='<?php echo $link; ?>'>
+					<a rel='nofollow' <?php if($apss_link_open_option_value == 2){ ?> onclick="apss_open_in_popup_window(event, '<?php echo $link; ?>');" <?php } ?> title="<?php _e( 'Share on Google Plus', 'accesspress-social-share' ); ?>" target='<?php echo $apss_link_open_option; ?>' href='<?php echo $link; ?>'>
 						<div class='apss-icon-block clearfix'>
 							<i class='fa fa-google-plus'></i>
 							<span class='apss-social-text'><?php _e( 'Share on Google Plus', 'accesspress-social-share' ); ?></span>
@@ -121,13 +120,12 @@ foreach ( $options['social_networks'] as $key => $value ) {
 
 			//couter available for linkedin
 			case 'linkedin':
-				$excerpt = strip_tags(get_the_excerpt());
 				$link = "http://www.linkedin.com/shareArticle?mini=true&amp;title=" . $title . "&amp;url=" . $url . "&amp;summary=" . $excerpt;
 				$count = $this->get_count( $key, $url );
 				?>
 
 				<div class='apss-linkedin apss-single-icon'>
-					<a rel='nofollow' <?php if($apss_link_open_option_value == 2){ ?> onclick="apss_open_in_popup_window('<?php echo $link; ?>');" <?php } ?> title="<?php _e( 'Share on LinkedIn', 'accesspress-social-share' ); ?>" target='<?php echo $apss_link_open_option; ?>' href='<?php echo $link; ?>'>
+					<a rel='nofollow' <?php if($apss_link_open_option_value == 2){ ?> onclick="apss_open_in_popup_window(event, '<?php echo $link; ?>');" <?php } ?> title="<?php _e( 'Share on LinkedIn', 'accesspress-social-share' ); ?>" target='<?php echo $apss_link_open_option; ?>' href='<?php echo $link; ?>'>
 						<div class='apss-icon-block clearfix'><i class='fa fa-linkedin'></i>
 							<span class='apss-social-text'><?php _e( 'Share on LinkedIn', 'accesspress-social-share' ); ?></span>
 							<span class='apss-share'><?php _e( 'Share', 'accesspress-social-share' ); ?></span>
@@ -145,7 +143,7 @@ foreach ( $options['social_networks'] as $key => $value ) {
 				$link = "http://digg.com/submit?phase=2%20&amp;url=" . $url . "&amp;title=" . $title;
 				?>
 				<div class='apss-digg apss-single-icon'>
-					<a rel='nofollow' <?php if($apss_link_open_option_value == 2){ ?> onclick="apss_open_in_popup_window('<?php echo $link; ?>');" <?php } ?> title="<?php _e( 'Share on Digg', 'accesspress-social-share' ); ?>" target='<?php echo $apss_link_open_option; ?>' href='<?php echo $link; ?>'>
+					<a rel='nofollow' <?php if($apss_link_open_option_value == 2){ ?> onclick="apss_open_in_popup_window(event, '<?php echo $link; ?>');" <?php } ?> title="<?php _e( 'Share on Digg', 'accesspress-social-share' ); ?>" target='<?php echo $apss_link_open_option; ?>' href='<?php echo $link; ?>'>
 						<div class='apss-icon-block clearfix'>
 							<i class='fa fa-digg'></i>
 							<span class='apss-social-text'><?php _e( 'Share on Digg', 'accesspress-social-share' ); ?></span>
