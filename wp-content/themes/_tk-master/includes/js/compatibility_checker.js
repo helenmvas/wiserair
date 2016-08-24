@@ -68,7 +68,7 @@ $(window).on("load", function() {
 	function showResult(status, msg) {
 
 		var backgroundColor;
-		var email_body = "Hello ecobee,%0D%0A%0D%0AI ran the compatibility checker with a wiring configuration and the tool reported that ecobee needs to take a closer look. Can you please let me know if my system configuration is supported?%0D%0A%0D%0APlease see the attached photo of my thermostat.%0D%0A%0D%0AMy thermostat has the following wires:";
+		var email_body = "Hello Wiser Air,%0D%0A%0D%0AI ran the compatibility checker with a wiring configuration and the tool reported that Wiser Air needs to take a closer look. Can you please let me know if my system configuration is supported?%0D%0A%0D%0APlease see the attached photo of my thermostat.%0D%0A%0D%0AMy thermostat has the following wires:";
 		var checkboxes = $("input:checked");
 		for (var i = 0; i < checkboxes.length; i++) {
 			console.log(checkboxes[i].name);
@@ -77,7 +77,7 @@ $(window).on("load", function() {
 
 		if (msg.includes(" but ") || msg.includes("need more info")) {
 			backgroundColor = "#E4DD6B";
-			jQuery('#comp_result p').html("<strong>Hmm... We need a little more information.</strong><br/>We'd like to take a closer look at your wiring to confirm if you're compatible. Take the cover off your old thermostat, snap a picture of the wires you can see and then <a href=\"mailto:support@ecobee.com?subject=compatibility%20Checker%20Result%20-%20ecobee%20Needs%20to%20Take%20a%20Closer%20Look%20-%20Please%20advise&amp;body=" + email_body + "\">send it to us by email</a>.");
+			jQuery('#comp_result p').html("<strong>Hmm... We need a little more information.</strong><br/>We'd like to take a closer look at your wiring to confirm if you're compatible. Take the cover off your old thermostat, snap a picture of the wires you can see and then <a href=\"mailto:wiser_support@schneider-electric.com?subject=compatibility%20Checker%20Result%20-%20Wiser Air%20Needs%20to%20Take%20a%20Closer%20Look%20-%20Please%20advise&amp;body=" + email_body + "\">send it to us by email</a>.");
 		} else {
 			backgroundColor = "#00a550";
 			jQuery('#comp_result p').html("<strong>It looks like your system is compatible with Wiser Air.</strong>");
