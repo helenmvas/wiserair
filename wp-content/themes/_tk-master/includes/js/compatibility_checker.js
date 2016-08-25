@@ -68,7 +68,7 @@ $(window).on("load", function() {
 	function showResult(status, msg) {
 
 		var backgroundColor;
-		var email_intro = "Hello ecobee,%0D%0A%0D%0A";
+		var email_intro = "Hello Wiser Air,%0D%0A%0D%0A";
 		var email_checkboxes = "My thermostat has the following wires:";
 		var checkboxes = $("input:checked");
 		for (var i = 0; i < checkboxes.length; i++) {
@@ -77,18 +77,18 @@ $(window).on("load", function() {
 
 		if (msg.includes(" pic ")) {
 			backgroundColor = "#E4DD6B";
-			var email_body = "I ran the compatibility checker with a wiring configuration and the tool reported that ecobee needs to take a closer look. Can you please let me know if my system configuration is supported?%0D%0A%0D%0APlease see the attached photo of my thermostat.%0D%0A%0D%0A";
-			$('#comp_result p').html("<strong>Hmm... We need a little more information.</strong><br/>We'd like to take a closer look at your wiring to confirm if you're compatible. Take the cover off your old thermostat, snap a picture of the wires you can see and then <a href=\"mailto:support@ecobee.com?subject=compatibility%20Checker%20Result%20-%20ecobee%20Needs%20to%20Take%20a%20Closer%20Look%20-%20Please%20advise&amp;body=" + email_intro + email_body + email_checkboxes + "\">send it to us by email</a>.");
+			var email_body = "I ran the compatibility checker with a wiring configuration and the tool reported that Wiser Air needs to take a closer look. Can you please let me know if my system configuration is supported?%0D%0A%0D%0APlease see the attached photo of my thermostat.%0D%0A%0D%0A";
+			$('#comp_result p').html("<strong>Hmm... We need a little more information.</strong><br/>We'd like to take a closer look at your wiring to confirm if you're compatible. Take the cover off your old thermostat, snap a picture of the wires you can see and then <a href=\"mailto:swiser_support@schneider-electric.com?subject=compatibility%20Checker%20Result%20-%20Wiser Air%20Needs%20to%20Take%20a%20Closer%20Look%20-%20Please%20advise&amp;body=" + email_intro + email_body + email_checkboxes + "\">send it to us by email</a>.");
 		}
 		else if (msg.includes(" new wire ") && msg.includes(" separate wire ") && msg.includes(" not all features ")) {
 			backgroundColor = "#E4DD6B";
 			var email_body = "I ran the compatibility checker with a wiring configuration and the tool reported that all of my thermostat's features may not be supported at this time. Can you please give me more information about this?%0D%0A%0D%0A"
-			$('#comp_result p').html("<strong>Your thermostat is mostly compatible...</strong><br/>You will need an extender wire or a new wire for your thermostat. Also, Wiser Air does not need a separate wire to run emergency heat E or X2 does not need to be connected.<br/>But not all of your thermostat's features are supported at this time. Please <a href=\"mailto:support@ecobee.com?subject=compatibility%20Checker%20Result%20-%20Not%20All%20Features%20Are%20Supported%20&amp;body=" + email_intro + email_body + email_checkboxes + "\">contact support for more info</a>.");
+			$('#comp_result p').html("<strong>Your thermostat is mostly compatible...</strong><br/>You will need an extender wire or a new wire for your thermostat. Also, Wiser Air does not need a separate wire to run emergency heat E or X2 does not need to be connected.<br/>But not all of your thermostat's features are supported at this time. Please <a href=\"mailto:wiser_support@schneider-electric.com?subject=compatibility%20Checker%20Result%20-%20Not%20All%20Features%20Are%20Supported%20&amp;body=" + email_intro + email_body + email_checkboxes + "\">contact support for more info</a>.");
 		}
 		else if (msg.includes(" separate wire ") && msg.includes(" not all features ")) {
 			backgroundColor = "#E4DD6B";
 			var email_body = "I ran the compatibility checker with a wiring configuration and the tool reported that all of my thermostat's features may not be supported at this time. Can you please give me more information about this?%0D%0A%0D%0A"
-			$('#comp_result p').html("<strong>Your thermostat is mostly compatible...</strong>.<br/>Wiser Air does not need a separate wire to run emergency heat E or X2 does not need to be connected. Please <a href=\"mailto:support@ecobee.com?subject=compatibility%20Checker%20Result%20-%20Not%20All%20Features%20Are%20Supported%20&amp;body=" + email_intro + email_body + email_checkboxes + "\">contact support for more info</a>.");
+			$('#comp_result p').html("<strong>Your thermostat is mostly compatible...</strong>.<br/>Wiser Air does not need a separate wire to run emergency heat E or X2 does not need to be connected. Please <a href=\"mailto:wiser_support@schneider-electric.com?subject=compatibility%20Checker%20Result%20-%20Not%20All%20Features%20Are%20Supported%20&amp;body=" + email_intro + email_body + email_checkboxes + "\">contact support for more info</a>.");
 		}
 		else if (msg.includes(" separate wire ") && msg.includes(" new wire ")) {
 			backgroundColor = "#E4DD6B";
@@ -97,7 +97,7 @@ $(window).on("load", function() {
 		else if (msg.includes(" new wire ") && msg.includes(" not all features ")) {
 			backgroundColor = "#E4DD6B";
 			var email_body = "I ran the compatibility checker with a wiring configuration and the tool reported that all of my thermostat's features may not be supported at this time. Can you please give me more information about this?%0D%0A%0D%0A"
-			$('#comp_result p').html("<strong>Your thermostat is mostly compatible...</strong>.<br/>You will need a wire extender or new wire. Please <a href=\"mailto:support@ecobee.com?subject=compatibility%20Checker%20Result%20-%20Not%20All%20Features%20Are%20Supported%20&amp;body=" + email_intro + email_body + email_checkboxes + "\">contact support for more info</a>.");
+			$('#comp_result p').html("<strong>Your thermostat is mostly compatible...</strong>.<br/>You will need a wire extender or new wire. Please <a href=\"mailto:wiser_support@schneider-electric.com?subject=compatibility%20Checker%20Result%20-%20Not%20All%20Features%20Are%20Supported%20&amp;body=" + email_intro + email_body + email_checkboxes + "\">contact support for more info</a>.");
 		}
 		else if (msg.includes(" separate wire ")) {
 			backgroundColor = "#E4DD6B";
@@ -106,7 +106,7 @@ $(window).on("load", function() {
 		else if (msg.includes(" not all features ")) {
 			backgroundColor = "#E4DD6B";
 			var email_body = "I ran the compatibility checker with a wiring configuration and the tool reported that all of my thermostat's features may not be supported at this time. Can you please give me more information about this?%0D%0A%0D%0A"
-			$('#comp_result p').html("<strong>Your thermostat is mostly compatible but...</strong>.<br/>You will need a wire extender or new wire. Also, not all of the thermostat's features are supported at this time. Please <a href=\"mailto:support@ecobee.com?subject=compatibility%20Checker%20Result%20-%20Not%20All%20Features%20Are%20Supported%20&amp;body=" + email_intro + email_body + email_checkboxes + "\">contact support for more info</a>.");
+			$('#comp_result p').html("<strong>Your thermostat is mostly compatible but...</strong>.<br/>You will need a wire extender or new wire. Also, not all of the thermostat's features are supported at this time. Please <a href=\"mailto:wiser_support@schneider-electric.com?subject=compatibility%20Checker%20Result%20-%20Not%20All%20Features%20Are%20Supported%20&amp;body=" + email_intro + email_body + email_checkboxes + "\">contact support for more info</a>.");
 		}
 		else if (msg.includes(" new wire ")) {
 			backgroundColor = "#E4DD6B";
