@@ -43,7 +43,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section id="compatibility">
+<!--<section id="compatibility">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
@@ -106,7 +106,7 @@ get_header(); ?>
             </div>
 		</div>
 	</div>
-</section>
+</section>-->
 
 <section>
 	<div class="container" id="install">
