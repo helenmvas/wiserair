@@ -78,7 +78,7 @@ $(window).on("load", function() {
 		if (msg.includes(" pic ")) {
 			backgroundColor = "#E4DD6B";
 			var email_body = "I ran the compatibility checker with a wiring configuration and the tool reported that Wiser Air needs to take a closer look. Can you please let me know if my system configuration is supported?%0D%0A%0D%0APlease see the attached photo of my thermostat.%0D%0A%0D%0A";
-			$('#comp_result p').html("<strong>Hmm... We need a little more information.</strong><br/>We'd like to take a closer look at your wiring to confirm if you're compatible. Take the cover off your old thermostat, snap a picture of the wires you can see and then <a href=\"mailto:swiser_support@schneider-electric.com?subject=compatibility%20Checker%20Result%20-%20Wiser Air%20Needs%20to%20Take%20a%20Closer%20Look%20-%20Please%20advise&amp;body=" + email_intro + email_body + email_checkboxes + "\">send it to us by email</a>.");
+			$('#comp_result p').html("<strong>Hmm... We need a little more information.</strong><br/>We'd like to take a closer look at your wiring to confirm if you're compatible. Take the cover off your old thermostat, snap a picture of the wires you can see and then <a href=\"mailto:wiser_support@schneider-electric.com?subject=compatibility%20Checker%20Result%20-%20Wiser Air%20Needs%20to%20Take%20a%20Closer%20Look%20-%20Please%20advise&amp;body=" + email_intro + email_body + email_checkboxes + "\">send it to us by email</a>.");
 		}
 		else if (msg.includes(" new wire ") && msg.includes(" separate wire ") && msg.includes(" not all features ")) {
 			backgroundColor = "#E4DD6B";
