@@ -1216,6 +1216,10 @@ section {
     font-size: 13px;
 }
 
+#compatibility form.compat-widget-form .submit-container {
+    padding: 30px;
+}
+
 #install p {
     color: #000;
 }
