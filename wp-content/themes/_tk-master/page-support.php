@@ -179,6 +179,10 @@ get_header(); ?>
 					<h4>Specifications</h4>
 					<p>Quick information on Wiser Air specifications</p>
 				</a>
+				<a href="#">
+					<h4>Wire Extender Installation Video</h4>
+					<p>For configurations without a common wire.</p>
+				</a>
 			</div>
 		</div>
 	</div>

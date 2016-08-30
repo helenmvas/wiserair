@@ -1036,9 +1036,11 @@ li.resp-tab-item:hover {
 
 #comp_result {
     display: none;
-    width: 247px;
+    /*width: 247px;*/
     text-align: center;
     padding: 17px 0 10px 0;
+    background: transparent !important;
+    font-weight: 16px;
 }
 
 #first h4 {
@@ -1198,7 +1200,7 @@ section {
 }
 
 #compatibility .compat-widget-form table td {
-    width: 100px;
+    width: 103px;
     padding-top: 50px!important;
     padding-right: 50px !important;
 }
