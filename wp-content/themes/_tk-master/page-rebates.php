@@ -44,8 +44,8 @@ get_header(); ?>
             <?php while($rebates->have_posts()) : $rebates->the_post(); ?>
 
                 <div class="col-lg-12 col-md-12 col-sm-12">
-                    <h3><a href="<?php the_title(); ?>"></h3>
-                    <h3><a href="<?php the_content(); ?>"></h3>
+                    <h3><?php the_title(); ?></h3>
+                    <p><a href="<?php the_content(); ?>"></p>
                 </div>
             <?php endwhile; // end of the loop. ?>
             <?php wp_reset_postdata(); ?>
