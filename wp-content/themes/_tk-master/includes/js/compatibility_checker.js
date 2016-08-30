@@ -117,7 +117,7 @@ $(window).on("load", function() {
 			$('#comp_result p').html("<strong>It looks like your system is compatible with Wiser Air.</strong>");
 		} else {
 			backgroundColor = "#ff7f7f";
-			$('#comp_result p').html("<strong>Unfortunately, it looks like your system is not compatible with Wiser Air.</strong>");
+			$('#comp_result p').html("<strong>Hmm... we need a little more information.</strong>");
 		}
 
 		jQuery('#comp_result').css('background-color' , backgroundColor);

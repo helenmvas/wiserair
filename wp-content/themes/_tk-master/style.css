@@ -1198,9 +1198,9 @@ section {
 }
 
 #compatibility .compat-widget-form table td {
-    padding-left: 0px !important;
-    padding-top: 25px!important;
-    padding-right: 25px !important;
+    width: 100px;
+    padding-top: 50px!important;
+    padding-right: 50px !important;
 }
 
 #compatibility .compat-widget-form table td input {
