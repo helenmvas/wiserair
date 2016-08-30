@@ -45,7 +45,7 @@ get_header(); ?>
 
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <h3><?php the_title(); ?></h3>
-                    <p><a href="<?php the_content(); ?>"></p>
+                    <p><?php the_content(); ?></p>
                 </div>
             <?php endwhile; // end of the loop. ?>
             <?php wp_reset_postdata(); ?>
