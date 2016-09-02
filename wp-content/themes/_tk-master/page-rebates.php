@@ -38,7 +38,8 @@ get_header(); ?>
         </div>
         <div class="row">
             <?php $rebates = new WP_Query(array(
-                'post_type' => 'rebates'
+                'post_type' => 'rebates,'
+                'order' => 'ASC'
                 )); ?>
 
             <?php while($rebates->have_posts()) : $rebates->the_post(); ?>
