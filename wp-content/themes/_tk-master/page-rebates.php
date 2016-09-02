@@ -29,7 +29,7 @@ get_header(); ?>
     </div>
 <!-- </div> -->
 
-<section class="rebates" style="margin-top: -150px;">
+<section class="rebates">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
@@ -39,7 +39,8 @@ get_header(); ?>
         <div class="row">
             <?php $rebates = new WP_Query(array(
                 'post_type' => 'rebates',
-                'order' => 'ASC'
+                'order' => 'ASC',
+                'posts_per_page' => '51'
                 )); ?>
 
             <?php while($rebates->have_posts()) : $rebates->the_post(); ?>

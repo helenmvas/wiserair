@@ -2439,6 +2439,26 @@ article .entry-meta {
     display: none;
 }
 
+.page-template-page-rebates table td:first-of-type {
+    width: 400px;
+    padding-right: 5%;
+    vertical-align: top;
+}
+
+.page-template-page-rebates table td {
+    padding: 10px 0px;
+}
+
+.page-template-page-rebates table tr {
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    display: inline-block !important;
+}
+
+.page-template-page-rebates .rebates h3 {
+    margin-top: 60px;
+}
+
 /*==================================================
 =            Bootstrap 3 Media Queries             =
 ==================================================*/
