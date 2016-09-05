@@ -2,25 +2,6 @@ $(window).on("load", function() {
 
 	console.log("Window loaded.");
 
-	$('.compatibility_checker_showMore').each(function(){
-		$(this).css('display', 'none');
-	});
-	$('#compatibility_checker_showMore_link').on("click", function() {
-		if($('#compatibility_checker_showMore_link').html().includes(" more ")) {
-			// expand them all
-			$('.compatibility_checker_showMore').each(function(){
-				$(this).css('display', 'table-row');
-			});
-			$('#compatibility_checker_showMore_link').html("Show fewer wires");
-		} else {
-			// collapse them all
-			$('.compatibility_checker_showMore').each(function(){
-				$(this).css('display', 'none');
-			});
-			$('#compatibility_checker_showMore_link').html("Show more wires");
-		};
-	});
-
 	$('.compat-widget-form').on("submit", function(e) {
 		e.preventDefault();
 		console.log("Form submitted.");
@@ -70,13 +51,13 @@ $(window).on("load", function() {
 		if($('input[name="other_wires"]') && $('input[name="other_wires"]').is(':checked')) {testArr.push(1)} else {testArr.push(0)};
 		
 		console.log("Test array: " + testArr + " length = " + testArr.length);
-		
+		console.log("Second table splice : " + compatibilityChart[2].slice(0,testArr.length) + " length = " + compatibilityChart[2].slice(0,testArr.length).length);
+
 		// compare the test array to the compatibility chart
 		for (var i = 1; i < compatibilityChart.length; i++) {
 			if (testArr.equals((compatibilityChart[i]).slice(0,testArr.length))) {
 				status = true;
 				msg = compatibilityChart[i][compatibilityChart[i].length-1];
-				console.log()
 			}
 		}
 
@@ -94,7 +75,7 @@ $(window).on("load", function() {
 			email_checkboxes += " " + checkboxes[i].name;
 		}
 
-		if (msg.includes(" pic ") || ($('input[name="B"]') && $('input[name="B"]').is(':checked'))) {
+		if (msg.includes(" pic ")) {
 			backgroundColor = "#E4DD6B";
 			var email_body = "I ran the compatibility checker with a wiring configuration and the tool reported that Wiser Air needs to take a closer look. Can you please let me know if my system configuration is supported?%0D%0A%0D%0APlease see the attached photo of my thermostat.%0D%0A%0D%0A";
 			$('#comp_result p').html("<strong>Hmm... We need a little more information.</strong><br/>We'd like to take a closer look at your wiring to confirm if you're compatible. Take the cover off your old thermostat, snap a picture of the wires you can see and then <a href=\"mailto:wiser_support@schneider-electric.com?subject=compatibility%20Checker%20Result%20-%20Wiser Air%20Needs%20to%20Take%20a%20Closer%20Look%20-%20Please%20advise&amp;body=" + email_intro + email_body + email_checkboxes + "\">send it to us by email</a>.");
@@ -136,7 +117,7 @@ $(window).on("load", function() {
 			$('#comp_result p').html("<strong>It looks like your system is compatible with Wiser Air.</strong>");
 		} else {
 			backgroundColor = "#ff7f7f";
-			$('#comp_result p').html("<strong>Unfortunately, it looks like your system is not compatible with Wiser Air.</strong>");
+			$('#comp_result p').html("<strong>Hmm... we need a little more information.</strong>");
 		}
 
 		jQuery('#comp_result').css('background-color' , backgroundColor);
