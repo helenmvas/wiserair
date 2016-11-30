@@ -43,7 +43,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section id="compatibility">
+<!-- <section id="compatibility">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -135,11 +135,6 @@ get_header(); ?>
 	                            <span><input type="checkbox" name="other_wires" value="true">Other</span>
 	                        </td>
 	                    </tr>
-	                    <!-- <tr class="compatibility_checker_showMore">
-	                        <td>
-	                            <span><input type="checkbox" name="other_wires" value="true">Other wires</span>
-	                        </td>
-	                    </tr> -->
 	                </tbody>
 	            </table>
 	            <a href="#" id="compatibility_checker_showMore_link">Show more wires</a>
@@ -152,7 +147,7 @@ get_header(); ?>
             </div>
 		</div>
 	</div>
-</section>
+</section> -->
 
 <section>
 	<div class="container" id="install">
