@@ -258,6 +258,8 @@ get_header(); ?>
 
 				<p class="subtitle">Monday - Friday: 8am-12am EST | Saturday - Sunday: 10am-7pm EST</p>
 
+				<p class="subtitle"><strong>New hours starting January 2017</strong><br>Monday - Friday: 8am-8pm EST</p>
+
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12">
 						<?php echo do_shortcode('[contact-form-7 id="4" title="Contact form 1"]'); ?>
