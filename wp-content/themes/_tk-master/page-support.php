@@ -43,7 +43,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<section id="compatibility">
+<!--<section id="compatibility">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
@@ -53,66 +53,40 @@ get_header(); ?>
 			<div class="col-lg-offset-1 col-md-offset-1 col-lg-3 col-md-4 col-sm-5 col-xs-12">
 				<form class="compat-widget-form">
 	                <table>
-	                    <tbody>
-	                    <tr>
-	                        <td>
-	                            <span><input type="checkbox" name="R" value="true">R</span>
-	                        </td>
+	                    <tbody><tr>
 	                        <td>
 	                            <span><input type="checkbox" name="RC" value="true">RC</span>
 	                        </td>
 	                        <td>
-	                            <span><input type="checkbox" name="RH" value="true">RH</span>
-	                        </td>
-	                        <td>
 	                            <span><input type="checkbox" name="C" value="true">C</span>
-	                        </td>
-	                    </tr>
-	                    <tr>
-	                        <td>
-	                            <span><input type="checkbox" name="W" value="true">W or W1</span>
-	                        </td>
-	                        <td>
-	                            <span><input type="checkbox" name="W2" value="true">W2</span>
-	                        </td>
-	                        <td>
-	                            <span><input type="checkbox" name="E" value="true">E</span>
 	                        </td>
 	                        <td>
 	                            <span><input type="checkbox" name="G" value="true">G</span>
 	                        </td>
+	                        <td>
+	                            <span><input type="checkbox" name="RH" value="true">RH</span>
+	                        </td>
 	                    </tr>
 	                    <tr>
 	                        <td>
-	                            <span><input type="checkbox" name="Y" value="true">Y or Y1</span>
+	                            <span><input type="checkbox" name="W2" value="true">W2</span>
+	                        </td>
+	                        <td>
+	                            <span><input type="checkbox" name="W" value="true">W</span>
 	                        </td>
 	                        <td>
 	                            <span><input type="checkbox" name="Y2" value="true">Y2</span>
 	                        </td>
 	                        <td>
-	                            <span><input type="checkbox" name="OB" value="true">O/B</span>
-	                        </td>
-	                        <td>
-	                            <span><input type="checkbox" name="AUX" value="true">AUX</span>
+	                            <span><input type="checkbox" name="Y" value="true">Y</span>
 	                        </td>
 	                    </tr>
-	                    <tr class="compatibility_checker_showMore">
+	                    <tr>
 	                        <td>
-	                            <span><input type="checkbox" name="B" value="true">B</span>
+	                            <span><input type="checkbox" name="O/B" value="true">O/B</span>
 	                        </td>
 	                        <td>
-	                            <span><input type="checkbox" name="D" value="true">D</span>
-	                        </td>
-	                        <td>
-	                            <span><input type="checkbox" name="F" value="true">F</span>
-	                        </td>
-	                        <td>
-	                            <span><input type="checkbox" name="H" value="true">H</span>
-	                        </td>
-	                    </tr>
-	                    <tr class="compatibility_checker_showMore">
-	                        <td>
-	                            <span><input type="checkbox" name="O" value="true">O</span>
+	                            <span><input type="checkbox" name="U" value="true">U</span>
 	                        </td>
 	                        <td>
 	                            <span><input type="checkbox" name="S1" value="true">S1</span>
@@ -120,36 +94,19 @@ get_header(); ?>
 	                        <td>
 	                            <span><input type="checkbox" name="S2" value="true">S2</span>
 	                        </td>
-	                        <td>
-	                            <span><input type="checkbox" name="U" value="true">U</span>
-	                        </td>
-	                    </tr>
-	                    <tr class="compatibility_checker_showMore">
-	                        <td>
-	                            <span><input type="checkbox" name="W3" value="true">W3</span>
-	                        </td>
-	                        <td>
-	                            <span><input type="checkbox" name="X" value="true">X</span>
-	                        </td>
-	                    </tr>
-	                    <tr class="compatibility_checker_showMore">
-	                        <td>
-	                            <span><input type="checkbox" name="other_wires" value="true">Other wires</span>
-	                        </td>
 	                    </tr>
 	                </tbody>
 	            </table>
-	            <a href="#" id="compatibility_checker_showMore_link">Show more wires</a>
                 <div class="submit-container">
                     <button type="submit" class="button">CHECK WISER COMPATIBILITY</button>
                 </div>
             </form>
             <div id="comp_result">
-            	<p></p>
+            	<p>Compatible</p>
             </div>
 		</div>
 	</div>
-</section>
+</section>-->
 
 <section>
 	<div class="container" id="install">
@@ -257,6 +214,8 @@ get_header(); ?>
 				<p class="subtitle">Contact us for partnership opportunities. Or, give us a call at 1-(855)-55-WISER.</p>
 
 				<p class="subtitle">Monday - Friday: 8am-12am EST | Saturday - Sunday: 10am-7pm EST</p>
+
+				<p class="subtitle"><strong>New hours starting January 2017</strong><br />Monday - Friday: 8am-8pm EST</p>
 
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12">
