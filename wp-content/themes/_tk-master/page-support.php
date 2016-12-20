@@ -215,7 +215,11 @@ get_header(); ?>
 
 				<p class="subtitle">Monday - Friday: 8am-12am EST | Saturday - Sunday: 10am-7pm EST</p>
 
+<<<<<<< HEAD
 				<p class="subtitle"><strong>New hours starting January 2017</strong><br />Monday - Friday: 8am-8pm EST</p>
+=======
+				<p class="subtitle"><strong>New hours starting January 2017</strong><br>Monday - Friday: 8am-8pm EST</p>
+>>>>>>> 1be3d3cde75af15c24c6510a6a1050d64419db69
 
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12">
