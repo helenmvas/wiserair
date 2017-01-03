@@ -43,7 +43,7 @@ get_header(); ?>
 	</div>
 </section>
 
-<!--<section id="compatibility">
+<section id="compatibility">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
@@ -60,25 +60,23 @@ get_header(); ?>
 	                        <td>
 	                            <span><input type="checkbox" name="C" value="true">C</span>
 	                        </td>
-<<<<<<< HEAD
 	                        <td>
 	                            <span><input type="checkbox" name="W" value="true">W or W1</span>
 	                        </td>
 	                        <td>
 	                            <span><input type="checkbox" name="W2" value="true">W2</span>
 	                        </td>
-	                    </tr>
-	                    <tr>
-	                    	<td>
-	                            <span><input type="checkbox" name="E" value="true">E</span>
-=======
+	                        <td>
+	                    		<span><input type="checkbox" name="E" value="true">E</span>
+	                    	</td>
 	                        <td>
 	                            <span><input type="checkbox" name="G" value="true">G</span>
->>>>>>> f4708e9a5694cc67961ff450c4662ce5740125f8
 	                        </td>
 	                        <td>
 	                            <span><input type="checkbox" name="RH" value="true">RH</span>
 	                        </td>
+	                    </tr>
+	                    <tr>
 	                        <td>
 	                            <span><input type="checkbox" name="W2" value="true">W2</span>
 	                        </td>
@@ -91,8 +89,6 @@ get_header(); ?>
 	                        <td>
 	                            <span><input type="checkbox" name="Y" value="true">Y</span>
 	                        </td>
-	                    </tr>
-	                    <tr>
 	                        <td>
 	                            <span><input type="checkbox" name="O/B" value="true">O/B</span>
 	                        </td>
@@ -102,13 +98,11 @@ get_header(); ?>
 	                        <td>
 	                            <span><input type="checkbox" name="S1" value="true">S1</span>
 	                        </td>
-	                        
 	                    </tr>
 	                    <tr class="compatibility_checker_showMore">
 	                       <td>
 	                            <span><input type="checkbox" name="S2" value="true">S2</span>
 	                        </td>
-<<<<<<< HEAD
 	                        <td>
 	                            <span><input type="checkbox" name="U" value="true">U</span>
 	                        </td>
@@ -123,8 +117,6 @@ get_header(); ?>
 	                        <td>
 	                            <span><input type="checkbox" name="other_wires" value="true">Other wires</span>
 	                        </td>
-=======
->>>>>>> f4708e9a5694cc67961ff450c4662ce5740125f8
 	                    </tr>
 	                </tbody>
 	            </table>
@@ -137,7 +129,7 @@ get_header(); ?>
             </div>
 		</div>
 	</div>
-</section>-->
+</section>
 
 <section>
 	<div class="container" id="install">
@@ -244,13 +236,7 @@ get_header(); ?>
 				<h2>Contact Us</h2>
 				<p class="subtitle">Contact us for partnership opportunities. Or, give us a call at 1-(855)-55-WISER.</p>
 
-				<p class="subtitle">Monday - Friday: 8am-12am EST | Saturday - Sunday: 10am-7pm EST</p>
-
-<<<<<<< HEAD
-				<p class="subtitle"><strong>New hours starting January 2017</strong><br />Monday - Friday: 8am-8pm EST</p>
-=======
-				<p class="subtitle"><strong>New hours starting January 2017</strong><br>Monday - Friday: 8am-8pm EST</p>
->>>>>>> 1be3d3cde75af15c24c6510a6a1050d64419db69
+				<p class="subtitle">Monday - Friday: 8am-8pm EST | Saturday - Sunday: 10am-7pm EST</p>
 
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12">
