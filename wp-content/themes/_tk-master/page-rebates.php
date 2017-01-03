@@ -32,10 +32,39 @@ get_header(); ?>
 <section class="rebates">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <h2>Rebates</h2>
+            <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                <?php the_title( '<h2>', '</h2>' ); ?>
+                <?php if ( have_posts() ) : while( have_posts() ) : the_post();
+     the_content('<p>', '</p>');
+endwhile; endif; ?>
             </div>
         </div>
+    </div>
+</section>
+<section class="grey">
+    <div class="container">
+        <div class="col-lg-8 col-md-8 col-sm-8">
+            <h2><?php the_field('marketing_section_1_title'); ?></h2>
+            <p class="subtitle"><?php the_field('marketing_section_1_text'); ?></p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <?php the_field('marketing_section_1_image'); ?>
+        </div>
+    </div>
+</section>
+<section class="blue">
+    <div class="container">
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <?php the_field('marketing_section_2_image'); ?>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-8">
+            <h2><?php the_field('marketing_section_2_title'); ?></h2>
+            <p class="subtitle"><?php the_field('marketing_section_2_text'); ?></p>
+        </div>
+    </div>
+</section>
+<section class="rebates">
+    <div class="container">
         <div class="row">
             <?php $rebates = new WP_Query(array(
                 'post_type' => 'rebates',
@@ -54,5 +83,15 @@ get_header(); ?>
         </div>
     </div>
 </section>
-
+<section class="grey">
+    <div class="container">
+        <div class="col-lg-8 col-md-8 col-sm-8">
+            <h2><?php the_field('marketing_section_3_title'); ?></h2>
+            <p class="subtitle"><?php the_field('marketing_section_3_text'); ?></p>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <?php the_field('marketing_section_3_image'); ?>
+        </div>
+    </div>
+</section>
 <?php get_footer(); ?>
