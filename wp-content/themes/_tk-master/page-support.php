@@ -50,7 +50,7 @@ get_header(); ?>
 				<h2>Compatibility Checker</h2>
 				<p class="subtitle">Mark the checkbox next to each wire that is connected to your current thermostat. Then, we'll let you know if your system is compatible with Wiser Air, or if we'll need to take a closer look.</p>
 			</div>
-			<div class="col-lg-offset-1 col-md-offset-1 col-lg-3 col-md-4 col-sm-5 col-xs-12">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
 				<form class="compat-widget-form">
 	                <table>
 	                    <tbody>
@@ -67,22 +67,20 @@ get_header(); ?>
 	                        <td>
 	                            <span><input type="checkbox" name="C" value="true">C</span>
 	                        </td>
-	                    </tr>
-	                    <tr>
 	                        <td>
 	                            <span><input type="checkbox" name="W" value="true">W or W1</span>
 	                        </td>
 	                        <td>
 	                            <span><input type="checkbox" name="W2" value="true">W2</span>
 	                        </td>
-	                        <td>
+	                    </tr>
+	                    <tr>
+	                    	<td>
 	                            <span><input type="checkbox" name="E" value="true">E</span>
 	                        </td>
 	                        <td>
 	                            <span><input type="checkbox" name="G" value="true">G</span>
 	                        </td>
-	                    </tr>
-	                    <tr>
 	                        <td>
 	                            <span><input type="checkbox" name="Y" value="true">Y or Y1</span>
 	                        </td>
@@ -109,22 +107,21 @@ get_header(); ?>
 	                        <td>
 	                            <span><input type="checkbox" name="H" value="true">H</span>
 	                        </td>
-	                    </tr>
-	                    <tr class="compatibility_checker_showMore">
 	                        <td>
 	                            <span><input type="checkbox" name="O" value="true">O</span>
 	                        </td>
 	                        <td>
 	                            <span><input type="checkbox" name="S1" value="true">S1</span>
 	                        </td>
-	                        <td>
+	                        
+	                    </tr>
+	                    <tr class="compatibility_checker_showMore">
+	                       <td>
 	                            <span><input type="checkbox" name="S2" value="true">S2</span>
 	                        </td>
 	                        <td>
 	                            <span><input type="checkbox" name="U" value="true">U</span>
 	                        </td>
-	                    </tr>
-	                    <tr class="compatibility_checker_showMore">
 	                        <td>
 	                            <span><input type="checkbox" name="W3" value="true">W3</span>
 	                        </td>
