@@ -48,7 +48,7 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
 				<h2>Compatibility Checker</h2>
-				<p class="subtitle">Mark the checkbox next to each wire that is connected to your current thermostat. Then, we'll let you know if your system is compatible with Wiser Air, or if we'll need to take a closer look.</p>
+				<p class="subtitle">Mark the checkbox next to each wire that is connected to your current thermostat.<br /> Then, we'll let you know if your system is compatible with Wiser Air, or if we'll need to take a closer look.</p>
 			</div>
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
 				<form class="compat-widget-form">
