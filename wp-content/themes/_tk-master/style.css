@@ -1036,9 +1036,11 @@ li.resp-tab-item:hover {
 
 #comp_result {
     display: none;
-    width: 247px;
+    /*width: 247px;*/
     text-align: center;
     padding: 17px 0 10px 0;
+    background: transparent !important;
+    font-weight: 16px;
 }
 
 #first h4 {
@@ -1155,6 +1157,20 @@ input.wpcf7-form-control {
     margin-right: 0% !important;
 }
 
+a#compatibility_checker_showMore_link {
+    text-align: center;
+    margin: 0px auto;
+    display: block;
+    padding-top: 20px;
+}
+
+#compatibility form.compat-widget-form .submit-container {
+    padding: 20px 0px 0px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
 /* Support Center Blog */
 .support-center-featured-image {
     background-image: url("https://www.wiserair.com/wp-content/uploads/2016/04/support-section-1-bg.jpg");
@@ -1198,9 +1214,9 @@ section {
 }
 
 #compatibility .compat-widget-form table td {
-    padding-left: 0px !important;
-    padding-top: 25px!important;
-    padding-right: 25px !important;
+    width: 103px;
+    padding-top: 50px!important;
+    padding-right: 31px !important;
 }
 
 #compatibility .compat-widget-form table td input {
@@ -1214,6 +1230,10 @@ section {
 
 #compatibility form.compat-widget-form span {
     font-size: 13px;
+}
+
+#compatibility form.compat-widget-form .submit-container {
+    padding: 30px;
 }
 
 #install p {
@@ -2431,6 +2451,30 @@ article .entry-meta {
     font-size: 13px !important;
     margin: 0 !important;
     display: none;
+}
+
+.page-template-page-rebates table {
+    width: 100%;
+}
+
+.page-template-page-rebates table td:first-of-type {
+    width: 400px;
+    padding-right: 5%;
+    vertical-align: top;
+}
+
+.page-template-page-rebates table td {
+    padding: 10px 0px;
+}
+
+.page-template-page-rebates table tr {
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    display: inline-block !important;
+}
+
+.page-template-page-rebates .rebates h3 {
+    margin-top: 60px;
 }
 
 /*==================================================
