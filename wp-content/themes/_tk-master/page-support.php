@@ -99,7 +99,7 @@ get_header(); ?>
 	                            <span><input type="checkbox" name="S1" value="true">S1</span>
 	                        </td>
 	                    </tr>
-	                    <tr class="compatibility_checker_showMore">
+	                    <tr>
 	                       <td>
 	                            <span></span>
 	                        </td>
