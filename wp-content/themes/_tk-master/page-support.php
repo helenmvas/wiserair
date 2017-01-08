@@ -61,7 +61,7 @@ get_header(); ?>
 	                            <span><input type="checkbox" name="C" value="true">C</span>
 	                        </td>
 	                        <td>
-	                            <span><input type="checkbox" name="W" value="true">W or W1</span>
+	                            <span><input type="checkbox" name="W" value="true">W/W1</span>
 	                        </td>
 	                        <td>
 	                            <span><input type="checkbox" name="W2" value="true">W2</span>
@@ -101,6 +101,9 @@ get_header(); ?>
 	                    </tr>
 	                    <tr class="compatibility_checker_showMore">
 	                       <td>
+	                            <span></span>
+	                        </td>
+	                       <td>
 	                            <span><input type="checkbox" name="S2" value="true">S2</span>
 	                        </td>
 	                        <td>
@@ -118,7 +121,7 @@ get_header(); ?>
 	                    </tr>
 	                </tbody>
 	            </table>
-	            <a href="#" id="compatibility_checker_showMore_link">Show more wires</a>
+	            <!-- <a href="#" id="compatibility_checker_showMore_link">Show more wires</a> -->
                 <div class="submit-container">
                     <button type="submit" class="button">CHECK WISER COMPATIBILITY</button>
                 </div>
