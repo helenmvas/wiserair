@@ -51,7 +51,7 @@
 						</button>
 	
 						<!-- Your site title as branding in the menu -->
-						<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="https://wiserairmlp-dev.azurewebsites.net/images/0.0.0_wiser_logo_white_text.svg" width="195"/></a>
+						<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="/images/0.0.0_wiser_logo_white_text.svg" width="195"/></a>
 					</div>
 
 					<!-- The WordPress Menu goes here -->
