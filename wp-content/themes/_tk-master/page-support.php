@@ -188,7 +188,7 @@ get_header(); ?>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 				<a href="/category/the-basics/" id="first">
 					<h4>The Basics</h4>
-					<p>The very most frequently asked questions</p>
+					<p>The most frequently asked questions</p>
 				</a>
 				
 				<a href="/category/compatibility/">
