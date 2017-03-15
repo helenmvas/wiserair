@@ -238,7 +238,7 @@ get_header(); ?>
 				<h2>Contact Us</h2>
 				<p class="subtitle">Contact us for partnership opportunities. Or, give us a call at 1-(855)-55-WISER.</p>
 
-				<p class="subtitle">Monday - Friday: 8am-8pm EST | Saturday - Sunday: 10am-7pm EST</p>
+				<p class="subtitle">Monday - Friday: 8am-6pm EST</p>
 
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12">
