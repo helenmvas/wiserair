@@ -61,7 +61,7 @@
 			</div>
 		</div>
 		<div class="row" id="copyright">
-			<div class="col-lg-8 col-md-8">© 2016 Schneider Electric. All rights reserved. <a href="/terms">Legal Terms</a> | <a href="http://www2.schneider-electric.com/sites/corporate/en/general/legal-information/data-privacy.page" target="_blank">Privacy Policy</a></div>
+			<div class="col-lg-8 col-md-8">© 2016 Schneider Electric. All rights reserved. <a href="/documents/WiserAir-UserAgreement_v1.1.pdf">Legal Terms</a> | <a href="http://www2.schneider-electric.com/sites/corporate/en/general/legal-information/data-privacy.page" target="_blank">Privacy Policy</a></div>
 
 			<div class="col-lg-4 col-md-4 text-right"><a href="http://www.schneider-electric.com/ww/en/"/><img src="https://www.jivesoftware.com/wp-content/themes/jive2015/images/nav/Schneider-Electric_White.png"/></a></div>
 			</div>

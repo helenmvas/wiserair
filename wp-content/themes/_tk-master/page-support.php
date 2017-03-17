@@ -188,7 +188,7 @@ get_header(); ?>
 			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 				<a href="/category/the-basics/" id="first">
 					<h4>The Basics</h4>
-					<p>The very most frequently asked questions</p>
+					<p>The most frequently asked questions</p>
 				</a>
 				
 				<a href="/category/compatibility/">
@@ -238,7 +238,7 @@ get_header(); ?>
 				<h2>Contact Us</h2>
 				<p class="subtitle">Contact us for partnership opportunities. Or, give us a call at 1-(855)-55-WISER.</p>
 
-				<p class="subtitle">Monday - Friday: 8am-8pm EST | Saturday - Sunday: 10am-7pm EST</p>
+				<p class="subtitle">Monday - Friday: 8am-6pm EST</p>
 
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12">

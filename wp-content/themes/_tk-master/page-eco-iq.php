@@ -154,25 +154,5 @@ $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 560
 	</div>
 </section>
 
-<section class="main-content">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12 text-center">
-				<h2>Contact Us</h2>
-				<p class="subtitle">Contact us for partnership opportunities. Or, give us a call at 1-(855)-55-WISER.</p>
-
-				<p class="subtitle">Monday - Friday: 8am-12am EST | Saturday - Sunday: 10am-7pm EST</p>
-
-				<div class="row">
-					<div class="col-lg-12 col-md-12 col-sm-12">
-						<?php echo do_shortcode('[contact-form-7 id="4" title="Contact form 1"]'); ?>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-
 
 <?php get_footer(); ?>
