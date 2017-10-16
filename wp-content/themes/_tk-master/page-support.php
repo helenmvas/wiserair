@@ -141,7 +141,6 @@ get_header(); ?>
 			</div>
 			<div class="col-lg-offset-1 col-lg-6 col-md-offset-1 col-md-6 col-sm-7">
 				<h2>Install</h2>
-				<!-- <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p> -->
 
 				<a href="/getting-started/" id="first">
 					<h4>Quickstart Guide</h4>
@@ -157,9 +156,15 @@ get_header(); ?>
 					<h4>Install Guide</h4>
 					<p>Easily install your Wiser Air </p>
 				</a>
+
+				<a href="/documents/WiserAir-UserGuide.pdf">
+					<h4>User Guide</h4>
+					<p>Quick information on the key features Wiser Air</p>
+				</a>
+
 				<a href="/documents/WiserAir-Specifications.pdf">
 					<h4>Specifications</h4>
-					<p>Quick information on Wiser Air specifications</p>
+					<p>An overview of Wiser Air's specifications</p>
 				</a>
 			</div>
 		</div>
